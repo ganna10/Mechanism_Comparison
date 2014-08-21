@@ -1,0 +1,293 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abbatt et~al.(2014)Abbatt, George, Melamed, Monks, Pandis, and
+  Rudich]{Abbatt:2014}
+Jon Abbatt, Christian George, Megan Melamed, Paul Monks, Spyros Pandis, and
+  Yinon Rudich.
+\newblock {New Directions: Fundamentals of atmospheric chemistry: Keeping a
+  three-legged stool balanced}.
+\newblock \emph{Atmospheric Environment}, 84:\penalty0 390--391, 2014.
+
+\bibitem[Atkinson(2000)]{Atkinson:2000}
+Roger Atkinson.
+\newblock {Atmospheric chemistry of VOCs and NO$_{\text{x}}$}.
+\newblock \emph{Atmospheric Environment}, 34\penalty0 (12-14):\penalty0
+  2063--2101, 2000.
+
+\bibitem[Baker et~al.(2008)Baker, Beyersdorf, Doezema, Katzenstein, Meinardi,
+  Simpson, Blake, and Rowland]{Baker:2008}
+Angela~K. Baker, Andreas~J. Beyersdorf, Lambert~A. Doezema, Aaron Katzenstein,
+  Simone Meinardi, Isobel~J. Simpson, Donald~R. Blake, and F.~Sherwood Rowland.
+\newblock {Measurements of nonmethane hydrocarbons in 28 United States cities}.
+\newblock \emph{Atmospheric Environment}, 42:\penalty0 170--182, 2008.
+
+\bibitem[Bierbach et~al.(1994)Bierbach, Barnes, Becker, and
+  Wisen]{Bierbach:1994}
+Arwid Bierbach, Ian Barnes, Karl~H. Becker, and Evelyn Wisen.
+\newblock {Atmospheric Chemistry of Unsaturated Carbonyls: Butenedial,
+  4-Oxo-2-pentenal, 3-Hexene-2,5-dione, Maleic Anhydride,
+  3\textit{H}-Furan-2-one, and 5-Methyl-3\textit{H}-furan-2-one}.
+\newblock \emph{Environmental Science and Technology}, 28:\penalty0 715--729,
+  1994.
+
+\bibitem[Bloss et~al.(2005)Bloss, Wagner, Jenkin, Vollamer, Bloss, Lee, Heard,
+  Wirtz, Martin-Reviejo, Rea, Wenger, and Pilling]{Bloss:2005}
+C.~Bloss, V.~Wagner, M.~E. Jenkin, R.~Vollamer, W.~J. Bloss, J.~D. Lee, D.~E.
+  Heard, K.~Wirtz, M.~Martin-Reviejo, G.~Rea, J.~C. Wenger, and M.~J. Pilling.
+\newblock {Development of a detailed chemical mechanism (MCMv3.1) for the
+  atmospheric oxidation of aromatic hydrocarbons}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 5:\penalty0 641--664, 2005.
+
+\bibitem[Butler et~al.(2011)Butler, Lawrence, Taraborrelli, and
+  Lelieveld]{Butler:2011}
+T.~M. Butler, M.~G. Lawrence, D.~Taraborrelli, and J.~Lelieveld.
+\newblock {Multi-day ozone production potential of volatile organic compounds
+  calculated with a tagging approach}.
+\newblock \emph{Atmospheric Environment}, 45\penalty0 (24):\penalty0
+  4082--4090, 2011.
+
+\bibitem[Carter(1994)]{Carter:1994}
+William P.~L. Carter.
+\newblock {Development of Ozone Reactivity Scales for Volatile Organic
+  Compounds}.
+\newblock \emph{Journal of the Air and Waste Management Association},
+  44:\penalty0 881--899, 1994.
+
+\bibitem[Damian et~al.(2002)Damian, Sandu, Damian, Potra, and
+  Carmichael]{Damian:2002}
+V.~Damian, A.~Sandu, M.~Damian, F.~Potra, and G.R. Carmichael.
+\newblock {The kinetic preprocessor KPP - A software environment for solving
+  chemical kinetics}.
+\newblock \emph{Computers and Chemical Engineering}, 26\penalty0 (11):\penalty0
+  1567--1579, 2002.
+
+\bibitem[Derwent et~al.(1996)Derwent, Jenkin, and Saunders]{Derwent:1996}
+R.~G. Derwent, M.~E. Jenkin, and S.~M. Saunders.
+\newblock {Photochemical Ozone Creation Potentials for a Large Number of
+  Reactive Hydrocarbons under European Conditions}.
+\newblock \emph{Atmospheric Environment}, 30\penalty0 (2):\penalty0 181--199,
+  1996.
+
+\bibitem[Derwent et~al.(1998)Derwent, Jenkin, Saunders, and
+  Pilling]{Derwent:1998}
+Richard~G. Derwent, Michael~E. Jenkin, Sandra~M. Saunders, and Michael~J.
+  Pilling.
+\newblock {Photochemical Ozone Creation Potentials for Organic Compounds in
+  Northwest Europe Calculated with a Master Chemical Mechanism}.
+\newblock \emph{Atmospheric Environment}, 32\penalty0 (14/15):\penalty0
+  2429--2441, 1998.
+
+\bibitem[Derwent et~al.(2010)Derwent, Jenkin, Pilling, Carter, and
+  Kaduwela]{Derwent:2010}
+Richard~G. Derwent, Michael~E. Jenkin, Michael~J. Pilling, William P.~L.
+  Carter, and Ajith Kaduwela.
+\newblock {Reactivity Scales as Comparative Tools for Chemical Mechanisms}.
+\newblock \emph{Journal of the Air and Waste Management Association},
+  60:\penalty0 914--924, 2010.
+
+\bibitem[Dodge(2000)]{Dodge:2000}
+M.C. Dodge.
+\newblock {Chemical oxidant mechanisms for air quality modeling: Critical
+  review}.
+\newblock \emph{Atmospheric Environment}, 34\penalty0 (12-14):\penalty0
+  2103--2130, 2000.
+
+\bibitem[Dunker et~al.(1984)Dunker, Kumar, and Berzins]{Dunker:1984}
+Alan~M. Dunker, Sudarshan Kumar, and Peteris~H. Berzins.
+\newblock {A Comparison of Chemical Mechanisms Used In Atmospheric Models}.
+\newblock \emph{Atmospheric Environment}, 18\penalty0 (2):\penalty0 311--321,
+  1984.
+
+\bibitem[EEA(2013)]{AQEU:2013}
+EEA.
+\newblock {Air quality in Europe - 2013 report}.
+\newblock Technical Report 9/2013, European Environmental Agency, 2013.
+
+\bibitem[Emmerson and Evans(2009)]{Emmerson:2009}
+K.~M. Emmerson and M.~J. Evans.
+\newblock {Comparison of tropospheric gas-phase chemistry schemes for use
+  within global models}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 9:\penalty0 1831--1845,
+  2009.
+
+\bibitem[Emmons et~al.(2010)Emmons, Walters, Hess, Lamarque, Pfister, Fillmore,
+  Granier, Guenther, Kinnison, Laepple, Orlando, Tie, Tyndall, Wiedinmyer,
+  Baughcum, and Kloster]{Emmons:2010}
+L.~K. Emmons, S.~Walters, P.~G. Hess, J.-F. Lamarque, G.~G. Pfister,
+  D.~Fillmore, C.~Granier, A.~Guenther, D.~Kinnison, T.~Laepple, J.~Orlando,
+  X.~Tie, G.~Tyndall, C.~Wiedinmyer, S.~L. Baughcum, and S.~Kloster.
+\newblock {Description and evaluation of the Model for Ozone and Related
+  chemical Tracers, version 4 (MOZART-4)}.
+\newblock \emph{Geoscientific Model Development}, 3:\penalty0 43--67, 2010.
+
+\bibitem[Fischer et~al.(2014)Fischer, Jacob, Yantosca, Sulprizio, Millet, Mao,
+  Paulot, Singh, Roiger, Ries, Talbot, Dzepina, and {Pandey
+  Deolal}]{Fischer:2014}
+E.~V. Fischer, D.~J. Jacob, R.~M. Yantosca, M.~P. Sulprizio, D.~B. Millet,
+  J.~Mao, F.~Paulot, H.~B. Singh, A.~Roiger, L.~Ries, R.W. Talbot, K.~Dzepina,
+  and S.~{Pandey Deolal}.
+\newblock {Atmospheric peroxyacetyl nitrate (PAN): a global budget and source
+  attribution}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 14\penalty0 (5):\penalty0
+  2679--2698, 2014.
+\newblock \doi{10.5194/acp-14-2679-2014}.
+\newblock URL \url{http://www.atmos-chem-phys.net/14/2679/2014}.
+
+\bibitem[Gery et~al.(1989)Gery, Whitten, Killus, and Dodge]{Gery:1989}
+Michael~W. Gery, Gary~Z. Whitten, James~P. Killus, and Marcia~C. Dodge.
+\newblock {A photochemical kinetics mechanism for urban and regional scale
+  computer modeling}.
+\newblock \emph{Journal of Geophysical Research}, 94\penalty0 (D10):\penalty0
+  12,925--12,956, 1989.
+
+\bibitem[Goliff et~al.(2013)Goliff, Stockwell, and Lawson]{Goliff:2013}
+Wendy~S. Goliff, William~R. Stockwell, and Charlene~V. Lawson.
+\newblock {The regional atmospheric chemistry mechanism, version 2}.
+\newblock \emph{Atmospheric Environment}, 68:\penalty0 174--185, 2013.
+
+\bibitem[Gross and Stockwell(2003)]{Gross:2003}
+Allan Gross and William~R. Stockwell.
+\newblock {Comparison of the EMEP, RADM2 and RACM Mechanisms}.
+\newblock \emph{Journal of Atmospheric Chemistry}, 44:\penalty0 151--170, 2003.
+
+\bibitem[Harwood et~al.(2003)Harwood, Roberts, Frost, Ravishankara, and
+  Burkholder]{Harwood:2003}
+M.H. Harwood, J.M. Roberts, G.J. Frost, A.R. Ravishankara, and J.B. Burkholder.
+\newblock {Photochemical studies of CH3C(O)OONO2 (PAN) and CH3CH2C(O)OONO2
+  (PPN): NO3 quantum yields}.
+\newblock \emph{Journal of Physical Chemistry A}, 107\penalty0 (8):\penalty0
+  1148--1154, 2003.
+
+\bibitem[Hogo and Gery(1989)]{Hogo:1989}
+H.~Hogo and M.~Gery.
+\newblock {USER'S GUIDE FOR EXECUTING OZIPM-4 (OZONE ISOPLETH PLOTTING WITH
+  OPTIONAL MECHANISMS, VERSION 4) WITH CBM-IV (CARBON-BOND MECHANISMS-IV) OR
+  OPTIONAL MECHANISMS. VOLUME 1. DESCRIPTION OF THE OZONE ISOPLETH PLOTTING
+  PACKAGE. VERSION 4}.
+\newblock Technical report, U.S. Environmental Protection Agency, 1989.
+
+\bibitem[Jenkin et~al.(2003)Jenkin, Saunders, Wagner, and Pilling]{Jenkin:2003}
+M.~E. Jenkin, S.~M. Saunders, V.~Wagner, and M.~J. Pilling.
+\newblock {Protocol for the development of the Master Chemical Mechanism, MCM
+  v3 (Part B): Tropospheric degradation of aromatic volatile organic
+  compounds}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 3\penalty0 (1):\penalty0
+  181--193, 2003.
+
+\bibitem[Jenkin et~al.(2008)Jenkin, Watson, Utembe, and
+  Shallcross]{Jenkin:2008}
+M.~E. Jenkin, L.~A. Watson, S.~R. Utembe, and D.~E. Shallcross.
+\newblock {A Common Representative Intermediates (CRI) mechanism for VOC
+  degradation. Part 1: Gas phase mechanism development}.
+\newblock \emph{Atmospheric Environment}, 42:\penalty0 7185--7195, 2008.
+
+\bibitem[Jenkin and Clemitshaw(2000)]{Jenkin:2000}
+Michael~E. Jenkin and Kevin~C. Clemitshaw.
+\newblock {Ozone and other secondary photochemical pollutants: Chemical
+  processes governing their formation in the planetary boundary layer}.
+\newblock \emph{Atmospheric Environment}, 34\penalty0 (16):\penalty0
+  2499--2527, 2000.
+
+\bibitem[Jenkin et~al.(1997)Jenkin, Saunders, and Pilling]{Jenkin:1997}
+Michael~E. Jenkin, Sandra~M. Saunders, and Michael~J. Pilling.
+\newblock {The tropospheric degradation of volatile organic compounds: A
+  protocol for mechanism development}.
+\newblock \emph{Atmospheric Environment}, 31\penalty0 (1):\penalty0 81--104,
+  1997.
+
+\bibitem[Kleinman(1991)]{Kleinman:1991}
+Lawrence~I. Kleinman.
+\newblock {Seasonal Dependence of Boundary Layer Peroxide Concentration: The
+  Low and High NO$_{\text{x}}$ Regimes}.
+\newblock \emph{Journal of Geophysical Research}, 96\penalty0 (D11):\penalty0
+  20,721--20,733, 1991.
+
+\bibitem[Kleinman(1994)]{Kleinman:1994}
+Lawrence~I. Kleinman.
+\newblock {Low and high NO$_{\text{x}}$ tropospheric photochemistry}.
+\newblock \emph{Journal of Geophysical Research}, 99\penalty0 (D8):\penalty0
+  16,831--16,838, 1994.
+
+\bibitem[Kuhn et~al.(1998)Kuhn, Builtjes, Poppe, Simpson, Stockwell,
+  Andersson-Sk{\"o}ld, Baart, Das, Fiedler, Hov, Kirchner, Makar, Milford,
+  Roemer, Ruhnke, Strand, Vogel, and Vogel]{Kuhn:1998}
+M.~Kuhn, P.~J.~H. Builtjes, D.~Poppe, D.~Simpson, W.~R. Stockwell,
+  Y.~Andersson-Sk{\"o}ld, A.~Baart, M.~Das, F.~Fiedler, {\O}.~Hov, F.~Kirchner,
+  P.~A. Makar, J.~B. Milford, M.~G.~M. Roemer, R.~Ruhnke, A.~Strand, B.~Vogel,
+  and H.~Vogel.
+\newblock {Intercomparison of the gas-phase chemistry in several chemistry and
+  transport models}.
+\newblock \emph{Atmospheric Environment}, 32\penalty0 (4):\penalty0 693--709,
+  1998.
+
+\bibitem[Rickard et~al.(2014)Rickard, Young, and Pascoe]{MCM_Site}
+Andrew Rickard, Jenny Young, and Stephen Pascoe.
+\newblock {The Master Chemical Mechanism: Major updates in MCM v3.2}.
+\newblock \url{http://mcm.leeds.ac.uk/MCM/project.htt\#New\_3.2}, 2014.
+\newblock [Online; accessed 05-August-2014].
+
+\bibitem[Sander et~al.(2011)Sander, Baumgaertner, Gromov, Harder, J{\"o}ckel,
+  Kerkweg, Kubistin, Regelin, Riede, Sandu, Taraborrelli, Tost, and
+  Xie]{Sander:2011}
+R.~Sander, A.~Baumgaertner, S.~Gromov, H.~Harder, P.~J{\"o}ckel, A.~Kerkweg,
+  D.~Kubistin, E.~Regelin, H.~Riede, A.~Sandu, D.~Taraborrelli, H.~Tost, and
+  Z.-Q. Xie.
+\newblock {The atmospheric chemistry box model CAABA/MECCA-3.0}.
+\newblock \emph{Geoscientific Model Development}, 4:\penalty0 373--380, 2011.
+
+\bibitem[Saunders et~al.(2003)Saunders, Jenkin, Derwent, and
+  Pilling]{Saunders:2003}
+S.~M. Saunders, M.~E. Jenkin, R.~G. Derwent, and M.~J. Pilling.
+\newblock {Protocol for the development of the Master Chemical Mechanism, MCM
+  v3 (Part A): Tropospheric degradation of non-aromatic volatile organic
+  compounds}.
+\newblock \emph{Atmospheric Chemistry and Physics}, 3\penalty0 (1):\penalty0
+  161--180, 2003.
+
+\bibitem[Sillman(1999)]{Sillman:1999}
+Sanford Sillman.
+\newblock {The relation between ozone, NO$_{\text{x}}$ and hydrocarbons in
+  urban and polluted rural environments}.
+\newblock \emph{Atmospheric Environment}, 33\penalty0 (12):\penalty0
+  1821--1845, 1999.
+
+\bibitem[Stockwell et~al.(1990)Stockwell, Middleton, Chang, and
+  Tang]{Stockwell:1990}
+William~R. Stockwell, Paulete Middleton, Julius~S. Chang, and Xiaoyan Tang.
+\newblock {The Second Generation Regional Acid Deposition Model Chemical
+  Mechanism for Regional Air Quality Modeling}.
+\newblock \emph{Journal of Geophysical Research}, 95\penalty0 (D10):\penalty0
+  16,343--16,367, 1990.
+
+\bibitem[Stockwell et~al.(1997)Stockwell, Kirchner, Kuhn, and
+  Seefeld]{Stockwell:1997}
+William~R. Stockwell, Frank Kirchner, Michael Kuhn, and Stephan Seefeld.
+\newblock {A new mechanism for regional atmospheric chemistry modeling}.
+\newblock \emph{Journal of Geophysical Research D: Atmospheres}, 102\penalty0
+  (22):\penalty0 25,847--25,879, 1997.
+
+\bibitem[Vereecken and Francisco(2012)]{Vereecken:2012}
+L.~Vereecken and J.S. Francisco.
+\newblock {Theoretical studies of atmospheric reaction mechanisms in the
+  troposphere}.
+\newblock \emph{Chemical Society Reviews}, 41\penalty0 (19):\penalty0
+  6259--6293, 2012.
+
+\bibitem[WHO(2006)]{WHO:2006}
+WHO.
+\newblock {Air quality guidelines for particulate matter, ozone, nitrogen
+  dioxide and sulfur dioxide. Global update 2005}.
+\newblock Technical report, World Health Organisation, Regional Office for
+  Europe, Copenhagen, Denmark, 2006.
+
+\bibitem[Yarwood et~al.(2005)Yarwood, Rao, Yocke, and Whitten]{Yarwood:2005}
+Greg Yarwood, Sunja Rao, Mark Yocke, and Gary~Z. Whitten.
+\newblock {Updates to the Carbon Bond Chemical Mechanism: CB05}.
+\newblock Technical report, U. S Environmental Protection Agency, 2005.
+
+\end{thebibliography}

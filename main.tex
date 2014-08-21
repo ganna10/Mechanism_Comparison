@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper,fullpage]{article}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf, .png, .jpg}
+\usepackage{style}
+
+\sloppy
+
+\title{A Comparison of Chemical Mechanisms using Tagged Ozone Production Potential (TOPP) Analysis}
+\author[1]{J. Coates}%\thanks{Correspondence to: jane.coates@iass-potsdam.de}}
+\author[1]{T. Butler}
+%\author[2,3]{P. J. H. Builtjes}
+%\author[3]{U. Langematz}
+\affil[1]{Institute for Advanced Sustainability Studies, Potsdam, Germany}
+%\affil[2]{TNO, 3508 TA Utrecht, The Netherlands}
+%\affil[3]{Freie Universit\"{a}t Berlin, Berlin, Germany}
+
+\renewcommand\Authands{ and }
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \input{abstract}
+\end{abstract}
+
+\section{Introduction} \label{s:introduction}
+\input{Introduction}
+
+\section{Methodology} \label{s:methodology}
+\input{Methodology}
+
+\section{Mechanism Comparison: Overall Results} \label{s:overall_results}
+\input{Overall_Results}
+
+\section{NMVOC Degradation Analysis} \label{s:detailed_results}
+\input{NMVOC_Results}
+
+\section{Conclusions} \label{s:conclusions}
+\input{Conclusions}
+
+\todo{Acknowledgement section}
+\newpage
+
+\bibliographystyle{plainnat}
+\bibliography{/local/home/coates/Documents/PhD_References} 
+
+\end{document}

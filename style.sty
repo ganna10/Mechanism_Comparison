@@ -1,0 +1,63 @@
+\ProvidesPackage{style}
+
+\usepackage{amsmath}
+\usepackage[version=3]{mhchem}
+\usepackage{ifthen}
+\usepackage{rotating}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{chemarrow}
+\usepackage[none]{hyphenat}
+\usepackage{todonotes}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage[a4paper, margin=30mm]{geometry}
+\usepackage[round]{natbib}
+\usepackage{setspace}
+\doublespacing
+\usepackage{lineno}
+\linenumbers
+\modulolinenumbers[2]
+\newcolumntype{P}[1]{>{\raggedright\let\newline\\\arraybackslash}p{#1}}
+\usepackage[hidelinks,pdftex,
+           pdfauthor={Jane Coates},
+           pdftitle={A Comparison of Chemical Mechanisms using Tagged Ozone Production Potential (TOPP) Analysis}, 
+           pdfsubject={A Comparison of Chemical Mechanisms using Tagged Ozone Production Potential (TOPP) Analysis},
+           pdfkeywords={TOPP, comparison, mechanism, Ox production, atmospheric chemistry},
+           pdfproducer={Latex with hyperref},
+           pdfcreator={pdflatex}]{hyperref}
+
+\newlength{\Alen}
+\newlength{\minAlen}
+\newcommand{\reaction}[1][\mbox{}]{\ensuremath{                                 
+    \settowidth{\minAlen}{\ensuremath{\rarrowfill{1.7em}}}
+    \settowidth{\Alen}{\ensuremath{\mathrm{^{#1}}}}\addtolength{\Alen}{0.6em}
+    \ifthenelse{\lengthtest{\Alen <\minAlen}}{\setlength{\Alen}{\minAlen}}{}
+    \stackrel{\mathrm{#1}}{\hbox to\Alen{\rightarrowfill}}
+}}
+
+\newcommand{\reactionrev}[1][\mbox{}]{\ensuremath{\rightleftharpoonsfill{1.7em}}}
+    
+\newenvironment{reactionlist}
+    {\begin{center}\begin{tabular}{l@{\hskip 0.3cm}c@{\hskip 0.3cm}l@{\hskip 0.2cm}r}}
+    {\end{tabular}\end{center}}
+\newcounter{reaction}
+\newcommand{\reactionref}[1]{(R\ref{#1})}
+\newcommand{\reactionitem}[5][\mbox{}]
+    {#2&\reaction[#1]&#3&
+    \ifthenelse{\equal{#4}{old}}
+        {\hspace{-.34em}}
+        {\refstepcounter{reaction}\label{#5}}
+    \reactionref{#5}\\}
+                                        
+\newcommand{\reactionitemrev}[5][\mbox{}]
+    {#2&\reactionrev[#1]&#3&
+    \ifthenelse{\equal{#4}{old}}
+        {\hspace{-.34em}}
+        {\refstepcounter{reaction}\label{#5}}
+    \reactionref{#5}\\} 
+

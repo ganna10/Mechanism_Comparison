@@ -1,0 +1,171 @@
+
+\subsection{Chemical Mechanisms} \label{ss:mechanisms}
+
+{
+    \renewcommand{\arraystretch}{1.3}
+    \begin{table}
+        \begin{center}
+            \begin{tabular}{llll}
+                \hline \hline
+                \textbf{Chemical} & \textbf{Number of} & \textbf{Number of} & \textbf{Type of} \\ 
+                \textbf{Mechanism} & \textbf{Organic Species} & \textbf{Organic Reactions} & \textbf{VOC Lumping} \\ \hline
+                MCM v3.2 & $5708$ & $16349$ & No lumping \\ \hline
+                MCM v3.1 & $4351$ & $12691$ & No lumping \\ \hline
+                CRI v2 & $411$ & $1145$ & No lumping* \\ \hline
+                MOZART-4 & $69$ & $145$ & Lumped molecule \\ \hline
+                RADM2 & $44$ & $103$ & Lumped molecule \\ \hline
+                RACM & $58$ & $193$ & Lumped molecule \\ \hline
+                RACM2 & $99$ & $315$ & Lumped molecule \\ \hline
+                CBM-IV & $20$ & $45$ & Lumped structure \\ \hline
+                CB05 & $37$ & $99$ & Lumped structure \\ 
+                \hline \hline
+            \end{tabular}
+        \end{center}
+        \caption{The chemical mechanisms used in the study, MCM v3.2 is the reference mechanism. References for the mechanisms are found within the main text. *The full CRI v2 is used and this has no lumping of the primary VOCs.}
+        \label{t:mechanisms}
+    \end{table}
+}
+
+The chemical mechanisms used in this study are outlined in Table \ref{t:mechanisms}. 
+This includes the reference mechanism (MCM v3.2) and other mechanisms that are used for both global and regional modelling. 
+
+%MCM
+The Master Chemical Mechanism (MCM) \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005, MCM_Site} is a near-explicit mechanism that describes the degradation of 125 primary VOCs. 
+Whilst the large number of reactions makes the MCM computationally inefficient for use in regional or 3-D models, it is ideal as a reference in mechanism comparison studies. 
+The latest version, MCM v3.2, is the reference mechanism in this study.
+
+%CRI
+The second version of the Common Representative Intermediates (CRI v2) \citep{Jenkin:2008} is a reduced chemical mechanism which describes the oxidation of the same primary VOCs as the MCM v3.1. 
+VOC degradation is represented through degradation species whose \ce{O3} production reflects that of the MCM v3.1. 
+The full version of the \mbox{CRI v2} (\url{http://mcm.leeds.ac.uk/CRI}) was used in this study.
+
+Differences in \ce{O3} production between the CRI v2 and MCM v3.2 may be due to differences between the MCM versions rather than the reduction techniques used in the CRI v2. 
+For this reason, the MCM v3.1 is also included in this study.
+
+%MOZART
+The Model for OZone and Related chemical Tracers version 4 (MOZART-4) is a global chemical transport model including its own representation of tropospheric and stratospheric chemistry \citep{Emmons:2010}. 
+Methane, ethane, propane, ethene, propene, isoprene and $\alpha$-pinene are represented by non-lumped model species. 
+The mechanism species BIGALK, BIGENE and TOLUENE represent all other VOC. 
+The choice of mechanism species is based on the functional group of the VOC.
+
+%RADM2
+The second generation Regional Acid Deposition Model (RADM2) was developed for regional scale modelling of atmospheric chemistry \citep{Stockwell:1990}. 
+Methane, ethane, ethene and isoprene are represented by separate model species. 
+All other VOCs are split into lumped model species based upon OH-reactivity and molecular weight.
+
+%RACM
+RADM2 was updated to the Regional Atmospheric Chemistry Mechanism (RACM) \citep{Stockwell:1997}. 
+Updates include more mechanism species representing individual VOCs as well as revised rate constants and product yields. 
+Aromatic, PAN and isoprene chemistry was also revised.
+
+%RACM2
+RACM2 is the most current version of the RACM mechanism \citep{Goliff:2013} with substantial updates to aromatic and ketone chemistry. 
+More mechanism species representing emitted VOC are included in RACM2 leading to a more detailed mechanism than its previous versions.
+
+%CBM4
+The Carbon Bond Mechanism version four (CBM-IV) was developed for simulations of urban polluted conditions \citep{Gery:1989}. 
+Ethene, formaldehyde and isoprene are the only VOCs represented by specific species. 
+All other emitted VOC are lumped according to their carbon bond types. 
+
+Initial concentrations of primary VOCs are split into the appropriate representation using the method described in \citet{Hogo:1989}. 
+For example, pentane has five single carbon bonds and is represented as $5$ PAR. 
+An initial concentration of $1,200$ pptv would be assigned as $6,000$ ($= 1,200 \times 5$) pptv in CBM-IV.
+
+%CB05
+The fifth version of the Carbon Bond Mechanism (CB05) \citep{Yarwood:2005} includes the mechanism species representing methane, ethane and acetaldehyde. 
+The chemistry schemes were revised to include peroxide formation that occurs in VOC-sensitive regions. 
+There were also updates in the allocation of some primary VOC to mechanism species.
+
+\subsection{Model Setup} \label{ss:model_setup}
+
+\begin{sidewaystable}
+    \begin{center}
+        \begin{tabular}{lllllllll}
+            \hline \hline
+            \multirow{2}{*}{\textbf{NMVOC}} & \textbf{Mixing Ratio} & \textbf{MCM v3.1, v3.2} & \multirow{2}{*}{\textbf{MOZART-4}} & \multirow{2}{*}{\textbf{RADM2}} & \multirow{2}{*}{\textbf{RACM}} & \multirow{2}{*}{\textbf{RACM2}} & \multirow{2}{*}{\textbf{CBM-IV}} & \multirow{2}{*}{\textbf{CB05}}\\ & \textbf{(ppbv)} & \textbf{and CRI v2} & & & & & & \\ 
+            \hline \hline \multicolumn{9}{c}{\textbf{Alkanes}}  \\ \hline
+            Ethane & $6610$ & C2H6 & C2H6 & ETH & ETH & ETH & $0.4$ PAR & ETHA \\
+            Propane  & $6050$ & C3H8 & C3H8 & HC3 & HC3 & HC3 & $1.5$ PAR & $1.5$ PAR \\
+            Butane & $2340$ & NC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
+            $2$-Methylpropane & $1240$ & IC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
+            Pentane & $1200$ & NC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
+            $2$-Methylbutane & $2790$ & IC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
+            Hexane & $390$ & NC6H14 & BIGALK & HC5 & HC5 & HC5 & $6$ PAR & $6$ PAR \\
+            Heptane & $160$ & NC7H16 &  BIGALK & HC5 & HC5 & HC5 & $7$ PAR & $7$ PAR \\
+            Octane & $80$ & NC8H18 & BIGALK & HC8 & HC8 & HC8 & $8$ PAR & $8$ PAR \\ \hline 
+            \multicolumn{9}{c}{\textbf{Alkenes}} \\ \hline
+            Ethene & $2430$ & C2H4 & C2H4 & OL2 & ETE & ETE & ETH & ETH \\
+            \multirow{2}{*}{Propene} & \multirow{2}{*}{$490$} & \multirow{2}{*}{C3H6} & \multirow{2}{*}{C3H6} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & OLE + & OLE + \\ & & & & & & & \hspace{3mm}PAR & \hspace{3mm}PAR \\
+            \multirow{2}{*}{Butene} & \multirow{2}{*}{$65$} & \multirow{2}{*}{BUT1ENE} & \multirow{2}{*}{BIGENE} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & OLE + & OLE + \\ & & & & & & & \hspace{3mm}$2$ PAR & \hspace{3mm}$2$ PAR \\
+            \multirow{2}{*}{$2$-Methylpropene} & \multirow{2}{*}{$130$} & \multirow{2}{*}{MEPROPENE} & \multirow{2}{*}{BIGENE} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & \multirow{2}{*}{$2$ ALD2} & FORM + \\ & & & & & & & & \hspace{3mm}$3$ PAR \\
+            Isoprene & $270$ & C5H8 & ISOP & ISO & ISO & ISO & ISOP & ISOP \\ \hline
+            \multicolumn{9}{c}{\textbf{Aromatics}} \\ \hline 
+            Benzene & $480$ & BENZENE & TOLUENE & TOL & TOL & BEN & PAR & PAR \\
+            Toluene & $1380$ & TOLUENE & TOLUENE & TOL & TOL & TOL & TOL & TOL \\
+            m-Xylene & $410$ & MXYL & TOLUENE & XYL & XYL & XYM & XYL & XYL \\
+            p-Xylene & $210$ & PXYL & TOLUENE & XYL & XYL & XYP & XYL & XYL \\
+            o-Xylene & $200$ & OXYL & TOLUENE & XYL & XYL & XYO & XYL & XYL \\
+            \multirow{2}{*}{Ethylbenzene} & \multirow{2}{*}{$210$} & \multirow{2}{*}{EBENZ} & \multirow{2}{*}{TOLUENE} & \multirow{2}{*}{TOL} & \multirow{2}{*}{TOL} & \multirow{2}{*}{TOL} & TOL + & TOL + \\ & & & & & & & \hspace{3mm}PAR & \hspace{3mm}PAR \\ \hline \hline
+        \end{tabular}
+    \end{center}
+    \caption{Typical NMVOCs present in Los Angeles and their respective mixing ratios \citep{Baker:2008} as well as their representation in each chemical mechanism. The representation of the VOCs in each mechanism is based upon the recommendations of the respective literature.}
+    \label{t:initial_conditions}
+\end{sidewaystable}
+
+%general info
+The modelling approach and set-up followed that of the original TOPP study of \citet{Butler:2011}.
+A summary is provided, further details are found in the supplement to this paper and \citep{Butler:2011}. 
+Maximum \ce{O3} production was achieved by emitting the amount of NO required to balance the source of radicals at each time step and was calculated following \citet{Kleinman:1991}. 
+The NO source was determined separately for each model run ensuring conditions of maximum \ce{O3} production for each mechanism.
+
+%initial conditions
+The NMVOC and their initial mixing ratios are those typical of Los Angeles and taken from \citet{Baker:2008}. 
+The initial NMVOC mixing ratios were held constant until midday of the first day and then left to react freely. 
+Methane (\ce{CH4}) was held fixed at $1.8$ ppmv throughout. 
+Carbon monoxide (CO) and \ce{O3} were initialised at $200$ ppbv and $40$ ppbv respectively and then allowed to evolve freely.
+
+Table \ref{t:initial_conditions} outlines the NMVOC used in the study, their initial mixing ratios and representation in the different mechanisms.
+Initial mixing ratios were weighted by carbon number of the mechanism species when lumping NMVOC into mechanism species. 
+This ensured the amount of reactive carbon was constant between the model runs.
+
+\subsubsection{Mechanism Implementation} %implementation of mechanisms for the runs
+
+The MECCA boxmodel \citep{Sander:2011} is based upon the Kinetic Pre-Processor (KPP) \citep{Damian:2002}. 
+Hence, all chemical mechanisms were adapted into the modularised KPP format from their original format.
+
+The MCM v3.2 inorganic chemistry reactions were used in each model run to focus on the treatment of organic NMVOC degradation chemistry between mechanisms. 
+Inorganic gas-phase chemistry is well-known and any differences are typically due to inconsistencies between IUPAC and JPL reaction rate constants \citep{Emmerson:2009}.
+
+Some mechanisms include reactions which are of importance only in the stratosphere or free troposphere. 
+As this study is concerned with processes below the planetary boundary layer, these reactions were not included. 
+For example, PAN photolysis was removed from MOZART-4, RACM2 and CB05 as it is only important in the free troposphere \citep{Harwood:2003}.  
+
+The MCM v3.2 approach to photolysis, dry deposition and peroxy radical -- peroxy radical reactions was used for each mechanism. 
+The supplement to this article contains a detailed description of how this was implemented.
+
+\subsection{Tagged Ozone Production Potential (TOPP)}
+This section summarises the tagging methodology described in \citet{Butler:2011} which should be consulted for more details.
+
+\subsubsection[Tagging Approach and Application to Ox Family]{Tagging Approach and Application to \ce{O_x} Family} \label{ss:tagging} %tagging of mechanisms
+
+Tagging follows the degradation of all NMVOCs in Table \ref{t:initial_conditions} through all possible degradation pathways. 
+This is achieved by labelling every organic degradation product produced during NMVOC degradation with the name of the emitted NMVOC. 
+Thus, each NMVOC has its own set of degradation reactions. 
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/MCMv3_2_Ox_production_budgets}
+        \caption{The \ce{O_x} production budgets using the MCM v3.2 (a) without tagging and (b) with tagging, where \ce{O_x} production is attributed to the emitted VOCs.}
+        \label{f:Ox_budget}
+    \end{center}
+\end{figure} 
+
+The tagging approach allows allocation of production and consumption budgets to emitted NMVOCs. 
+Without tagging, the individual reactions responsible for \ce{O_x} production are determined but not the NMVOC source of the organic reactants. 
+The NMVOC source can be determined by exploiting the tags and this is illustrated in Figure \ref{f:Ox_budget}.
+
+\subsubsection{Tagged Ozone Production Potential (TOPP) Definition} %final definition of TOPP
+
+The daily Tagged Ozone Production Potential (TOPP) of a VOC is its total daily contribution to \ce{O_x} production normalised by its total emissions on the first day of the model run. 
+The \ce{O_x} production of each VOC is determined by means of the tags as described in Section \ref{ss:tagging}. 
+The TOPP is a measure of the number of \ce{O_x} molecules produced per molecule of emitted VOC.  

@@ -18,20 +18,19 @@ This study compares the impacts of these different simplified representations on
     \reactionitem{\ce{O2 + O(^3P) + M}}{\ce{O3 + M}}{new}{r:O2_O3P}
 \end{reactionlist}
 NO and \ce{NO2} reach a near-steady state via \reactionref{r:NO_O3} and \reactionref{r:NO2_hv} which is disturbed in two cases. 
-Firstly, when \ce{O3} is removed via \reactionref{r:NO_O3} which occurs during night-time or near large NO sources -- \ce{NO_x}-titration. 
-Secondly, when \ce{O3} is produced through VOC--\ce{NO_x} chemistry \citep{Sillman:1999}.
+Firstly, when \ce{O3} is removed via \reactionref{r:NO_O3} which occurs during night-time or near large NO sources and secondly, when \ce{O3} is produced through VOC--\ce{NO_x} chemistry \citep{Sillman:1999}.
 
 The odd oxygen family, \ce{O_x}, is often used to remove the influence of rapid null cycles on \ce{O3} budgets \citep{Seinfeld:2006}. 
 In this study \ce{O_x} is defined to include \ce{O3}, \ce{NO2}, \ce{O(^3P)}, \ce{O(^1D)} and other chemical species that are involved in fast photochemical cycles with \ce{O3} and \ce{NO2}, such as PAN (peroxy acetyl nitrate).
 
-%here
-Emitted VOCs (RH) are typically oxidised in the atmosphere by hydoxyl radical (OH) forming peroxy radicals (\ce{RO2}) in the presence of \ce{O2} \reactionref{r:RH_OH}. 
-Further reactions of VOC degradation products produces \ce{RO2} and hydroperoxy radicals (\ce{HO2}). 
-Both \ce{RO2} and \ce{HO2} radicals react with NO to produce \ce{NO2} (\reactionref{r:RO2_NO}--\reactionref{r:HO2_NO}) leading directly to \ce{O3} production via \reactionref{r:NO2_hv} and \reactionref{r:O2_O3P}. 
-Thus the amount of \ce{O3} produced from the degradation of a VOC is directly related to the number of NO to \ce{NO2} conversions by peroxy and hydroperoxy radicals \citep{Atkinson:2000}.
+Emitted VOCs (RH) are typically oxidised in the atmosphere by the hydoxyl radical (OH) forming peroxy radicals (\ce{RO2}) in the presence of \ce{O2} \reactionref{r:RH_OH}. 
+Alkoxy radicals (RO) are produced from the reaction of \ce{RO2} with NO \reactionref{r:RO2_NO} and react quickly with \ce{O2} producing a carbonyl species (R$^{\prime}$CHO) and a hydroperoxy radical (\ce{HO2}), \reactionref{r:RO_O2}.
+Both \ce{RO2} and \ce{HO2} radicals react with NO to produce \ce{NO2} (\reactionref{r:RO2_NO} and \reactionref{r:HO2_NO}) leading directly to \ce{O3} production via \reactionref{r:NO2_hv} and \reactionref{r:O2_O3P}. 
+Thus the amount of \ce{O3} produced from the degradation of a VOC is directly related to the number of NO to \ce{NO2} conversions by \ce{RO2} and \ce{HO2} radicals \citep{Atkinson:2000}.
 \begin{reactionlist}
     \reactionitem{\ce{RH + OH + O2}}{\ce{RO2 + H2O + O2}}{new}{r:RH_OH}
     \reactionitem{\ce{RO2 + NO}}{\ce{RO + NO2}}{new}{r:RO2_NO}
+    \reactionitem{\ce{RO + O2}}{\ce{R$^{\prime}$CHO + HO2}}{new}{r:RO_O2}
     \reactionitem{\ce{HO2 + NO}}{\ce{OH + NO2}}{new}{r:HO2_NO}
 \end{reactionlist}
 
@@ -50,7 +49,7 @@ In the \ce{NO_x}-sensitive regime, the concentration of radicals is very high re
     \reactionitem{\ce{HO2 + OH}}{\ce{H2O + O2}}{new}{r:HO2_OH}
 \end{reactionlist}
 Whereas in the VOC-sensitive regime, high \ce{NO_x} concentrations lead to radical removal by reaction with \ce{NO2}. 
-These reactions lead to nitric acid \reactionref{r:NO2_OH} and peroxy acetyl nitrate (PAN) species production \reactionref{r:RC(O)O2_NO2}.
+These reactions lead to nitric acid \reactionref{r:NO2_OH} and PAN species production \reactionref{r:RC(O)O2_NO2}.
 \begin{reactionlist}
     \reactionitem{\ce{NO2 + OH}}{\ce{HNO3}}{new}{r:NO2_OH}
     \reactionitem{\ce{RC(O)O2 + NO2}}{\ce{RC(O)O2NO2}}{new}{r:RC(O)O2_NO2}
@@ -61,32 +60,18 @@ Hence, radical and PAN chemistry play an important role in \ce{O3} production as
 %OPP 
 VOCs impact \ce{O3} production in different ways due to their diverse reaction rates and degradation pathways. 
 Ozone Production Potentials (OPP) quantify the effect of individual VOCs on \ce{O3} production. 
-OPPs are typically been calculated through incremental reactivity (IR) studies. 
-This involves changing the concentration of a particular VOC by a known increment and calculating the resulting change in \ce{O3}. 
+OPPs are typically calculated through incremental reactivity (IR) studies using photochemical models. 
+This involves changing the concentration of a particular VOC by a known increment and calculating the resulting change in \ce{O3} production compared to the \ce{O3} production from a standard VOC mixture. 
 
 Examples of IR scales are the Maximal Incremental Reactivity (MIR) and Maximum Ozone Incremental Reactivity (MOIR) scales in \citet{Carter:1994}, as well as the Photochemical Ozone Creation Potential (POCP) scale of \citet{Derwent:1996} and \citet{Derwent:1998}. 
 Different \ce{NO_x} conditions were used when calculating these IR scales thus calculating the OPPs of VOCs in different atmospheric regimes.
 
-%The MIR scale was derived using \ce{NO_x} conditions that gave the highest incremental reactivity for the VOC mix and corresponds to the 
-%VOC-sensitive regime. Whilst the MOIR scale was calculated with \ce{NO_x} conditions that gave peak \ce{O3} production for the VOC mix --
-%the VOC-\ce{NO_x}-sensitive regime. 
+OPPs have been calculated using a tagging approach in \citet{Butler:2011}, giving rise to Tagged Ozone Production Potentials (TOPP). 
+Tagging a chemical mechanism involves labelling all organic degradation products of a VOC with the name of the emitted VOC.
+Thus all degradation pathways of the emitted VOC are tracked, enabling \ce{O_x} production to be attributed to the parent VOC.
+This study exploits the tagging approach to compare the VOC degradation chemistry of different chemical mechanisms. 
 
-%POCPs were calculated using \ce{NO_x} conditions representing polluted conditions in northwest Europe. The sensitivity of POCPs to \ce{NO_x} 
-%was also investigated in \cite{Derwent:1998}. POCPs were determined using half and twice the base case \ce{NO_x} emissions, thus representing 
-%\ce{NO_x}-sensitive and VOC-sensitive regimes respectively. This study is concerned with comparing maximal \ce{O3} production from and so the 
-%\ce{NO_x}-conditions used induce the VOC-\ce{NO_x}-sensitive regime.
-
-IR calculations lack detailed mechanistic information about the processes affecting \ce{O3} formation and combine both the direct and indirect effects of VOC degradation on \ce{O3} production. 
-The direct effect is the impact of the increased VOC concentration on \ce{O3} production. 
-This is related to the number of NO to \ce{NO2} conversions from \ce{RO2} produced during VOC degradation. 
-Whereas the indirect effect is the influence of the increased radical species availability between the base VOC-mix and the increased VOC-mix on \ce{O3} production.
-
-OPPs have been calculated using a tagging approach in \citet{Butler:2011}. 
-All organic degradation products of a VOC are labelled with the name of the parent VOC enabling attribution of \ce{O_x} production back to the emitted VOC. 
-The Tagged Ozone Production Potential (TOPP) of a VOC is obtained by normalising the total daily \ce{O_x} production by the total emissions of the VOC. 
-The tagging approach follows each degradation pathway of each VOC making this approach ideal to compare the chemistry of different chemical mechanisms. 
-Full details of the TOPP calculation is found in Section \ref{s:methodology}.
-
+%here
 %chemical mechanisms are how they have to represent O3 chemistry
 Chemical mechanisms represent atmospheric chemistry in chemical transport models. 
 All mechanisms have some level of simplification due to the computational resourses needed for gas-phase chemistry calculations. 

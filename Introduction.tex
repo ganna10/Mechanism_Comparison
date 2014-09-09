@@ -7,16 +7,11 @@ These exceedances are the result of local and regional emissions of \ce{O3} prec
 
 Effective emission reduction strategies require accurate predictions of \ce{O3} concentrations using chemical transport models (CTMs). 
 This requires adequate representation of gas-phase chemistry in the chemical mechanism used by the CTM. 
-%here
-Solving the concentrations of each chemical species is very computationally expensive and in regional and 3-D models simplified chemical mechanisms are used. \todo{re-word}
-Many chemical mechanisms are available, these were developed using differing streamlining approaches to gas-phase chemistry resulting in varying levels of simplification. 
+Highly detailed chemical mechanisms are computationally expensive resulting in the development of chemical mechanisms using different simplification approaches to the gas-phase chemistry.
 This study compares the impacts of these different simplified representations on \ce{O3} production levels with a focus on the treatment of VOC degradation product chemistry by the chemical mechanism.
 
-There is also a need to improve the accuracy of modelling studies from a scientific perspective. 
-\citet{Abbatt:2014} stresses the need to focus on the three fundamentals of atmospheric chemistry: observations, laboratory and modelling. 
-
 %NOx-VOC-chemistry and use of Ox family
-\ce{O3} is primarily produced and destroyed in the fast photochemical NO--\ce{NO2}--\ce{O3} cycle \reactionref{r:NO_O3}--\reactionref{r:O2_O3P}. 
+\ce{O3} is rapidily produced and destroyed in the null photochemical cycle \reactionref{r:NO_O3}--\reactionref{r:O2_O3P}. 
 \begin{reactionlist}
     \reactionitem{\ce{NO + O3}}{\ce{NO2 + O2}}{new}{r:NO_O3}
     \reactionitem{\ce{NO2 + h$\nu$}}{\ce{NO + O(^3P)}}{new}{r:NO2_hv}
@@ -26,10 +21,11 @@ NO and \ce{NO2} reach a near-steady state via \reactionref{r:NO_O3} and \reactio
 Firstly, when \ce{O3} is removed via \reactionref{r:NO_O3} which occurs during night-time or near large NO sources -- \ce{NO_x}-titration. 
 Secondly, when \ce{O3} is produced through VOC--\ce{NO_x} chemistry \citep{Sillman:1999}.
 
-The odd oxygen family, \ce{O_x}, is used to remove the influence of \ce{NO_x}-titration on \ce{O3} chemistry. 
-In this study \ce{O_x} is defined to include \ce{O3}, \ce{NO2}, \ce{O(^3P)}, \ce{O(^1D)} and other chemical species that are involved in fast photochemical cycles with \ce{O3} and \ce{NO2}. 
+The odd oxygen family, \ce{O_x}, is often used to remove the influence of rapid null cycles on \ce{O3} budgets \citep{Seinfeld:2006}. 
+In this study \ce{O_x} is defined to include \ce{O3}, \ce{NO2}, \ce{O(^3P)}, \ce{O(^1D)} and other chemical species that are involved in fast photochemical cycles with \ce{O3} and \ce{NO2}, such as PAN (peroxy acetyl nitrate).
 
-Emitted VOCs (RH) are typically oxidised in the atmosphere by reacting with the hydoxyl radical (OH) forming peroxy radicals (\ce{RO2}) in the presence of \ce{O2} \reactionref{r:RH_OH}. 
+%here
+Emitted VOCs (RH) are typically oxidised in the atmosphere by hydoxyl radical (OH) forming peroxy radicals (\ce{RO2}) in the presence of \ce{O2} \reactionref{r:RH_OH}. 
 Further reactions of VOC degradation products produces \ce{RO2} and hydroperoxy radicals (\ce{HO2}). 
 Both \ce{RO2} and \ce{HO2} radicals react with NO to produce \ce{NO2} (\reactionref{r:RO2_NO}--\reactionref{r:HO2_NO}) leading directly to \ce{O3} production via \reactionref{r:NO2_hv} and \reactionref{r:O2_O3P}. 
 Thus the amount of \ce{O3} produced from the degradation of a VOC is directly related to the number of NO to \ce{NO2} conversions by peroxy and hydroperoxy radicals \citep{Atkinson:2000}.

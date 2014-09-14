@@ -7,8 +7,9 @@ These exceedances are the result of local and regional emissions of \ce{O3} prec
 
 Effective emission reduction strategies require accurate predictions of \ce{O3} concentrations using chemical transport models (CTMs). 
 This requires adequate representation of gas-phase chemistry in the chemical mechanism used by the CTM. 
-Highly detailed chemical mechanisms are computationally expensive resulting in the development of chemical mechanisms using different simplification approaches to the gas-phase chemistry.
-This study compares the impacts of these different simplified representations on \ce{O3} production levels with a focus on the treatment of VOC degradation product chemistry by the chemical mechanism.
+All mechanisms have some level of simplification due to the computational resourses needed for gas-phase chemistry calculations. 
+These simplification levels arise from the different scopes of modelling studies, for example a global CTM requires a more computationally efficient mechanism than a boxmodel. 
+This study compares the impacts of different simplified representations on \ce{O3} production levels focusing on the treatment of VOC degradation product chemistry by the chemical mechanism.
 
 %NOx-VOC-chemistry and use of Ox family
 \ce{O3} is rapidily produced and destroyed in the null photochemical cycle \reactionref{r:NO_O3}--\reactionref{r:O2_O3P}. 
@@ -71,37 +72,37 @@ Tagging a chemical mechanism involves labelling all organic degradation products
 Thus all degradation pathways of the emitted VOC are tracked, enabling \ce{O_x} production to be attributed to the parent VOC.
 This study exploits the tagging approach to compare the VOC degradation chemistry of different chemical mechanisms. 
 
-%here
 %chemical mechanisms are how they have to represent O3 chemistry
-Chemical mechanisms represent atmospheric chemistry in chemical transport models. 
-All mechanisms have some level of simplification due to the computational resourses needed for gas-phase chemistry calculations. 
-These levels of simplification arise from the different scopes of modelling studies, for example a global CTM requires a more computational efficient mechanism than a boxmodel. 
-
 A near-explicit mechanism such as the Master Chemical Mechanism (MCM) \citep{Jenkin:2003, Saunders:2003, Bloss:2005} includes a large amount of mechanistic details ($\sim$ $12,000$ reactions). 
 This makes the MCM ideal as a reference mechanism when comparing chemical mechanisms. 
 The latest version, MCM v3.2, \citep{MCM_Site} is the reference mechanism in this study.
 
-Further simplification is achieved by using either a lumped structure or a lumped molecule approach \citep{Dodge:2000}. 
+Further simplification is achieved by using a lumped structure or a lumped molecule approach \citep{Dodge:2000}. 
 Lumped structure mechanisms speciate VOCs by the carbon bonds of the emitted VOC. 
 Whilst in lumped molecule mechanisms, VOCs are represented by a specific organic or mechanism species representing a number of VOCs. 
-Different lumped molecule mechanisms use diverse approaches to creating mechanism species representing emitted VOCs.  
+Different lumped molecule mechanisms use diverse approaches to create mechanism species representing emitted VOCs.  
+Another simplification technique is lumping the intermediates produced during VOC degradation instead of lumping the emitted VOCs.
 
 %other chemical mechanism comparison studies
-Other chemical mechanism comparison studies consider \ce{O3} concentration time series over varying VOC and \ce{NO_x} concentrations. 
-Examples of such studies are \citet{Dunker:1984, Kuhn:1998, Gross:2003} and \citet{Emmerson:2009}. 
-A common outcome is that the largest discrepancies in \ce{O3} concentration times series arise when modelling urban rather than rural conditions. 
-Other atmospheric species, such as PAN or \ce{H2O2}, also show large concentration time series deviations between mechanisms.
+Chemical mechanism comparison studies consider modelled \ce{O3} concentration time series over varying VOC and \ce{NO_x} concentrations. 
+Examples of such studies are \citet{Dunker:1984}, \citet{Kuhn:1998} and \citet{Emmerson:2009}.
+A common outcome is that the largest discrepancies in \ce{O3} concentration times series arise when modelling urban rather than rural conditions.
+These discrepancies are due to the treatment of radical production, organic nitrate and night-time chemistry.
 
 IR scales have also been used as a tool for mechanism comparison. 
 In \citet{Derwent:2010}, the near-explicit mechanisms MCM v3.1 and SAPRC-07 were compared using first-day POCP values calculated under VOC-sensitive conditions. 
 In general, the POCP values were comparable between the mechanisms. 
 
-OPPs are a useful mechanism comparison tool as they relate \ce{O3} production to a single number. 
+OPPs are a useful comparison tool as they relate \ce{O3} production to a single value. 
+\citet{Butler:2011} compares first day TOPPs of a VOC mixture to the corresponding MIR, MOIR and POCP values.
+TOPPs were most comparable to MOIR and POCP values, whilst MIR values for reactive VOC were overestimated.
+
 In this study, TOPPs calculated for a number of VOCs using different mechanisms are compared to those calculated with the MCM v3.2. 
-TOPPs are ideal for such a mechanism comparison study as they address multi-day scenarios and the tagging approach allows a detailed comparison of the VOC degradation chemistry between the mechanisms.
+Processes influencing \ce{O_x} production in the mechanisms are compared by exploiting the tagging approach used in calculating the TOPPs.
+In particular, differences in the treatment of organic degradation products and subsequent chemistry is emphasized.
 
 %paper outline
-The chemical mechanisms compared and the methodology are described in Section \ref{s:methodology}. 
+The chemical mechanisms compared and the comparison methodology are described in Section \ref{s:methodology}. 
 Section \ref{s:overall_results} presents the comparison of the first-day TOPPs and their time series. 
-Detailed analysis of \ce{O_x} production chemistry as well as the treatment of radical and PAN chemistry is compared in Section \ref{s:detailed_results}. 
-Finally the conclusions and further work are in outlined \mbox{Section \ref{s:conclusions}}.  
+Detailed analysis of \ce{O_x} production chemistry is compared in Section \ref{s:detailed_results}. 
+Finally conclusions and further work are outlined in \mbox{Section \ref{s:conclusions}}.  

@@ -114,33 +114,34 @@ The allocation of some primary VOC to mechanism species was also updated.
 %general info
 The modelling approach and set-up followed that of the original TOPP study of \citet{Butler:2011}.
 A summary is provided, further details are found in the supplement to this paper and in \citet{Butler:2011}. 
-The radical and \ce{NO_x} amounts were balanced at each time step by emitting the amount of NO equalling the total radical chemical source minus the total \ce{NO_x} source.
-The NO emission amounts were determined separately for each model run ensuring conditions for maximum \ce{O3} production for each mechanism.
+The radical and \ce{NO_x} amounts were balanced at each time step by emitting the amount of NO equalling the total radical source minus the total \ce{NO_x} source.
+The NO emission amounts were determined separately for each model run ensuring conditions of maximum \ce{O3} production for each mechanism.
 
 %initial conditions
-The NMVOC and their initial mixing ratios are those typical of Los Angeles and taken from \citet{Baker:2008}. 
+The NMVOC and their initial mixing ratios are those of Los Angeles taken from \citet{Baker:2008}. 
 The initial NMVOC mixing ratios were held constant until midday of the first day and then left to react freely. 
 Methane (\ce{CH4}) was held fixed at \mbox{$1.8$ ppmv}. 
 Carbon monoxide (CO) and \ce{O3} were initialised at \mbox{$200$ ppbv} and \mbox{$40$ ppbv} respectively and then allowed to evolve freely.
 
 Table \ref{t:initial_conditions} outlines the NMVOC used in the study, their initial mixing ratios and representation in the different mechanisms.
+The mechanism assignment of each NMVOC followed the recommendations for each mechanism.
 Initial mixing ratios were weighted by carbon number of the mechanism species when lumping NMVOC into mechanism species. 
-This ensured the amount of reactive carbon was constant between the model runs.
+This ensured the initial amount of reactive carbon was constant between model runs.
 
 \subsubsection{Mechanism Implementation} %implementation of mechanisms for the runs
 
-The MECCA boxmodel \citep{Sander:2011} is based upon the Kinetic Pre-Processor (KPP) \citep{Damian:2002}. 
-Hence, all chemical mechanisms were adapted into the modularised KPP format from their original format.
+The MECCA boxmodel \citep{Sander:2005} is based upon the Kinetic Pre-Processor (KPP) \citep{Damian:2002} and was used as described in \citet{Butler:2011}. 
+Hence, all chemical mechanisms were adapted into the modularised KPP format.
 
-The MCM v3.2 inorganic chemistry reactions were used in each model run to focus on the treatment of organic NMVOC degradation chemistry between mechanisms. 
-Inorganic gas-phase chemistry is well-known and any differences are typically due to inconsistencies between IUPAC and JPL reaction rate constants \citep{Emmerson:2009}.
+The MCM v3.2 inorganic chemistry reactions were used in each model run to focus on the organic NMVOC degradation chemistry.
+Inorganic gas-phase chemistry is relatively well-known and any differences are typically due to inconsistencies between IUPAC and JPL reaction rate constants \citep{Emmerson:2009}.
 
-Some mechanisms include reactions which are of importance only in the stratosphere or free troposphere. 
-As this study is concerned with processes below the planetary boundary layer, these reactions were not included. 
+Some mechanisms include reactions which are important only in the stratosphere or free troposphere. 
+Such reactions were not included as this study is concerned with processes below the planetary boundary layer. 
 For example, PAN photolysis was removed from MOZART-4, RACM2 and CB05 as it is only important in the free troposphere \citep{Harwood:2003}.  
 
 The MCM v3.2 approach to photolysis, dry deposition and peroxy radical -- peroxy radical reactions was used for each mechanism. 
-The supplement to this article contains a detailed description of how this was implemented.
+The supplement to this article contains a detailed description of this implementation.
 
 \subsection{Tagged Ozone Production Potential (TOPP)}
 This section summarises the tagging methodology described in \citet{Butler:2011} which should be consulted for more details.

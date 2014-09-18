@@ -10,30 +10,32 @@
 \end{figure}
 
 The first day TOPP values calculated from each mechanism are compared to those calculated with the MCM v3.{2} in Figure \ref{f:first_day}. 
-The reduced mechanisms generally reproduce the MCM v3.2 first day TOPP values. 
-However the TOPP values resulting from aromatic VOC degradation is underestimated in the reduced mechanisms.
+The reduced mechanisms generally match the MCM v3.2 first day TOPP values. 
+However the TOPP values resulting from aromatic VOC degradation is lower in the reduced mechanisms.
 
-Aromatic chemistry has always been difficult to represent in chemical mechanisms as many products, their yields and reactions are not known or are subject to uncertainties \citep{Vereecken:2012}. 
-Thus, greater variation is expected between the TOPP values of aromatic VOCs. 
+Aromatic chemistry is difficult to represent in chemical mechanisms as many products, their yields and reactions are not known or are subject to uncertainties \citep{Vereecken:2012}. 
+Thus, greater variation is expected between the aromatic VOC TOPP values.
 The largest discrepancies are the zero TOPP values of toluene and xylene in RACM. 
 This is unrealistic as aromatic VOCs contribute significantly to \ce{O_x} production \citep{Derwent:1998}. 
-Section \ref{sss:RACM_aromatic} outlines the chemistry responsible for these results.
+Section \ref{sss:RACM_aromatic} outlines the responsible chemistry.
 
-The first day TOPP values of $2$-methylpropene in RACM, RACM2, CBM-IV and CB05 indicate that its degradation is treated very differently to the MCM v3.2. 
-The variation between RACM, RACM2 and MCM v3.2 arise from the differences between the rate constants of the $2$-methylpropene ozonolysis reactions. 
-In MCM v3.2, this rate constant at 273 K is \mbox{$1 \times 10^{-17}$ cm$^3$ s$^{-1}$} whereas in RACM and RACM2 it is about $25$ times faster at \mbox{$2.5 \times 10^{-16}$ cm$^3$ s$^{-1}$}. 
-This leads to more radical and hence \ce{O_x} production than in the MCM v3.2.
+The $2$-methylpropene first day TOPP values in RACM, RACM2, CBM-IV and CB05 indicate that its degradation is treated very differently to the MCM v3.2. 
+The variation between RACM, RACM2 and MCM v3.2 arise from differences between the rate constants of $2$-methylpropene ozonolysis. 
+These rate constants are derived from the IUPAC recommendations\citep{IUPAC_Site}, however RACM and RACM2 rate constants are an order of magnitude faster than the MCM v3.2.
+This is the outcome of the rate constant being a weighted mean of all VOC ozonolysis rate constants represented as OLI in RACM and RACM2 \citep{Stockwell:1997, Goliff:2013}.
+The resulting increased radical production leads to more \ce{O_x} production than in the MCM v3.2.
 
-In CBM-IV, $2$-methylpropene is represented by the mechanism species ALD2, which is a surrogate for aldehydes with more than one carbon atom. 
+In CBM-IV, $2$-methylpropene is represented by the mechanism species ALD2 \citep{Hogo:1989}, which is a surrogate for aldehydes with more than one carbon atom. 
 ALD2 reacts very quickly with OH forming \ce{CH3CO3}, leading to \ce{O_x} production. 
 Furthermore, photolysis of ALD2 promotes radical and in turn \ce{O_x} production. 
 This is not a degradation pathway for $2$-methylpropene in any other mechanism. 
 The choice of $2$-methylpropene representation gives rise to more \ce{O_x} production than in the MCM v3.2.
 
-$2$-methylpropene representation was updated in CB05 to \mbox{FORM + $3$ PAR}, where FORM represents formaldehyde and PAR the paraffin \ce{C-C} bond. 
+$2$-methylpropene representation was updated in CB05 to \mbox{FORM + $3$ PAR}, where FORM represents formaldehyde and PAR the paraffin \ce{C-C} bond \citep{Yarwood:2005}. 
 The initial oxidation reactions of formaldehyde are similar to ALD2 whilst PAR is a slow reacting species. 
 This slows down the \ce{O_x} production resulting in lower \ce{O_x} production than in the MCM v3.2.
 
+\todo{check out why CBMs have underestimations}
 \subsection{TOPP Values Time Series} \label{ss:profiles} %TOPP time series of all species
 
 \begin{figure}

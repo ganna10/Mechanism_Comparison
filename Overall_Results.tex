@@ -5,8 +5,16 @@
     \begin{center}
         \includegraphics[width=\textwidth]{img/first_day_values}
     \end{center}
-    \caption{First day TOPP values obtained using (a) MCM v3.1, (b) CRI v2, (c) MOZART-4, (d) RADM2, (e) RACM, (f) RACM2, (g) CBM-IV and (h) CB05 mechanisms compared to the corresponding MCM v3.2 values.}
+    \caption{First day TOPP values obtained using (a) MCM v3.1, (b) CRI v2, \mbox{(c) MOZART-4}, (d) RADM2, (e) RACM, (f) RACM2, (g) CBM-IV and (h) CB05 mechanisms compared to the corresponding MCM v3.2 values.}
     \label{f:first_day}
+\end{figure}
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/Ox_tagged_budget_overlay_all_mechanisms}
+    \end{center}
+    \caption{\ce{O_x} production budgets allocated to individual VOCs using (a) MCM v3.2, \mbox{(b) MCM v3.1}, (c) CRI v2, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, \mbox{(h) CBM-IV} and (i) CB05 mechanisms.}
+    \label{f:Ox_tagged_budgets}
 \end{figure}
 
 The first day TOPP values calculated from each mechanism are compared to those calculated with the MCM v3.{2} in Figure \ref{f:first_day}. 
@@ -35,7 +43,11 @@ $2$-methylpropene representation was updated in CB05 to \mbox{FORM + $3$ PAR}, w
 The initial oxidation reactions of formaldehyde are similar to ALD2 whilst PAR is a slow reacting species. 
 This slows down the \ce{O_x} production resulting in lower \ce{O_x} production than in the MCM v3.2.
 
-\todo{check out why CBMs have underestimations}
+The first day TOPP values of many VOCs using CBM-IV and CB05 are lower than those of the MCM v3.2. 
+This is related to lower \ce{O_x} production in CBM-IV and CB05, shown in Figure \ref{f:Ox_tagged_budgets}.
+Lower \ce{O3} levels using CBM-IV and CB05 have also been noted in other modelling studies such as \citet{Luecken:2008, Emmerson:2009} and \citet{Saylor:2012}.
+Analysis of the lower \ce{O_x} production is investigated in the following sections.
+
 \subsection{TOPP Values Time Series} \label{ss:profiles} %TOPP time series of all species
 
 \begin{figure}
@@ -46,9 +58,9 @@ This slows down the \ce{O_x} production resulting in lower \ce{O_x} production t
     \label{f:TOPP_dailies}
 \end{figure}
 
-The time series of the daily TOPP values for all NMVOCs in Table \ref{t:initial_conditions} are presented in \mbox{Figure \ref{f:TOPP_dailies}}. 
+The daily TOPP values time series of all NMVOCs in Table \ref{t:initial_conditions} are presented in \mbox{Figure \ref{f:TOPP_dailies}}. 
 NMVOCs, such as ethene, whose degradation is described using dedicated mechanism species have a narrow spread between their time series. 
-Higher variability emerges between the time series of those NMVOCs, such as pentane, that are lumped mechanism species.
+Higher variability emerges between the time series of those NMVOCs, such as pentane, represented by lumped mechanism species.
 
 The second day maximum of all alkane TOPP time series is reproduced by all mechanisms except the RADM2, RACM and RACM2 representation of octane. 
 \ce{O_x} production is attributed to the carbon number of the NMVOC degradation products in Section \ref{ss:c_number} demonstrating that the reduced mechanisms break down the emitted NMVOC into species with a lower number of carbon atoms quicker than more detailed mechanisms. 

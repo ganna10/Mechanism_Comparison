@@ -17,13 +17,15 @@
     \end{center}
 \end{figure} 
 
-The different NMVOC \ce{O_x} production time profiles in Figure \ref{f:TOPP_dailies} results from the different rates at which the NMVOCs break up into smaller fragments \citep{Butler:2011}.
-The percent contributions from the degradation products amount of carbon on daily \ce{O_x} production during pentane and toluene degradation is illustrated in Figure \ref{f:percent_carbon}.
+The different NMVOC \ce{O_x} production time profiles in Figure \ref{f:TOPP_dailies} result from the different rates at which NMVOCs break up into smaller fragments \citep{Butler:2011}.
+The daily percent contributions from the carbon amounts of the \ce{O_x} producing degradation products during pentane and toluene degradation is illustrated in Figure \ref{f:percent_carbon}.
 
-Figure \ref{f:percent_carbon} indicates that near-explicit mechanisms retain a larger influence on \ce{O_x} production of degradation products having the same number of carbons as the emitted NMVOC throughout the model run than less-explicit mechanisms.
+Figure \ref{f:percent_carbon} indicates that degradation products having the same carbon number as the emitted NMVOC have more influence on \ce{O_x} production throughout the model run in near-explicit than less-explicit mechanisms.
 Toluene degradation in MOZART-4 is an exception.
-Despite the large influence of C7 degradation products the daily \ce{O_x} production from toluene in MOZART-4 is practically zero after the fourth day.
-\todo{add sentence about reactive carbon loss results -> this must be due to a quick breakdown but need to prove this.}
+
+The rapid loss of toluene reactive carbon shown in Figure \ref{f:net_carbon_loss} is responsible for the immediate decrease in \ce{O_x} production over the MOZART-4 model run.
+Even though C7 degradation products have a larger relative contribution to \ce{O_x} production in MOZART-4 than in MCM v3.2, the absolute \ce{O_x} production is lower in MOZART-4.
+The loss of toluene reactive carbon determines the \ce{O_x} production from toluene degradation in MOZART-4.
 
 The impact of C1 and C2 degradation products increases over the run.
 Emitted NMVOCs are oxidised to these smaller fragments quicker in the less-explicit mechanisms implying less carbon to fuel \ce{O_x} production.
@@ -74,40 +76,47 @@ The additional photolysis pathways in MCM v3.2 are non-\ce{HO2_x} producing path
 
 The combination of the higher rate constant for the glyoxal reaction with OH radical and additional \ce{HO2_x} production during photolysis are responsible for the higher \ce{HO2_x} production in CRI v2. 
 
-\subsection{Radical Production and Consumption Budgets} \label{ss:radicals}
 
-\ce{O_x} production is directly to the conversion of NO to \ce{NO2} by peroxy radicals. 
-Moreover, in this study maximum \ce{O3} production was achieved by emitting the amount of NO required to balance the radical source at each time step. 
-A radical family for each mechanism was used to investigate the processes affecting production and loss budgets. 
-This radical family includes all radical species and species involved in quick production and consumption cycles, such as PAN species and \ce{HO2NO2}.
+\subsection{Reactive Carbon Loss} \label{ss:carbon_loss}
 
 \begin{figure}
     \begin{center}
-        \includegraphics[width=\textwidth]{img/Net_radical_budgets}
+        \includegraphics[width=\textwidth]{img/net_reactive_carbon_loss}
     \end{center}
-    \caption{The day-time net budget contribution of (a) alkane, (b) alkene and (c) aromatic degradation on the radical family in each mechanism.}
-    \label{f:net_radical_budgets} 
-\end{figure} 
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{img/pentane_radical_budgets}
-    \end{center}
-    \caption{The processes influencing the radical family production and consumption budgets during pentane degradation are illustrated for (a) MCM v3.2, (b) MCM v3.1, (c) CRI v2, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, (h) CBM-IV and (i) CB05.}
-    \label{f:pentane_radical_budgets}
+    \caption{Daily net rate of carbon loss during \ce{O_x} production resulting from pentane and toluene degradation.}
+    \label{f:net_carbon_loss}
 \end{figure}
 
+\subsection{Radical Sinks and Sources} \label{ss:radicals}
+
+\ce{O_x} production is directly related to the conversion of NO to \ce{NO2} by peroxy radicals. 
+Moreover, in this study maximum \ce{O3} production was achieved by emitting the amount of NO required to balance the radical source at each time step. 
+Differences in radical treatment will not only impact \ce{O_x} production but also the amount of NO emitted into the system.
+%relate to atmospheric regimes??
+
 \begin{figure}
     \begin{center}
-        \includegraphics[width=\textwidth]{img/toluene_radical_budgets}
+        \includegraphics[width=\textwidth]{img/radicals_budget_assigned}
     \end{center}
-    \caption{The processes influencing the radical family production and consumption budgets during toluene degradation is illustrated for (a) MCM v3.2, (b) MCM v3.1, (c) CRI v2, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, (h) CBM-IV and (i) CB05.}
-    \label{f:toluene_radical_budgets} 
+    \caption{Radical family production and loss budgets in (a) MCM v3.2, (b) MCM v3.1, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
+    \label{f:radical_budgets} 
 \end{figure} 
 
-The day-time net radical production and loss budgets due to alkane, alkene and aromatic degradation is shown in Figure \ref{f:net_radical_budgets}. 
-The largest differences arise from alkane and aromatic degradation. 
-Pentane and toluene radical budgets are attributed to the responsible processes in Figures \ref{f:pentane_radical_budgets} and \ref{f:toluene_radical_budgets} to determine the source of these differences.
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/HCHO_budget_comparison}
+    \end{center}
+    \caption{Formaldehyde production and loss budgets in (a) MCM v3.2, (b) MCM v3.1, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
+    \label{f:HCHO_budgets} 
+\end{figure} 
+
+The sources and sinks of the radical family, consisting of all radicals, is depicted for each mechanism in Figure \ref{f:radical_budgets}.
+The radical production from \ce{O(^1D)}, HONO, \ce{HO2NO2}, PAN and \ce{CH3O2NO2} decomposition are all affected by the NO source of each mechanism.
+The same is true for the radical loss through \ce{HNO3}, HONO, \ce{HO2NO2}, PAN and \ce{CH3O2NO2} formation.
+However, radical production from formaldehyde (HCHO) photolysis impacts each mechanism differently.
+VOC degradation is the sole formaldehyde source in this study and any differences in its treatment will impact on the radical budget.
+
+HCHO production and consumption budgets for each mechanism are illustrated in Figure \ref{f:HCHO_budgets}.
 
 In general, photolysis is the major radical production process and the reactions of radicals with other species, such as NO and \ce{HO2}, is the main radical sink. 
 Reduced mechanisms include other processes to maintain radical production.

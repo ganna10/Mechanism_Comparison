@@ -2,88 +2,89 @@
 \subsection{Carbon Number of \ce{O_x} Producing Degradation Products} \label{ss:c_number} %comparison by carbon number breakdown
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{img/carbon_percent_total_Ox_production}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{img/carbon_percent_total_Ox_production}
+    \vspace{0mm}
     \caption{Pentane and toluene daily \ce{O_x} production percentage contributions by carbon number of degradation products.}
+    \vspace{-4mm}
     \label{f:percent_carbon}
 \end{figure}
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{img/TOL_MCM_CRI_HO2x_intermediates}
-        \caption{The \ce{HO2_x} production budgets from toluene degradation attributed to the responsible reactions in (a) MCM v3.2 and (b) CRI v2.}
-        \label{f:toluene_HO2x}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{img/TOL_HO2x_intermediates}
+    \vspace{0mm}
+    \caption{Day-time \ce{HO2_x} production and consumption budgets from toluene degradation in (a) MCM v3.2, (b) CRI v2 and (c) RACM2.}
+    \vspace{-4mm}
+    \label{f:toluene_HO2x}
 \end{figure} 
 
 The different NMVOC \ce{O_x} production time profiles in Figure \ref{f:TOPP_dailies} result from the different rates at which NMVOCs break up into smaller fragments \citep{Butler:2011}.
-The daily percent contributions from the carbon amounts of the \ce{O_x} producing degradation products during pentane and toluene degradation is illustrated in Figure \ref{f:percent_carbon}.
+The daily percent contributions from the carbon numbers of the \ce{O_x} producing degradation products during pentane and toluene degradation are illustrated in Figure \ref{f:percent_carbon}.
+The contribution of \ce{HO2} and operator species, such as XO2 in CBM-IV and CB05, are allocated to the carbon number of its source. 
 
 Figure \ref{f:percent_carbon} indicates that degradation products having the same carbon number as the emitted NMVOC have more influence on \ce{O_x} production throughout the model run in near-explicit than less-explicit mechanisms.
 Toluene degradation in MOZART-4 is an exception.
 
-The rapid loss of toluene reactive carbon shown in Figure \ref{f:net_carbon_loss} is responsible for the immediate decrease in \ce{O_x} production over the MOZART-4 model run.
-Even though C7 degradation products have a larger relative contribution to \ce{O_x} production in MOZART-4 than in MCM v3.2, the absolute \ce{O_x} production is lower in MOZART-4.
-The loss of toluene reactive carbon determines the \ce{O_x} production from toluene degradation in MOZART-4.
-
-The impact of C1 and C2 degradation products increases over the run.
-Emitted NMVOCs are oxidised to these smaller fragments quicker in the less-explicit mechanisms implying less carbon to fuel \ce{O_x} production.
-\todo{slower in explicit mechanisms? Reactive carbon analysis needed for this claim}
+The rapid loss of toluene's reactive carbon shown in Figure \ref{f:net_carbon_loss} is responsible for the sharp decrease in \ce{O_x} production over the MOZART-4 model run.
+Even though C7 degradation products have a larger relative contribution to \ce{O_x} production in MOZART-4 than in \mbox{MCM v3.2}, the absolute \ce{O_x} production is lower in MOZART-4.
+The loss of toluene's reactive carbon determines the \ce{O_x} production from toluene degradation in MOZART-4.
 
 C1 and C2 degradation products are the sole influence on \ce{O_x} production from alkane degradation in CBM-IV and CB05.
 Alkane degradation is depicted using PAR, whose degradation consists of mechanism species having either one or two carbon atoms.
 PAR represents singly bonded carbons and alkane emissions are scaled by the carbon number to account for increased \ce{O_x} production with alkane carbon number.
 \citet{Hogo:1989} and \citet{Yarwood:2005} contain details for the CBM-IV and CB05, whilst Section \ref{ss:mechanisms} has a brief summary.
 
-CRI v2 and RACM2 toluene degradation differs from toluene degradation in all other mechanisms as maximum \ce{O_x} production is reached on the second day. 
-In RACM2 this is due to the degradation into smaller products happening at a slower pace than in other mechanisms.
-\todo{confirm this with reactive carbon analysis}
-
-Toluene C2 degradation products in CRI v2 have a larger impact than in the MCM.  
-Figure \ref{f:toluene_HO2x} illustrates the \ce{HO2_x} production budget allocated to the responsible reactions in MCM v3.2 and CRI v2. 
-The \ce{HO2_x} family consists of \ce{HO2} and \ce{HO2NO2}.
+CRI v2 and RACM2 toluene degradation differs from that in other mechanisms as maximum \ce{O_x} production is reached on the second day. 
+This is due to higher second day \ce{HO2} production in CRI v2 and RACM2 which is not the case for MCM v3.2.  
+Figure \ref{f:toluene_HO2x} illustrates the day-time \ce{HO2_x} (= \ce{HO2 + HO2NO2}) production and consumption budgets allocated to the responsible reactions in MCM v3.2, CRI v2 and RACM2. 
 \ce{HO2_x} production influences \ce{O_x} production through \ce{HO2} converting NO to \ce{NO2} via \reactionref{r:HO2_NO}.
-\mbox{Figure \ref{f:toluene_HO2x}} shows more \ce{HO2_x} production from the reaction of CARB3 and OH in CRI v2 than its corresponding MCM v3.2 reaction (\mbox{GLYOX + OH}).
 
-Glyoxal is represented as CARB3 in CRI v2 and GLYOX in MCM v3.2, but there are many differences in the chemistry of these species.
+\mbox{Figure \ref{f:toluene_HO2x}} shows more \ce{HO2_x} production from the reaction of CARB3 and OH in \mbox{CRI v2} than its corresponding MCM v3.2 reaction (\mbox{GLYOX + OH}).  
+Glyoxal is represented as CARB3 in CRI v2 and GLYOX in MCM v3.2, but there are differences in the chemistry of these species.
 In CRI v2, CARB3 is only produced from aromatic degradation whilst GLYOX is also a degradation product of other non-aromatic NMVOCs in MCM v3.2. 
 
-CRI v2 glyoxal degradation is through reaction with OH radical and photolysis whilst extra degradation options are available in MCM v3.2. 
+CRI v2 glyoxal degradation is through reaction with OH and photolysis whilst extra degradation options are available in MCM v3.2. 
 Moreover, the rate constant for the reaction with OH radical in CRI v2 is $\sim$ $15$\% faster than in MCM v3.2. 
 
-Glyoxal has three available photolysis pathways in MCM v3.2 and only one in \mbox{CRI v2}. 
-These photolysis pathways and their rate parameters are outlined in Table \ref{t:glyoxal}. 
-The additional photolysis pathways in MCM v3.2 are non-\ce{HO2_x} producing pathways leading to less \ce{HO2_x} production.
-
+Glyoxal has three available photolysis pathways in MCM v3.2 and only one in \mbox{CRI v2}, these are outlined in Table \ref{t:glyoxal}. 
+The additional photolysis pathways in MCM v3.2 are non-\ce{HO2_x} producing pathways leading to less \ce{HO2_x} production.  
+The combination of the higher rate constant for the glyoxal--OH reaction and additional \ce{HO2_x} production during photolysis are responsible for the higher \ce{HO2_x} production in CRI v2. 
 {
     \renewcommand{\arraystretch}{1.3}
     \begin{table}
-        \begin{center}\small
-            \begin{tabular}{lP{6.8cm}P{3.0cm}}
-                \hline \hline
-                \textbf{Mechanism} & \textbf{Photolysis Pathway} & \textbf{Rate Parameter} \\ \hline \hline
-                \multirow{3}{*}{MCM v3.2} & GLYOX + hv = CO + CO + H2 & J$_{31}$ \\
-                & GLYOX + hv = HCHO + CO & J$_{32}$ \\
-                & GLYOX + hv = CO + CO + HO2 + HO2 & J$_{33}$ \\ \hline
-                CRI v2 & CARB3 + hv = CO + CO + HO2 + HO2 & J$_{33}$ \\ \hline \hline
-            \end{tabular}
-            \caption{Glyoxal photolysis in MCM v3.2 and CRI v2 with specified rate parameters.}
-            \label{t:glyoxal}
-        \end{center}
+        \centering
+        \small
+        \begin{tabular}{lP{6.8cm}P{3.0cm}}
+            \hline \hline
+            \textbf{Mechanism} & \textbf{Photolysis Pathway} & \textbf{Rate Parameter} \\ \hline \hline
+            \multirow{3}{*}{MCM v3.2} & GLYOX + hv = CO + CO + H2 & J$_{31}$ \\
+            & GLYOX + hv = HCHO + CO & J$_{32}$ \\
+            & GLYOX + hv = CO + CO + HO2 + HO2 & J$_{33}$ \\ \hline
+            CRI v2 & CARB3 + hv = CO + CO + HO2 + HO2 & J$_{33}$ \\ \hline \hline
+        \end{tabular}
+        \vspace{1mm}
+        \caption{Glyoxal photolysis in MCM v3.2 and CRI v2 with specified rate parameters.}
+        \vspace{-4mm}
+        \label{t:glyoxal}
     \end{table}
 }
 
-The combination of the higher rate constant for the glyoxal reaction with OH radical and additional \ce{HO2_x} production during photolysis are responsible for the higher \ce{HO2_x} production in CRI v2. 
-
+RACM2 \ce{HO2_x} production during toluene degradation includes reactions unique to RACM2.
+Initial OH reaction produces the lumped mechanism species TR2 which degrades immediately producing the epoxy species EPX along with \ce{HO2}.
+Epoxy production in \mbox{MCM v3.2} is a minor pathway of initial toluene oxidation.
+The EPX ozonolysis rate constant is $100$ times faster than the analogous \mbox{MCM v3.2} species (TLEPOXMUC).
+EPX ozonolysis yields $1.5$ \ce{HO2}, thus the reacted \ce{O3} is regenerated with extra \ce{HO2}.
+This causes the RACM2 toluene degradation second day \ce{O_x} production maximum.
 
 \subsection{Reactive Carbon Loss} \label{ss:carbon_loss}
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{img/net_reactive_carbon_loss}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{img/net_reactive_carbon_loss}
+    \vspace{0mm}
     \caption{Daily net rate of carbon loss during \ce{O_x} production resulting from pentane and toluene degradation.}
+    \vspace{-4mm}
     \label{f:net_carbon_loss}
 \end{figure}
 
@@ -95,18 +96,20 @@ Differences in radical treatment will not only impact \ce{O_x} production but al
 %relate to atmospheric regimes??
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{img/radicals_budget_assigned}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{img/radicals_budget_assigned}
+    \vspace{0mm}
     \caption{Radical family production and loss budgets in (a) MCM v3.2, (b) MCM v3.1, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
+    \vspace{-4mm}
     \label{f:radical_budgets} 
 \end{figure} 
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{img/HCHO_budget_comparison}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{img/HCHO_budget_comparison}
+    \vspace{0mm}
     \caption{Formaldehyde production and loss budgets in (a) MCM v3.2, (b) MCM v3.1, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
+    \vspace{-4mm}
     \label{f:HCHO_budgets} 
 \end{figure} 
 

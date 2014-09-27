@@ -4,24 +4,25 @@
 {
     \renewcommand{\arraystretch}{1.3}
     \begin{table}
-        \begin{center}
-            \begin{tabular}{llll}
-                \hline \hline
-                \textbf{Chemical} & \textbf{Number of} & \textbf{Number of} & \textbf{Type of} \\ 
-                \textbf{Mechanism} & \textbf{Organic Species} & \textbf{Organic Reactions} & \textbf{VOC Lumping} \\ \hline
-                MCM v3.2 & $5708$ & $16349$ & No lumping \\ \hline
-                MCM v3.1 & $4351$ & $12691$ & No lumping \\ \hline
-                CRI v2 & $411$ & $1145$ & Lumped intermediates \\ \hline
-                MOZART-4 & $69$ & $145$ & Lumped molecule \\ \hline
-                RADM2 & $44$ & $103$ & Lumped molecule \\ \hline
-                RACM & $58$ & $193$ & Lumped molecule \\ \hline
-                RACM2 & $99$ & $315$ & Lumped molecule \\ \hline
-                CBM-IV & $20$ & $45$ & Lumped structure \\ \hline
-                CB05 & $37$ & $99$ & Lumped structure \\ 
-                \hline \hline
-            \end{tabular}
-        \end{center}
+        \centering
+        \begin{tabular}{llll}
+            \hline \hline
+            \textbf{Chemical} & \textbf{Number of} & \textbf{Number of} & \textbf{Type of} \\ 
+            \textbf{Mechanism} & \textbf{Organic Species} & \textbf{Organic Reactions} & \textbf{VOC Lumping} \\ \hline
+            MCM v3.2 & $5708$ & $16349$ & No lumping \\ \hline
+            MCM v3.1 & $4351$ & $12691$ & No lumping \\ \hline
+            CRI v2 & $411$ & $1145$ & Lumped intermediates \\ \hline
+            MOZART-4 & $69$ & $145$ & Lumped molecule \\ \hline
+            RADM2 & $44$ & $103$ & Lumped molecule \\ \hline
+            RACM & $58$ & $193$ & Lumped molecule \\ \hline
+            RACM2 & $99$ & $315$ & Lumped molecule \\ \hline
+            CBM-IV & $20$ & $45$ & Lumped structure \\ \hline
+            CB05 & $37$ & $99$ & Lumped structure \\ 
+            \hline \hline
+        \end{tabular}
+        \vspace{0mm}
         \caption{The chemical mechanisms used in the study, MCM v3.2 is the reference mechanism. References for the mechanisms are found within the main text.}
+        \vspace{-4mm}
         \label{t:mechanisms}
     \end{table}
 }
@@ -78,36 +79,37 @@ The allocation of some primary VOC to mechanism species was also updated.
 \subsection{Model Setup} \label{ss:model_setup}
 
 \begin{sidewaystable}
-    \begin{center}
-        \begin{tabular}{lllllllll}
-            \hline \hline
-            \multirow{2}{*}{\textbf{NMVOC}} & \textbf{Mixing Ratio} & \textbf{MCM v3.1, v3.2} & \multirow{2}{*}{\textbf{MOZART-4}} & \multirow{2}{*}{\textbf{RADM2}} & \multirow{2}{*}{\textbf{RACM}} & \multirow{2}{*}{\textbf{RACM2}} & \multirow{2}{*}{\textbf{CBM-IV}} & \multirow{2}{*}{\textbf{CB05}}\\ & \textbf{(ppbv)} & \textbf{and CRI v2} & & & & & & \\ 
-            \hline \hline \multicolumn{9}{c}{\textbf{Alkanes}}  \\ \hline
-            Ethane & $6610$ & C2H6 & C2H6 & ETH & ETH & ETH & $0.4$ PAR & ETHA \\
-            Propane  & $6050$ & C3H8 & C3H8 & HC3 & HC3 & HC3 & $1.5$ PAR & $1.5$ PAR \\
-            Butane & $2340$ & NC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
-            $2$-Methylpropane & $1240$ & IC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
-            Pentane & $1200$ & NC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
-            $2$-Methylbutane & $2790$ & IC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
-            Hexane & $390$ & NC6H14 & BIGALK & HC5 & HC5 & HC5 & $6$ PAR & $6$ PAR \\
-            Heptane & $160$ & NC7H16 &  BIGALK & HC5 & HC5 & HC5 & $7$ PAR & $7$ PAR \\
-            Octane & $80$ & NC8H18 & BIGALK & HC8 & HC8 & HC8 & $8$ PAR & $8$ PAR \\ \hline 
-            \multicolumn{9}{c}{\textbf{Alkenes}} \\ \hline
-            Ethene & $2430$ & C2H4 & C2H4 & OL2 & ETE & ETE & ETH & ETH \\
-            \multirow{2}{*}{Propene} & \multirow{2}{*}{$490$} & \multirow{2}{*}{C3H6} & \multirow{2}{*}{C3H6} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & OLE + & OLE + \\ & & & & & & & \hspace{3mm}PAR & \hspace{3mm}PAR \\
-            \multirow{2}{*}{Butene} & \multirow{2}{*}{$65$} & \multirow{2}{*}{BUT1ENE} & \multirow{2}{*}{BIGENE} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & OLE + & OLE + \\ & & & & & & & \hspace{3mm}$2$ PAR & \hspace{3mm}$2$ PAR \\
-            \multirow{2}{*}{$2$-Methylpropene} & \multirow{2}{*}{$130$} & \multirow{2}{*}{MEPROPENE} & \multirow{2}{*}{BIGENE} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & \multirow{2}{*}{$2$ ALD2} & FORM + \\ & & & & & & & & \hspace{3mm}$3$ PAR \\
-            Isoprene & $270$ & C5H8 & ISOP & ISO & ISO & ISO & ISOP & ISOP \\ \hline
-            \multicolumn{9}{c}{\textbf{Aromatics}} \\ \hline 
-            Benzene & $480$ & BENZENE & TOLUENE & TOL & TOL & BEN & PAR & PAR \\
-            Toluene & $1380$ & TOLUENE & TOLUENE & TOL & TOL & TOL & TOL & TOL \\
-            m-Xylene & $410$ & MXYL & TOLUENE & XYL & XYL & XYM & XYL & XYL \\
-            p-Xylene & $210$ & PXYL & TOLUENE & XYL & XYL & XYP & XYL & XYL \\
-            o-Xylene & $200$ & OXYL & TOLUENE & XYL & XYL & XYO & XYL & XYL \\
-            \multirow{2}{*}{Ethylbenzene} & \multirow{2}{*}{$210$} & \multirow{2}{*}{EBENZ} & \multirow{2}{*}{TOLUENE} & \multirow{2}{*}{TOL} & \multirow{2}{*}{TOL} & \multirow{2}{*}{TOL} & TOL + & TOL + \\ & & & & & & & \hspace{3mm}PAR & \hspace{3mm}PAR \\ \hline \hline
-        \end{tabular}
-    \end{center}
+    \centering
+    \begin{tabular}{lllllllll}
+        \hline \hline
+        \multirow{2}{*}{\textbf{NMVOC}} & \textbf{Mixing Ratio} & \textbf{MCM v3.1, v3.2} & \multirow{2}{*}{\textbf{MOZART-4}} & \multirow{2}{*}{\textbf{RADM2}} & \multirow{2}{*}{\textbf{RACM}} & \multirow{2}{*}{\textbf{RACM2}} & \multirow{2}{*}{\textbf{CBM-IV}} & \multirow{2}{*}{\textbf{CB05}}\\ & \textbf{(ppbv)} & \textbf{and CRI v2} & & & & & & \\ 
+        \hline \hline \multicolumn{9}{c}{\textbf{Alkanes}}  \\ \hline
+        Ethane & $6610$ & C2H6 & C2H6 & ETH & ETH & ETH & $0.4$ PAR & ETHA \\
+        Propane  & $6050$ & C3H8 & C3H8 & HC3 & HC3 & HC3 & $1.5$ PAR & $1.5$ PAR \\
+        Butane & $2340$ & NC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
+        $2$-Methylpropane & $1240$ & IC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
+        Pentane & $1200$ & NC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
+        $2$-Methylbutane & $2790$ & IC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
+        Hexane & $390$ & NC6H14 & BIGALK & HC5 & HC5 & HC5 & $6$ PAR & $6$ PAR \\
+        Heptane & $160$ & NC7H16 &  BIGALK & HC5 & HC5 & HC5 & $7$ PAR & $7$ PAR \\
+        Octane & $80$ & NC8H18 & BIGALK & HC8 & HC8 & HC8 & $8$ PAR & $8$ PAR \\ \hline 
+        \multicolumn{9}{c}{\textbf{Alkenes}} \\ \hline
+        Ethene & $2430$ & C2H4 & C2H4 & OL2 & ETE & ETE & ETH & ETH \\
+        \multirow{2}{*}{Propene} & \multirow{2}{*}{$490$} & \multirow{2}{*}{C3H6} & \multirow{2}{*}{C3H6} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & OLE + & OLE + \\ & & & & & & & \hspace{3mm}PAR & \hspace{3mm}PAR \\
+        \multirow{2}{*}{Butene} & \multirow{2}{*}{$65$} & \multirow{2}{*}{BUT1ENE} & \multirow{2}{*}{BIGENE} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & \multirow{2}{*}{OLT} & OLE + & OLE + \\ & & & & & & & \hspace{3mm}$2$ PAR & \hspace{3mm}$2$ PAR \\
+        \multirow{2}{*}{$2$-Methylpropene} & \multirow{2}{*}{$130$} & \multirow{2}{*}{MEPROPENE} & \multirow{2}{*}{BIGENE} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & \multirow{2}{*}{$2$ ALD2} & FORM + \\ & & & & & & & & \hspace{3mm}$3$ PAR \\
+        Isoprene & $270$ & C5H8 & ISOP & ISO & ISO & ISO & ISOP & ISOP \\ \hline
+        \multicolumn{9}{c}{\textbf{Aromatics}} \\ \hline 
+        Benzene & $480$ & BENZENE & TOLUENE & TOL & TOL & BEN & PAR & PAR \\
+        Toluene & $1380$ & TOLUENE & TOLUENE & TOL & TOL & TOL & TOL & TOL \\
+        m-Xylene & $410$ & MXYL & TOLUENE & XYL & XYL & XYM & XYL & XYL \\
+        p-Xylene & $210$ & PXYL & TOLUENE & XYL & XYL & XYP & XYL & XYL \\
+        o-Xylene & $200$ & OXYL & TOLUENE & XYL & XYL & XYO & XYL & XYL \\
+        \multirow{2}{*}{Ethylbenzene} & \multirow{2}{*}{$210$} & \multirow{2}{*}{EBENZ} & \multirow{2}{*}{TOLUENE} & \multirow{2}{*}{TOL} & \multirow{2}{*}{TOL} & \multirow{2}{*}{TOL} & TOL + & TOL + \\ & & & & & & & \hspace{3mm}PAR & \hspace{3mm}PAR \\ \hline \hline
+    \end{tabular}
+    \vspace{0mm}
     \caption{Typical NMVOCs present in Los Angeles and their respective mixing ratios \citep{Baker:2008} as well as their representation in each chemical mechanism. The representation of the VOCs in each mechanism is based upon the recommendations of the respective literature.}
+    \vspace{-4mm}
     \label{t:initial_conditions}
 \end{sidewaystable}
 
@@ -153,11 +155,12 @@ The chemical mechanisms were re-written with every organic degradation product l
 Thus, each NMVOC has its own set of degradation reactions \citep{Butler:2011}. 
 
 \begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{img/MCMv3_2_Ox_production_budgets}
-        \caption{The \ce{O_x} production budgets using the MCM v3.2 (a) without tagging and \mbox{(b) with} tagging, where \ce{O_x} production is attributed to the emitted VOCs.}
-        \label{f:Ox_budget}
-    \end{center}
+    \centering
+    \includegraphics[width=\textwidth]{img/MCMv3_2_Ox_no_tagging_tagging_budget}
+    \vspace{0mm}
+    \caption{Day-time \ce{O_x} production budgets using the MCM v3.2 (a) without tagging and \mbox{(b) with} tagging, where \ce{O_x} production is attributed to the emitted VOCs.}
+    \vspace{-4mm}
+    \label{f:Ox_budget}
 \end{figure} 
 
 The tagging approach allows allocation of production and consumption budgets to emitted NMVOCs. 

@@ -1,5 +1,5 @@
 
-\subsection{Carbon Number of \ce{O_x} Producing Degradation Products} \label{ss:c_number} %comparison by carbon number breakdown
+\subsection[Carbon Number of Ox Producing Degradation Products]{Carbon Number of \ce{O_x} Producing Degradation Products} \label{ss:c_number} %comparison by carbon number breakdown
 
 \begin{figure}
     \centering
@@ -77,7 +77,7 @@ The EPX ozonolysis rate constant is $100$ times faster than the analogous \mbox{
 EPX ozonolysis yields $1.5$ \ce{HO2}, thus the reacted \ce{O3} is regenerated with extra \ce{HO2}.
 This causes the RACM2 toluene degradation second day \ce{O_x} production maximum.
 
-\subsection{Reactive Carbon Loss} \label{ss:carbon_loss}
+\subsection[Reactive Carbon Loss during Ox Production]{Reactive Carbon Loss during \ce{O_x} Production} \label{ss:carbon_loss}
 
 \begin{figure}
     \centering
@@ -87,6 +87,47 @@ This causes the RACM2 toluene degradation second day \ce{O_x} production maximum
     \vspace{-4mm}
     \label{f:net_carbon_loss}
 \end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{img/CH3CO3_budget_comparison}
+    \vspace{0mm}
+    \caption{Day-time \ce{CH3CO3} production and loss budgets in (a) MCM v3.2 and \mbox{(b) MOZART-4}.}
+    \vspace{-4mm}
+    \label{f:CH3CO3_budget}
+\end{figure}
+
+Day-time net carbon loss during \ce{O_x} production from pentane and toluene degradation is plotted in Figure \ref{f:net_carbon_loss}.
+%The net carbon yield of each \ce{O_x} producing reaction was calculated, multiplied by the reaction rate and then integrated over each day-time period.
+This analysis complements that of Section \ref{ss:c_number} by comparing the VOC break down rate into smaller fragments.
+The supplement contains additional plots showing the reactions responsible for carbon loss in pentane and toluene degradation.
+
+RACM2 pentane degradation has the largest carbon loss rate and a different time series to RADM2 and RACM, its previous versions.  
+The reaction of HC5P (pentyl peroxy radical) with NO is largely responsible for carbon loss.
+The reaction products and their yields were updated from RACM to RACM2 due to the increased speciation of the oxygenated products.
+For example, ALD describes acetaldehyde and higher aldehyde chemistry in RACM whilst in RACM2 acetaldehyde is represented explicitly (ACD) and ALD represents C3 and higher aldehydes \citep{Goliff:2013}.
+These updates result in more carbon loss in RACM2 through \mbox{HC5P + NO} reaction.
+
+Another contributing factor to increased carbon loss in RACM2 is the updated reaction of HC3P (propyl peroxy radical) with NO.
+In RACM, this reaction gave net carbon gain whereas in RACM2 it contributes to net carbon loss.
+
+MOZART-4 pentane degradation has high carbon loss via the \ce{CH3CO3 + NO} reaction.
+This reaction leads to carbon loss in every mechanism however it has the most influence in MOZART-4. 
+Figure \ref{f:CH3CO3_budget} shows extra \ce{CH3CO3} production through the \mbox{MEKO2 + NO} reaction.
+This reaction contributes twice to \ce{CH3CO3} production -- as a primary product and reaction of OH with another product, \ce{CH3CHO}.
+
+CBM-IV and CB05 show little carbon loss throughout pentane degradation.
+Since pentane degradation is described by C2 and C1 products there is little carbon be lost.
+
+MOZART-4 and RADM2 have the highest loss carbon rates during toluene degradation.
+The high net carbon loss from BIGALD (unsaturated dicarbonyls) photolysis coupled with large BIGALD yields during MOZART-4 toluene degradation reactions leads to rapid carbon loss.
+BIGALD is produced from other reactions that result in carbon loss: \mbox{NO + TOLO2} and \mbox{NO2 + XOH}, where TOLO2 is the peroxy radical from \mbox{toluene + OH} reaction and XOH represents \ce{C7H10O6} \citep{Emmons:2010}.
+
+RADM2 carbon loss during toluene degradation is mainly from the \mbox{NO + TOLP} reaction, TOLP is the peroxy radical formed from toluene OH oxidation.
+RACM and RACM2 aromatic degradation has been heavily updated from RADM2 and this reaction has been removed altogether \citep{Stockwell:1997, Goliff:2013}.
+
+CRI v2 has faster carbon loss than the MCM v3.2.
+Both branches of the \mbox{NO + RA16O2} reaction, RA16O2 is the peroxy radical formed from toluene OH oxidation, are responsible for the carbon loss in CRI v2.
 
 \subsection{Radical Sinks and Sources} \label{ss:radicals}
 
@@ -124,7 +165,7 @@ HCHO production and consumption budgets for each mechanism are illustrated in Fi
 In general, photolysis is the major radical production process and the reactions of radicals with other species, such as NO and \ce{HO2}, is the main radical sink. 
 Reduced mechanisms include other processes to maintain radical production.
 
-Figure \ref{f:pentane_radical_budgets} shows that initial VOC oxidation contributes to radical production in RADM2. 
+Figure shows that initial VOC oxidation contributes to radical production in RADM2. 
 This is represented by
 \begin{reactionlist}
     \reactionitem{HC5 + OH}{HC5P + 0.25 XO2 + H2O}{new}{r:HC5_OH}
@@ -144,7 +185,7 @@ The main source being the reaction of HC5P with NO,
     \end{tabular}
 \end{center}
 where HO2, MO2, ETHP and XO2 are the produced radical species. 
-The larger net RADM2 and RACM radical production in Figure \ref{f:net_radical_budgets} is traced back to the extra radical production from reactions \reactionref{r:HC5_OH} and \reactionref{r:HC5P_NO} respectively.
+The larger net RADM2 and RACM radical production in Figure is traced back to the extra radical production from reactions \reactionref{r:HC5_OH} and \reactionref{r:HC5P_NO} respectively.
 
 Radical production in CBM-IV and CB05 is largely impacted by NMVOC initial oxidation and production from other radical reactions. 
 Pentane degradation in these mechanisms is very similar and the CB05 reactions are considered here. 
@@ -163,9 +204,9 @@ The very fast decomposition of ROR and the use of XO2 to rapidly convert NO to \
 The large production and consumption processes are balanced so that the net radical production correlates with that of the MCM v3.2.
 
 The first day net radical production due to aromatic degradation are overestimated using RADM2 and RACM2 chemistry and underestimated in RACM. 
-The RACM underestimation results from the degradation chemistry discussed in Section \ref{sss:RACM_aromatic}.
+The RACM underestimation results from the degradation chemistry discussed in Section \ref{sss:aromatic}.
 
-Figure \ref{f:toluene_radical_budgets} indicates that the RACM2 overestimation is due to radical production from reactions that do not involve radicals. 
+Figure indicates that the RACM2 overestimation is due to radical production from reactions that do not involve radicals. 
 The ozonolysis of the unsaturated dicarbonyl mechanism species DCB1 and DCB2 as well as the epoxy mechanism species EPX are additional reactions used to produce radicals.
 
 The MCM v3.2 species TLEPOXMUC is analogous to EPX in RACM2. 

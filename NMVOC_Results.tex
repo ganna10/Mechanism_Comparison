@@ -137,28 +137,36 @@ Both branches of the \mbox{NO + RA16O2} reaction, RA16O2 is the peroxy radical f
     \vspace{0mm}
     \caption{Pentane and toluene day-time \ce{O_x} production efficiency normalised by VOC emissions per carbon number size of \ce{O_x} producing degradation products.}
     \vspace{-4mm}
-    \label{f:net_carbon_loss}
+    \label{f:OPE}
 \end{figure}
+
+The reactive carbon loss analysis of Section \ref{ss:carbon_loss} shows that reduced mechanisms tend to loss carbon quicker than in more explicit mechanisms.
+Despite this, reduced mechanisms still produce significant \ce{O_x} amounts during VOC degradation as shown in Figure \ref{f:TOPP_dailies}.
+\ce{O_x} production efficiencies were calculated for pentane and toluene degradation products carbon numbers to investigate how reduced mechanisms manage to produce \ce{O_x} despite large carbon loss.
+
+The \ce{O_x} production efficiency (OPE) calculation followed the definition in \citet{Kleinman:2002}.
+Instantaneous \ce{O_x} production, using the definition of the \ce{O_x} family used in this study, was calculated and distributed to the different carbon numbers of pentane and toluene degradation products.
+This was then normalised by the emissions of the respective VOCs and then divided by the \ce{NO_z} production, which following \citet{Kleinman:2002} was defined as \ce{HNO3} production.
 
 \subsection{Radical Sinks and Sources} \label{ss:radicals}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{img/radicals_budget_assigned}
-    \vspace{0mm}
-    \caption{Radical family production and loss budgets in (a) MCM v3.2, \mbox{(b) MCM v3.1}, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
-    \vspace{-4mm}
-    \label{f:radical_budgets} 
-\end{figure} 
+%\begin{figure}
+    %\centering
+    %\includegraphics[width=\textwidth]{img/radicals_budget_assigned}
+    %\vspace{0mm}
+    %\caption{Radical family production and loss budgets in (a) MCM v3.2, \mbox{(b) MCM v3.1}, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
+    %\vspace{-4mm}
+    %\label{f:radical_budgets} 
+%\end{figure} 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{img/HCHO_budget_comparison}
-    \vspace{0mm}
-    \caption{Formaldehyde production budgets in (a) MCM v3.2, (b) MCM v3.1, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
-    \vspace{-4mm}
-    \label{f:HCHO_budgets} 
-\end{figure} 
+%\begin{figure}
+    %\centering
+    %\includegraphics[width=\textwidth]{img/HCHO_budget_comparison}
+    %\vspace{0mm}
+    %\caption{Formaldehyde production budgets in (a) MCM v3.2, (b) MCM v3.1, \mbox{(c) CRI v2}, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, (h) CBM-IV and \mbox{(i) CB05}.}
+    %\vspace{-4mm}
+    %\label{f:HCHO_budgets} 
+%\end{figure} 
 
 \ce{O_x} production is directly related to the conversion of NO to \ce{NO2} by peroxy radicals. 
 Moreover, in this study maximum \ce{O3} production was achieved by emitting the amount of NO required to balance the radical source at each time step. 

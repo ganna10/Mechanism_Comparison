@@ -5,7 +5,7 @@
     \centering
     \includegraphics[width=\textwidth]{img/carbon_percent_total_Ox_production}
     \vspace{0mm}
-    \caption{Pentane and toluene daily \ce{O_x} production percentage contributions by carbon number of degradation products.}
+    \caption{Pentane and toluene day-time \ce{O_x} production percentage contributions by carbon number of degradation products.}
     \vspace{-4mm}
     \label{f:percent_carbon}
 \end{figure}
@@ -19,35 +19,36 @@
     \label{f:toluene_HO2x}
 \end{figure} 
 
-The different NMVOC \ce{O_x} production time profiles in Figure \ref{f:TOPP_dailies} result from the different rates at which NMVOCs break up into smaller fragments \citep{Butler:2011}.
-The daily percent contributions from the carbon numbers of the \ce{O_x} producing degradation products during pentane and toluene degradation are illustrated in Figure \ref{f:percent_carbon}.
-The contribution of \ce{HO2} and operator species, such as XO2 in CBM-IV and CB05, are allocated to the carbon number of its source. 
+The different NMVOC \ce{O_x} production time profiles in Figure \ref{f:TOPP_dailies} result from the varying rates at which NMVOCs break up into smaller fragments \citep{Butler:2011}.
+The day-time \ce{O_x} production percentage contributions is allocated to the degradation product carbon numbers during pentane and toluene degradation in Figure \ref{f:percent_carbon}.
+\ce{HO2} and operator species, such as XO2, contributions are allocated to their reactant source carbon number.
+Contributions of mechanism species having fractional carbon numbers are rounded to the nearest integral carbon number. 
 
-Figure \ref{f:percent_carbon} indicates that degradation products having the same carbon number as the emitted NMVOC have more influence on \ce{O_x} production throughout the model run in near-explicit than less-explicit mechanisms.
-Toluene degradation in MOZART-4 is an exception.
+Figure \ref{f:percent_carbon} indicates that degradation products having the same carbon number as the emitted NMVOC have more influence on \ce{O_x} production over the model run in near-explicit than less-explicit mechanisms.
+MOZART-4 toluene degradation is an exception.
 
-The rapid loss of toluene's reactive carbon shown in Figure \ref{f:net_carbon_loss} is responsible for the sharp decrease in \ce{O_x} production over the MOZART-4 model run.
-Even though C7 degradation products have a larger relative contribution to \ce{O_x} production in MOZART-4 than in \mbox{MCM v3.2}, the absolute \ce{O_x} production is lower in MOZART-4.
-The loss of toluene's reactive carbon determines the \ce{O_x} production from toluene degradation in MOZART-4.
+Rapid loss of reactive carbon during toluene degradation is responsible for the sharp decrease in \ce{O_x} production over the MOZART-4 model run.
+This is shown in Figure \ref{f:net_carbon_loss} and further explained in Section \ref{ss:carbon_loss}.
+Despite C7 degradation products having larger relative contribution to MOZART-4 \ce{O_x} production than \mbox{MCM v3.2}, the absolute \ce{O_x} production (Figure \ref{f:TOPP_dailies}) is lower in MOZART-4.
 
 C1 and C2 degradation products are the sole influence on \ce{O_x} production from alkane degradation in CBM-IV and CB05.
-Alkane degradation is depicted using PAR, whose degradation consists of mechanism species having either one or two carbon atoms.
+Alkane degradation is depicted using PAR, whose degradation consists of either C1 or C2 mechanism species.
 PAR represents singly bonded carbons and alkane emissions are scaled by the carbon number to account for increased \ce{O_x} production with alkane carbon number.
-\citet{Hogo:1989} and \citet{Yarwood:2005} contain details for the CBM-IV and CB05, whilst Section \ref{ss:mechanisms} has a brief summary.
+Details are found in \citet{Hogo:1989} and \citet{Yarwood:2005} for the CBM-IV and CB05, whilst Section \ref{ss:mechanisms} has a brief summary.
 
-CRI v2 and RACM2 toluene degradation differs from that in other mechanisms as maximum \ce{O_x} production is reached on the second day. 
-This is due to higher second day \ce{HO2} production in CRI v2 and RACM2 which is not the case for MCM v3.2.  
+CRI v2 and RACM2 toluene degradation differs from other mechanisms as maximum \ce{O_x} production is reached on the second day. 
+Higher second day \ce{HO2} production in CRI v2 and RACM2, not present in MCM v3.2, is responsible.  
 Figure \ref{f:toluene_HO2x} illustrates the day-time \ce{HO2_x} (= \ce{HO2 + HO2NO2}) production and consumption budgets allocated to the responsible reactions in MCM v3.2, CRI v2 and RACM2. 
 \ce{HO2_x} production influences \ce{O_x} production through \ce{HO2} converting NO to \ce{NO2} via \reactionref{r:HO2_NO}.
 
 \mbox{Figure \ref{f:toluene_HO2x}} shows more \ce{HO2_x} production from the reaction of CARB3 and OH in \mbox{CRI v2} than its corresponding MCM v3.2 reaction (\mbox{GLYOX + OH}).  
 Glyoxal is represented as CARB3 in CRI v2 and GLYOX in MCM v3.2, but there are differences in the chemistry of these species.
-In CRI v2, CARB3 is only produced from aromatic degradation whilst GLYOX is also a degradation product of other non-aromatic NMVOCs in MCM v3.2. 
+In CRI v2, CARB3 is only produced from aromatic degradation whilst GLYOX is also a degradation product of non-aromatic NMVOCs in MCM v3.2. 
 
-CRI v2 glyoxal degradation is through reaction with OH and photolysis whilst extra degradation options are available in MCM v3.2. 
-Moreover, the rate constant for the reaction with OH radical in CRI v2 is $\sim$ $15$\% faster than in MCM v3.2. 
+CRI v2 glyoxal degradation is through OH oxidation and photolysis, extra degradation options are available in MCM v3.2. 
+Moreover, the OH oxidation rate constant in CRI v2 is $\sim$ $15$\% faster than in MCM v3.2. 
 
-Glyoxal has three available photolysis pathways in MCM v3.2 and only one in \mbox{CRI v2}, these are outlined in Table \ref{t:glyoxal}. 
+Glyoxal has three available photolysis pathways in MCM v3.2 and only one in \mbox{CRI v2}, outlined in Table \ref{t:glyoxal}. 
 The additional photolysis pathways in MCM v3.2 are non-\ce{HO2_x} producing pathways leading to less \ce{HO2_x} production.  
 The combination of the higher rate constant for the glyoxal--OH reaction and additional \ce{HO2_x} production during photolysis are responsible for the higher \ce{HO2_x} production in CRI v2. 
 {
@@ -70,12 +71,11 @@ The combination of the higher rate constant for the glyoxal--OH reaction and add
     \end{table}
 }
 
-RACM2 \ce{HO2_x} production during toluene degradation includes reactions unique to RACM2.
-Initial OH reaction produces the lumped mechanism species TR2 which degrades immediately producing the epoxy species EPX along with \ce{HO2}.
-Epoxy production in \mbox{MCM v3.2} is a minor pathway of initial toluene oxidation.
+RACM2 \ce{HO2_x} production during toluene degradation includes pathways unique to RACM2.
+Initial OH reaction produces the lumped mechanism species TR2 that degrades immediately producing the epoxy species EPX and \ce{HO2}.
+Epoxy production in \mbox{MCM v3.2} is a minor toluene oxidation branch.
 The EPX ozonolysis rate constant is $100$ times faster than the analogous \mbox{MCM v3.2} species (TLEPOXMUC).
-EPX ozonolysis yields $1.5$ \ce{HO2}, thus the reacted \ce{O3} is regenerated with extra \ce{HO2}.
-This causes the RACM2 toluene degradation second day \ce{O_x} production maximum.
+Furthermore, EPX ozonolysis produces $1.5$ \ce{HO2}, thus the reacted \ce{O3} is regenerated with extra \ce{HO2} causing the RACM2 toluene degradation second day \ce{O_x} production maximum.
 
 \subsection[Reactive Carbon Loss during Ox Production]{Reactive Carbon Loss during \ce{O_x} Production} \label{ss:carbon_loss}
 
@@ -97,30 +97,29 @@ This causes the RACM2 toluene degradation second day \ce{O_x} production maximum
     \label{f:CH3CO3_budget}
 \end{figure}
 
-Day-time net carbon loss during \ce{O_x} production from pentane and toluene degradation is plotted in Figure \ref{f:net_carbon_loss}.
+Day-time net carbon loss rates during \ce{O_x} production from pentane and toluene degradation are plotted in Figure \ref{f:net_carbon_loss}.
 %The net carbon yield of each \ce{O_x} producing reaction was calculated, multiplied by the reaction rate and then integrated over each day-time period.
-This analysis complements that of Section \ref{ss:c_number} by comparing the VOC break down rate into smaller fragments.
 The supplement contains additional plots showing the reactions responsible for carbon loss in pentane and toluene degradation.
 
-RACM2 pentane degradation has the largest carbon loss rate and a different time series to RADM2 and RACM, its previous versions.  
-The reaction of HC5P (pentyl peroxy radical) with NO is largely responsible for carbon loss.
-The reaction products and their yields were updated from RACM to RACM2 due to the increased speciation of the oxygenated products.
+RACM2 pentane degradation has the largest carbon loss rate and a different time series to previous versions (RADM2 and RACM).  
+The \mbox{NO + HC5P} (pentyl peroxy radical) reaction is largely responsible for carbon loss.
+The reaction products and their yields were updated from RACM to RACM2 due to increased oxygenated product speciation.
 For example, ALD describes acetaldehyde and higher aldehyde chemistry in RACM whilst in RACM2 acetaldehyde is represented explicitly (ACD) and ALD represents C3 and higher aldehydes \citep{Goliff:2013}.
-These updates result in more carbon loss in RACM2 through \mbox{HC5P + NO} reaction.
+These RACM2 updates result in more carbon loss through \mbox{HC5P + NO} reaction.
 
-Another contributing factor to increased carbon loss in RACM2 is the updated reaction of HC3P (propyl peroxy radical) with NO.
+Another contributing factor to increased carbon loss in RACM2 is the updated \mbox{NO + HC3P} (propyl peroxy radical) reaction.
 In RACM, this reaction gave net carbon gain whereas in RACM2 it contributes to net carbon loss.
 
 MOZART-4 pentane degradation has high carbon loss via the \ce{CH3CO3 + NO} reaction.
 This reaction leads to carbon loss in every mechanism however it has the most influence in MOZART-4. 
 Figure \ref{f:CH3CO3_budget} shows extra \ce{CH3CO3} production through the \mbox{MEKO2 + NO} reaction.
-This reaction contributes twice to \ce{CH3CO3} production -- as a primary product and reaction of OH with another product, \ce{CH3CHO}.
+This reaction contributes twice to \ce{CH3CO3} production -- as a primary product and OH oxidation of \ce{CH3CHO}.
 
 CBM-IV and CB05 show little carbon loss throughout pentane degradation.
-Since pentane degradation is described by C2 and C1 products there is little carbon be lost.
+Since pentane degradation is described by C2 and C1 products there is little carbon to be lost.
 
 MOZART-4 and RADM2 have the highest loss carbon rates during toluene degradation.
-The high net carbon loss from BIGALD (unsaturated dicarbonyls) photolysis coupled with large BIGALD yields during MOZART-4 toluene degradation reactions leads to rapid carbon loss.
+The high net carbon loss from BIGALD (unsaturated dicarbonyls) photolysis coupled with its large yields during MOZART-4 toluene degradation reactions leads to rapid carbon loss.
 BIGALD is produced from other reactions that result in carbon loss: \mbox{NO + TOLO2} and \mbox{NO2 + XOH}, where TOLO2 is the peroxy radical from \mbox{toluene + OH} reaction and XOH represents \ce{C7H10O6} \citep{Emmons:2010}.
 
 RADM2 carbon loss during toluene degradation is mainly from the \mbox{NO + TOLP} reaction, TOLP is the peroxy radical formed from toluene OH oxidation.
@@ -129,7 +128,7 @@ RACM and RACM2 aromatic degradation has been heavily updated from RADM2 and this
 CRI v2 has faster carbon loss than the MCM v3.2.
 Both branches of the \mbox{NO + RA16O2} reaction, RA16O2 is the peroxy radical formed from toluene OH oxidation, are responsible for the carbon loss in CRI v2.
 
-\subsection[Ox Production Efficiency of Carbon Number Sizes]{\ce{O_x} Production Efficiency of Carbon Number Sizes} \label{ss:OPE}
+\subsection[Degradation Products Size Ox Production Efficiency]{Degradation Products Size \ce{O_x} Production Efficiency} \label{ss:OPE}
 
 \begin{figure}
     \centering
@@ -140,13 +139,36 @@ Both branches of the \mbox{NO + RA16O2} reaction, RA16O2 is the peroxy radical f
     \label{f:OPE}
 \end{figure}
 
-The reactive carbon loss analysis of Section \ref{ss:carbon_loss} shows that reduced mechanisms tend to loss carbon quicker than in more explicit mechanisms.
-Despite this, reduced mechanisms still produce significant \ce{O_x} amounts during VOC degradation as shown in Figure \ref{f:TOPP_dailies}.
-\ce{O_x} production efficiencies were calculated for pentane and toluene degradation products carbon numbers to investigate how reduced mechanisms manage to produce \ce{O_x} despite large carbon loss.
+The previous section indicates that reduced mechanisms tend to lose carbon quicker than more-explicit mechanisms.
+\ce{O_x} production efficiencies (OPEs) were calculated for the degradation fragment sizes arising during pentane and toluene degradation and depicted in Figure \ref{f:OPE}.
 
-The \ce{O_x} production efficiency (OPE) calculation followed the definition in \citet{Kleinman:2002}.
-Instantaneous \ce{O_x} production, using the definition of the \ce{O_x} family used in this study, was calculated and distributed to the different carbon numbers of pentane and toluene degradation products.
-This was then normalised by the emissions of the respective VOCs and then divided by the \ce{NO_z} production, which following \citet{Kleinman:2002} was defined as \ce{HNO3} production.
+OPEs were calculated following \citet{Kleinman:2002}; calculation details and plots showing the responsible reactions are found in the supplement.
+The OPE of each fragment size is the ratio of the number of \ce{O_x} molecules produced per \ce{NO_x} molecule removal.
+
+All mechanisms have a first day maximum OPE for both pentane and toluene degradation.
+This is due to reactions of degradation products with the same carbon number as the parent VOC.
+An exception is pentane degradation in CBM-IV and CB05 where practically all OPE comes from C1 degradation products.
+
+After the first day, all reduced mechanisms produce more \ce{O_x} from pentane C2 and C1 degradation products than the MCM mechanisms.
+The loss of reactive carbon during pentane degradation in reduced mechanisms is compensated by increased OPE from smaller degradation fragments.
+
+CBM-IV and CB05 OPE during toluene degradation is split between two extremes.
+On the first day, larger degradation products dominate OPE whilst afterwards C1 and C2 degradation products dominate.
+Moreover, very low total OPE results in reduced \ce{O_x} production from toluene degradation compared to MCM, indicated in Figure \ref{f:TOPP_dailies}.
+
+RADM2 toluene degradation has high OPE contribution from C4 degradation fragments.
+This is due to the high \ce{O_x} yield from reaction \reactionref{r:NO_TCO3} of NO with TCO3, which represents \ce{H(CO)CH=CHCO3} \citep{Stockwell:1990}.
+\begin{center}
+\refstepcounter{reaction}\label{r:NO_TCO3}
+    \begin{tabular}{l@{\hskip 0.3cm}c@{\hskip 0.3cm}l@{\hskip 0.2cm}r}
+        NO + TCO3 & \reaction & NO2 + 0.92 HO2 + 0.89 GLY + 0.11 MGLY & \reactionref{r:NO_TCO3} \\
+        & & \hspace{2mm} + 0.05 ACO3 + 0.95 CO + 2 XO2 & \\
+    \end{tabular}
+\end{center}
+\ce{O_x} is produced through NO to \ce{NO2} conversion as well as from HO2 and XO2.
+
+\ce{O_x} production during MCM toluene degradation has contributions from all possible degradation size fragments, whilst reduced mechanisms skip certain size fragments.
+Reduced mechanisms try to compensate by increasing the OPE in other size fragments, resulting in sharp carbon reduction as seen in \mbox{Section \ref{ss:carbon_loss}}.
 
 \subsection{Radical Sinks and Sources} \label{ss:radicals}
 

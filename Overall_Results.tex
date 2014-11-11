@@ -5,7 +5,7 @@
     \centering
     \includegraphics[width=\textwidth]{img/first_day_values}
     \vspace{0mm}
-    \caption{First day TOPP values obtained using (a) MCM v3.1, (b) CRI v2, \mbox{(c) MOZART-4}, (d) RADM2, (e) RACM, (f) RACM2, (g) CBM-IV and (h) CB05 mechanisms compared to the corresponding MCM v3.2 values.}
+    \caption{MCM v3.2 first day TOPP values and corresponding values in each mechanism.}
     \vspace{-4mm}
     \label{f:first_day}
 \end{figure}
@@ -14,7 +14,7 @@
     \centering
     \includegraphics[width=\textwidth]{img/Ox_tagged_budget_overlay_all_mechanisms}
     \vspace{0mm}
-    \caption{\ce{O_x} production budgets allocated to individual VOCs using (a) MCM v3.2, \mbox{(b) MCM v3.1}, (c) CRI v2, (d) RADM2, (e) RACM, (f) RACM2, (g) MOZART-4, \mbox{(h) CBM-IV} and (i) CB05 mechanisms.}
+    \caption{\ce{O_x} production budgets allocated to individual VOCs.}
     \vspace{-4mm}
     \label{f:Ox_tagged_budgets}
 \end{figure}
@@ -25,29 +25,29 @@ However the TOPP values resulting from aromatic VOC degradation are lower in red
 
 Aromatic chemistry is difficult to represent in chemical mechanisms as many products, their yields and reactions are not known or are subject to uncertainties \citep{Vereecken:2012}. 
 Thus, greater variation is expected between the aromatic VOC TOPP values.
-The largest discrepancies are the zero TOPP values of toluene and xylene in RACM. 
+The largest discrepancies are the zero TOPP values of toluene and m-xylene in RACM. 
 This is unrealistic as aromatic VOCs contribute significantly to \ce{O_x} production \citep{Derwent:1998}. 
 Section \ref{sss:aromatic} outlines the responsible chemistry.
 
-The $2$-methylpropene first day TOPP values in RACM, RACM2, CBM-IV and CB05 indicate that its degradation is treated very differently to the MCM v3.2. 
-The variation between RACM, RACM2 and MCM v3.2 arise from differences between the rate constants of $2$-methylpropene ozonolysis. 
-These rate constants are derived from the IUPAC recommendations \citep{IUPAC_Site}, however RACM and RACM2 rate constants are an order of magnitude faster than the MCM v3.2.
-This results from the rate constant being a weighted mean of all VOC ozonolysis rate constants represented as OLI in RACM and RACM2 \citep{Stockwell:1997, Goliff:2013}.
+The $2$-methylpropene first day TOPP values in RACM, RACM2, CBM-IV and CB05 indicate that its degradation is treated differently to the MCM v3.2. 
+The variation between RACM, RACM2 and MCM v3.2 arises from differences in $2$-methylpropene ozonolysis rate constants.
+In RACM and RACM2 this is a weighted mean of all VOC ozonolysis rate constants represented as OLI \citep{Stockwell:1997, Goliff:2013} and is an order of magnitude faster than MCM v3.2 despite a common rate constant source (IUPAC).
 The resulting increased radical production leads to more \ce{O_x} production than in the MCM v3.2.
 
 In CBM-IV, $2$-methylpropene is represented by the mechanism species ALD2 \citep{Hogo:1989}, which is a surrogate for aldehydes with more than one carbon atom. 
 ALD2 reacts very quickly with OH forming \ce{CH3CO3}, leading to \ce{O_x} production. 
-Furthermore, photolysis of ALD2 promotes radical and in turn \ce{O_x} production. 
+Furthermore, ALD2 photolysis promotes radical and in turn \ce{O_x} production. 
 This is not a degradation pathway for $2$-methylpropene in any other mechanism. 
 The choice of $2$-methylpropene representation gives rise to higher \ce{O_x} production than in the MCM v3.2.
 
 $2$-methylpropene representation was updated in CB05 to \mbox{FORM + $3$ PAR}, where FORM represents formaldehyde and PAR the paraffin \ce{C-C} bond \citep{Yarwood:2005}. 
-The initial oxidation reactions of formaldehyde are similar to ALD2 whilst PAR is a slow reacting species. 
+The initial formaldehyde oxidation reactions are similar to ALD2 whilst PAR is a slow reacting species. 
 This slows down the \ce{O_x} production resulting in lower \ce{O_x} production than in the MCM v3.2.
 
-The first day TOPP values of many VOCs using CBM-IV and CB05 are lower than those of the MCM v3.2. 
-This is related to lower \ce{O_x} production in CBM-IV and CB05, shown in Figure \ref{f:Ox_tagged_budgets}.
-Lower \ce{O3} levels using CBM-IV and CB05 have also been noted in other modelling studies such as \citet{Luecken:2008, Emmerson:2009} and \citet{Saylor:2012}.
+The first day TOPP values of many VOCs in CBM-IV and CB05 are lower than those of the MCM v3.2. 
+Lower \ce{O_x} production in CBM-IV and CB05 compared to MCM v3.2 is responsible.
+\ce{O_x} production allocated to parent VOCs in each mechanism is shown in \mbox{Figure \ref{f:Ox_tagged_budgets}}.
+Lower \ce{O3} levels using CBM-IV and CB05 when compared to other mechanisms have also been noted in other modelling studies such as \citet{Luecken:2008, Emmerson:2009} and \citet{Saylor:2012}.
 
 \subsection{TOPP Value Time Series} \label{ss:profiles} %TOPP time series of all species
 
@@ -64,19 +64,15 @@ The daily TOPP value time series of the NMVOCs are presented in \mbox{Figure \re
 NMVOCs, such as ethene, whose degradation is described using dedicated mechanism species show similar time-dependent \ce{O_x} production.
 Higher variability emerges between the time series of those NMVOCs represented by lumped mechanism species, such as pentane.
 
-A second day \ce{O_x} production maximum of all alkanes is present by all mechanisms except RADM2, RACM and RACM2 representations of octane. 
-Also, the MCM mechanisms have pronounced maxima that increase with carbon number.
-
-Section \ref{ss:carbon_loss} outlines the impact on \ce{O_x} production from loss of carbon during VOC degradation.
-Less-explicit mechanisms that break down the emitted VOC quicker than near-explicit mechanisms produce less \ce{O_x}.
-In the case of octane, this break down proceeds so quickly that maximum \ce{O_x} production is on the first day. 
-The supplement to this paper contains details of the octane analysis.
+\ce{O_x} production from alkane degradation has a second day maximum which increases with carbon number in CRI v2 and both MCM mechanisms.
+Octane degradation in RADM2, RACM and RACM2 is the exception as octane is broken down into smaller sized fragments so quickly that maximum \ce{O_x} production is reached on the first day.
+This analysis is outlined in Section \ref{s:detailed_results} and octane results are found in the supplement.
 
 Aromatic VOC \ce{O_x} production has the most variability between mechanisms. 
 In particular, zero \ce{O_x} production for toluene and m-xylene when using RACM.
 
 \ce{O_x} production from toluene degradation in CBM-IV and CB05 is much lower than in the MCM v3.2.
-This impacts \ce{O_x} production from ethylbenzene degradation as this is represented as \mbox{TOL + PAR}. 
+This impacts \ce{O_x} production from ethylbenzene degradation as it is represented as \mbox{TOL + PAR}. 
 Toluene degradation in RACM, CBM-IV and CB05 is summarised in Section \ref{sss:aromatic}.  
 
 \subsubsection{Toluene Degradation in RACM, CBM-IV and CB05} \label{sss:aromatic}
@@ -85,27 +81,27 @@ Toluene degradation in RACM, CBM-IV and CB05 is summarised in Section \ref{sss:a
     \centering
     \includegraphics[width=\textwidth]{img/TOL_Ox_intermediates}
     \vspace{0mm}
-    \caption{The day-time \ce{O_x} production and consumption budgets from toluene degradation in \mbox{(a) MCM v3.2}, (b) RACM, (c) CBM-IV and (d) CB05.}
+    \caption{Day-time \ce{O_x} production and consumption budgets from toluene degradation in \mbox{(a) MCM v3.2}, (b) RACM, (c) CBM-IV and (d) CB05.}
     \vspace{-4mm}
     \label{f:toluene_Ox}
 \end{figure}
 
 \ce{O_x} production and consumption day-time budgets due to toluene degradation in \mbox{MCM v3.2}, RACM, CBM-IV and CB05 are depicted in Figure \ref{f:toluene_Ox}. 
-The tagging approach allows attribution of these budgets to the responsible organic reactions.
+The tagging approach allows attribution of these budgets to the contributing organic reactions.
 
-RACM chemistry results in net \ce{O_x} consumption on the first two days in contrast to the net \ce{O_x} production throughout the MCM v3.2 model run.
+RACM chemistry results in net \ce{O_x} loss on the first two days in contrast to net \ce{O_x} production using the MCM v3.2.
 This is due to several \ce{O_x}-consuming reactions in RACM which are not present in the MCM.
-The largest contribution is from the cresol OH-adduct mechanism species ADDC reaction with \ce{O3}. 
+The largest contribution is from the cresol OH-adduct mechanism species ADDC ozonolysis.
 A fast rate constant \mbox{($5 \times 10^{-11}$ cm$^3$ s$^{-1}$)} was assigned to this reaction making it the main reaction pathway of ADDC. 
 This reaction was included due to improved cresol product yields when comparing RACM predictions with experimental data \citep{Stockwell:1997}.
 
 Other mechanisms that include cresol OH-adduct species do not include ozonolysis.
 Including aromatic OH-adduct species ozonolysis in RACM results in non-representative \ce{O_x} production. 
-This has been updated in RACM2 where aromatic OH-adduct species ozonolysis is no longer included.
+This has been updated in RACM2 where aromatic OH-adduct species ozonolysis are no longer included.
 
-\ce{O_x} production in CBM-IV and CB05 is mainly from the operator species XO2 which is a surrogate for organic peroxy radicals.
-This is produced at various stages of toluene degradation and unlike typical organic peroxy radical degradation, the XO2 degradation chain ends after converting NO to \ce{NO2}.
-Thus toluene degradation is unable to sustain \ce{O_x} production through further degradation products, as in other mechanisms.
+Cresol OH-oxidation is the highest contributor to both \ce{O_x} production and reactive carbon loss during CBM-IV and CB05 toluene degradation.
+This reactive carbon loss results in less carbon being available to produce \ce{O_x} leading to overall lower \ce{O_x} production during toluene degradation in CBM-IV and CB05.
+Section \ref{s:detailed_results} details the reactive carbon loss analysis and the supplement illustrates the reactions responsible for reactive carbon loss during toluene degradation.
 
 \subsection{Radical Sources} \label{ss:radicals}
 

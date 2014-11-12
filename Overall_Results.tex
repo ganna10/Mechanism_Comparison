@@ -115,46 +115,42 @@ Section \ref{s:detailed_results} details the reactive carbon loss analysis and t
 \end{figure} 
 
 Maximum \ce{O_x} production was achieved by emitting the NO amount required to balance the radical source at each time step. 
-Differences between mechanisms in radical production lead to different NO emissions.
-Depending on the NO source, these differences may change the atmospheric regime represented by the mechanism.
+Mechanism differences in radical production would lead to different NO emissions in this study.
 
-Figure \ref{f:radical_production} illustrates the reactions responsible for day-time net radical production in each mechanism.
-The reactions having net radical to \ce{NO_x} yield were determined for each mechanism, this was then multiplied by the reaction rate.
+Figure \ref{f:radical_production} depicts the day-time net radical production budgets in each mechanism allocated to the contributing reactions.
+Reactions having net radical to \ce{NO_x} yield were determined for each mechanism and the rate was multiplied by this yield.
 
-CBM-IV and CB05 have much higher net radical production rates on the first two days than any other mechanism.
-Thus larger NO emissions are required for maximal \ce{O_x} production, indicating that CBM-IV and CB05 represent \ce{NO_x}-sensitive chemistry.
+CBM-IV and CB05 have much higher net radical production on the first two days than any other mechanism.
+Thus larger NO emissions are required for maximal \ce{O_x} production indicating that CBM-IV and CB05 represent \ce{NO_x}-sensitive chemistry.
 
 CBM-IV was developed for the high \ce{NO_x} conditions of urban and polluted regions \citep{Gery:1989}.
 Hence, CBM-IV lacks low \ce{NO_x} chemistry such as organic peroxide formation.
-CB05 includes oxygenated species so that organic peroxide chemistry is represented \citep{Yarwood:2005}.
-However, CB05 net radical production rates are still significantly higher than other mechanisms.
+CB05 includes more oxygenated species so that organic peroxide chemistry is represented \citep{Yarwood:2005}.
+However, CB05 net radical production is still significantly large.
 
-The reaction of \ce{O(^1D)} with water vapour, \reactionref{r:O1D_H2O}, is the main radical source in each mechanism.%
-\begin{reactionlist}%
-    \reactionitem{\ce{O(^1D) + H2O}}{2 OH}{new}{r:O1D_H2O}
-\end{reactionlist}%
-\ce{O3} photolysis produces \ce{O(^1D)}, hence differences between the mechanisms in \ce{O3} amounts impacts \ce{O(^1D)} production.
-Carbonyl photolysis is the main radical source from organic chemistry.
-HCHO photolysis is the major carbonyl species impacting net radical production and this contribution is very similar between all mechanisms.
+The \ce{O(^1D)} and water vapour reaction is the main radical source in each mechanism.
+Varying \ce{O3} levels in each mechanism leads to different \ce{O(^1D)} amounts as its main source is \ce{O3} photolysis.
+Carbonyl, mainly HCHO, photolysis is the main radical source from organic chemistry.
+Moreover, each mechanism has a similar contribution from HCHO photolysis.
 
-Methyl glyoxal photolysis impacts net radical production in each mechanism to varying degrees.
-\mbox{Section \ref{sss:mglyox}} describes methyl glyoxal production of all mechanisms and explains these differences.
+Methyl glyoxal photolysis has a varying impact on net radical production in each mechanism.
+\mbox{Section \ref{sss:mglyox}} describes methyl glyoxal production in all mechanisms and explains these differences.
 
-Most reduced mechanisms do not have sufficient carbonyl species to sustain radical production solely through photolysis.
-VOC initial oxidation, \ce{RO2} reactions with NO and aromatic degradation product ozonolysis are used to sustain radical production in less-explicit mechanisms.
-Examples of non-photolysis radical sources are given in Table \ref{t:thermal_radicals}.%
+Most reduced mechanisms do not have sufficient carbonyl species to sustain radical production solely through carbonyl photolysis.
+Initial VOC oxidation, NO--\ce{RO2} reactions and aromatic degradation product ozonolysis are used to sustain radical production in less-explicit mechanisms.
+Examples of non-photolysis radical sources are given in Table \ref{t:thermal_radicals}.
 
-This analysis shows that different \ce{NO_x} conditions are required for maximum \ce{O_x} production between the mechanisms.
-This may lead to different atmospheric regimes being represented in different mechanisms, resulting in different \ce{O_x} production levels.
-These effects shall be further investigated in future work.
+Mechanisms require different NO emissions for \ce{NO_x}-VOC-sensitive conditions.
+Thus, a constant NO source may lead to different atmospheric regimes being simulated in each mechanism.
+This shall be investigated in future work.
 {%
     \renewcommand{\arraystretch}{1.3}
     \begin{table}
         \centering
         \small
-        \begin{tabular}{lP{4.0cm}P{2.5cm}P{2.5cm}}
+        \begin{tabular}{lP{3.0cm}P{2.5cm}P{2.5cm}}
             \hline \hline
-            \textbf{Mechanism} & \textbf{VOC OH Oxidation} & \textbf{\ce{RO2 + NO}} & \textbf{Ozonolysis} \\ \hline \hline
+            \textbf{Mechanism} & \textbf{VOC Oxidation} & \textbf{\ce{RO2 + NO}} & \textbf{Ozonolysis} \\ \hline \hline
             RADM2 & HC5 + OH & NO + TCO3 & \\ \hline
             \multirow{2}{*}{RACM2} & & & DCB + O3 \\
             & & & EPX + O3 \\ \hline
@@ -188,17 +184,15 @@ NMVOC degradation is the only source and Figure \ref{f:mglyox_budgets} shows the
 
 Isoprene and aromatic VOC degradation are the main methyl glyoxal sources in all mechanisms except RADM2, RACM and RACM2.
 In these mechanisms, pentane and propane degradation produce the most methyl glyoxal.
-MOZART-4 pentane degradation is also a source from the second day onwards.
+MOZART-4 pentane degradation also produces methyl glyoxal.
 The supplement shows the pentane degradation reactions influencing the methyl glyoxal production budget.
 
 Acetone degradation in low-\ce{NO_x} conditions produces methyl glyoxal through the acetone peroxy radical reaction with other \ce{RO2} \citep{Fu:2008}.
-Both MCM versions represent this chemistry however this route is not a major source as \ce{NO_x}-VOC-sensitive conditions are used.  
-MOZART-4 also represents this chemistry with the rate constant four times faster than the MCM v3.2, leading to higher MOZART-4 production.
+This is represented in both MCM versions but is a minor source as \ce{NO_x}-VOC-sensitive conditions are used.  
+MOZART-4 also includes this chemistry but the rate constant is four times faster than the MCM v3.2, leading to higher MOZART-4 production.
 
-An additional methyl glyoxal production pathway from alkane degradation is included in RADM2, RACM and RACM2.
-The NO + KETP reaction, KETP is the ketone peroxy radical, produces methyl glyoxal under high-\ce{NO_x} conditions.
-This additional pathway leads to higher methyl glyoxal production from alkane degradation in these mechanisms.
+The NO + KETP reaction, KETP is the ketone peroxy radical, produces additional methyl glyoxal under high-\ce{NO_x} conditions in RADM2, RACM and RACM2.
+This additional pathway results in the higher methyl glyoxal production from alkane degradation in these mechanisms.
 
-Methyl glyoxal production from acetone degradation is not included in CRI v2, CBM-IV or CB05.
-This chemistry is not included in CBM-IV and CB05 as high-\ce{NO_x} conditions are assumed.
+Methyl glyoxal production from acetone degradation is not included in CBM-IV and CB05 as high-\ce{NO_x} conditions are assumed.
 In CRI v2, the acetone peroxy radical (RN8O2) skips methyl glyoxal production altogether and immediately produces \ce{CH3CO3}.

@@ -72,21 +72,22 @@ Tagging enables VOC source attribution of \ce{O3} production and a detailed insi
 We exploit the tagging approach to compare the VOC degradation chemistry of different chemical mechanisms. 
 
 %chemical mechanisms are how they have to represent O3 chemistry
-A near-explicit mechanism such as the Master Chemical Mechanism (MCM) \citep{Jenkin:2003, Saunders:2003, Bloss:2005} includes a large amount of mechanistic details ($\sim$ $12,000$ reactions). 
-This makes the MCM ideal as a reference for comparing chemical mechanisms.
-The latest version, MCM v3.2, \citep{MCM_Site} is the reference mechanism in this study.
+A near-explicit mechanism, such as the Master Chemical Mechanism (MCM) \citep{Jenkin:2003, Saunders:2003, Bloss:2005}, includes a large amount of mechanistic details ($\sim$ $12,000$ reactions). 
+This level of detail makes the MCM ideal as a reference for comparing chemical mechanisms.
+The latest version, MCM v3.2 \citep{MCM_Site}, is the reference mechanism in this study.
 
-Further simplification can be achieved by using lumped structure or lumped molecule approachs \citep{Dodge:2000}. 
-Lumped structure mechanisms speciate VOCs by the emitted VOC carbon bonds.
-VOCs are represented in lumped structure mechanisms by a specific organic or mechanism species representing many VOCs. 
-Lumped molecule mechanisms use diverse approaches to create mechanism species representing emitted VOCs.  
-Another simplification technique is lumping the intermediate species produced during VOC degradation rather than lumping the emitted VOCs.
+Mechanisms are further simplified by using lumped structure or lumped molecule approachs \citep{Dodge:2000}. 
+Lumped structure mechanisms speciate VOC by the carbon bonds of the emitted VOC.
+Examples of the lumped structure approach are CBM-IV \citep{Gery:1989} and CB05 \citep{Yarwood:2005}.
+Lumped structure mechanisms represent VOC by either an explicit or a lumped species that represents many VOC. 
+Lumping emitted VOC into mechanism species may be achieved by similar functionality (MOZART-4 \citep{Emmons:2010}) or OH-reactivity (RADM2 \citep{Stockwell:1990}, RACM \citep{Stockwell:1997}, RACM2 \citep{Goliff:2013}).
+A different lumped molecule approach is used in the CRI \citep{Jenkin:2008}, where the intermediate species produced during VOC degradation are lumped not the emitted VOC.
 
 %other chemical mechanism comparison studies
-Chemical mechanism comparison studies consider modelled \ce{O3} concentration time series over varying VOC and \ce{NO_x} concentrations. 
+Chemical mechanism comparison studies consider modelled time series of \ce{O3} concentrations over varying VOC and \ce{NO_x} concentrations. 
 Examples of such studies are \citet{Dunker:1984}, \citet{Kuhn:1998} and \citet{Emmerson:2009}.
-A common outcome is that the largest discrepancies in \ce{O3} concentration times series arise when modelling urban rather than rural conditions.
-These discrepancies are due to the treatment of radical production, organic nitrate and night-time chemistry.
+A common outcome is that the largest discrepancies in the time series of \ce{O3} concentrations arise when modelling urban rather than rural conditions.
+These discrepancies have been attributed to the treatment of radical production, organic nitrate and night-time chemistry in mechanisms.
 
 IR scales have also been used to compare mechanisms.
 In \citet{Derwent:2010}, the near-explicit MCM v3.1 and SAPRC-07 mechanisms were compared using first-day POCP values calculated under VOC-sensitive conditions. 
@@ -94,14 +95,10 @@ The POCP values were comparable between the mechanisms.
 
 OPPs are a useful comparison tool as they relate \ce{O3} production to a single value. 
 \citet{Butler:2011} compares first day TOPP values to the corresponding MIR, MOIR and POCP values.
-TOPP values were most comparable to MOIR and POCP values, whilst MIR values for reactive VOC were overestimated.
+TOPP values were most comparable to MOIR and POCP values.
 
-In this study, TOPP values calculated for VOCs using different mechanisms are compared to those calculated with the MCM v3.2. 
-Processes influencing \ce{O_x} production in the mechanisms are compared by exploiting the tagging approach used to calculate the TOPP.
-In particular, differences in the treatment of organic degradation products and subsequent chemistry is emphasized.
+In this study, TOPP values calculated for VOC using a number of mechanisms are compared to those calculated with the MCM v3.2. 
+Differences in \ce{O3} production are explained by the treatment of VOC degradation.
 
 %paper outline
-The chemical mechanisms and comparison methodology are described in \mbox{Section \ref{s:methodology}}. 
-\mbox{Section \ref{s:overall_results}} compares the first-day TOPP values, their time series and net radical production. 
-\ce{O_x} production chemistry is correlated with VOC break down into smaller fragments in \mbox{Section \ref{s:detailed_results}}. 
-Finally conclusions and further work are outlined in \mbox{Section \ref{s:conclusions}}.  
+The comparison methodology is described in \mbox{Section \ref{s:methodology}}, overall mechanism comparison results are detailed in \mbox{Section \ref{s:overall_results}} with detailed \ce{O3} production analysis in \mbox{Section \ref{s:detailed_results}} and finally, results are presented in \mbox{Section \ref{s:conclusions}}.

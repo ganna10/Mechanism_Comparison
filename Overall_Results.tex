@@ -31,48 +31,44 @@ The \ce{O3} mixing ratio levels in RACM are much lower on the first day compared
 These low \ce{O3} amounts are due to the lack of \ce{O_x} production from aromatic VOC in RACM, which differs from \ce{O_x} production on the first day in all other mechanisms.
 This lack of \ce{O_x} production from aromatic species arises from aromatic degradation chemistry which results in net \ce{O_x} consumption and is further detailed in \mbox{Section \ref{sss:aromatic}}.
 
-\subsection{First Day TOPP Value Comparison} \label{ss:day1} %first day comparison
+Low \ce{O_x} production in CBM-IV and CB05 is related to the lower OH levels produced during the model runs using these mechanisms compared to the MCM v3.2. 
+The lower OH levels arise from the high NO emissions required for maximal \ce{O_x} production conditions in CBM-IV and CB05 --- high NO levels suppresses the OH amounts through \ce{HNO3} formation \reactionref{r:NO2_OH} in which both \ce{NO2} and OH are removed from the system.
+Details are found in Section \ref{ss:radicals} which compares the NO emissions calculated for maximal \ce{O_x} production in each mechanism.
+Lower \ce{O3} levels using CBM-IV and CB05 compared to other mechanisms have also been noted in previous modelling studies such as \citet{Luecken:2008, Emmerson:2009} and \citet{Saylor:2012}.
+
+\subsection{First Day Ozone Production} \label{ss:day1} %first day comparison
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{img/first_day_values}
     \vspace{1mm}
-    \caption{MCM v3.2 first day TOPP values and corresponding values in each mechanism.}
+    \caption{MCM v3.2 first day TOPP values and corresponding values in each mechanism. The root mean square error (RMSE) of each set of TOPP values is also displayed.}
     \vspace{-4mm}
     \label{f:first_day}
 \end{figure}
 
 The first day TOPP values calculated from each mechanism are compared to those obtained with the MCM v3.{2} in Figure \ref{f:first_day}. 
-The reduced mechanisms generally match the \mbox{MCM v3.2} first day TOPP values. 
-However TOPP values resulting from aromatic VOC degradation are lower in reduced mechanisms.
+The root mean square error (RMSE) are also illustrated in \mbox{Figure \ref{f:first_day}}.
+TOPP values in MCM v3.1 and CRI v2 match those of the MCM v3.2 as indicated by their low RMSE values.
+The more reduced mechanisms have a much higher spread in their first day TOPP values for each VOC and this is also confirmed by the large RMSE values.
 
-Aromatic chemistry is difficult to represent in chemical mechanisms as many products, their yields and reactions are not known or subject to uncertainties \citep{Vereecken:2012}. 
-Thus, greater variation is expected between aromatic VOC TOPP values.
-The largest discrepancies are the zero TOPP values of toluene and m-xylene in RACM. 
-This is unrealistic as aromatic VOCs contribute significantly to \ce{O_x} production \citep{Derwent:1998}. 
-Section \ref{sss:aromatic} outlines the responsible chemistry.
+The TOPP values for aromatic VOC tend to be lower than in MCM v3.2 in many mechanisms, this is particularly the case in RACM and  MOZART-4.
+As these TOPP values for aromatic VOC vary the most from MCM v3.2, they are the root of the high RMSE values in RACM and  MOZART-4.
+The lower TOPPs for aromatic VOC show that aromatic degradation chemistry is difficult to represent in chemical mechanisms as many products, their yields and reactions are not known or subject to uncertainties \citep{Vereecken:2012}.
 
-The $2$-methylpropene first day TOPP values in RACM, RACM2, CBM-IV and CB05 indicate that its degradation is treated differently to the MCM v3.2. 
+The first day TOPP values of $2$-methylpropene in RACM, RACM2, MOZART-4 and CB05 indicate that its degradation is treated differently to the MCM v3.2. 
 The variation between RACM, RACM2 and MCM v3.2 arises from differences in $2$-methylpropene ozonolysis rate constants.
-In RACM and RACM2 this is a weighted mean of all VOC ozonolysis rate constants represented as OLI \citep{Stockwell:1997, Goliff:2013} and is an order of magnitude faster than MCM v3.2 despite a common source (IUPAC).
-The resulting increased radical production leads to more \ce{O_x} production than in the MCM v3.2.
+In RACM and RACM2, this rate constant is calculated as a weighted mean of all VOC ozonolysis rate constants represented as OLI \citep{Stockwell:1997, Goliff:2013} and is an order of magnitude faster than MCM v3.2 despite a common source (IUPAC).
+The faster rate constant results in increased radical production which leads to more \ce{O_x} production than in the MCM v3.2.
 
-In CBM-IV, $2$-methylpropene is represented by the mechanism species ALD2 \citep{Hogo:1989}, which is a surrogate for aldehydes with more than one carbon atom. 
-ALD2 reacts very quickly with OH forming \ce{CH3CO3}, leading to \ce{O_x} production. 
-Furthermore, ALD2 photolysis promotes radical and in turn \ce{O_x} production. 
-This is not a degradation pathway for $2$-methylpropene in any other mechanism. 
-The choice of $2$-methylpropene representation gives rise to higher \ce{O_x} production than in the MCM v3.2.
+In MOZART-4, higher amounts of \ce{CH3CO3}, which also leads to higher amounts of \ce{CH3O2}, during $2$-methylpropene degradation are produced compared to the MCM v3.2.
+These higher \ce{CH3CO3} amounts lead to more \ce{O_x} production in MOZART-4 and hence a higher TOPP value compared to the MCM v3.2.
 
-$2$-methylpropene representation was updated in CB05 to \mbox{FORM + $3$ PAR}, where FORM represents formaldehyde and PAR the paraffin \ce{C-C} bond \citep{Yarwood:2005}. 
-The initial formaldehyde oxidation reactions are similar to ALD2 whilst PAR is a slow reacting species. 
-This slows down the \ce{O_x} production resulting in lower \ce{O_x} production than in the MCM v3.2.
+$2$-methylpropene is represented in CB05 as \mbox{FORM + $3$ PAR}, where FORM represents formaldehyde and PAR the paraffin \ce{C-C} bond \citep{Yarwood:2005}. 
+The initial formaldehyde oxidation immediately produces radicals which leads to \ce{O_x} production.
+On the other hand PAR is a slow reacting species which slows down the \ce{O_x} production resulting in lower \ce{O_x} production than in the MCM v3.2.
 
-Many CBM-IV and CB05 first day TOPP values are lower than those of the \mbox{MCM v3.2}. 
-Lower \ce{O_x} production in CBM-IV and CB05 compared to MCM v3.2 is responsible.
-This is shown in \mbox{Figure \ref{f:Ox_tagged_budgets}} where \ce{O_x} production is allocated to parent VOCs in each mechanism.
-Lower \ce{O3} levels using CBM-IV and CB05 compared to other mechanisms have also been noted in previous modelling studies such as \citet{Luecken:2008, Emmerson:2009} and \citet{Saylor:2012}.
-
-\subsection{TOPP Value Time Series} \label{ss:profiles} %TOPP time series of all species
+\subsection{Ozone Production on Subsequent Days} \label{ss:profiles} %TOPP time series of all species
 
 \begin{figure}
     \centering

@@ -1,28 +1,35 @@
 
-\subsection[Time Series of Key Species and Ox Production Budgets]{Time Series of Key Species and \ce{O_x} Production Budgets}
+\subsection[Ozone Time Series and Ox Production Budgets]{Ozone Time Series and \ce{O_x} Production Budgets}
 
 \begin{figure}
     \centering
-    %\includegraphics[width=\textwidth]{img/}
+    \includegraphics[width=0.6\textwidth]{img/O3_mixing_ratios}
     \vspace{1mm}
-    \caption{Time series of \ce{O3} and OH mixing ratios and NO source in each mechanism.}
+    \caption{Time series of \ce{O3} mixing ratios.}
     \vspace{-4mm}
     \label{f:time_series}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{img/Ox_tagged_budget_overlay_all_mechanisms}
+    \includegraphics[width=\textwidth]{img/Ox_production_budgets_by_VOC_de-allocated}
     \vspace{1mm}
     \caption{The day-time \ce{O_x} production budgets allocated to individual VOC in each mechanism.}
     \vspace{-4mm}
     \label{f:Ox_tagged_budgets}
 \end{figure}
 
-Figure \ref{f:time_series} shows the time series of the mixing ratios for \ce{O3} and OH as well as the NO source obtained using each model.
-%which mechanism is highest ? lowest ? difference in CBs
-The day-time production budgets of the \ce{O_x} family for each mechanism are displayed in Figure \ref{f:Ox_tagged_budgets}, the \ce{O_x} production budget is allocated to each emitted VOC.
-%comments
+Figure \ref{f:time_series} shows the time series of \ce{O3} mixing ratios obtained using each mechanism.
+The day-time production budgets of the \ce{O_x} family for each mechanism are displayed in Figure \ref{f:Ox_tagged_budgets}, the \ce{O_x} production budgets are allocated to each VOC.
+The contributions from the individual VOC in Table \ref{t:initial_conditions} are re-assigned from lumped mechanism emitted species using the inverse calculation when assigning the initial conditions to the respective mechanism species.
+
+The mechanisms including the highest amount of chemical details (MCM v3.2, MCM v3.1 and CRI v2) produce the largest amount of \ce{O3} in Figure \ref{f:time_series}.
+Whilst both the CBM-IV and CB05, that include the least amount of chemical detail, produce the lowest amount of \ce{O3}.
+This trend is also evident in Figure \ref{f:Ox_tagged_budgets} where the more-detailed mechanisms have largest day-time \ce{O_x} production and the less-detailed mechanisms have the lowest day-time \ce{O_x} production.
+
+The \ce{O3} mixing ratio levels in RACM are much lower on the first day compared to mechanisms having a similar amount of chemical detail.
+These low \ce{O3} amounts are due to the lack of \ce{O_x} production from aromatic VOC in RACM, which differs from \ce{O_x} production on the first day in all other mechanisms.
+This lack of \ce{O_x} production from aromatic species arises from aromatic degradation chemistry which results in net \ce{O_x} consumption and is further detailed in \mbox{Section \ref{sss:aromatic}}.
 
 \subsection{First Day TOPP Value Comparison} \label{ss:day1} %first day comparison
 

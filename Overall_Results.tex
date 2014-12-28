@@ -130,8 +130,7 @@ Ozonolysis of the cresol OH-adduct mechanism species ADDC contributes the most t
 This reaction was included in RACM due to improved cresol product yields when comparing RACM predictions with experimental data \citep{Stockwell:1997}, other mechanisms that include cresol OH-adduct species do not include ozonolysis.
 Including ozonolysis of aromatic OH-adduct species in RACM results in non-representative \ce{O_x} production, these ozonolysis reactions are not included in the updated RACM2.
 
-\subsection{Radical Sources} \label{ss:radicals}
-%change subsection title?
+\subsection{Production of Radicals} \label{ss:radicals}
 
 \begin{figure}
     \centering
@@ -142,37 +141,26 @@ Including ozonolysis of aromatic OH-adduct species in RACM results in non-repres
     \label{f:radical_production} 
 \end{figure} 
 
-Maximum \ce{O_x} production was achieved by emitting the NO amount required to balance the radical source at each time step. 
-Mechanism differences in radical production lead to different NO emissions.
+Production of radicals impacts \ce{O_x} production by the conversion of NO to \ce{NO2} by peroxy radicals produced from VOC degradation that is typically initiated through OH reaction.
+In this study, the amount of NO emissions are also affected by radical production as described in Section \ref{ss:model_setup} conditions of maximal \ce{O_x} production are achieved for each mechanism by emitting the amount of NO required to balance the source of radicals at each time step. 
 
-Figure \ref{f:radical_production} depicts the day-time net radical production budgets in each mechanism allocated to the contributing reactions.
-Reactions having net radical to \ce{NO_x} yield were determined for each mechanism and the rate was multiplied by this yield.
+In order to investigate the differences in NO emissions required by each mechanism to achieve maximal \ce{O_x} production, the net radical to \ce{NO_x} production budgets allocated to the contributing reactions are presented in Figure \ref{f:radical_production}.
+The net radical to \ce{NO_x} production budgets were determined using the same calculation that was used to calculate the amount of NO emitted at each time step and hence the net radical production budgets in Figure \ref{f:radical_production} directly correlate to the amount of NO emitted during each mechanism's model run.
 
-CBM-IV and CB05 have much higher net radical production on the first two days than any other mechanism.
-Thus larger NO emissions are required for maximal \ce{O_x} production indicating that CBM-IV and CB05 represent \ce{NO_x}-sensitive chemistry.
+CBM-IV and CB05 were developed for the high-\ce{NO_x} conditions of urban and polluted regions \citep{Gery:1989, Yarwood:2005} and both mechanisms represent VOC-sensitive chemistry.
+The representation of VOC-sensitive chemistry in CBM-IV and CB05 leads to much higher net radical production on the first two days corresponding to larger NO emissions than any other mechanism.
+The higher NO emissions in CBM-IV and CB05 limit the amount of OH available for initiating VOC degradation as larger amount of \ce{HNO3} are produced through \reactionref{r:NO2_OH}.
+\ce{HNO3} production also removes \ce{NO_x} from the system which constrains the amount of NO available for reaction with \ce{RO2} that would produce \ce{O_x}.
 
-CBM-IV was developed for the high-\ce{NO_x} conditions of urban and polluted regions \citep{Gery:1989}.
-Hence, CBM-IV lacks low-\ce{NO_x} chemistry such as organic peroxide formation.
-CB05 includes more oxygenated species so that organic peroxide chemistry is represented \citep{Yarwood:2005}.
-However, CB05 net radical production is still significantly large.
+Photolysis of carbonyl species, mainly HCHO, is the main source of radicals from organic chemistry.
+Reduced mechanisms do not include as many carbonyl species as more explicit mechanisms --- CBM-IV with 2 and RACM2 with 17 carbonyl species represent the lower and upper limits the number of carbonyl species in reduced mechanisms (besides the CRI v2).
+The lack of carbonyl species in non-CRI v2 reduced mechanisms means that these reduced mechanisms produce radicals through other reactions such as initial VOC oxidation, NO--\ce{RO2} reactions and ozonolysis.
+Examples of radical sources through non-photolysis pathways in reduced mechanisms are given in Table \ref{t:thermal_radicals}.
 
-The \ce{O(^1D)} and water vapour reaction is the main radical source in each mechanism.
-Varying \ce{O3} levels in each mechanism leads to different \ce{O(^1D)} amounts as its main source is \ce{O3} photolysis.
-Carbonyl, mainly HCHO, photolysis is the main radical source from organic chemistry.
-Moreover, each mechanism has a similar contribution from HCHO photolysis.
-
-Methyl glyoxal photolysis has a varying impact on net radical production in each mechanism.
-\mbox{Section \ref{sss:mglyox}} describes methyl glyoxal production in all mechanisms and explains these differences.
-
-Most reduced mechanisms lack sufficient carbonyl species to sustain radical production solely through carbonyl photolysis.
-Initial VOC oxidation, NO--\ce{RO2} reactions and ozonolysis are used to further sustain radical production in less-explicit mechanisms.
-Examples of non-photolysis radical sources are given in Table \ref{t:thermal_radicals}.
-
-Mechanisms require different NO emissions to simulate \ce{NO_x}-VOC-sensitive conditions.
-Thus, a constant NO source may lead to different atmospheric regimes being simulated depending on the mechanism.
-This shall be investigated in future work.
+The mechanisms compared here require different NO emissions to simulate \ce{NO_x}-VOC-sensitive conditions, where the source of radicals is balanced by the source of \ce{NO_x}.
+Thus, a constant NO source may lead to different atmospheric regimes (\ce{NO_x}- or VOC-sensitive) being simulated depending on the mechanism, this shall be investigated in future work.
 {%
-    \renewcommand{\arraystretch}{1.3}
+    \renewcommand{\arraystretch}{1.1}
     \begin{table}
         \centering
         \small
@@ -195,32 +183,3 @@ This shall be investigated in future work.
         \label{t:thermal_radicals}
     \end{table}
 }%
-
-\subsubsection{Methyl Glyoxal Production} \label{sss:mglyox}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{img/MGLY_VOC_allocated_production_rates}
-    \vspace{0mm}
-    \caption{Methyl glyoxal production budgets allocated to parent VOCs in each mechanism.}
-    \vspace{-4mm}
-    \label{f:mglyox_budgets} 
-\end{figure} 
-
-Methyl glyoxal is represented in each mechanism -- MGLYOX in both MCM versions, CARB6 in CRI v2, CH3COCHO in MOZART-4 and MGLY in RADM2, RACM, RACM2, CBM-IV and CB05.
-NMVOC degradation is the only source and Figure \ref{f:mglyox_budgets} shows the individual sources in each mechanism.
-
-Isoprene and aromatic VOC degradation are the main methyl glyoxal sources in all mechanisms except RADM2, RACM and RACM2.
-In these mechanisms, pentane and propane degradation produce the most methyl glyoxal.
-MOZART-4 pentane degradation also produces methyl glyoxal.
-The supplement shows the pentane degradation reactions influencing the methyl glyoxal production budget.
-
-Acetone degradation in low-\ce{NO_x} conditions produces methyl glyoxal through the acetone peroxy radical reaction with other \ce{RO2} \citep{Fu:2008}.
-This is represented in both MCM versions and is a minor source as \ce{NO_x}-VOC-sensitive conditions are used.  
-MOZART-4 also includes this chemistry but the rate constant is four times faster than the MCM v3.2, leading to higher MOZART-4 production.
-
-The NO + KETP reaction, KETP is the ketone peroxy radical, produces additional methyl glyoxal under high-\ce{NO_x} conditions in RADM2, RACM and RACM2.
-This additional pathway results in higher methyl glyoxal production from alkane degradation in these mechanisms.
-
-Methyl glyoxal production from acetone degradation is not included in CBM-IV and CB05 as high-\ce{NO_x} conditions are assumed.
-In CRI v2, the acetone peroxy radical (RN8O2) skips methyl glyoxal production altogether and immediately produces \ce{CH3CO3}.

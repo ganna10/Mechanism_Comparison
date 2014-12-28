@@ -1,0 +1,87 @@
+%% Creator: Inkscape inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'first_day_values.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{561bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.37789661)%
+    \put(0,0){\includegraphics[width=\unitlength]{first_day_values.pdf}}%
+    \put(0.24560635,1.36406528){\makebox(0,0)[lb]{\smash{MCMv3.1CRIv2
+RADM2RACM
+RACM2MOZART-4
+CBM-IVCB05}}}%
+    \put(0.02942569,1.09084364){\makebox(0,0)[lb]{\smash{0246}}}%
+    \put(0.02942569,0.7858428){\makebox(0,0)[lb]{\smash{0246}}}%
+    \put(0.02942569,0.48083501){\makebox(0,0)[lb]{\smash{0246}}}%
+    \put(0.02942569,0.17583417){\makebox(0,0)[lb]{\smash{0246}}}%
+    \put(0.06077317,0.14424995){\makebox(0,0)[lb]{\smash{0246}}}%
+    \put(0.53223875,0.14424995){\makebox(0,0)[lb]{\smash{0246}}}%
+    \put(0.2590728,0.1215923){\makebox(0,0)[lb]{\smash{MCM v3.2 TOPP (molecules(Ox)/molecules(VOC))}}}%
+    \put(0.02301276,0.55705214){\rotatebox{90}{\makebox(0,0)[lb]{\smash{TOPP (molecules(Ox)/molecules(VOC))}}}}%
+    \put(0.07898145,0.06774733){\makebox(0,0)[lb]{\smash{Ethane 
+Propane 
+Butane 
+2-Methylpropane 
+Pentane 
+2-Methylbutane 
+Hexane 
+Heptane 
+Octane 
+Ethene 
+Propene 
+Butene 
+2-Methylpropene 
+Isoprene 
+Benzene 
+Toluene 
+m-Xylene 
+o-Xylene 
+p-Xylene 
+Ethylbenzene }}}%
+    \put(0.06442461,1.30815389){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{RMSE = 0.2}}}%
+  \end{picture}%
+\endgroup%

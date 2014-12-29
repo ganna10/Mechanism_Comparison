@@ -48,35 +48,27 @@ The net loss of reactive carbon during pentane and toluene degradation is analys
     \label{f:net_carbon_loss}
 \end{figure}
 
-Day-time net carbon loss rates during \ce{O_x} production from pentane and toluene degradation are plotted in Figure \ref{f:net_carbon_loss}.
-The net carbon yield of each \ce{O_x} producing reaction was calculated and multiplied by the reaction rate.
-The supplement contains plots showing the reactions responsible for carbon loss in pentane and toluene degradation.
+The analysis of the \ce{O_x} production allocated to the different sizes of the pentane and degradation products in Section \ref{ss:c_number} indicates that reduced mechanisms may lose reactive carbon quicker than more explicit mechanisms.
+This section compares the reactive carbon loss rates during pentane and toluene degradation in Figure \ref{f:net_carbon_loss} by calculating the net carbon yield from each \ce{O_x} producing reaction and multiplying this yield by the reaction rate.
 
-RACM2 pentane degradation has the largest carbon loss rate and a different time series to previous versions (RADM2 and RACM).  
-The \mbox{NO + HC5P} (pentyl peroxy radical) reaction is largely responsible for carbon loss.
-The reaction products and their yields were updated from RACM to RACM2 due to increased oxygenated product speciation in RACM2.
-For example, ALD describes acetaldehyde and higher aldehyde chemistry in RACM whilst in RACM2 acetaldehyde is represented explicitly (ACD) and ALD represents C3 and higher aldehydes \citep{Goliff:2013}.
-These RACM2 updates result in more carbon loss through \mbox{HC5P + NO} reaction.
+Pentane degradation shows comparable loss rates of reactive carbon between the MCM v3.2 and the other mechanisms, besides CBM-IV and CB05.
+The loss rates of reative carbon during pentane degradation in CBM-IV and CB05 is described by C1 and C2 species this leads to little carbon loss during pentane degradation in CBM-IV and CB05, hence the lumped species reduced mechanisms have different loss of carbon profiles to other types of mechanisms.
 
-Another contributing factor to increased carbon loss in RACM2 is the updated \mbox{NO + HC3P} (propyl peroxy radical) reaction.
-In RACM, this reaction gave net carbon gain whereas it contributes to net carbon loss in RACM2.
+RADM2, RACM and RACM2 have the highest loss rates of reactive carbon on the first day (Figure \ref{f:net_carbon_loss}), this leads to these mechanisms being unable to reach the same \ce{O_x} production as other mechanisms on subsequent days (Figure \ref{f:carbon}).
+CRI v2 and MOZART-4 have slower loss rates of reactive carbon than the MCM v3.2 and this results in higher \ce{O_x} production than RADM2, RACM and RACM2 (Figure \ref{f:carbon}).
 
-MOZART-4 pentane degradation has high carbon loss via the \ce{CH3CO3 + NO} reaction.
-This reaction leads to carbon loss in every mechanism however it has the most influence in MOZART-4. 
-This reaction contributes twice to \ce{CH3CO3} production -- as a primary product and OH-oxidation of \ce{CH3CHO}.
+Although MOZART-4, CBM-IV and CB05 lose reactive carbon at a slower rate than the MCM v3.2, \ce{O_x} production from these mechanisms is lower than the MCM v3.2.
+This lower \ce{O_x} production results from a lower \ce{O_x} production efficiency of these mechanisms and is detailed in Section \ref{ss:OxPE}.
 
-CBM-IV and CB05 show little carbon loss throughout pentane degradation.
-Since pentane degradation is described by C2 and C1 products there is little carbon to be lost.
+All reduced mechanisms have quicker loss rate of reactive carbon during toluene degradation (Figure \ref{f:net_carbon_loss}).
+In particular, MOZART-4 loses reactive carbon at least twice as fast as other mechanisms and this explains why \ce{O_x} production during toluene degradation in MOZART-4 sharply decreases after the first day (Figure \ref{f:carbon}).
+This same trend is also seen in the \ce{O_x} production during toluene degradation in CBM-IV and CB05 (Figure \ref{f:carbon}).
 
-MOZART-4 and RADM2 have the highest loss carbon rates during toluene degradation.
-The high net carbon loss from BIGALD (unsaturated dicarbonyls) photolysis coupled with its large yields during MOZART-4 toluene degradation reactions leads to rapid carbon loss.
-BIGALD is produced from other reactions that result in carbon loss: \mbox{NO + TOLO2} and \mbox{NO2 + XOH}, where TOLO2 is the peroxy radical from \mbox{toluene + OH} reaction and XOH represents \ce{C7H10O6} \citep{Emmons:2010}.
+CRI v2 and RACM2 both have a higher loss rate of reactive carbon on the second day compared to the MCM v3.2 but the both have in increase in \ce{O_x} production on the second day (Figure \ref{f:carbon}) and this is due to a higher Ox production efficiency in CRI v2 and RACM2 compared to the MCM v3.2 (Section \ref{ss:OxPE}).
 
-RADM2 carbon loss during toluene degradation is mainly from the \mbox{NO + TOLP} reaction, TOLP is the peroxy radical formed from toluene OH-oxidation.
-RACM and RACM2 aromatic degradation has been heavily updated from RADM2 and this reaction removed altogether \citep{Stockwell:1997, Goliff:2013}.
-
-CRI v2 has faster carbon loss from toluene degradation than the MCM v3.2.
-Both branches of the \mbox{NO + RA16O2} reaction, RA16O2 is the peroxy radical formed from toluene OH-oxidation, are responsible for the carbon loss in CRI v2.
+Mechanisms which have high reactive carbon loss rates during the degradation of a VOC limit the amount of \ce{O_x} that can be produced.
+Loss of reactive carbon is the constraining factor during toluene degradation in all reduced mechanisms and is a limiting factor during pentane degradation in RADM2, RACM and RACM2.
+The fact that reduced mechanisms are still able to produce similar amounts of \ce{O3} (Figure \ref{f:time_series}) shows that loss of reactive carbon is only one factor, the \ce{O_x} production efficiency (ratio of \ce{O_x} production per loss of \ce{O_x}) is another important factor when considering \ce{O_x} production and is discuss in Section \ref{ss:OxPE}.
 
 \subsection[Degradation Fragment Ox Production Efficiency]{Degradation Fragment \ce{O_x} Production Efficiency} \label{ss:OxPE}
 

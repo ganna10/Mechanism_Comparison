@@ -1,16 +1,19 @@
-Tagged Ozone Production Potentials (TOPPs) were used to compare NMVOC degradation in reduced chemical mechanisms to the near-explicit MCM v3.2. 
-First day TOPP values were generally comparable to those of the MCM v3.2.
+Tagged Ozone Production Potentials (TOPPs) were used to compare \ce{O_x} production during NMVOC degradation in reduced chemical mechanisms to the near-explicit MCM v3.2. 
+\ce{O_x} production on the first day was generally comparable to that of the MCM v3.2.
 Differences in \ce{O_x} production between reduced and near-explicit mechanisms had a larger impact over multi-day scenarios, with reduced mechanisms tending to underpredict \ce{O_x} production.  
-The largest discrepancies from the MCM v3.2 were obtained for aromatic VOCs and VOCs represented by lumped mechanism species.
+The largest discrepancies between \ce{O_x} production from individual VOC in reduced mechanisms and MCM v3.2 were from aromatic VOC.
+The trends in \ce{O_x} production reflects the \ce{O3} mixing ratios produced from each mechanism, where reduced mechanisms produce lower amounts of \ce{O3}.
 
-Different NO emissions were required to obtain \ce{NO_x}-VOC-sensitive conditions in each mechanism.
-NO emissions were determined using net radical to \ce{NO_x} yield thus different atmospheric regimes are represented in different mechanisms.
-The impacts on \ce{O_x} production shall be investigated in future work.
+CBM-IV and CB05 produced much lower \ce{O3} than any other mechanism due to the higher NO emissions required for conditions of maximal \ce{O_x} production.
+The high \ce{NO_x} amounts leads to removal of both OH and \ce{NO2} due to increased \ce{HNO3} production, thus \ce{O_x} production is suppressed as there is not enough OH available to oxidise VOC.
 
-Reduced mechanisms generally produced lower but similar \ce{O_x} levels to near-explicit mechanisms.
-Increased reactive carbon loss rates result in lower \ce{O_x} production in less-explicit mechanisms.
-Higher reactive carbon loss was compensated by a higher \ce{O_x} production efficiency in less-explicit mechanisms. 
-For some VOCs, incorrect chemistry or inadequate representation in reduced mechanisms led to reduced \ce{O_x} production.
+Reduced mechanisms tend to produce more \ce{O_x} from smaller sized degradation products than more explicit mechanisms, this is the result of either rapid loss of reactive carbon or a lower efficency of producing \ce{O_x}.
+Reactions during VOC degradation in reduced mechanisms that result in loss of reactive carbon also tend to be reactions that produce more \ce{O_x}, this leads to a limit of how much \ce{O_x} can be produced during VOC degradation.
+Increased acetaldehyde production in reduced mechanisms leads to increased levels of \ce{CH3CO3} which produced \ce{O_x} by reacting with NO, but this reaction is also a major source of reactive carbon loss.
+Improved representation of aldehydes in reduced mechanisms would lead to more representative \ce{O_x} production both through reducing the amount of reactive carbon lost during VOC degradation but this would also improve the representation of organic radical chemistry as organic radicals are mainly produced during aldehyde photolysis.
 
-The tagging approach and TOPP calculation over multi-day scenarios have proven to be a useful tool in comparing the chemical degradation pathways in chemical mechanisms. 
-This approach could be used to further investigate how mechanisms treat degradation chemistry under more realistic \ce{NO_x} conditions or a range of \ce{NO_x} conditions, simulating different atmospheric regimes. 
+Out of all the reduced mechanisms compared in this study, the CRI v2 was able to produce the most similar amounts of \ce{O_x} to the MCM v3.2.
+The CRI v2 treatment of unsaturated dicarbonyls does lead to differences in \ce{O_x} production on the second day but in general the approach of lumping degradation products leads to more similar \ce{O_x} production to more-explicit mechanisms than when lumping the initial NMVOC.
+
+The tagging approach and TOPP calculation over multi-day scenarios is a useful tool for comparing the chemical degradation pathways in chemical mechanisms. 
+This tagging approach could be used to investigate the effects on \ce{O_x} production by the treatment of degradation chemistry in mechanisms under using more realistic \ce{NO_x} conditions or a range of \ce{NO_x} conditions, simulating different atmospheric regimes. 

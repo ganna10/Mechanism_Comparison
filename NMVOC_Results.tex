@@ -52,7 +52,7 @@ The analysis of the \ce{O_x} production allocated to the different sizes of the 
 This section compares the reactive carbon loss rates during pentane and toluene degradation in Figure \ref{f:net_carbon_loss} by calculating the net carbon yield from each \ce{O_x} producing reaction and multiplying this yield by the reaction rate.
 
 Pentane degradation shows comparable loss rates of reactive carbon between the MCM v3.2 and the other mechanisms, besides CBM-IV and CB05.
-The loss rates of reative carbon during pentane degradation in CBM-IV and CB05 is described by C1 and C2 species this leads to little carbon loss during pentane degradation in CBM-IV and CB05, hence the lumped species reduced mechanisms have different loss of carbon profiles to other types of mechanisms.
+The loss rates of reative carbon during pentane degradation in CBM-IV and CB05 is represented by C1 and C2 species this leads to little carbon loss during pentane degradation in CBM-IV and CB05, hence the lumped species reduced mechanisms have different loss of carbon profiles to other types of mechanisms.
 
 RADM2, RACM and RACM2 have the highest loss rates of reactive carbon on the first day (Figure \ref{f:net_carbon_loss}), this leads to these mechanisms being unable to reach the same \ce{O_x} production as other mechanisms on subsequent days (Figure \ref{f:carbon}).
 CRI v2 and MOZART-4 have slower loss rates of reactive carbon than the MCM v3.2 and this results in higher \ce{O_x} production than RADM2, RACM and RACM2 (Figure \ref{f:carbon}).
@@ -74,35 +74,33 @@ Mechanisms which have high reactive carbon loss rates during the degradation of 
 Loss of reactive carbon is the constraining factor during toluene degradation in all reduced mechanisms and is a limiting factor during pentane degradation in RADM2, RACM and RACM2.
 The fact that reduced mechanisms are still able to produce similar amounts of \ce{O3} (Figure \ref{f:time_series}) shows that loss of reactive carbon is only one factor, the \ce{O_x} production efficiency (ratio of \ce{O_x} production per loss of \ce{O_x}) is another important factor when considering \ce{O_x} production and is discuss in Section \ref{ss:OxPE}.
 
-\subsection[Degradation Fragment Ox Production Efficiency]{Degradation Fragment \ce{O_x} Production Efficiency} \label{ss:OxPE}
+\subsection[Ox Production Efficiency of Degradation Fragments]{\ce{O_x} Production Efficiency of Degradation Fragments} \label{ss:OxPE}
 
 \begin{figure}
     \centering
     \includegraphics[width=1.1\textwidth]{img/OxPEs_by_C_number}
     \vspace{0mm}
-    \caption{Degradation product \ce{O_x} production efficiency during pentane and toluene degradation.}
+    \caption{\ce{O_x} production efficiency of the degradation fragments during pentane and toluene degradation.}
     \vspace{-4mm}
     \label{f:OxPE}
 \end{figure}
 
-Reduced mechanisms have similar \ce{O_x} production to more-explicit mechanisms despite quicker reactive carbon loss.
-Moreover, C1 and C2 degradation products have higher influence on \ce{O_x} production in less-explicit mechanisms.
-\ce{O_x} production efficiencies (OxPE) for the degradation fragment sizes were calculated by dividing total \ce{O_x} production from the degradation fragment size by total \ce{O_x} consumption.
-This is illustrated in Figure \ref{f:OxPE} for pentane and toluene degradation.
+Reduced mechanisms can produce similar amounts of \ce{O_x} during NMVOC degradation to more-explicit mechanisms as shown in Figure \ref{f:carbon} but the \ce{O_x} is produced via the degradation fragments with a smaller number of carbons than in explicit mechanisms (Section \ref{ss:c_number}).
+Also, in Section \ref{ss:carbon_loss}, the loss rates of reactive carbon during VOC degradation plays a factor in determining how much \ce{O_x} can be produced throughout the degradation of the VOC.
+To determine how effective reduced mechanisms are at producing \ce{O_x} the \ce{O_x} production efficiency (OxPE) was calculated for the different sizes of the degradation products.
+The OxPE of each degradation fragment size was determined by dividing the total \ce{O_x} production from each degradation fragment size (this was shown in Figure \ref{f:carbon}) by the total \ce{O_x} consumption, Figure \ref{f:OxPE} shows this for pentane and toluene degradation.
 
-All less-explicit mechanisms have higher C1 and C2 OxPEs than the MCMs during pentane and toluene degradation.
-CBM-IV and CB05 have low OxPEs during toluene degradation mirroring the low \ce{O_x} production noted in Section \ref{sss:aromatic}.
-Reduced mechanisms simulate similar \ce{O_x} production to more-explicit mechanisms by being more efficient at producing \ce{O_x} particularly from smaller sized fragments.
+Reactions during VOC degradation that lead to increased OxPE are also those that result in loss of reactive carbon (Section \ref{ss:carbon_loss}).
+For example, the \ce{CH3O2 + NO} reaction is the main C1 \ce{O_x} production pathway during pentane degradation in reduced mechanisms with a larger contribution to the MCMs.
+Reduced mechanisms have higher acetaldehyde (\ce{CH3CHO}) production which results in a degradation chain leading to higher \ce{CH3O2} amounts.
+The OH-oxidation of \ce{CH3CHO} produces \ce{CH3CO3} whose reaction with NO produces \ce{O_x} as well as \ce{CH3O2}.
 
-The \ce{CH3O2 + NO} reaction is the main C1 \ce{O_x} production pathway in reduced mechanisms with a larger contribution to the MCMs.
-Reduced mechanisms have higher aldehyde production starting a degradation chain resulting in higher \ce{CH3O2} amounts.
-For example, acetaldehyde (\ce{CH3CHO}) OH-oxidation produces \ce{CH3CO3} whose reaction with NO produces \ce{O_x} as well as \ce{CH3O2}.
-The supplement shows total aldehyde production budgets from pentane and toluene degradation in each mechanism.  
+Increased acetaldehyde amounts in reduced mechanisms result in increased OxPEs but also increased reactive carbon loss as noted in Section \ref{ss:carbon_loss}, the \ce{CH3CO3 + NO} reaction is also a major source of reactive carbon loss in all mechanisms. 
+Thus increased \ce{CH3CO3} levels produced from acetaldehyde production in less-explicit mechanisms leads to higher reactive carbon loss rates.
 
-Pentane degradation has larger total aldehyde production in all reduced mechanisms.
-Whilst during toluene degradation, total aldehyde production is more variable between reduced mechanisms.
-The overall total aldehyde production budgets mirrors the OxPEs of Figure \ref{f:OxPE}.
+Acetaldehyde is used as a surrogate for higher aldehydes in many reduced mechanisms, such as CBM-IV, CB05, RADM2 and RACM, this leads to a quicker break down of the parent VOC in the case of pentane as pentane has 5 carbons and acetaldehyde as 2.
+This quicker breakdown results in faster production of \ce{O_x} but that cannot be sustained over the model run and is evident in the similar \ce{O_x} production on the first day but not on the second (Figure \ref{f:carbon}).
+A better representation of aldehydes in reduced mechanisms would improve the time-dependent \ce{O_x} production.
 
-Increased aldehyde amounts in reduced mechanisms result in increased OxPEs but also increased reactive carbon loss.
-Section \ref{ss:carbon_loss} noted that the \ce{CH3CO3 + NO} reaction is a major source of reactive carbon loss in all mechanisms. 
-Thus increased \ce{CH3CO3} levels produced from higher aldehyde production in less-explicit mechanisms leads to higher reactive carbon loss rates.
+OxPE during toluene degradation is mainly attributed to the reactions of the toluene peroxy radical formed during the initial OH-oxidation of toluene.
+The reactions of the toluene peroxy radical are also the main source of reactive carbon loss during toluene degradation (Section \ref{ss:carbon_loss}).

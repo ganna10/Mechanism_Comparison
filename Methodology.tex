@@ -99,7 +99,7 @@ Other updates include revised allocation of primary VOC and updated reaction rat
         Ethylbenzene & $210$ & EBENZ & TOLUENE & TOL & TOL & TOL & TOL + PAR & TOL + PAR \\ \hline \hline
     \end{tabular}
     \vspace{1mm}
-    \caption{Typical NMVOCs present in Los Angeles, mixing ratios from \citet{Baker:2008} and their representation in each chemical mechanism. The representation of the NMVOC in each mechanism was based upon the recommendations of literature of each mechanism.}
+    \caption{NMVOC present in Los Angeles, mixing ratios taken from \citet{Baker:2008} and their representation in each chemical mechanism. The representation of the NMVOC in each mechanism is based upon the recommendations of the literature for each mechanism.}
     \vspace{-4mm}
     \label{t:initial_conditions}
 \end{sidewaystable}
@@ -107,27 +107,26 @@ Other updates include revised allocation of primary VOC and updated reaction rat
 %general info
 The modelling approach and set-up follows the original TOPP study in \citet{Butler:2011}.
 A summary is provided here, further details are found in the supplement and \citet{Butler:2011}. 
-Maximum \ce{O3} production is achieved by balancing the chemical sources of radicals and \ce{NO_x} with the appropriate amount of NO emissions at each time step.
+Maximum \ce{O3} production is achieved by balancing the chemical source of radicals and \ce{NO_x} by emitting the appropriate amount of NO at each time step.
 This balance was determined separately for each mechanism.
 
 %initial conditions
-The initial NMVOC are typical of Los Angeles and their initial mixing ratios were taken from \citet{Baker:2008}. 
-Following \citet{Butler:2011}, the emissions required to keep the initial mixing ratios constant until noon of the first day of each VOC were calculated using the MCM v3.2.
-These emissions were used for every mechanism, ensuring the amount of each VOC was the same in every model run.
-Methane (\ce{CH4}) was fixed at \mbox{$1.8$ ppmv}. 
-Carbon monoxide (CO) and \ce{O3} were initialised at \mbox{$200$ ppbv} and \mbox{$40$ ppbv} and then allowed to evolve freely.
+The initial NMVOC are typical of Los Angeles and their initial mixing ratios are taken from \citet{Baker:2008}. 
+Following \citet{Butler:2011}, the emissions required to keep the initial mixing ratios constant until noon of the first day of each VOC were calculated using the \mbox{MCM v3.2.}
+These emissions are used for every mechanism, ensuring the amount of each VOC was the same in every model run.
+Methane (\ce{CH4}) was fixed at \mbox{$1.8$ ppmv} whilst carbon monoxide (CO) and \ce{O3} were initialised at \mbox{$200$ ppbv} and \mbox{$40$ ppbv} and then allowed to evolve freely.
 
-Table \ref{t:initial_conditions} outlines the NMVOC used in the study, their mixing ratios and representation in the each mechanism.
-The NMVOC were assigned to the appropriate species following the recommendations from the respective literature of each mechanism.
-Initial emission rates were weighted by the carbon number of the mechanism species when lumping NMVOC into mechanism species, this ensuring the initial amount of reactive carbon was constant between model runs.
+The NMVOC used in the study, their mixing ratios and representation in the each mechanism are outlined in Table \ref{t:initial_conditions}.
+NMVOC are assigned to mechanism species following the recommendations from the literature of each mechanism.
+Initial emissions are weighted by the carbon number of the mechanism species ensuring the amount of reactive carbon was constant.
 
 \subsubsection{Mechanism Implementation} %implementation of mechanisms for the runs
 
 The MECCA boxmodel \citep{Sander:2005} is based upon the Kinetic Pre-Processor (KPP) \citep{Damian:2002} and used as described in \citet{Butler:2011}. 
 Hence, all chemical mechanisms were adapted into modularised KPP format.
 
-The inorganic gas-phase chemistry of MCM v3.2 was used in each model run to remove any discrepancies between how inorganic chemistry is treated in each mechanism.
-Using a common set of inorganic reactions implies that differences between mechanisms are due to their treatment of organic degradation chemistry.
+The MCM v3.2 inorganic gas-phase chemistry was used in each run to remove any differences between treatment of inorganic chemistry in each mechanism.
+Thus any differences between the \ce{O3} produced by the mechanisms are due to the treatment of organic degradation chemistry.
 Inorganic gas-phase chemistry is relatively well-known and any differences arise from inconsistencies between IUPAC and JPL reaction rate constants \citep{Emmerson:2009}.
 
 Some mechanisms include reactions which are only important in the stratosphere or free troposphere.

@@ -2,7 +2,7 @@
 \subsection{Chemical Mechanisms} \label{ss:mechanisms}
 
 {
-    \renewcommand{\arraystretch}{1.3}
+    \renewcommand{\arraystretch}{1.1}
     \begin{table}
         \centering
         \begin{tabular}{M{2.5cm}M{2.0cm}M{2.0cm}M{2.5cm}M{3.9cm}}
@@ -20,55 +20,52 @@
             \hline \hline
         \end{tabular}
         \vspace{0mm}
-        \caption{The chemical mechanisms used in the study. The reference mechanism is the MCM v3.2.}
+        \caption{The chemical mechanisms used in the study, MCM v3.2 is the reference mechanism.}
         \vspace{-4mm}
         \label{t:mechanisms}
     \end{table}
 }
 
-The chemical mechanisms compared in this study include mechanisms used for global and regional modelling and are outlined in Table \ref{t:mechanisms}. 
+The chemical mechanisms compared in this study are outlined in Table \ref{t:mechanisms}; each mechanism is summarised below.
 
 %MCM
-The Master Chemical Mechanism (MCM) \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005, MCM_Site} is a near-explicit mechanism describing the degradation of 125 primary VOC. 
-The latest version, \mbox{MCM v3.2}, is the reference mechanism in this study.
+The Master Chemical Mechanism (MCM) \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005, MCM_Site} is a near-explicit mechanism describing the degradation of $125$ primary VOC. 
+The latest version (\mbox{MCM v3.2}) is the reference mechanism in this study.
 
 %CRI
-The second version of the Common Representative Intermediates (CRI v2) \citep{Jenkin:2008} is a reduced chemical mechanism describing the oxidation of the same primary VOC as MCM v3.1, the previous MCM version. 
-VOC degradation is represented by species whose \ce{O3} production reflects that of the \mbox{MCM v3.1}. 
-The full version of the \mbox{CRI v2} (\url{http://mcm.leeds.ac.uk/CRI}) was used.
-
-Differences in \ce{O3} production between the CRI v2 and MCM v3.2 may be due to changes in the MCM versions rather than the CRI v2 reduction techniques.
-For this reason, the MCM v3.1 was also included.
+The Common Representative Intermediates (CRI v2) \citep{Jenkin:2008} is a reduced chemical mechanism describing the oxidation of the same primary VOC as the previous MCM version (MCM v3.1). 
+VOC degradation is simplified by lumping the degradation products of many VOC into species whose \ce{O3} production reflects that of the \mbox{MCM v3.1}. 
+We use the full version of the \mbox{CRI v2} (\url{http://mcm.leeds.ac.uk/CRI}).  
+Differences in \ce{O3} production between the CRI v2 and MCM v3.2 may be due to changes in the MCM versions rather than the CRI reduction techniques, hence we include the MCM v3.1 in the study.
 
 %MOZART
-The Model for OZone and Related chemical Tracers version 4 (MOZART-4) is a global chemical transport model representing tropospheric and stratospheric chemistry \citep{Emmons:2010}. 
+The Model for OZone and Related chemical Tracers version 4 (MOZART-4) represents global tropospheric and stratospheric chemistry \citep{Emmons:2010}. 
 Explicit species exist for methane, ethane, propane, ethene, propene, isoprene and $\alpha$-pinene.
-Lumped species represent all other VOC and the choice of lumped species is based on the functionality of the VOC.
+All other VOC are represented by lumped species which is determined by the functionality of the VOC.
 
 %RADM2
-The second generation Regional Acid Deposition Model (RADM2) was developed for regional scale atmospheric chemistry modelling \citep{Stockwell:1990}. 
-Explicit species represent methane, ethane, ethene and isoprene.
-All other VOCs are assigned to lumped species based upon OH-reactivity and molecular weight.
+The second generation Regional Acid Deposition Model (RADM2) describes regional scale atmospheric chemistry \citep{Stockwell:1990}. 
+Explicit species represent methane, ethane, ethene and isoprene, while all other VOC are assigned to lumped species based on OH-reactivity and molecular weight.
 
 %RACM
 RADM2 was updated to the Regional Atmospheric Chemistry Mechanism (RACM) \citep{Stockwell:1997}. 
 Updates include more explicit and lumped species representing VOC as well as revised chemistry.
 
 %RACM2
-RACM2 is the current RACM version \citep{Goliff:2013} with substantial updates to the represented chemistry. 
+RACM2 is the latest RACM version \citep{Goliff:2013} with substantial updates to the chemistry. 
 More lumped and explicit species representing emitted VOC are also included.
 
 %CBM4
 The Carbon Bond Mechanism version four (CBM-IV) simulates polluted urban conditions \citep{Gery:1989}. 
-Explicit representation of ethene, formaldehyde and isoprene are included while all other emitted VOC are lumped according to their carbon bond types. 
+CBM-IV represents ethene, formaldehyde and isoprene explicitly while all other emitted VOC are lumped by their carbon bond types. 
 
-The emission rates of all primary VOC were assigned to lumped species as described in \citet{Hogo:1989}. 
-For example, pentane is represented as $5$ PAR as it has five single carbon bonds (PAR represents the paraffin C--C bond).
-An initial emission rate of $2.5 \times 10^{12}$ molecules cm$^{-2}$ s$^{-1}$ was assigned as \mbox{$1.25 \times 10^{13}$ ($= 2.5 \times 10^{12} \times 5$) molecules cm$^{-2}$ s$^{-1}$} in CBM-IV.
+All primary VOC were assigned to lumped species in CBM-IV as described in \citet{Hogo:1989}. 
+For example, pentane is represented as $5$ PAR as it has five single carbon bonds (PAR represents the C--C bond).
+An initial mixing ratio of $1200$ pptv was assigned to \mbox{$6000$ ($= 1200 \times 5$) pptv} in CBM-IV.
 
 %CB05
-The fifth version of the Carbon Bond Mechanism (CB05) \citep{Yarwood:2005} includes explicit species to represent methane, ethane and acetaldehyde. 
-Other updates include revised allocation of primary VOC and amended reaction rate constants.
+The fifth version of the Carbon Bond Mechanism (CB05) \citep{Yarwood:2005} includes explicit species representing methane, ethane and acetaldehyde. 
+Other updates include revised allocation of primary VOC and updated reaction rate constants.
 
 \subsection{Model Setup} \label{ss:model_setup}
 

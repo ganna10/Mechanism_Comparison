@@ -5,35 +5,37 @@
     \centering
     \includegraphics[width=0.6\textwidth]{img/O3_mixing_ratios}
     \vspace{1mm}
-    \caption{Time series of \ce{O3} mixing ratios.}
+    \caption{Time series of \ce{O3} mixing ratios obtained using each mechanism.}
     \vspace{-4mm}
     \label{f:time_series}
 \end{figure}
-
+\todo{Change legend order with MCMs first}
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{img/Ox_production_budgets_by_VOC_de-allocated}
     \vspace{1mm}
-    \caption{The day-time \ce{O_x} production budgets allocated to individual VOC in each mechanism.}
+    \caption{Day-time \ce{O_x} production budgets in each mechanism allocated to individual VOC.}
     \vspace{-4mm}
     \label{f:Ox_tagged_budgets}
 \end{figure}
 
-Figure \ref{f:time_series} shows the time series of \ce{O3} mixing ratios obtained using each mechanism.
-The day-time production budgets of the \ce{O_x} family for each mechanism are displayed in Figure \ref{f:Ox_tagged_budgets}, the \ce{O_x} production budgets are allocated to each VOC.
-The contributions from the individual VOC in Table \ref{t:initial_conditions} are re-assigned from lumped mechanism emitted species using the inverse calculation when assigning the initial conditions to the respective mechanism species.
+Figure \ref{f:time_series} shows the time series of \ce{O3} mixing ratios obtained with each mechanism.
+The day-time \ce{O_x} production budgets allocated to VOC for each mechanism are displayed in \mbox{Figure \ref{f:Ox_tagged_budgets}}.
+The \ce{O_x} production from lumped mechanism species is re-assigned to the base VOC of \mbox{Table \ref{t:initial_conditions}} by applying a contributing factor to the \ce{O_x} production of the lumped species.
+For example, TOL in RACM2 represents both toluene and ethylbenzene with contributing factors of $0.868$ and $0.132$.
+The \ce{O_x} production of toluene and ethylbenzene in RACM2 are determined by multiplying the \ce{O_x} production from TOL by these factors.
 
-The mechanisms including the highest amount of chemical details (MCM v3.2, MCM v3.1 and CRI v2) produce the largest amount of \ce{O3} in Figure \ref{f:time_series}.
-Whilst both the CBM-IV and CB05, that include the least amount of chemical detail, produce the lowest amount of \ce{O3}.
-This trend is also evident in Figure \ref{f:Ox_tagged_budgets} where the more-detailed mechanisms have largest day-time \ce{O_x} production and the less-detailed mechanisms have the lowest day-time \ce{O_x} production.
+The mechanisms with the most detailed chemistry (MCM v3.2, MCM v3.1 and CRI v2) produce the largest amount of \ce{O3} (Figure \ref{f:time_series}).
+Whilst CBM-IV and CB05, with the least chemical detail, produce the lowest amount of \ce{O3}.
+This trend is mirrored in Figure \ref{f:Ox_tagged_budgets} where the more detailed mechanisms produce more \ce{O_x} than less detailed mechanisms.
 
-The \ce{O3} mixing ratio levels in RACM are much lower on the first day compared to mechanisms having a similar amount of chemical detail.
-These low \ce{O3} amounts are due to the lack of \ce{O_x} production from aromatic VOC in RACM, which differs from \ce{O_x} production on the first day in all other mechanisms.
-This lack of \ce{O_x} production from aromatic species arises from aromatic degradation chemistry which results in net \ce{O_x} consumption and is further detailed in \mbox{Section \ref{sss:aromatic}}.
+The \ce{O3} mixing ratios on the first day in RACM are lower than mechanisms having similarly detailed chemistry (such as MOZART-4 or RADM2).
+The lower \ce{O3} mixing ratios are due to a lack of \ce{O_x} production from aromatic VOC on the first day in RACM (Figure \ref{f:Ox_tagged_budgets}).
+Aromatic degradation chemistry in RACM results in net \ce{O_x} consumption on the first day, this is detailed in \mbox{Section \ref{sss:aromatic}}.
 
-Low \ce{O_x} production in CBM-IV and CB05 is related to the lower OH levels produced during the model runs using these mechanisms compared to the MCM v3.2. 
-The lower OH levels arise from the high NO emissions required for maximal \ce{O_x} production conditions in CBM-IV and CB05 --- high NO levels suppresses the OH amounts through \ce{HNO3} formation \reactionref{r:NO2_OH} in which both \ce{NO2} and OH are removed from the system.
-Details are found in Section \ref{ss:radicals} which compares the NO emissions calculated for maximal \ce{O_x} production in each mechanism.
+Low \ce{O_x} production in CBM-IV and CB05 is related to lower OH mixing ratios compared to the MCM v3.2. 
+Higher NO emissions are required for maximal \ce{O_x} production in CBM-IV and CB05 than the MCM v3.2, producing more \ce{HNO3} \reactionref{r:NO2_OH} which removes \ce{NO2} and OH through \ce{HNO3} deposition.
+The NO emissions required for maximal \ce{O_x} production in each mechanism are compared in Section \ref{ss:radicals}.
 Lower \ce{O3} levels using CBM-IV and CB05 compared to other mechanisms have also been noted in previous modelling studies such as \citet{Luecken:2008, Emmerson:2009} and \citet{Saylor:2012}.
 
 \subsection{First Day Ozone Production} \label{ss:day1} %first day comparison

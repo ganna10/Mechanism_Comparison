@@ -9,7 +9,7 @@
     \vspace{-4mm}
     \label{f:time_series}
 \end{figure}
-\todo{Change legend order with MCMs first}
+
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{img/Ox_production_budgets_by_VOC_de-allocated}
@@ -44,32 +44,27 @@ Lower \ce{O3} levels using CBM-IV and CB05 compared to other mechanisms have als
     \centering
     \includegraphics[width=\textwidth]{img/first_day_values}
     \vspace{1mm}
-    \caption{MCM v3.2 first day TOPP values and corresponding values in each mechanism. The root mean square error (RMSE) of each set of TOPP values is also displayed.}
+    \caption{The first day TOPP values for each VOC calculated using MCM v3.2 and the corresponding values in each mechanism. The root mean square error (RMSE) of each set of TOPP values is also displayed.}
     \vspace{-4mm}
     \label{f:first_day}
 \end{figure}
 
-The first day TOPP values calculated from each mechanism are compared to those obtained with the MCM v3.{2} in Figure \ref{f:first_day}. 
-The root mean square error (RMSE) are also illustrated in \mbox{Figure \ref{f:first_day}}.
-TOPP values in MCM v3.1 and CRI v2 match those of the MCM v3.2 as indicated by their low RMSE values.
-The more reduced mechanisms have a much higher spread in their first day TOPP values for each VOC and this is also confirmed by the large RMSE values.
+The first day TOPP values of each VOC calculated from each mechanism are compared to those obtained with the MCM v3.{2} in Figure \ref{f:first_day}.
+The root mean square error (RMSE) of all first day TOPP values in each mechanism from those in the MCM v3.2 are also included.
+The RMSE values show that reduced mechanisms have a higher spread in their first day TOPP values than the MCM v3.1 and CRI v2.
+The higher RMSE values are mainly due to the lower TOPP values obtained for aromatic VOC in reduced mechanisms.
 
-The TOPP values for aromatic VOC tend to be lower than in MCM v3.2 in many mechanisms, this is particularly the case in RACM and  MOZART-4.
-As these TOPP values for aromatic VOC vary the most from MCM v3.2, they are the root of the high RMSE values in RACM and  MOZART-4.
-The lower TOPPs for aromatic VOC show that aromatic degradation chemistry is difficult to represent in chemical mechanisms as many products, their yields and reactions are not known or subject to uncertainties \citep{Vereecken:2012}.
+The first day TOPP value of $2$-methylpropene in RACM, RACM2, MOZART-4 and CB05 indicate that it degrades differently to the MCM v3.2. 
+The variation between RACM, RACM2 and MCM v3.2 arises from differences in the ozonolysis rate constant of $2$-methylpropene.
+This rate constant is an order of magnitude faster in RACM and RACM2 than in MCM v3.2 as the RACM, RACM2 rate constant is a weighted mean of all the ozonolysis rate constants of all VOC represented as OLI \citep{Stockwell:1997, Goliff:2013}.
+The faster rate constant produces more radicals in RACM and RACM2 producing more \ce{O_x} than the MCM v3.2.
 
-The first day TOPP values of $2$-methylpropene in RACM, RACM2, MOZART-4 and CB05 indicate that its degradation is treated differently to the MCM v3.2. 
-The variation between RACM, RACM2 and MCM v3.2 arises from differences in $2$-methylpropene ozonolysis rate constants.
-In RACM and RACM2, this rate constant is calculated as a weighted mean of all VOC ozonolysis rate constants represented as OLI \citep{Stockwell:1997, Goliff:2013} and is an order of magnitude faster than MCM v3.2 despite a common source (IUPAC).
-The faster rate constant results in increased radical production which leads to more \ce{O_x} production than in the MCM v3.2.
+The MOZART-4 degradation of $2$-methylpropene produces acetaldehyde (\ce{CH3CHO}) through the reaction of NO with the $2$-methylpropene peroxy radical.
+Whereas no \ce{CH3CHO} is produced during $2$-methylpropene degradation in MCM v3.2.
+\ce{CH3CHO} initiates an \ce{O_x}-producing degradation chain involving \ce{CH3CO3} and \ce{CH3O2} producing more \ce{O_x} in MOZART-4 than \mbox{MCM v3.2}.
 
-In MOZART-4, acetaldehyde is producted through the $2$-methylpropene peroxy radical reaction with NO.
-Whereas there is no acetaldehyde production during $2$-methylpropene degradation in MCM v3.2.
-The acetaldehyde production initiates a degradation chain involving \ce{CH3CO3} and \ce{CH3O2} that produces \ce{O_x}.
-
-$2$-methylpropene is represented in CBM-IV and CB05 as a mixture of aldehydes (acetaldehyde and formaldehyde in CBM-IV and formaldehyde in CB05) and PAR the paraffin \ce{C-C} bond \citep{Gery:1989, Yarwood:2005}. 
-The initial aldehyde oxidation immediately produces radicals which leads to \ce{O_x} production.
-On the other hand PAR is a slow reacting species which slows down the \ce{O_x} production resulting in lower \ce{O_x} production than in the MCM v3.2.
+The $2$-methylpropene representation in CB05 was updated to \mbox{HCHO + $3$ PAR} from \mbox{\ce{CH3CHO} + HCHO + PAR} in CBM-IV, where PAR is the paraffin \ce{C-C} bond \citep{Gery:1989, Yarwood:2005}.
+The representation in CB05 includes more of the slower reacting PAR at the expense of the more reactive \ce{CH3CHO} promoting lower \ce{O_x} production than the MCM v3.2.
 
 \subsection{Ozone Production on Subsequent Days} \label{ss:profiles} %TOPP time series of all species
 

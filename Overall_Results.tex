@@ -52,7 +52,7 @@ Lower \ce{O3} levels using CBM-IV and CB05 compared to other mechanisms have als
 
 The first day TOPP values of each VOC calculated using each mechanism are compared to those obtained with the MCM v3.{2} in Figure \ref{f:first_day}.
 The root mean square error (RMSE) of all first day TOPP values in each mechanism from those in the MCM v3.2 are also included.
-The RMSE values show that reduced mechanisms have a higher spread in their first day \ce{O_x} production than the MCM v3.1 and CRI v2.
+The RMSE values show that mechanisms using lumped structure and lumped molecule techniques have a higher spread in their first day \ce{O_x} production than the CRI v2, which lumps intermediate species.
 
 CBM-IV and CB05 produce low amounts of \ce{O_x} (Figure \ref{f:Ox_tagged_budgets}) resulting in low TOPP values for most VOC.
 Low OH levels lead to lower \ce{O_x} production in the CBM-IV and CB05 (Section \ref{ss:O3_time_series}).
@@ -79,26 +79,29 @@ The representation in CB05 includes more of the slower reacting PAR at the expen
     \centering
     \includegraphics[width=\textwidth]{img/TOPP_daily_time_series_all_VOC}
     \vspace{0mm}
-    \caption{TOPP value time series using each mechanism for all NMVOC.}
+    \caption{TOPP value time series using each mechanism for each VOC.}
     \vspace{-4mm}
     \label{f:TOPP_dailies}
 \end{figure}
 
-Time series of daily TOPP values for each NMVOC are presented in \mbox{Figure \ref{f:TOPP_dailies}}. 
-NMVOC such as ethene, that are represented by dedicated mechanism species produce similar \ce{O_x} over the whole model run in all mechanisms.
-Higher variability in the time dependent \ce{O_x} production is evident for all aromatic VOC and NMVOC represented by lumped mechanism species, such as pentane.
+Time series of daily TOPP values for each VOC are presented in \mbox{Figure \ref{f:TOPP_dailies}}. 
+Higher variability in the time dependent \ce{O_x} production is evident for all VOC represented by lumped mechanism species.
+The lumped structure approach of CBM-IV and CB05 produces the lowest \ce{O_x} throughout the model run, whilst the lumped intermediate mechanism (CRI v2) leads to similar \ce{O_x} production to the MCM v3.2.
 
-Alkane degradation in CRI v2 and both MCM mechanisms produces a second day maximum in \ce{O_x} increasing with carbon number (Figure \ref{f:TOPP_dailies}).
-The increase in \ce{O_x} production on the second day is reproduced by the reduced mechanisms but the magnitude is not -- in particular hexane, heptane and octane degradation.
-Hexane, heptane and octane are represented by lumped species in all reduced mechanisms, except CRI v2 and the \ce{O_x} production during the degradation of these lumped species has a significantly lower total \ce{O_x} yield than the explicit species representing these alkanes.
-The total \ce{O_x} yield of hexane, heptane and octane in each mechanism is found in the supplement to the paper.
+Alkane degradation in CRI v2 and both MCM mechanisms produces a second day maximum in \ce{O_x} that increases with carbon number (Figure \ref{f:TOPP_dailies}).
+The increase in \ce{O_x} production on the second day is reproduced by the reduced mechanisms but not the magnitude, especially alkanes represented as lumped species.
+This is detailed in Section \ref{sss:alkanes}.
+\todo{summarise Ox production from pentane section and forward reference}
 
-All aromatic VOC are represented as toluene in MOZART-4, this leads to overestimating the \ce{O_x} production from less reactive VOC (benzene) and also underestimating the \ce{O_x} production from more reactive aromatic VOC (xylenes).
-Aromatic VOC in RADM2 and RACM are represent as either toluene or xylene depending on the \textit{k}$_{\text{OH}}$ of the VOC.
-This approach also leads to an over-estimation of the \ce{O_x} production from benzene and ethylbenzene but fares better for the \ce{O_x} production from the xylenes.
-There is no \ce{O_x} production from aromatic VOC in RACM due to a change in degradation chemistry that leads to \ce{O_x} consumption, details are found in \mbox{Section \ref{sss:aromatic}}.
-\ce{O_x} production from all aromatic VOC in CBM-IV and CB05 is much lower than in MCM v3.2 due to a combination of rapid loss of reactive carbon and a low \ce{O_x} Production Efficiency (OxPE, the ratio of \ce{O_x} production to \ce{O_x} loss).
-Details of the reactive carbon loss and OxPE for toluene are found in Sections \ref{ss:carbon_loss} and \ref{ss:OxPE}.
+The lumped structure approach in CBM-IV and CB05 also does not capture the second day increase in \ce{O_x} production with alkane carbon number.
+This approach scales the \ce{O_x} production of PAR (\ce{C-C}) by the carbon number of the alkane leading to a slower increase in \ce{O_x} production with increasing carbon number than the MCM v3.2.
+The supplement shows the rate of increase of \ce{O_x} production with alkane carbon number.
+
+The time-dependent \ce{O_x} production during degradation of aromatic VOC indicate different treatments between the mechanisms.
+In particular, no \ce{O_x} is produced from aromatic VOC in RACM as aromatic degradation chemistry leads to net \ce{O_x} loss, \ce{O_x} production and loss during toluene degradation is detailed in Section \ref{sss:aromatic}.
+Lower \ce{O_x} is produced during degradation of aromatic VOC in all reduced mechanisms due to a quicker loss rate of reactive carbon than the MCM v3.2, presented in Section \ref{ss:carbon_loss}.
+
+\subsubsection[Ox Production during Pentane Degradation]{\ce{O_x} Production during Pentane Degradation} \label{sss:alkanes}
 
 \subsubsection[Ox Production during Toluene Degradation]{\ce{O_x} Production during Toluene Degradation} \label{sss:aromatic}
 

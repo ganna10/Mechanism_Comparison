@@ -74,33 +74,3 @@ Mechanisms which have high reactive carbon loss rates during the degradation of 
 Loss of reactive carbon is the constraining factor during toluene degradation in all reduced mechanisms and is a limiting factor during pentane degradation in RADM2, RACM and RACM2.
 The fact that reduced mechanisms are still able to produce similar amounts of \ce{O3} (Figure \ref{f:time_series}) shows that loss of reactive carbon is only one factor, the \ce{O_x} production efficiency (ratio of \ce{O_x} production per loss of \ce{O_x}) is another important factor when considering \ce{O_x} production and is discuss in Section \ref{ss:OxPE}.
 
-\subsection[Ox Production Efficiency of Degradation Fragments]{\ce{O_x} Production Efficiency of Degradation Fragments} \label{ss:OxPE}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1.1\textwidth]{img/OxPEs_by_C_number}
-    \vspace{0mm}
-    \caption{\ce{O_x} production efficiency of the degradation fragments during pentane and toluene degradation.}
-    \vspace{-4mm}
-    \label{f:OxPE}
-\end{figure}
-
-Reduced mechanisms can produce similar amounts of \ce{O_x} during NMVOC degradation to more-explicit mechanisms as shown in Figure \ref{f:carbon} but the \ce{O_x} is produced via the degradation fragments with a smaller number of carbons than in explicit mechanisms (Section \ref{ss:c_number}).
-Also, in Section \ref{ss:carbon_loss}, the loss rates of reactive carbon during VOC degradation plays a factor in determining how much \ce{O_x} can be produced throughout the degradation of the VOC.
-To determine how effective reduced mechanisms are at producing \ce{O_x} the \ce{O_x} production efficiency (OxPE) was calculated for the different sizes of the degradation products.
-The OxPE of each degradation fragment size was determined by dividing the total \ce{O_x} production from each degradation fragment size (this was shown in Figure \ref{f:carbon}) by the total \ce{O_x} consumption, Figure \ref{f:OxPE} shows this for pentane and toluene degradation.
-
-Reactions during VOC degradation that lead to increased OxPE are also those that result in loss of reactive carbon (Section \ref{ss:carbon_loss}).
-For example, the \ce{CH3O2 + NO} reaction is the main C1 \ce{O_x} production pathway during pentane degradation in reduced mechanisms with a larger contribution to the MCMs.
-Reduced mechanisms have higher acetaldehyde (\ce{CH3CHO}) production which results in a degradation chain leading to higher \ce{CH3O2} amounts.
-The OH-oxidation of \ce{CH3CHO} produces \ce{CH3CO3} whose reaction with NO produces \ce{O_x} as well as \ce{CH3O2}.
-
-Increased acetaldehyde amounts in reduced mechanisms result in increased OxPEs but also increased reactive carbon loss as noted in Section \ref{ss:carbon_loss}, the \ce{CH3CO3 + NO} reaction is also a major source of reactive carbon loss in all mechanisms. 
-Thus increased \ce{CH3CO3} levels produced from acetaldehyde production in less-explicit mechanisms leads to higher reactive carbon loss rates.
-
-Acetaldehyde is used as a surrogate for higher aldehydes in many reduced mechanisms, such as CBM-IV, CB05, RADM2 and RACM, this leads to a quicker break down of the parent VOC in the case of pentane as pentane has 5 carbons and acetaldehyde as 2.
-This quicker breakdown results in faster production of \ce{O_x} but that cannot be sustained over the model run and is evident in the similar \ce{O_x} production on the first day but not on the second (Figure \ref{f:carbon}).
-A better representation of aldehydes in reduced mechanisms would improve the time-dependent \ce{O_x} production.
-
-OxPE during toluene degradation is mainly attributed to the reactions of the toluene peroxy radical formed during the initial OH-oxidation of toluene.
-The reactions of the toluene peroxy radical are also the main source of reactive carbon loss during toluene degradation (Section \ref{ss:carbon_loss}).

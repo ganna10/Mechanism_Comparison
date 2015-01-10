@@ -101,41 +101,41 @@ The time-dependent \ce{O_x} production during degradation of aromatic VOC indica
 In particular, no \ce{O_x} is produced from aromatic VOC in RACM as aromatic degradation chemistry leads to net \ce{O_x} loss, \ce{O_x} production and loss during toluene degradation is detailed in Section \ref{sss:aromatic}.
 Lower \ce{O_x} is produced during degradation of aromatic VOC in all reduced mechanisms due to a quicker loss rate of reactive carbon than the MCM v3.2, presented in Section \ref{ss:carbon_loss}.
 
-\subsubsection[Ox Production during Pentane Degradation]{\ce{O_x} Production during Pentane Degradation} \label{sss:alkanes}
-
 \subsubsection[Ox Production during Toluene Degradation]{\ce{O_x} Production during Toluene Degradation} \label{sss:aromatic}
 
 \begin{figure}
     \centering
     \includegraphics[height=0.98\textheight]{img/TOL_Ox_intermediates}
     \vspace{0mm}
-    \caption{Day-time \ce{O_x} production and consumption budgets allocated to the responsible reactions from toluene degradation in all mechanisms.}
+    \caption{Day-time \ce{O_x} production and loss budgets allocated to the responsible reactions during toluene degradation in all mechanisms.}
     \vspace{-4mm}
     \label{f:toluene_Ox}
 \end{figure}
 
-\ce{O_x} production during toluene degradation in Figure \ref{f:TOPP_dailies} has the largest spread between all mechanisms.
-In order to explain the reasons for the large spread in \ce{O_x} production the day-time \ce{O_x} production and consumption budgets due to toluene degradation are shown in Figure \ref{f:toluene_Ox}.
-The \ce{O_x} production and consumption during toluene degradation are allocated to the responsible reactions by following the tags in each mechanism.
-
-All reduced mechanisms except CRI v2, are unable to produce similar amounts of \ce{O_x} as the MCMv3.2.
-The lower amounts of \ce{O_x} produced in reduced mechanisms is constrained by their rapid loss of reactive carbon during degradation of toluene, this analysis is described in Section \ref{ss:carbon_loss}.
-Reduced mechanisms have a similar or lower \ce{O_x} production efficiency to the MCM v3.2 as highlighted in Section \ref{ss:OxPE}, in the case of toluene degradation this lower OxPE does not compensate enough for the loss of reactive carbon leading to lower \ce{O_x} production.
-
-The \ce{O_x} production in CRI v2 and RACM2 reaches its maximum on the second day which differs from the MCM v3.2 which produces peak \ce{O_x} on the first day.
-The second day maximum of \ce{O_x} production in CRI v2 and RACM2 results from additional \ce{C2H5O2} (C2H5O2 in CRI v2 and ETHP in RACM2) production that is not found in MCM v3.2.
-The extra \ce{C2H5O2} production results from differing treatments to the MCM v3.2 in the degradation of unsaturated dicarbonyls producing during toluene degradation.
-
-In CRI v2, unsaturated dicarbonyls from toluene degradation produce propionaldehyde (\ce{C2H5CHO}) leading to \ce{C2H5O2}.
-Another degradation pathway for unsaturated dicarbonyls in CRI v2 produces the HOCH2CH2O2 peroxy radical which is also an additional \ce{O_x} source unique to CRI v2 in Figure \ref{f:toluene_Ox}.
-
-Unsaturated dicarbonyls in RACM2 also lead to production of \ce{C2H5CHO} but this is reached via different pathways to the CRI v2.
-\ce{C2H5CHO} is produced through the degradation of higher peroxides (OP2) and propyl peroxy radical (HC3P) which are degradation products of unsaturated dicarbonyl, in addition to \ce{C2H5CHO} production directly from unsaturated dicarbonyl degradation.
+Toluene degradation produces \ce{O_x} with a high spread between mechanisms (\mbox{Figure \ref{f:TOPP_dailies}}).
+The reactions contributing to \ce{O_x} production and loss budgets during toluene degradation are determined by following the ``toluene'' tags in each mechanism and are compared in Figure \ref{f:toluene_Ox}.
 
 RACM chemistry results in net \ce{O_x} loss on the first two days in contrast to net \ce{O_x} production in the MCM v3.2 due to several \ce{O_x}-consuming reactions in RACM that are not present in the MCM.
 Ozonolysis of the cresol OH-adduct mechanism species ADDC contributes the most to \ce{O_x} loss in RACM.
 This reaction was included in RACM due to improved cresol product yields when comparing RACM predictions with experimental data \citep{Stockwell:1997}, other mechanisms that include cresol OH-adduct species do not include ozonolysis.
 Including ozonolysis of aromatic OH-adduct species in RACM results in non-representative \ce{O_x} production, these ozonolysis reactions are not included in the updated RACM2.
+
+All reduced mechanisms are unable to produce similar amounts of \ce{O_x} on the first day as the MCM v3.2.
+\ce{O_x} production in reduced mechanisms is constrained by the rapid loss of reactive carbon during degradation of toluene, this analysis is described in Section \ref{ss:carbon_loss}.
+
+Maximum \ce{O_x} production in CRI v2 and RACM2 is reached on the second day unlike the MCM v3.2 which produces peak \ce{O_x} on the first day.
+The second day maximum of \ce{O_x} production in CRI v2 and RACM2 results from different treatments of unsaturated dicarbonyl degradation during toluene degradation to MCM v3.2.
+
+In CRI v2, unsaturated dicarbonyls from toluene degradation produce either the HOCH2CH2O2 peroxy radical or propionaldehyde (\ce{C2H5CHO}) leading to \ce{C2H5O2}.
+Both \ce{C2H5O2} and HOCH2CH2O2 produce \ce{O_x} significantly on the second day and are not produced during toluene degradation in MCM v3.2.
+
+Unsaturated dicarbonyls in RACM2 also produce \ce{C2H5CHO} but this is reached via different pathways to the CRI v2.
+\ce{C2H5CHO} is a primary degradation product of unsaturated dicarbonyls and also produced from the degradation of other unsaturated dicarbonyl products, such as higher peroxides (OP2) and propyl peroxy radical (HC3P).
+As in CRI v2, \ce{C2H5CHO} produces \ce{C2H5O2} producing more \ce{O_x} on the second day than in the MCM v3.2.
+
+Different treatments of toluene degradation in reduced mechanisms leads to dissimilar time-dependent \ce{O_x} production to the MCM v3.2.
+Refining the treatment of unsaturated dicarbonyls in CRI v2 and RACM2 would provide similar \ce{O_x} production to the \mbox{MCM v3.2}.
+Also minimising the loss of reactive carbon during toluene degradation in other reduced mechanisms would provide further pathways of producing more \ce{O_x}.
 
 \subsection{Production of Radicals} \label{ss:radicals}
 

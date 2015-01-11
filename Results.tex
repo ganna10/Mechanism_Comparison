@@ -167,3 +167,96 @@ Examples of thermal reactions that produce radicals in reduced mechanisms are in
 
 The mechanisms compared here require different NO emissions to simulate \ce{NO_x}-VOC-sensitive conditions, where the source of radicals is balanced by the source of \ce{NO_x}.
 Thus, a constant NO source may lead to different atmospheric regimes (\ce{NO_x}- or VOC-sensitive) being simulated depending on the mechanism, this shall be investigated in future work.
+
+This section details \ce{O_x} production in the chemical mechanisms of this study by comparing the treatment of the degradation products.
+\ce{O_x} production during pentane and toluene degradation is compared between mechanisms by analysing the distribution of \ce{O_x} production with the carbon number of the degradation products and the loss rates of reactive carbon.
+
+Some mechanism species in RADM2, RACM and RACM2 have fractional carbon numbers \citep{Stockwell:1990, Stockwell:1997, Goliff:2013}.
+\ce{O_x} production such mechanism species is assigned as \ce{O_x} production of the nearest integral carbon number.
+
+Many reduced mechanisms use operator species as a proxy for peroxy radicals during VOC degradation enabling more \ce{O_x} production without including additional species in the mechanism.
+\ce{O_x} production from operator species was assigned as \ce{O_x} production from the organic degradation product producing the operator species.
+This approach was also used to assign the \ce{O_x} production via \reactionref{r:HO2_NO} from \ce{HO2}.
+
+\subsection[Carbon Number of Ox Producing Degradation Products]{Carbon Number of \ce{O_x} Producing Degradation Products} \label{ss:c_number} %comparison by carbon number breakdown
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.10\textwidth]{img/Ox_production_by_C_number}
+    \vspace{0mm}
+    \caption{Day-time \ce{O_x} production during pentane and toluene degradation is attributed to the number of carbons of the degradation products for each mechanism.}
+    \vspace{-4mm}
+    \label{f:carbon}
+\end{figure}
+
+The time dependent \ce{O_x} production of different VOC in Figure \ref{f:TOPP_dailies} results from the varying rates at which VOC break up into smaller fragments \citep{Butler:2011}.
+The day-time \ce{O_x} production during pentane and toluene is distributed by the carbon numbers of the \ce{O_x} producing degradation products in Figure \ref{f:carbon} to compare the break down between mechanisms.
+
+During pentane degradation, more \ce{O_x} is produced from degradation products having the same carbon number as pentane throughout the model run in explicit mechanisms.
+Reduced mechanisms produce similar amounts of \ce{O_x} on the first day by increasing the \ce{O_x} production from smaller degradation products, indicating that pentane is broken into smaller fragments quicker in reduced mechanisms.  
+
+The first day break down of pentane affects the \ce{O_x} production of subsequent days by limiting the availability of higher degradation products to produce further \ce{O_x}.
+Thus \ce{O_x} production on subsequent days cannot reach the same levels as in explicit mechanisms, this is analysed for all alkanes in Section \ref{sss:alkanes}.
+
+The \ce{O_x} produced during toluene degradation has a high spread between all mechanisms (Figure \ref{f:TOPP_dailies}).
+Distributing this \ce{O_x} production to the carbon numbers of toluene degradation products in Figure \ref{f:carbon} shows a variability in \ce{O_x} production from the different sizes of degradation products between mechanisms.
+
+All reduced mechanisms omit \ce{O_x} production from at least one degradation fragment size that produces \ce{O_x} in the MCM v3.2 indicating that reactive carbon during toluene degradation is lost quicker than more explicit mechanisms.
+For example, toluene degradation does not produce \ce{O_x} from degradation products with six carbons in RACM2 unlike the MCM v3.2.
+
+%The \ce{O_x} production during pentane and toluene degradation distributed by the sizes of the degradation products indicates that VOC are broken down quicker in reduced mechanisms.
+%
+%If reduced mechanisms lose reactive carbon at a quicker rate than the MCM v3.2 this would mean that the reduced mechanisms could not produce the same amount of \ce{O_x} as the MCM as the degradation chains that produce \ce{O_x} are terminated quicker.
+%The net loss of reactive carbon during pentane and toluene degradation is analysed in more detail in Section \ref{ss:carbon_loss}.
+
+\subsubsection[Ox Production during Alkane Degradation]{\ce{O_x} Production during Alkane Degradation} \label{sss:alkanes}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{img/Alkanes_vs_C}
+    \vspace{0mm}
+    \caption{First day TOPP value of each alkane versus its carbon number in each mechanism.}
+    \vspace{-4mm}
+    \label{f:alkanes_C}
+\end{figure}
+
+Many alkanes in this study are represented by lumped species in reduced mechanisms that use lumped molecule approach and these alkanes produce lower amounts of \ce{O_x} than when represented explicitly (Figure \ref{f:TOPP_dailies}).
+In particular, the second day maximum in \ce{O_x} from alkane degradation is significantly lower in reduced mechanisms.
+
+Pentane is represented in CBM-IV and CB05 (lumped structure mechanisms) as $5$ PAR -- the paraffin (C--C) bond -- whose degradation is described using mechanism species having either one or two carbons \citep{Gery:1989, Yarwood:2005}. 
+\ce{O_x} production is sustained throughout PAR degradation by recycling of \ce{O_x} producing mechanism species.
+An example is the oxy organic radical ROR that is a primary degradation product of PAR and further degradation of ROR also produces ROR with a product yield of $0.02$ \citep{Gery:1989}.
+This approach of using representing alkanes as a multiple of the base C--C bonds limits the amount of \ce{O_x} that can be produced during pentane degradation as this reduces the number of available pathways for \ce{O_x} production.
+
+\subsection[Reactive Carbon Loss during Ox Production]{Reactive Carbon Loss during \ce{O_x} Production} \label{ss:carbon_loss}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/net_reactive_carbon_loss_pentane_toluene}
+    \vspace{0mm}
+    \caption{Daily net carbon loss rate during \ce{O_x} production from pentane and toluene degradation.}
+    \vspace{-4mm}
+    \label{f:net_carbon_loss}
+\end{figure}
+
+The analysis of the \ce{O_x} production allocated to the different sizes of the pentane and degradation products in Section \ref{ss:c_number} indicates that reduced mechanisms may lose reactive carbon quicker than more explicit mechanisms.
+This section compares the reactive carbon loss rates during pentane and toluene degradation in Figure \ref{f:net_carbon_loss} by calculating the net carbon yield from each \ce{O_x} producing reaction and multiplying this yield by the reaction rate.
+
+Pentane degradation shows comparable loss rates of reactive carbon between the MCM v3.2 and the other mechanisms, besides CBM-IV and CB05.
+The loss rates of reative carbon during pentane degradation in CBM-IV and CB05 is represented by C1 and C2 species this leads to little carbon loss during pentane degradation in CBM-IV and CB05, hence the lumped species reduced mechanisms have different loss of carbon profiles to other types of mechanisms.
+
+RADM2, RACM and RACM2 have the highest loss rates of reactive carbon on the first day (Figure \ref{f:net_carbon_loss}), this leads to these mechanisms being unable to reach the same \ce{O_x} production as other mechanisms on subsequent days (Figure \ref{f:carbon}).
+CRI v2 and MOZART-4 have slower loss rates of reactive carbon than the MCM v3.2 and this results in higher \ce{O_x} production than RADM2, RACM and RACM2 (Figure \ref{f:carbon}).
+
+All reduced mechanisms have quicker loss rate of reactive carbon during toluene degradation (Figure \ref{f:net_carbon_loss}).
+In particular, MOZART-4 loses reactive carbon at least twice as fast as other mechanisms and this explains why \ce{O_x} production during toluene degradation in MOZART-4 sharply decreases after the first day (Figure \ref{f:carbon}).
+This same trend is also seen in the \ce{O_x} production during toluene degradation in CBM-IV and CB05 (Figure \ref{f:carbon}).
+
+CRI v2 and RACM2 both have a higher loss rate of reactive carbon during toluene degradation on the second day compared to the MCM v3.2 but the both have in increase in \ce{O_x} production on the second day (Figure \ref{f:carbon}) and this is due\ldots
+
+The \ce{CH3CO3 + NO} reaction is the main source of reactive carbon loss during pentane degradation in all mechanisms.
+Reactive carbon loss during toluene degradation also has significant loss of carbon from the \ce{CH3CO3 + NO} reaction but the degradation of the toluene peroxy radical formed after initial OH-oxidation also leads to significant reactive carbon loss.
+The supplement to this paper includes analysis of which reactions are the main sources of reactive carbon loss during pentane and toluene degradation.
+
+Mechanisms which have high reactive carbon loss rates during the degradation of a VOC limit the amount of \ce{O_x} that can be produced.
+Loss of reactive carbon is the constraining factor during toluene degradation in all reduced mechanisms and is a limiting factor during pentane degradation in RADM2, RACM and RACM2.

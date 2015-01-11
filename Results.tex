@@ -22,21 +22,23 @@
 \todo{Ox instead of O3?}
 Figure \ref{f:time_series} shows the time series of \ce{O3} and OH mixing ratios obtained with each mechanism.
 The day-time \ce{O_x} production budgets allocated to VOC for each mechanism are displayed in \mbox{Figure \ref{f:Ox_tagged_budgets}}.
-The \ce{O_x} production from lumped mechanism species is re-assigned to the VOC of \mbox{Table \ref{t:initial_conditions}} by applying a contributing factor to the \ce{O_x} production of the lumped species.
+The \ce{O_x} production from lumped mechanism species are re-assigned to the VOC of \mbox{Table \ref{t:initial_conditions}} by applying a contributing factor to the \ce{O_x} production of the lumped species.
 For example, TOL in RACM2 represents toluene and ethylbenzene with contributing factors of $0.87$ and $0.13$.
 Multiplying these factors to the \ce{O_x} production from TOL gives the \ce{O_x} production from toluene and ethylbenzene in RACM2.
 
 The mechanisms with the most detailed chemistry (MCM v3.2, MCM v3.1 and CRI v2) produce the highest \ce{O3} mixing ratios (Figure \ref{f:time_series}).
 Whilst CBM-IV and CB05, with the least chemical detail, produce the lowest \ce{O3} mixing ratios.
-The trends in \ce{O3} mixing ratios are mirrored in Figure \ref{f:Ox_tagged_budgets} with mechanisms producing high \ce{O_x} levels having high \ce{O3} mixing ratios.
+The trends in \ce{O3} mixing ratios are mirrored in Figure \ref{f:Ox_tagged_budgets} with mechanisms producing high amounts of \ce{O_x} having high \ce{O3} mixing ratios.
 
 The \ce{O3} mixing ratios on the first day in RACM are lower than mechanisms having similarly detailed chemistry (such as MOZART-4 or RADM2).
 The lower \ce{O3} mixing ratios are due to a lack of \ce{O_x} production from aromatic VOC on the first day in RACM (Figure \ref{f:Ox_tagged_budgets}).
 Aromatic degradation chemistry in RACM results in net \ce{O_x} consumption on the first day and is detailed in \mbox{Section \ref{sss:aromatic}}.
 
 The low OH mixing ratios obtained with CBM-IV and CB05 (Figure \ref{f:time_series}) inhibit VOC oxidation leading to lower \ce{O3} mixing ratios in CBM-IV and CB05 compared to the MCM v3.2. 
-CBM-IV and CB05 represent the high-\ce{NO_x} chemistry of polluted urban areas leading to larger NO emissions for conditions of maximal \ce{O3} production than any other mechanism, detailed in \mbox{Section \ref{ss:radicals}}.
-These large NO emissions induce higher \ce{HNO3} production and deposition leading to greater loss of OH and \ce{NO_x} in CBM-IV and CB05.
+CBM-IV and CB05 represent the high-\ce{NO_x} chemistry of polluted urban areas leading to larger NO emissions for the conditions of maximal \ce{O3} production used in this study than any other mechanism.
+The higher NO emissions in CBM-IV and CB05 lead to higher \ce{HNO3} production through \reactionref{r:NO2_OH} than other mechanisms.
+Larger \ce{HNO3} amounts results in an increased sink for OH and \ce{NO_x} due to higher \ce{HNO3} deposition rates in CBM-IV and CB05.
+The \ce{HNO3} deposition sink causes much lower OH amounts in CBM-IV and CB05 (Figure \ref{f:time_series}) limiting the amount of OH available for VOC oxidation.
 Lower \ce{O3} levels using CBM-IV and CB05 compared to other mechanisms have also been noted in previous modelling studies such as \citet{Emmerson:2009} and \citet{Saylor:2012}.
 
 \subsection{First Day Ozone Production} \label{ss:day1} %first day comparison
@@ -136,47 +138,6 @@ As in CRI v2, \ce{C2H5CHO} produces \ce{C2H5O2} producing more \ce{O_x} on the s
 Different treatments of toluene degradation in reduced mechanisms leads to dissimilar time-dependent \ce{O_x} production to the MCM v3.2.
 Refining the treatment of unsaturated dicarbonyls in CRI v2 and RACM2 would provide similar \ce{O_x} production to the \mbox{MCM v3.2}.
 Also minimising the loss of reactive carbon during toluene degradation in other reduced mechanisms would provide further pathways of producing more \ce{O_x}.
-
-\subsection{Production of Radicals} \label{ss:radicals}
-\todo{do I need this section - it's not adding much to the \ce{O_x} production}
-\begin{figure}
-    \centering
-    \includegraphics[height=0.94\textheight]{img/radical_NOx_production_budgets}
-    \vspace{0mm}
-    \caption{Net radical production day-time budgets for each mechanism. Net radical production calculated as the difference between radical and \ce{NO_x} yields. O1D represents the reaction of \ce{O(^1D)} with water vapour.}
-    \vspace{-4mm}
-    \label{f:radical_production} 
-\end{figure} 
-
-Production of radicals impacts \ce{O_x} production through the conversion of NO to \ce{NO2} by peroxy radicals.
-Moreover in this study, NO emissions are calculated as the amount of NO needed to balance the source of radicals at each time step ensuring conditions of maximal \ce{O3} production (Section \ref{ss:model_setup}).
-Thus differences in radical production between mechanisms impacts both \ce{O_x} production and NO emissions.
-
-Figure \ref{f:radical_production} compares the reactions contributing to net radical to \ce{NO_x} production in each mechanism.
-The total net radical to \ce{NO_x} production in Figure \ref{f:radical_production} indicates the total NO emissions of each mechanism.
-
-CBM-IV and CB05 were developed for the high-\ce{NO_x} conditions of polluted urban regions \citep{Gery:1989, Yarwood:2005} and both mechanisms represent VOC-sensitive chemistry.
-This VOC-sensitive chemistry leads to much higher net radical production on the first two days and corresponds with larger NO emissions in CBM-IV and CB05 than any other mechanism.
-The higher NO emissions in CBM-IV and CB05 lead to higher \ce{HNO3} production through \reactionref{r:NO2_OH} than other mechanisms.
-Larger \ce{HNO3} amounts results in an increased sink for OH and \ce{NO_x} due to higher \ce{HNO3} deposition rates in CBM-IV and CB05.
-The \ce{HNO3} deposition sink causes much lower OH amounts in CBM-IV and CB05 (Figure \ref{f:time_series}) limiting the amount of OH available for VOC oxidation.
-
-Photolysis of carbonyl species, mainly HCHO, is the main source of radicals from organic chemistry.
-Reduced mechanisms produce radicals from thermal reactions as they do not include as many carbonyl species as more explicit mechanisms. 
-Examples of thermal reactions that produce radicals in reduced mechanisms are initial VOC oxidation, NO--\ce{RO2} reactions and ozonolysis.
-
-The mechanisms compared here require different NO emissions to simulate \ce{NO_x}-VOC-sensitive conditions, where the source of radicals is balanced by the source of \ce{NO_x}.
-Thus, a constant NO source may lead to different atmospheric regimes (\ce{NO_x}- or VOC-sensitive) being simulated depending on the mechanism, this shall be investigated in future work.
-
-This section details \ce{O_x} production in the chemical mechanisms of this study by comparing the treatment of the degradation products.
-\ce{O_x} production during pentane and toluene degradation is compared between mechanisms by analysing the distribution of \ce{O_x} production with the carbon number of the degradation products and the loss rates of reactive carbon.
-
-Some mechanism species in RADM2, RACM and RACM2 have fractional carbon numbers \citep{Stockwell:1990, Stockwell:1997, Goliff:2013}.
-\ce{O_x} production such mechanism species is assigned as \ce{O_x} production of the nearest integral carbon number.
-
-Many reduced mechanisms use operator species as a proxy for peroxy radicals during VOC degradation enabling more \ce{O_x} production without including additional species in the mechanism.
-\ce{O_x} production from operator species was assigned as \ce{O_x} production from the organic degradation product producing the operator species.
-This approach was also used to assign the \ce{O_x} production via \reactionref{r:HO2_NO} from \ce{HO2}.
 
 \subsection[Carbon Number of Ox Producing Degradation Products]{Carbon Number of \ce{O_x} Producing Degradation Products} \label{ss:c_number} %comparison by carbon number breakdown
 

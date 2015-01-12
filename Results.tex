@@ -85,21 +85,30 @@ The representation in CB05 includes more of the slower reacting PAR at the expen
     \label{f:TOPP_dailies}
 \end{figure}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{img/Alkanes_vs_C}
+    \vspace{0mm}
+    \caption{Maximum TOPP value of each alkane versus carbon number in each mechanism.}
+    \vspace{-4mm}
+    \label{f:alkane_TOPP_C}
+\end{figure}
+
 Time series of daily TOPP values for each VOC are presented in \mbox{Figure \ref{f:TOPP_dailies}}. 
 Higher variability in the time dependent \ce{O_x} production is evident for all VOC represented by lumped mechanism species.
-The lumped structure approach of CBM-IV and CB05 produces the lowest \ce{O_x} throughout the model run, whilst the lumped intermediate mechanism (CRI v2) leads to similar \ce{O_x} production to the MCM v3.2.
+The lumped structure approach of CBM-IV and CB05 produces the lowest \ce{O_x} throughout the model run, whilst the lumped intermediate mechanism (CRI v2) produces the most similar amount of \ce{O_x} to the MCM v3.2.
 
 Alkane degradation in CRI v2 and both MCM mechanisms produces a second day maximum in \ce{O_x} that increases with carbon number (Figure \ref{f:TOPP_dailies}).
-The increase in \ce{O_x} production on the second day is reproduced by the reduced mechanisms but not the magnitude, especially alkanes represented as lumped species.
-This is detailed in Section \ref{sss:alkanes}.
-\todo{summarise Ox production from pentane section and forward reference}
+The increase in \ce{O_x} production on the second day is reproduced by the reduced mechanisms but not the magnitude.
+Alkane degradation in lumped structure mechanisms (CBM-IV and CB05) scale the \ce{O_x} production of PAR (\ce{C-C}) by the carbon number of the alkane.
+This approach leads to a slower increase in \ce{O_x} production with increasing carbon number than the MCM v3.2 as shown in Figure \ref{f:alkane_TOPP_C}.
 
-The lumped structure approach in CBM-IV and CB05 also does not capture the second day increase in \ce{O_x} production with alkane carbon number.
-This approach scales the \ce{O_x} production of PAR (\ce{C-C}) by the carbon number of the alkane leading to a slower increase in \ce{O_x} production with increasing carbon number than the MCM v3.2.
-The supplement shows the rate of increase of \ce{O_x} production with alkane carbon number.
+\ce{O_x} production from alkanes represented by lumped species in reduced mechanisms also scale the \ce{O_x} produced by the mechanism species.
+This approach in MOZART-4, RADM2, RACM and RACM2 leads to a less linear increase of \ce{O_x} production with alkane carbon number which is also slower than the MCM v3.2 (Figure \ref{f:alkane_TOPP_C}).
 
-The time-dependent \ce{O_x} production during degradation of aromatic VOC indicate different treatments between the mechanisms.
-In particular, no \ce{O_x} is produced from aromatic VOC in RACM as aromatic degradation chemistry leads to net \ce{O_x} loss, \ce{O_x} production and loss during toluene degradation is detailed in Section \ref{sss:aromatic}.
+The wide spread in the time-dependent \ce{O_x} production during degradation of aromatic VOC indicate different treatments between the mechanisms.
+In particular, no \ce{O_x} is produced from aromatic VOC in RACM as aromatic degradation chemistry leads to net \ce{O_x} loss.
+\ce{O_x} production and loss during toluene degradation is detailed in Section \ref{sss:aromatic}.
 Lower \ce{O_x} is produced during degradation of aromatic VOC in all reduced mechanisms due to a quicker loss rate of reactive carbon than the MCM v3.2, presented in Section \ref{ss:carbon_loss}.
 
 \subsubsection[Ox Production during Toluene Degradation]{\ce{O_x} Production during Toluene Degradation} \label{sss:aromatic}
@@ -163,30 +172,6 @@ Distributing this \ce{O_x} production to the carbon numbers of toluene degradati
 
 All reduced mechanisms omit \ce{O_x} production from at least one degradation fragment size that produces \ce{O_x} in the MCM v3.2 indicating that reactive carbon during toluene degradation is lost quicker than more explicit mechanisms.
 For example, toluene degradation does not produce \ce{O_x} from degradation products with six carbons in RACM2 unlike the MCM v3.2.
-
-%The \ce{O_x} production during pentane and toluene degradation distributed by the sizes of the degradation products indicates that VOC are broken down quicker in reduced mechanisms.
-%
-%If reduced mechanisms lose reactive carbon at a quicker rate than the MCM v3.2 this would mean that the reduced mechanisms could not produce the same amount of \ce{O_x} as the MCM as the degradation chains that produce \ce{O_x} are terminated quicker.
-%The net loss of reactive carbon during pentane and toluene degradation is analysed in more detail in Section \ref{ss:carbon_loss}.
-
-\subsubsection[Ox Production during Alkane Degradation]{\ce{O_x} Production during Alkane Degradation} \label{sss:alkanes}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{img/Alkanes_vs_C}
-    \vspace{0mm}
-    \caption{First day TOPP value of each alkane versus its carbon number in each mechanism.}
-    \vspace{-4mm}
-    \label{f:alkanes_C}
-\end{figure}
-
-Many alkanes in this study are represented by lumped species in reduced mechanisms that use lumped molecule approach and these alkanes produce lower amounts of \ce{O_x} than when represented explicitly (Figure \ref{f:TOPP_dailies}).
-In particular, the second day maximum in \ce{O_x} from alkane degradation is significantly lower in reduced mechanisms.
-
-Pentane is represented in CBM-IV and CB05 (lumped structure mechanisms) as $5$ PAR -- the paraffin (C--C) bond -- whose degradation is described using mechanism species having either one or two carbons \citep{Gery:1989, Yarwood:2005}. 
-\ce{O_x} production is sustained throughout PAR degradation by recycling of \ce{O_x} producing mechanism species.
-An example is the oxy organic radical ROR that is a primary degradation product of PAR and further degradation of ROR also produces ROR with a product yield of $0.02$ \citep{Gery:1989}.
-This approach of using representing alkanes as a multiple of the base C--C bonds limits the amount of \ce{O_x} that can be produced during pentane degradation as this reduces the number of available pathways for \ce{O_x} production.
 
 \subsection[Reactive Carbon Loss during Ox Production]{Reactive Carbon Loss during \ce{O_x} Production} \label{ss:carbon_loss}
 

@@ -100,11 +100,13 @@ The lumped structure approach of CBM-IV and CB05 produces the lowest \ce{O_x} th
 
 Alkane degradation in CRI v2 and both MCM mechanisms produces a second day maximum in \ce{O_x} that increases with carbon number (Figure \ref{f:TOPP_dailies}).
 The increase in \ce{O_x} production on the second day is reproduced by the reduced mechanisms but not the magnitude.
-Alkane degradation in lumped structure mechanisms (CBM-IV and CB05) scale the \ce{O_x} production of PAR (\ce{C-C}) by the carbon number of the alkane.
-This approach leads to a slower increase in \ce{O_x} production with increasing carbon number than the MCM v3.2 as shown in Figure \ref{f:alkane_TOPP_C}.
+Alkane degradation in lumped structure mechanisms (CBM-IV and CB05) scales the \ce{O_x} production of PAR (\ce{C-C}) by the alkane carbon number.
+This approach leads to a slower increase in \ce{O_x} production with carbon number than the MCM v3.2 (Figure \ref{f:alkane_TOPP_C}) and does not capture differences in \ce{O_x} production from isomers, such as butane and $2$-methylpropane.
 
-\ce{O_x} production from alkanes represented by lumped species in reduced mechanisms also scale the \ce{O_x} produced by the mechanism species.
-This approach in MOZART-4, RADM2, RACM and RACM2 leads to a less linear increase of \ce{O_x} production with alkane carbon number which is also slower than the MCM v3.2 (Figure \ref{f:alkane_TOPP_C}).
+\ce{O_x} production from alkanes represented by lumped species includes product yields or degradation pathways that lead to dissimilar \ce{O_x} production from the MCM v3.2.
+For example, HC3 in RACM has increased glyoxal yield compared to MCM v3.2 as HC3 also represents alcohols, esters and alkynes \citep{Stockwell:1997}.
+Thus the \ce{O_x} production from propane, butane and $2$-methylpropane in RACM (represented as HC3) differs from the \ce{O_x} production in the MCM v3.2.
+This non-representative alkane degradation chemistry produces a less linear increase of \ce{O_x} with carbon number (Figure \ref{f:alkane_TOPP_C}).
 
 The wide spread in the time-dependent \ce{O_x} production during degradation of aromatic VOC indicate different treatments between the mechanisms.
 In particular, no \ce{O_x} is produced from aromatic VOC in RACM as aromatic degradation chemistry leads to net \ce{O_x} loss.
@@ -157,6 +159,16 @@ Also minimising the loss of reactive carbon during toluene degradation in other 
     \vspace{-4mm}
     \label{f:carbon}
 \end{figure}
+
+This section looks into more detail of how \ce{O_x} is produced in the chemical mechanisms of this study by comparing the treatment of the degradation products.
+\ce{O_x} production during pentane and toluene degradation is compared between the mechanisms by analysing the distribution of the carbon number of the degradation products, the loss rates of reactive carbon and the \ce{O_x} production efficiences.
+
+Some mechanism species in RADM2, RACM and RACM2 have fractional carbon numbers \citep{Stockwell:1990, Stockwell:1997, Goliff:2013}.
+\ce{O_x} production from these mechanism species was assigned as \ce{O_x} production of the nearest integral carbon number.
+
+Many reduced mechanisms use operator species as a surrogate for peroxy radicals during VOC degradation, this enables these mechanisms to produce more \ce{O_x} without including many additional species in the mechanism.
+\ce{O_x} production from operator species was assigned as \ce{O_x} production from the organic degradation species that produced the operator.
+This allocation was also used to assign \ce{O_x} production from \ce{HO2} via \reactionref{r:HO2_NO}.
 
 The time dependent \ce{O_x} production of different VOC in Figure \ref{f:TOPP_dailies} results from the varying rates at which VOC break up into smaller fragments \citep{Butler:2011}.
 The day-time \ce{O_x} production during pentane and toluene is distributed by the carbon numbers of the \ce{O_x} producing degradation products in Figure \ref{f:carbon} to compare the break down between mechanisms.

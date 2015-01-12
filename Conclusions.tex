@@ -1,19 +1,23 @@
-Tagged Ozone Production Potentials (TOPPs) were used to compare \ce{O_x} production during NMVOC degradation in reduced chemical mechanisms to the near-explicit MCM v3.2. 
+Tagged Ozone Production Potentials (TOPPs) were used to compare \ce{O_x} production during VOC degradation in reduced chemical mechanisms to the near-explicit MCM v3.2. 
 \ce{O_x} production on the first day was generally comparable to that of the MCM v3.2.
-Differences in \ce{O_x} production between reduced and near-explicit mechanisms had a larger impact over multi-day scenarios, with reduced mechanisms tending to underpredict \ce{O_x} production.  
-The largest discrepancies between \ce{O_x} production from individual VOC in reduced mechanisms and MCM v3.2 were from aromatic VOC.
-The trends in \ce{O_x} production reflects the \ce{O3} mixing ratios produced from each mechanism, where reduced mechanisms produce lower amounts of \ce{O3}.
+Differences in \ce{O_x} production between reduced and near-explicit mechanisms had a larger impact over multi-day scenarios, with reduced mechanisms producing lower amounts of \ce{O_x}.
 
-CBM-IV and CB05 produced much lower \ce{O3} than any other mechanism due to the higher NO emissions required for conditions of maximal \ce{O_x} production.
-The high \ce{NO_x} amounts leads to removal of both OH and \ce{NO2} due to increased \ce{HNO3} production, thus \ce{O_x} production is suppressed as there is not enough OH available to oxidise VOC.
+The high NO emissions required by the CBM-IV and CB05 for maximal \ce{O_x} production induce higher \ce{HNO3} deposition than any other mechanism leading to low OH levels.
+The low OH levels suppress \ce{O_x} production in CBM-IV and CB05 as there is less OH available to oxidise VOC.
 
-Reduced mechanisms tend to produce more \ce{O_x} from smaller sized degradation products than more explicit mechanisms, this is the result of either rapid loss of reactive carbon or a lower efficency of producing \ce{O_x}.
-Reactions during VOC degradation in reduced mechanisms that result in loss of reactive carbon also tend to be reactions that produce more \ce{O_x}, this leads to a limit of how much \ce{O_x} can be produced during VOC degradation.
-Increased acetaldehyde production in reduced mechanisms leads to increased levels of \ce{CH3CO3} which produced \ce{O_x} by reacting with NO, but this reaction is also a major source of reactive carbon loss.
-Improved representation of aldehydes in reduced mechanisms would lead to more representative \ce{O_x} production both through reducing the amount of reactive carbon lost during VOC degradation but this would also improve the representation of organic radical chemistry as organic radicals are mainly produced during aldehyde photolysis.
+Reduced mechanisms produce more \ce{O_x} from smaller sized degradation products than more explicit mechanisms as VOC are broken into smaller fragments quicker in reduced mechanisms.
+The quicker break down of VOC limits \ce{O_x} production during VOC degradation in reduced mechanisms affecting the amount of \ce{O_x} produced on subsequent days.
 
-Out of all the reduced mechanisms compared in this study, the CRI v2 was able to produce the most similar amounts of \ce{O_x} to the MCM v3.2.
-The CRI v2 treatment of unsaturated dicarbonyls does lead to differences in \ce{O_x} production on the second day but in general the approach of lumping degradation products leads to more similar \ce{O_x} production to more-explicit mechanisms than when lumping the initial NMVOC.
+The lumped intermediate mechanism (CRI v2) produces the most similar amounts of \ce{O_x} to the MCM v3.2.
+The CRI v2 treatment of unsaturated dicarbonyls that arise during aromatic VOC degradation leads to a second day maximum of \ce{O_x} production not seen in the \mbox{MCM v3.2}.
+
+The CBM-IV and CB05 (lumped structure mechanisms) produce the lowest amounts of \ce{O_x} for all VOC from the mechanisms compared in this study.
+The lumped structure approach assumes the \ce{O_x} production of VOC with the same functionality is a factor of the carbon number.
+The increase in \ce{O_x} production with carbon number in more explicit mechanisms is a multiple of the carbon number thus larger amounts of \ce{O_x} are produced in more explicit mechanisms.
+
+The \ce{O_x} produced from those VOC represented by lumped species in lumped molecule mechanisms (MOZART-4, RADM2, RACM, RACM2) varies the most from the MCM v3.2.
+Lumped species are used to represent the degradation chemistry of many types of VOC requiring degradation products that reflect some part of each VOCs degradation.
+This generalisation of the degradation of many VOC leads to non-representative \ce{O_x} production of the individual VOC.
 
 The tagging approach and TOPP calculation over multi-day scenarios is a useful tool for comparing the chemical degradation pathways in chemical mechanisms. 
 This tagging approach could be used to investigate the effects on \ce{O_x} production by the treatment of degradation chemistry in mechanisms under using more realistic \ce{NO_x} conditions or a range of \ce{NO_x} conditions, simulating different atmospheric regimes. 

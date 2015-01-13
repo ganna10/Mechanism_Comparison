@@ -2,14 +2,14 @@
 Ground-level ozone (\ce{O3}) is both an air pollutant and a short-lived climate forcing pollutant (SLCP) that is detrimental to human health and crop growth \citep{AQEU:2014}. 
 \ce{O3} is not directly emitted but produced from the reactions of volatile organic compounds (VOC) and nitrogen oxides (\ce{NO_x} = NO + \ce{NO2}) in the presence of sunlight \citep{Atkinson:2000}.
 
-Increases in anthropogenic emissions of \ce{O3} precursors have increased the concentrations of background \ce{O3} \citep{HTAP:2010}.
-Despite decreases in emissions of \ce{O3} precursors over Europe, $98$\% of Europe's urban population are exposed to levels exceeding the World Health Organization (WHO) air quality guideline of \mbox{$100$ $\mu$g/m$^3$} over an \mbox{$8$-hour} mean \citep{WHO:2006}. 
+Background \ce{O3} concentrations have increased due to the overall global increase in anthropogenic emissions of \ce{O3} precursors \citep{HTAP:2010}.
+Despite decreases in emissions of \ce{O3} precursors over Europe, $98$\% of Europe's urban population are exposed to levels exceeding the WHO air quality guideline of \mbox{$100$ $\mu$g/m$^3$} over an \mbox{$8$-hour} mean \citep{WHO:2006}. 
 These exceedances result from local and regional \ce{O3} precursor gas emissions, their intercontinental transport and the non-linear relationship of \ce{O3} concentrations on \ce{NO_x} and VOC levels \citep{AQEU:2014}.
 
 Effective strategies for emission reductions depend on accurate predictions of \ce{O3} concentrations using chemical transport models (CTMs). 
 These predictions require adequate representation of gas-phase chemistry in the chemical mechanism used by the CTM. 
 All mechanisms simplify gas-phase chemistry due to the computational resourses needed for gas-phase chemistry calculations.
-The modelling study scope determines the level of simplification --- global CTMs require more computationally efficient mechanisms than boxmodels.
+The scope of the modelling study determines the level of simplification --- global CTMs require more computationally efficient mechanisms than boxmodels.
 This study compares the impacts of different simplificaton levels on \ce{O3} production chemistry focusing on the representation of VOC degradation products.
 
 %NOx-VOC-chemistry
@@ -22,10 +22,10 @@ The photochemical cycle (\reactionref{r:NO_O3}--\reactionref{r:O2_O3P}) rapdily 
 NO and \ce{NO2} reach a near-steady state via \reactionref{r:NO_O3} and \reactionref{r:NO2_hv} which is disturbed in two cases. 
 Firstly, via \ce{O3} removal (deposition or \reactionref{r:NO_O3} during night-time and near large NO sources) and secondly, when \ce{O3} is produced through VOC--\ce{NO_x} chemistry \citep{Sillman:1999}.
 
-Emitted VOCs (RH) are oxidised in the troposphere by the hydoxyl radical (OH) forming peroxy radicals (\ce{RO2}) in the presence of \ce{O2} \reactionref{r:RH_OH}. 
-In high-\ce{NO_x} conditions typical of urban environments, \ce{RO2} react with NO \reactionref{r:RO2_NO} to form alkoxy radicals (RO), which react quickly with \ce{O2} \reactionref{r:RO_O2} producing a carbonyl species (R$^{\prime}$CHO) and a hydroperoxy radical (\ce{HO2}).
-Both \ce{RO2} and \ce{HO2} react with NO to produce \ce{NO2} (\reactionref{r:RO2_NO} and \reactionref{r:HO2_NO}) which leads to \ce{O3} production via \reactionref{r:NO2_hv} and \reactionref{r:O2_O3P}. 
-Thus the amount of \ce{O3} produced from VOC degradation is directly related to the number of NO to \ce{NO2} conversions by \ce{RO2} and \ce{HO2} radicals \citep{Atkinson:2000}.
+VOC (RH) are oxidised in the troposphere by the hydoxyl radical (OH) forming peroxy radicals (\ce{RO2}) in the presence of \ce{O2} \reactionref{r:RH_OH}. 
+In high-\ce{NO_x} conditions typical of urban environments, \ce{RO2} react with NO \reactionref{r:RO2_NO} to form alkoxy radicals (RO),which react quickly with \ce{O2} \reactionref{r:RO_O2} producing a carbonyl species (R$^{\prime}$CHO) and a hydroperoxy radical (\ce{HO2}).
+Both \ce{RO2} and \ce{HO2} react with NO to produce \ce{NO2} (\reactionref{r:RO2_NO} and \reactionref{r:HO2_NO}) leading to \ce{O3} production via \reactionref{r:NO2_hv} and \reactionref{r:O2_O3P}. 
+Thus the amount of \ce{O3} produced from VOC degradation is related to the number of NO to \ce{NO2} conversions by \ce{RO2} and \ce{HO2} radicals \citep{Atkinson:2000}.
 \begin{reactionlist}
     \reactionitem{\ce{RH + OH + O2}}{\ce{RO2 + H2O + O2}}{new}{r:RH_OH}
     \reactionitem{\ce{RO2 + NO}}{\ce{RO + NO2}}{new}{r:RO2_NO}
@@ -37,11 +37,11 @@ Thus the amount of \ce{O3} produced from VOC degradation is directly related to 
 This chemistry leads to \ce{O3} concentration being a non-linear function of \ce{NO_x} and VOC concentrations.
 Three atmospheric regimes with respect to \ce{O3} production can be defined \citep{Jenkin:2000}. 
 In the \ce{NO_x}-sensitive regime, VOC concentrations are much higher than those of \ce{NO_x} and \ce{O3} production depends on \ce{NO_x} concentrations. 
-On the other hand, when \ce{NO_x} concentrations are much higher than those of VOCs (VOC-sensitive regime), the VOC concentrations determine the amount of \ce{O3} produced.
+On the other hand, when \ce{NO_x} concentrations are much higher than those of VOC (VOC-sensitive regime), VOC concentrations determine the amount of \ce{O3} produced.
 Finally, the \ce{NO_x}-VOC-sensitive regime produces maximal \ce{O3} and is controlled by both VOC and \ce{NO_x} concentrations.
 
 These atmospheric regimes remove radicals through distinct mechanisms \citep{Kleinman:1991}. 
-In the \ce{NO_x}-sensitive regime, radical concentrations are high relative to \ce{NO_x} causing radical removal by radical combination reactions \reactionref{r:RO2_HO2} and bimolecular destruction reactions \reactionref{r:HO2_OH} \citep{Kleinman:1994}.
+In the \ce{NO_x}-sensitive regime, radical concentrations are high relative to \ce{NO_x} removing radicals by radical combination reactions \reactionref{r:RO2_HO2} and bimolecular destruction reactions \reactionref{r:HO2_OH} \citep{Kleinman:1994}.
 \vspace{-5mm}
 \begin{reactionlist}
     \reactionitem{\ce{RO2 + HO2}}{\ce{ROOH + O2}}{new}{r:RO2_HO2}
@@ -56,17 +56,18 @@ Whereas in the VOC-sensitive regime, radicals are removed by reacting with \ce{N
 The \ce{NO_x}-VOC-sensitive regime has no dominant radical removal mechanism as radical and \ce{NO_x} amounts are comparable.
 
 %OPP 
-Individual VOC impact \ce{O3} production differently due to their diverse reaction rates and degradation pathways. 
+Individual VOC impact \ce{O3} production differently through their diverse reaction rates and degradation pathways. 
 These impacts are quantified using Ozone Production Potentials (OPP) which are calculated through incremental reactivity (IR) studies using photochemical models. 
-In IR studies, VOC concentrations are changed by a known increment and the resulting change in \ce{O3} production is compared to that of a standard VOC mixture. 
+In IR studies, VOC concentrations are changed by a known increment and the change in \ce{O3} production is compared to that of a standard VOC mixture. 
 
 Examples of IR scales are the Maximal Incremental Reactivity (MIR) and Maximum Ozone Incremental Reactivity (MOIR) scales in \citet{Carter:1994}, as well as the Photochemical Ozone Creation Potential (POCP) scale of \citet{Derwent:1996} and \citet{Derwent:1998}. 
 These IR scales use separate \ce{NO_x} conditions thus calculating OPPs in different atmospheric regimes.
 
-\citet{Butler:2011} calculate OPP using a ``tagging'' approach leading to the Tagged Ozone Production Potential (TOPP). 
-The TOPP determines the maximum potential of a VOC to produce \ce{O3} by using \ce{NO_x} conditions leading to \ce{NO_x}-VOC-sensitive chemistry.
-Tagging involves labeling all organic degradation products produced during VOC degradation with the name of the emitted VOC, enabling VOC source attribution of \ce{O3} production and a detailed insight into VOC degradation chemistry.
-We apply the tagging approach to different chemical mechanisms to compare the different representations of VOC degradation chemistry. 
+\citet{Butler:2011} calculate OPP using a ``tagging'' approach -- the Tagged Ozone Production Potential (TOPP). 
+The TOPP measures the maximum potential of a VOC to produce \ce{O3} by using \ce{NO_x} conditions leading to \ce{NO_x}-VOC-sensitive chemistry.
+Tagging involves labelling all organic degradation products produced during VOC degradation with the name of the emitted VOC.
+Thus tagging enables VOC source attribution of \ce{O3} production and a detailed insight into VOC degradation chemistry.
+Tagging is applied to different chemical mechanisms comparing the different representations of VOC degradation chemistry. 
 
 %chemical mechanisms are how they have to represent O3 chemistry
 A near-explicit mechanism, such as the Master Chemical Mechanism (MCM) \citep{Jenkin:2003, Saunders:2003, Bloss:2005}, includes detailed degradation chemistry making the MCM ideal as a reference for comparing chemical mechanisms.
@@ -83,13 +84,13 @@ Many comparison studies of chemical mechanisms consider modelled time series of 
 The largest discrepancies between the time series of \ce{O3} concentrations in different mechanisms arise when modelling urban rather than rural conditions and are attributed to the treatment of radical production, organic nitrate and night-time chemistry.
 
 Mechanisms have been compared using IR scales.
-In \citet{Derwent:2010}, the near-explicit MCM v3.1 and SAPRC-07 mechanisms were compared using first-day POCP values calculated under VOC-sensitive conditions. 
+\citet{Derwent:2010} compares the near-explicit MCM v3.1 and SAPRC-07 mechanisms using first-day POCP values calculated under VOC-sensitive conditions. 
 The POCP values were comparable between the mechanisms. 
 
 OPPs are a useful comparison tool as they relate \ce{O3} production to a single value. 
 \citet{Butler:2011} compares first day TOPP values to the corresponding MIR, MOIR and POCP values.
 TOPP values were most comparable to MOIR and POCP values.  
-We compare TOPP values for VOC using a number of mechanisms and to those calculated with the MCM v3.2. 
+We compare TOPP values for VOC using a number of mechanisms to those calculated with the MCM v3.2. 
 Differences in \ce{O3} production are explained by the treatment of VOC degradation.
 
 %paper outline

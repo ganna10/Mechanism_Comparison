@@ -26,7 +26,7 @@
     \end{table}
 }
 
-The chemical mechanisms compared in this study are outlined in Table \ref{t:mechanisms}; each mechanism is summarised below.
+The chemical mechanisms compared in this study are outlined in Table \ref{t:mechanisms} with a brief summary below.
 
 %MCM
 The Master Chemical Mechanism (MCM) \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005, MCM_Site} is a near-explicit mechanism describing the degradation of $125$ primary VOC. 
@@ -34,14 +34,14 @@ The latest version (\mbox{MCM v3.2}) is the reference mechanism in this study.
 
 %CRI
 The Common Representative Intermediates (CRI v2) \citep{Jenkin:2008} is a reduced chemical mechanism describing the oxidation of the same primary VOC as the previous MCM version (MCM v3.1). 
-VOC degradation is simplified by lumping the degradation products of many VOC into species whose \ce{O3} production reflects that of the \mbox{MCM v3.1}. 
-We use the full version of the \mbox{CRI v2} (\url{http://mcm.leeds.ac.uk/CRI}).  
-Differences in \ce{O3} production between the CRI v2 and MCM v3.2 may be due to changes in the MCM versions rather than the CRI reduction techniques, hence we include the MCM v3.1 in the study.
+VOC degradation is simplified by lumping the degradation products of many VOC into mechanism species whose \ce{O3} production reflects that of the \mbox{MCM v3.1}. 
+The full version of the \mbox{CRI v2} (\url{http://mcm.leeds.ac.uk/CRI}) is used in this study.
+Differences in \ce{O3} production between the CRI v2 and MCM v3.2 may be due to changes in the MCM versions rather than the CRI reduction techniques, hence the MCM v3.1 is included.
 
 %MOZART
 The Model for OZone and Related chemical Tracers version 4 (MOZART-4) represents global tropospheric and stratospheric chemistry \citep{Emmons:2010}. 
 Explicit species exist for methane, ethane, propane, ethene, propene, isoprene and $\alpha$-pinene.
-All other VOC are represented by lumped species which is determined by the functionality of the VOC.
+All other VOC are represented by lumped species determined by the functionality of the VOC.
 
 %RADM2
 The second generation Regional Acid Deposition Model (RADM2) describes regional scale atmospheric chemistry \citep{Stockwell:1990}. 
@@ -64,8 +64,8 @@ For example, pentane is represented as $5$ PAR as it has five single carbon bond
 An initial mixing ratio of $1200$ pptv was assigned to \mbox{$6000$ ($= 1200 \times 5$) pptv} in CBM-IV.
 
 %CB05
-The fifth version of the Carbon Bond Mechanism (CB05) \citep{Yarwood:2005} includes explicit species representing methane, ethane and acetaldehyde. 
-Other updates include revised allocation of primary VOC and updated reaction rate constants.
+The fifth version of the Carbon Bond Mechanism (CB05) \citep{Yarwood:2005} includes further explicit species representing methane, ethane and acetaldehyde. 
+Other updates include revised allocation of primary VOC and updated rate constants.
 
 \subsection{Model Setup} \label{ss:model_setup}
 
@@ -99,25 +99,25 @@ Other updates include revised allocation of primary VOC and updated reaction rat
         Ethylbenzene & $210$ & EBENZ & TOLUENE & TOL & TOL & TOL & TOL + PAR & TOL + PAR \\ \hline \hline
     \end{tabular}
     \vspace{1mm}
-    \caption{NMVOC present in Los Angeles, mixing ratios taken from \citet{Baker:2008} and their representation in each chemical mechanism. The representation of the NMVOC in each mechanism is based upon the recommendations of the literature for each mechanism.}
+    \caption{VOC present in Los Angeles, mixing ratios taken from \citet{Baker:2008} and their representation in each chemical mechanism. The representation of the VOC in each mechanism is based upon the recommendations of the literature for each mechanism.}
     \vspace{-4mm}
     \label{t:initial_conditions}
 \end{sidewaystable}
 
 %general info
 The modelling approach and set-up follows the original TOPP study in \citet{Butler:2011}.
-A summary is provided here, further details are found in the supplement and \citet{Butler:2011}. 
+A summary is provided here with further details in the supplement and \citet{Butler:2011}. 
 Maximum \ce{O3} production is achieved by balancing the chemical source of radicals and \ce{NO_x} by emitting the appropriate amount of NO at each time step.
 This balance was determined separately for each mechanism.
 
 %initial conditions
-The initial NMVOC are typical of Los Angeles and their initial mixing ratios are taken from \citet{Baker:2008}. 
-Following \citet{Butler:2011}, the emissions required to keep the initial mixing ratios constant until noon of the first day of each VOC were calculated using the \mbox{MCM v3.2.}
-These emissions are used for every mechanism, ensuring the amount of each VOC was the same in every model run.
+The initial VOC are typical of Los Angeles and their initial mixing ratios taken from \citet{Baker:2008}. 
+Following \citet{Butler:2011}, the emissions required to keep the initial mixing ratios constant until noon of the first day of each VOC were determined for the \mbox{MCM v3.2.}
+These emissions are used for each mechanism, ensuring the amount of each VOC was the same in every model run.
 Methane (\ce{CH4}) was fixed at \mbox{$1.8$ ppmv} whilst carbon monoxide (CO) and \ce{O3} were initialised at \mbox{$200$ ppbv} and \mbox{$40$ ppbv} and then allowed to evolve freely.
 
-The NMVOC used in the study, their mixing ratios and representation in the each mechanism are outlined in Table \ref{t:initial_conditions}.
-NMVOC are assigned to mechanism species following the recommendations from the literature of each mechanism.
+The VOC used in the study, their mixing ratios and representation in the each mechanism are outlined in Table \ref{t:initial_conditions}.
+VOC are assigned to mechanism species following the recommendations from the literature of each mechanism.
 Initial emissions are weighted by the carbon number of the mechanism species ensuring the amount of reactive carbon was constant.
 
 \subsubsection{Mechanism Implementation} %implementation of mechanisms for the runs
@@ -125,7 +125,7 @@ Initial emissions are weighted by the carbon number of the mechanism species ens
 The MECCA boxmodel \citep{Sander:2005} is based upon the Kinetic Pre-Processor (KPP) \citep{Damian:2002} and used as described in \citet{Butler:2011}. 
 Hence, all chemical mechanisms were adapted into modularised KPP format.
 
-The MCM v3.2 inorganic gas-phase chemistry was used in each run to remove any differences between treatment of inorganic chemistry in each mechanism.
+The MCM v3.2 inorganic gas-phase chemistry was used in each run removing any differences between treatments of inorganic chemistry in each mechanism.
 Thus any differences between the \ce{O3} produced by the mechanisms are due to the treatment of organic degradation chemistry.
 Inorganic gas-phase chemistry is relatively well-known and any differences arise from inconsistencies between IUPAC and JPL reaction rate constants \citep{Emmerson:2009}.
 
@@ -141,9 +141,9 @@ This section summarises the tagging approach described in \citet{Butler:2011} th
 \subsubsection[Ox Family and Tagging Approach]{\ce{O_x} Family and Tagging Approach} \label{ss:tagging} %tagging of mechanisms
 
 \ce{O3} production and loss is dominated by rapid photochemical cycles such as \reactionref{r:NO_O3}--\reactionref{r:O2_O3P}.
-The effect of rapid production and loss cycles are removed by using chemical families that include rapidly inter-converting species.
+The effects of rapid production and loss cycles are removed by using chemical families that include rapidly inter-converting species.
 We define the \ce{O_x} family to include \ce{O3}, \ce{O(^3P)}, \ce{O(^1D)}, \ce{NO2} and other species involved in fast cycling with \ce{NO2}, such as \ce{HO2NO2} and PAN species.
-The production of \ce{O_x} family is closely tied to that of \ce{O3} as demonstrated in \citet{Butler:2011}.
+The production of \ce{O_x} is closely tied to that of \ce{O3} as demonstrated in \citet{Butler:2011}.
 
 Tagging follows the degradation of emitted VOC through all possible pathways by re-writing every organic degradation product to include a label with the name of the emitted VOC.
 Thus, each emitted VOC effectively has its own set of degradation reactions \citep{Butler:2011}.

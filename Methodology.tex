@@ -118,7 +118,7 @@ Methane (\ce{CH4}) was fixed at \mbox{$1.8$ ppmv} whilst carbon monoxide (CO) an
 
 The VOC used in the study, their mixing ratios and representation in the each mechanism are outlined in Table \ref{t:initial_conditions}.
 VOC are assigned to mechanism species following the recommendations from the literature of each mechanism.
-Initial emissions are weighted by the carbon number of the mechanism species ensuring the amount of reactive carbon was constant.
+Emissions are weighted by the carbon number of the mechanism species ensuring the amount of reactive carbon was constant.
 
 \subsubsection{Mechanism Implementation} %implementation of mechanisms for the runs
 
@@ -143,7 +143,7 @@ This section summarises the tagging approach described in \citet{Butler:2011} th
 \ce{O3} production and loss is dominated by rapid photochemical cycles such as \reactionref{r:NO_O3}--\reactionref{r:O2_O3P}.
 The effects of rapid production and loss cycles are removed by using chemical families that include rapidly inter-converting species.
 We define the \ce{O_x} family to include \ce{O3}, \ce{O(^3P)}, \ce{O(^1D)}, \ce{NO2} and other species involved in fast cycling with \ce{NO2}, such as \ce{HO2NO2} and PAN species.
-The production of \ce{O_x} is closely tied to that of \ce{O3} as demonstrated in \citet{Butler:2011}.
+\citet{Butler:2011} show that \ce{O_x} and \ce{O3} production are closely related.
 
 Tagging follows the degradation of emitted VOC through all possible pathways by re-writing every organic degradation product to include a label with the name of the emitted VOC.
 Thus, each emitted VOC effectively has its own set of degradation reactions \citep{Butler:2011}.
@@ -185,4 +185,11 @@ Without tagging, \ce{O_x} production can only be attributed to the individual re
 \subsubsection{Tagged Ozone Production Potential (TOPP) Definition} %final definition of TOPP
 
 Allocating \ce{O_x} production to individual VOC using the tagging approach is the basis for calculating the TOPP of a VOC.
-The TOPP for a given VOC is the number of \ce{O_x} molecules produced per emitted VOC molecule and is defined as the daily contribution to \ce{O_x} production from a VOC normalised by the total emissions of the VOC.
+The TOPP for a VOC is the number of \ce{O_x} molecules produced per emitted VOC molecule and is defined as the daily contribution to \ce{O_x} production from a VOC normalised by the total emissions of the VOC.
+
+VOC having similar carbon bonds are represented in lumped structure mechanisms (CBM-IV and CB05) by scaling the emissions of a base mechanism species by the carbon number of the VOC.
+The TOPP value of the base mechanism species is scaled by the VOC carbon number determining the TOPP value for each VOC represented by the base mechanism species.
+A similar approach is used for VOC represented by lumped mechanism species.
+For example, CBM-IV and CB05 represent hexane as $6$ PAR and the TOPP value of hexane in these mechanisms is $6$ times the TOPP of PAR.
+Whilst in MOZART-4 hexane is represented by the five carbon species BIGALK.
+Thus hexane emissions are scaled by $\frac{5}{6}$ and the TOPP value of hexane is calculated by multiplying the TOPP value of BIGALK by $\frac{6}{5}$.

@@ -1,10 +1,11 @@
-
+%
 \subsection{Chemical Mechanisms} \label{ss:mechanisms}
 
-{
-    \renewcommand{\arraystretch}{1.1}
-    \begin{table}
-        \centering
+The chemical mechanisms compared in this study are outlined in Table \ref{t:mechanisms} with a brief summary below.
+{%
+    \renewcommand{\arraystretch}{1.1}%
+    \begin{table}%
+        \centering%
         \begin{tabular}{M{2.5cm}M{2.0cm}M{2.0cm}M{2.5cm}M{3.9cm}}
             \hline \hline
             \textbf{Chemical Mechanism} & \textbf{Number of Organic Species} & \textbf{Number of Organic Reactions} & \textbf{Type of Lumping} & \textbf{Reference} \\ \hline
@@ -18,15 +19,13 @@
             CBM-IV & $20$ & $45$ & Lumped structure & \citet{Gery:1989} \\ \hline
             CB05 & $37$ & $99$ & Lumped structure & \citet{Yarwood:2005} \\ 
             \hline \hline
-        \end{tabular}
-        \vspace{0mm}
-        \caption{The chemical mechanisms used in the study, MCM v3.2 is the reference mechanism.}
-        \vspace{-4mm}
-        \label{t:mechanisms}
-    \end{table}
+        \end{tabular}%
+        \vspace{0mm}%
+        \caption{The chemical mechanisms used in the study, MCM v3.2 is the reference mechanism.}%
+        \vspace{-4mm}%
+        \label{t:mechanisms}%
+    \end{table}%
 }
-
-The chemical mechanisms compared in this study are outlined in Table \ref{t:mechanisms} with a brief summary below.
 
 %MCM
 The Master Chemical Mechanism (MCM) \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005, MCM_Site} is a near-explicit mechanism describing the degradation of $125$ primary VOC. 
@@ -47,11 +46,9 @@ All other VOC are represented by lumped species determined by the functionality 
 The second generation Regional Acid Deposition Model (RADM2) describes regional scale atmospheric chemistry \citep{Stockwell:1990}. 
 Explicit species represent methane, ethane, ethene and isoprene, while all other VOC are assigned to lumped species based on OH-reactivity and molecular weight.
 
-%RACM
+%RACM and RACM2
 RADM2 was updated to the Regional Atmospheric Chemistry Mechanism (RACM) \citep{Stockwell:1997}. 
 Updates include more explicit and lumped species representing VOC as well as revised chemistry.
-
-%RACM2
 RACM2 is the latest RACM version \citep{Goliff:2013} with substantial updates to the chemistry. 
 More lumped and explicit species representing emitted VOC are also included.
 
@@ -61,13 +58,19 @@ CBM-IV represents ethene, formaldehyde and isoprene explicitly while all other e
 
 All primary VOC were assigned to lumped species in CBM-IV as described in \citet{Hogo:1989}. 
 For example, pentane is represented as $5$ PAR as it has five single carbon bonds (PAR represents the C--C bond).
-An initial mixing ratio of $1200$ pptv was assigned to \mbox{$6000$ ($= 1200 \times 5$) pptv} in CBM-IV.
+Thus an initial mixing ratio of $1200$ pptv would be assigned to \mbox{$6000$ ($= 1200 \times 5$) pptv} in CBM-IV.
 
 %CB05
 The fifth version of the Carbon Bond Mechanism (CB05) \citep{Yarwood:2005} includes further explicit species representing methane, ethane and acetaldehyde. 
 Other updates include revised allocation of primary VOC and updated rate constants.
 
 \subsection{Model Setup} \label{ss:model_setup}
+
+%general info
+The modelling approach and set-up follows the original TOPP study in \citet{Butler:2011}.
+A summary is provided with further details in the supplement and \citet{Butler:2011}. 
+Maximum \ce{O3} production is achieved by balancing the chemical source of radicals and \ce{NO_x} by emitting the appropriate amount of NO at each time step.
+This balance was determined separately for each mechanism.
 
 \begin{sidewaystable}
     \centering
@@ -104,12 +107,6 @@ Other updates include revised allocation of primary VOC and updated rate constan
     \label{t:initial_conditions}
 \end{sidewaystable}
 
-%general info
-The modelling approach and set-up follows the original TOPP study in \citet{Butler:2011}.
-A summary is provided here with further details in the supplement and \citet{Butler:2011}. 
-Maximum \ce{O3} production is achieved by balancing the chemical source of radicals and \ce{NO_x} by emitting the appropriate amount of NO at each time step.
-This balance was determined separately for each mechanism.
-
 %initial conditions
 The initial VOC are typical of Los Angeles and their initial mixing ratios taken from \citet{Baker:2008}. 
 Following \citet{Butler:2011}, the emissions required to keep the initial mixing ratios constant until noon of the first day of each VOC were determined for the \mbox{MCM v3.2.}
@@ -143,7 +140,7 @@ This section summarises the tagging approach described in \citet{Butler:2011} th
 \ce{O3} production and loss is dominated by rapid photochemical cycles such as \reactionref{r:NO_O3}--\reactionref{r:O2_O3P}.
 The effects of rapid production and loss cycles are removed by using chemical families that include rapidly inter-converting species.
 We define the \ce{O_x} family to include \ce{O3}, \ce{O(^3P)}, \ce{O(^1D)}, \ce{NO2} and other species involved in fast cycling with \ce{NO2}, such as \ce{HO2NO2} and PAN species.
-\citet{Butler:2011} show that \ce{O_x} and \ce{O3} production are closely related.
+\citet{Butler:2011} shows that \ce{O_x} and \ce{O3} production are closely related.
 
 Tagging follows the degradation of emitted VOC through all possible pathways by re-writing every organic degradation product to include a label with the name of the emitted VOC.
 Thus, each emitted VOC effectively has its own set of degradation reactions \citep{Butler:2011}.
@@ -170,7 +167,7 @@ Thus, each emitted VOC effectively has its own set of degradation reactions \cit
 %    \label{f:tagging_approach}
 %\end{figure} 
 
-The \ce{O_x} production budget is allocated to individual VOC by following the VOC tags \mbox{(Figure \ref{f:Ox_budget} (a)).}
+The \ce{O_x} production budget is allocated to individual VOC by following the VOC tags of each VOC \mbox{(Figure \ref{f:Ox_budget} (a)).}
 Without tagging, \ce{O_x} production can only be attributed to the individual reactions \mbox{(Figure \ref{f:Ox_budget} (b))}, lacking information about the VOC source of the organic reactants.
 
 \begin{figure}
@@ -185,11 +182,11 @@ Without tagging, \ce{O_x} production can only be attributed to the individual re
 \subsubsection{Tagged Ozone Production Potential (TOPP) Definition} \label{sss:TOPP} %final definition of TOPP
 
 Allocating \ce{O_x} production to individual VOC using the tagging approach is the basis for calculating the TOPP of a VOC.
-The TOPP for a VOC is the number of \ce{O_x} molecules produced per emitted VOC molecule and is defined as the daily contribution to \ce{O_x} production from a VOC normalised by the total emissions of the VOC.
+The TOPP of a VOC is the number of \ce{O_x} molecules produced per emitted VOC molecule and is defined as the daily contribution to \ce{O_x} production from a VOC normalised by the total emissions of the VOC.
 
 VOC having similar carbon bonds are represented in lumped structure mechanisms (CBM-IV and CB05) by scaling the emissions of a base mechanism species by the carbon number of the VOC.
 The TOPP value of the base mechanism species is scaled by the VOC carbon number determining the TOPP value for each VOC represented by the base mechanism species.
 A similar approach is used for VOC represented by lumped mechanism species.
-For example, CBM-IV and CB05 represent hexane as $6$ PAR and the TOPP value of hexane in these mechanisms is $6$ times the TOPP of PAR.
-Whilst in MOZART-4 hexane is represented by the five carbon species BIGALK.
-Thus hexane emissions are scaled by $\frac{5}{6}$ and the TOPP value of hexane is calculated by multiplying the TOPP value of BIGALK by $\frac{6}{5}$.
+For example, CB05 represents hexane as $6$ PAR and the TOPP value of hexane in the CB05 is $6$ times the TOPP of PAR.
+Whilst in MOZART-4, hexane is represented by the five carbon species BIGALK.
+Thus hexane emissions are scaled by $\frac{5}{6}$ and the TOPP value of hexane in MOZART-4 is calculated by multiplying the TOPP value of BIGALK by $\frac{6}{5}$.

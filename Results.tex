@@ -95,11 +95,18 @@ This difference is most pronounced for the larger alkanes in this study.
 Many alkanes are not explicitly represented in lumped molecule or lumped structure mechanisms and the \ce{O_x} production of the individual alkanes is determined by scaling the \ce{O_x} production of the mechanism species by the alkane carbon number (Section \ref{sss:TOPP}).
 This approach leads to a lower increase of \ce{O_x} with alkane carbon number in lumped molecule and lumped structure mechanisms as the \ce{O_x} production per carbon number is lower than explicit representations (Figure \ref{f:alkane_C}).
 
+The RADM2, RACM and RACM2 treatment of propane degradation leads to higher \ce{O_x} production than the MCM v3.2.
+Propane is represented as HC3 in RADM2, RACM and RACM2 and HC3 has a higher glyoxal yield compared to alkane degradation in MCM v3.2 as HC3 also represents alcohols, esters and alkynes \citep{Stockwell:1990, Stockwell:1997, Goliff:2013}.
+Higher glyoxal levels produce more radicals and hence \ce{O_x} leading to dissimilar \ce{O_x} production for propane between MCM v3.2 and RACM.
+
+\ce{O_x} production from branched alkanes is larger in reduced mechanisms than MCM v3.2 as the degradation of branched and straight-chain alkanes is not differentiated in reduced mechanisms.
+This approach does not account for the lower reaction rate constant of branched alkane with OH.
+
 \begin{figure}
     \centering
-    \includegraphics[width=0.7\textwidth]{img/Alkanes_vs_C_sums}
+    \includegraphics[width=\textwidth]{img/Alkanes_vs_C_sums}
     \vspace{0mm}
-    \caption{Cumulative TOPP values of hexane, heptane and octane per alkane carbon number in each mechanism. The MCM v3.2, MCM v3.1 and CRI v2 represent these alkanes explicitly while a single mechanism species is used in MOZART-4, CBM-IV and CB05. A different lumped species represents hexane and heptane than octane in RADM2, RACM and RACM2.}
+    \caption{Cumulative TOPP values per carbon number of each alkane in the mechanisms.}
     \vspace{-4mm}
     \label{f:alkane_C}
 \end{figure}

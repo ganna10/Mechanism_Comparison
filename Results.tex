@@ -1,4 +1,4 @@
-
+%
 \subsection[O3 Time Series and Ox Production Budgets]{Ozone Time Series and \ce{O_x} Production Budgets} \label{ss:O3_time_series}
 
 \begin{figure}
@@ -22,15 +22,15 @@
 Figure \ref{f:time_series} shows the time series of \ce{O3} and OH mixing ratios obtained with each mechanism.
 The day-time \ce{O_x} production budgets allocated to VOC for each mechanism are displayed in \mbox{Figure \ref{f:Ox_tagged_budgets}}.
 The \ce{O_x} production from lumped mechanism species are re-assigned to the VOC of \mbox{Table \ref{t:initial_conditions}} by scaling the \ce{O_x} production of the lumped species by the fractional contribution of each represented VOC.
-For example, TOL in RACM2 represents toluene and ethylbenzene with fractional contributions of $0.85$ and $0.15$ to TOL emissions.
+For example, TOL in RACM2 represents toluene and ethylbenzene with fractional contributions of $0.85$ and $0.15$.
 Scaling the \ce{O_x} production from TOL by these factors gives the \ce{O_x} production from toluene and ethylbenzene in RACM2.
 
 The mechanisms with the most detailed chemistry (MCM v3.2, MCM v3.1 and CRI v2) produce the highest \ce{O3} mixing ratios (Figure \ref{f:time_series}).
 Whilst CBM-IV and CB05, with the least chemical detail, produce the lowest \ce{O3} mixing ratios.
 The trends in \ce{O3} mixing ratios are mirrored in Figure \ref{f:Ox_tagged_budgets} where mechanisms producing high amounts of \ce{O_x} have high \ce{O3} mixing ratios.
-The first day \ce{O3} mixing ratios in RADM2 are slightly less than in MCM v3.2 despite larger \ce{O_x} production due to higher \ce{NO2} mixing ratios in RADM2 caused by larger NO emissions in RADM2.
+The first day \ce{O3} mixing ratios in RADM2 are slightly less than in MCM v3.2 despite larger \ce{O_x} production due to higher \ce{NO2} mixing ratios in RADM2 caused by larger NO emissions in RADM2 than MCM v3.2.
 
-The \ce{O3} mixing ratios on the first day in RACM are lower than mechanisms having similarly detailed chemistry (such as MOZART-4 or RADM2).
+The first day mixing ratios of \ce{O3} in RACM are lower than mechanisms having similarly detailed chemistry (such as MOZART-4 or RADM2).
 The lower \ce{O3} mixing ratios are due to a lack of \ce{O_x} production from aromatic VOC on the first day in RACM (Figure \ref{f:Ox_tagged_budgets}).
 Aromatic degradation chemistry in RACM results in net loss of \ce{O_x} on the first day, detailed in \mbox{Section \ref{ss:profiles}}.
 
@@ -93,14 +93,14 @@ The increase in \ce{O_x} production on the second day is reproduced by the reduc
 This difference is most pronounced for the larger alkanes in this study.
 
 Many alkanes are not explicitly represented in lumped molecule or lumped structure mechanisms and the \ce{O_x} production of the individual alkanes is determined by scaling the \ce{O_x} production of the mechanism species by the alkane carbon number (Section \ref{sss:TOPP}).
-This approach leads to a lower increase of \ce{O_x} with alkane carbon number in lumped molecule and lumped structure mechanisms as the \ce{O_x} production per carbon number is lower than explicit representations (Figure \ref{f:alkane_C}).
+This approach leads to a lower increase of \ce{O_x} with alkane carbon number in lumped molecule and lumped structure mechanisms as the \ce{O_x} production per carbon number is lower than the explicit representations in MCM v3.2, MCMv3.1 and CRI v2 (Figure \ref{f:alkane_C}).
 
 The RADM2, RACM and RACM2 treatment of propane degradation leads to higher \ce{O_x} production than the MCM v3.2.
 Propane is represented as HC3 in RADM2, RACM and RACM2 and HC3 has a higher glyoxal yield compared to alkane degradation in MCM v3.2 as HC3 also represents alcohols, esters and alkynes \citep{Stockwell:1990, Stockwell:1997, Goliff:2013}.
 Higher glyoxal levels produce more radicals and hence \ce{O_x} leading to dissimilar \ce{O_x} production for propane between MCM v3.2 and RACM.
 
-\ce{O_x} production from branched alkanes is larger in reduced mechanisms than MCM v3.2 as the degradation of branched and straight-chain alkanes is not differentiated in reduced mechanisms.
-This approach does not account for the lower reaction rate constant of branched alkane with OH.
+\ce{O_x} production from branched alkanes is larger in reduced mechanisms than the \mbox{MCM v3.2} as the degradation of branched and straight-chain alkanes is not differentiated in reduced mechanisms.
+This approach does not account for the lower reaction rate constant of branched alkanes with OH.
 
 \begin{figure}
     \centering
@@ -182,12 +182,9 @@ The quicker break down of pentane limits the amount of reactive carbon available
 CBM-IV and CB05 represent pentane degradation chemistry by that of PAR, the \ce{C-C} bond, which involves only C1 and C2 species.
 Thus pentane degradation in CBM-IV and CB05 has a low rate of reactive carbon loss in Figure \ref{f:net_carbon_loss}.
 
-\ce{O_x} produced during toluene degradation has a high spread between all mechanisms \mbox{(Figure \ref{f:TOPP_dailies})} and Figure \ref{f:carbon} shows differing distributions of the degradation products sizes that produce \ce{O_x}.
+\ce{O_x} produced during toluene degradation has a high spread between all mechanisms \mbox{(Figure \ref{f:TOPP_dailies})} and Figure \ref{f:carbon} shows differing distributions of the degradation products sizes producing \ce{O_x}.
 All reduced mechanisms omit \ce{O_x} production from at least one degradation fragment size which produces \ce{O_x} in the MCM v3.2 indicating that toluene is also broken down quicker than more explicit mechanisms.
 For example, toluene degradation in RACM2 does not produce \ce{O_x} from degradation products with six carbons unlike the \mbox{MCM v3.2}.
 
 All reduced mechanisms lose reactive carbon faster than the MCM v3.2 during toluene degradation (Figure \ref{f:net_carbon_loss}).
 Thus reduced mechanisms are unable to reach the \ce{O_x} production levels of explicit mechanisms.
-
-Both the CRI v2 and RACM2 treatment of toluene degradation produce peak \ce{O_x} on the second day and a large contribution from C2 degradation products is noted in Figure \ref{f:carbon}.
-Increased \ce{O_x} production of the C2 species \ce{C2H5O2} and \ce{HOCH2CH2O2} in CRI v2 and \ce{C2H5O2} in RACM2 lead to peak \ce{O_x} production on the second day (Section \ref{ss:profiles}).

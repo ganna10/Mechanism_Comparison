@@ -21,9 +21,6 @@
 
 Figure \ref{f:time_series} shows the time series of \ce{O3} and OH mixing ratios obtained with each mechanism.
 The day-time \ce{O_x} production budgets allocated to VOC for each mechanism are displayed in \mbox{Figure \ref{f:Ox_tagged_budgets}}.
-The \ce{O_x} production from lumped mechanism species are re-assigned to the VOC of \mbox{Table \ref{t:initial_conditions}} by scaling the \ce{O_x} production of the lumped species by the fractional contribution of each represented VOC.
-For example, TOL in RACM2 represents toluene and ethylbenzene with fractional contributions of $0.85$ and $0.15$ to TOL emissions.
-Scaling the \ce{O_x} production from TOL by these factors gives the \ce{O_x} production from toluene and ethylbenzene in RACM2.
 
 The mechanisms with the most detailed chemistry (MCM v3.2, MCM v3.1 and CRI v2) produce the highest \ce{O3} mixing ratios (Figure \ref{f:time_series}).
 Whilst CBM-IV and CB05, with the least chemical detail, produce the lowest \ce{O3} mixing ratios.
@@ -147,6 +144,7 @@ The faster break down of VOC coupled with different degradation chemistry in red
 The time dependent \ce{O_x} production of different VOC in Figure \ref{f:TOPP_dailies} results from the varying rates at which VOC break up into smaller fragments \citep{Butler:2011}.
 Varying break down rates of VOC between mechanisms could explain the different time dependent \ce{O_x} production between mechanisms.
 The break down of pentane and toluene between mechanisms is compared in \mbox{Figure \ref{f:carbon}} by allocating the \ce{O_x} production to the different sizes of degradation products.
+Some mechanism species in RADM2, RACM and RACM2 have fractional carbon numbers \citep{Stockwell:1990, Stockwell:1997, Goliff:2013} and \ce{O_x} production from these species was reassigned as \ce{O_x} production of the nearest integral carbon number.  
 
 \begin{figure}
     \centering
@@ -156,11 +154,6 @@ The break down of pentane and toluene between mechanisms is compared in \mbox{Fi
     \vspace{-4mm}
     \label{f:carbon}
 \end{figure}
-
-Some mechanism species in RADM2, RACM and RACM2 have fractional carbon numbers \citep{Stockwell:1990, Stockwell:1997, Goliff:2013} and \ce{O_x} production from these species was reassigned as \ce{O_x} production of the nearest integral carbon number.  
-Many reduced mechanisms use an operator species as a surrogate for \ce{RO2} during VOC degradation enabling these mechanisms to produce \ce{O_x} whilst minimising the number of \ce{RO2} species.
-\ce{O_x} production from operator species is assigned as \ce{O_x} production from the organic degradation species producing the operator.
-This allocation technique is also used to assign \ce{O_x} production from \ce{HO2} via \reactionref{r:HO2_NO}.
 
 During pentane degradation, more \ce{O_x} is produced from degradation products having the same carbon number as pentane in explicit mechanisms throughout the model run (Figure \ref{f:carbon}).
 Reduced mechanisms produce similar amounts of \ce{O_x} on the first day to the MCM v3.2 by producing more \ce{O_x} from smaller degradation products.

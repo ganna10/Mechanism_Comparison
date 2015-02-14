@@ -1,6 +1,6 @@
 %
 \subsection{Chemical Mechanisms} \label{ss:mechanisms}
-
+%
 The nine chemical mechanisms compared in this study are outlined in Table \ref{t:mechanisms} with a brief summary below.
 {%
     \renewcommand{\arraystretch}{1.1}%
@@ -33,7 +33,7 @@ The latest version (\mbox{MCM v3.2}) is the reference mechanism in this study.
 
 %CRI
 The Common Representative Intermediates (CRI v2) \citep{Jenkin:2008} is a reduced chemical mechanism describing the oxidation of the same primary VOC as the previous MCM version (MCM v3.1). 
-VOC degradation in the CRI is simplified by lumping the degradation products of many VOC into mechanism species whose \ce{O3} production reflects that of the \mbox{MCM v3.1}. 
+VOC degradation in the CRI is simplified by lumping the degradation products of many VOC into mechanism species whose overall \ce{O3} production reflects that of the \mbox{MCM v3.1}. 
 The full version of the \mbox{CRI v2} (\url{http://mcm.leeds.ac.uk/CRI}) is used in this study.
 Differences in \ce{O3} production between the CRI v2 and MCM v3.2 may be due to changes in the MCM versions rather than the CRI reduction techniques, hence the MCM v3.1 is also included in this study.
 
@@ -58,14 +58,14 @@ Pentane is represented as $5$ PAR as it has five single carbon bonds.
 A mixing ratio of $1200$ pptv of pentane would be assigned to \mbox{$6000$ ($= 1200 \times 5$) pptv of PAR} in CBM-IV.
 The fifth version of the Carbon Bond Mechanism (CB05) \citep{Yarwood:2005} includes further explicit species representing methane, ethane and acetaldehyde. 
 Other updates include revised allocation of primary VOC and updated rate constants.
-
+%
 \subsection{Model Setup} \label{ss:model_setup}
-
+%
 %general info
 The modelling approach and set-up follows the original TOPP study of \citet{Butler:2011}.
 A summary is provided with further details in the supplement to this paper and \citet{Butler:2011}. 
 Using a box model, maximum \ce{O3} production is achieved in each model run by balancing the chemical source of radicals and \ce{NO_x} at each timestep by emitting the appropriate amount of NO.
-This balance was determined online for each mechanism and the supplement to this paper illustrates that the calculated NO emissions lead to conditions of maximum \ce{O3} production.
+This balance was determined online for each mechanism and the supplement to this paper illustrates that the calculated NO emissions lead to conditions of maximum \ce{O3} production in each mechanism.
 
 \begin{sidewaystable}
     \centering
@@ -128,7 +128,7 @@ Details of the adaptations made to each mechanism can be found in the online sup
 This section summarises the tagging approach described in \citet{Butler:2011} that is applied in this study.
 
 \subsubsection[Ox Family and Tagging Approach]{\ce{O_x} Family and Tagging Approach} \label{ss:tagging} %tagging of mechanisms
-
+%
 \ce{O3} production and loss is dominated by rapid photochemical cycles such as \reactionref{r:NO_O3}--\reactionref{r:O2_O3P}.
 The effects of rapid production and loss cycles can be removed by using chemical families that include rapidly inter-converting species.
 In this study we define the \ce{O_x} family to include \ce{O3}, \ce{O(^3P)}, \ce{O(^1D)}, \ce{NO2} and other species involved in fast cycling with \ce{NO2}, such as \ce{HO2NO2} and PAN species.
@@ -138,7 +138,7 @@ Following \citet{Butler:2011} we use the production of \ce{O_x} as a proxy for t
 Tagging follows the degradation of emitted VOC through all possible pathways by re-writing every organic degradation product to include a label with the name of the emitted VOC.
 Thus, each emitted VOC effectively has its own set of degradation reactions \citep{Butler:2011}.
 Without tagging, \ce{O_x} production can only be attributed to the individual reactions \mbox{(Figure \ref{f:Ox_budget} (a))}, lacking information about the VOC source of the organic reactants.
-However with tagging, the \ce{O_x} production budget can be allocated to individual VOC by following the VOC tags of each VOC \mbox{(Figure \ref{f:Ox_budget} (b)).}
+However with tagging, the \ce{O_x} production budget can be allocated to individual VOC by following the tags of each VOC \mbox{(Figure \ref{f:Ox_budget} (b)).}
 
 \ce{O_x} production from lumped mechanism species are re-assigned to the VOC of \mbox{Table \ref{t:initial_conditions}} by scaling the \ce{O_x} production of the lumped species by the fractional contribution of each represented VOC.
 For example, TOL in RACM2 represents toluene and ethylbenzene with fractional contributions of $0.85$ and $0.15$ to TOL emissions.
@@ -147,7 +147,7 @@ Scaling the \ce{O_x} production from TOL by these factors gives the \ce{O_x} pro
 Many reduced mechanisms use an operator species as a surrogate for \ce{RO2} during VOC degradation enabling these mechanisms to produce \ce{O_x} whilst minimising the number of \ce{RO2} species.
 \ce{O_x} production from operator species is assigned as \ce{O_x} production from the organic degradation species producing the operator.
 This allocation technique is also used to assign \ce{O_x} production from \ce{HO2} via \reactionref{r:HO2_NO}.
-
+%
 \begin{figure}
     \centering
     \includegraphics[height=0.4\textheight]{img/MCMv3_2_tagged_non_tagged_Ox_budget}
@@ -156,11 +156,11 @@ This allocation technique is also used to assign \ce{O_x} production from \ce{HO
     \vspace{-4mm}
     \label{f:Ox_budget}
 \end{figure} 
-
+%
 \subsubsection{Definition of the Tagged Ozone Production Potential (TOPP)} \label{sss:TOPP} %final definition of TOPP
-
+%
 Allocating \ce{O_x} production to individual VOC using the tagging approach is the basis for calculating the TOPP of a VOC, which is defined as the number of \ce{O_x} molecules produced per emitted VOC molecule.
 For lumped VOC species, which are not represented explicitly in the reduced chemical mechanism, TOPP values are calculated by scaling the TOPP value of the base mechanism species used to represent the lumped species by the ratio of the numbers of carbon atoms in the lumped species to the mechanism species.
 For example, CB05 represents hexane as $6$ PAR, so the TOPP value of hexane in the CB05 is $6$ times the TOPP of PAR.
 In MOZART-4, hexane is represented by the five carbon species BIGALK.
-Thus hexane emissions are represented molecule for molecule as $\frac{6}{5}$ of the equivalent number of molecules of BIGALK, and the TOPP value of hexane in MOZART-4 is calculated by multiplying the TOPP value of BIGALK by $\frac{6}{5}$.
+Thus hexane emissions are represented molecule for molecule as $\frac{6}{5}$ of the equivalent number of molecules of BIGALK, and the TOPP value of hexane in MOZART-4 is calculated by multiplying the TOPP value of BIGALK by $\frac{5}{6}$.

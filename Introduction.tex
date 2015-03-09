@@ -2,7 +2,7 @@
 Ground-level ozone (\ce{O3}) is both an air pollutant and a short-lived climate forcing pollutant (SLCP) that is detrimental to human health and crop growth \citep{AQEU:2014}. 
 \ce{O3} is produced from the reactions of volatile organic compounds (VOC) and nitrogen oxides (\ce{NO_x} = NO + \ce{NO2}) in the presence of sunlight \citep{Atkinson:2000}.
 
-Background \ce{O3} concentrations have increased during the last several decades due to the overall global increase in anthropogenic emissions of \ce{O3} precursors \citep{HTAP:2010}.
+Background \ce{O3} concentrations have increased during the last several decades due to the increase of overall global in anthropogenic emissions of \ce{O3} precursors \citep{HTAP:2010}.
 Despite decreases in emissions of \ce{O3} precursors over Europe since 1990, $98$\% of Europe's urban population are exposed to levels exceeding the WHO air quality guideline of \mbox{$100$ $\mu$g/m$^3$} over an \mbox{$8$-hour} mean \citep{WHO:2006}. 
 These exceedances result from local and regional \ce{O3} precursor gas emissions, their intercontinental transport and the non-linear relationship of \ce{O3} concentrations to \ce{NO_x} and VOC levels \citep{AQEU:2014}.
 
@@ -12,7 +12,7 @@ For reasons of computational efficiency, the chemical mechanisms used by global 
 This study compares the impacts of different degrees of simplificaton of chemical mechanisms on \ce{O3} production chemistry focusing on the role of VOC degradation products.
 
 %NOx-VOC-chemistry
-The photochemical cycle (\reactionref{r:NO_O3}--\reactionref{r:O2_O3P}) rapdily produces and destroys \ce{O3}. 
+The photochemical cycle (\reactionref{r:NO_O3}--\reactionref{r:O2_O3P}) rapidly produces and destroys \ce{O3}.
 \begin{reactionlist}
     \reactionitem{\ce{NO + O3}}{\ce{NO2 + O2}}{new}{r:NO_O3}
     \reactionitem{\ce{NO2 + h$\nu$}}{\ce{NO + O(^3P)}}{new}{r:NO2_hv}
@@ -66,13 +66,13 @@ The MIR, MOIR and POCP scales were calculated under different \ce{NO_x} conditio
 \citet{Butler:2011} calculate the OPP of VOC over multi-day scenarios using a ``tagging'' approach -- the Tagged Ozone Production Potential (TOPP). 
 Tagging involves labelling all organic degradation products produced during VOC degradation with the name of the emitted VOC.
 Tagging enables the attribution of \ce{O3} production from VOC degradation products back to the emitted VOC, thus providing detailed insight into the secondary chemistry of VOC degradation.
-Applying the tagging approach over multi-day scenarios revealed that VOC, such as alkanes, produce maximum \ce{O3} production on the second day of the model run; in contrast to unsaturated and aromatic VOC which produce maximum \ce{O3} on the first day.
+Applying the tagging approach over multi-day scenarios revealed that some VOC, such as alkanes, produce maximum \ce{O3} on the second day of the model run; in contrast to unsaturated and aromatic VOC which produce maximum \ce{O3} on the first day.
 \citet{Butler:2011} calculated the maximum potential of VOC to produce \ce{O3} by using \ce{NO_x} conditions inducing \ce{NO_x}-VOC-sensitive chemistry.
-In this study, the tagging approach of \citet{Butler:2011} is applied to several chemical mechanisms under conditions of maximum \ce{O3} production in the \ce{NO_x}-VOC-sensitive regime comparing the effects of different representations of VOC degradation chemistry on \ce{O3} production in the different chemical mechanisms.
+In this study, the tagging approach of \citet{Butler:2011} is applied to several chemical mechanisms, using conditions of maximum \ce{O3} production (the \ce{NO_x}-VOC-sensitive regime), to compare the effects of different representations of VOC degradation chemistry on \ce{O3} production in the different chemical mechanisms.
 
 %chemical mechanisms are how they have to represent O3 chemistry
 A near-explicit mechanism, such as the Master Chemical Mechanism (MCM) \citep{Jenkin:2003, Saunders:2003, Bloss:2005}, includes detailed degradation chemistry making the MCM ideal as a reference for comparing chemical mechanisms.
-Reduced mechanisms generally take two different approaches to simplifying the representation of VOC degradation chemistry: lumped structure approaches; and lumped molecule approaches \citep{Dodge:2000}. 
+Reduced mechanisms generally take two approaches to simplifying the representation of VOC degradation chemistry: lumped structure approaches; and lumped molecule approaches \citep{Dodge:2000}. 
 
 Lumped structure mechanisms speciate VOC by the carbon bonds of the emitted VOC, examples are the CBM-IV \citep{Gery:1989} and CB05 \citep{Yarwood:2005}.
 Lumped molecule mechanisms represent VOC by an explicit or a lumped species representing many VOC. 
@@ -83,7 +83,7 @@ The Common Representative Intermediates mechanism (CRI) lumps the degradation pr
 Many comparison studies of chemical mechanisms consider modelled time series of \ce{O3} concentrations over varying VOC and \ce{NO_x} concentrations.
 Examples are \citet{Dunker:1984}, \citet{Kuhn:1998} and \citet{Emmerson:2009}.
 The largest discrepancies between the time series of \ce{O3} concentrations in different mechanisms from these studies arise when modelling urban rather than rural conditions and are attributed to the treatment of radical production, organic nitrate and night-time chemistry.
-\citet{Emmerson:2009} compare the inorganic gas-phase chemistry of different chemical mechanisms, differences arise from inconsistencies between IUPAC and JPL reaction rate constants.
+\citet{Emmerson:2009} also compare the inorganic gas-phase chemistry of different chemical mechanisms; differences in inorganic chemistry arise from inconsistencies between IUPAC and JPL reaction rate constants.
 
 Mechanisms have also been compared using OPP scales.
 OPPs are a useful comparison tool as they relate \ce{O3} production to a single value. 

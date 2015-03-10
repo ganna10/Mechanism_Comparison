@@ -118,38 +118,23 @@ The secondary chemistry of HC3 is tailored to produce \ce{O_x} from these differ
 %
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{img/HC5P_NO_C_numbers}
-        \caption{The total reactive carbon of the products of the reaction between NO and the pentyl peroxy radical in lumped molecule mechanisms compared to the MCM. The black dot represents the reactive carbon of the pentyl peroxy radical.}
-        \label{f:HC5P_NO}
-    \end{subfigure}
-    \hspace{1cm}
-    \begin{subfigure}[t]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{img/alkane_unreacted_after_day1}
-        \caption{The percentage of unreacted alkane at the beginning of the second day of simulations in the lumped structure mechanisms compared to the MCM.}
-        \label{f:Unreacted_PAR}
-    \end{subfigure}
-    \vspace{3mm}
-    \caption{Treatment of alkane degradation in lumped molecule and structure mechanisms.}
+    \includegraphics[width=0.8\textwidth]{img/HC5P_NO_C_numbers}
+    \vspace{1mm}
+    \caption{The total reactive carbon of the products of the reaction between NO and the pentyl peroxy radical in lumped molecule mechanisms compared to the MCM. The black dot represents the reactive carbon of the pentyl peroxy radical.}
+    \label{f:HC5P_NO}
     \vspace{-4mm}
-    \label{f:alkanes}
 \end{figure}
 %
-As will be shown in Section \ref{ss:products}, another feature of lumped molecule mechanisms is that the breakdown of emitted VOC into smaller sized degradation products is faster than more explicit mechanisms.
-Alkanes are broken down quicker in RADM2, RACM and RACM2 through a higher rate of reactive carbon loss than the MCM v3.2 (shown for pentane in \mbox{Figure \ref{f:net_carbon_loss}}); reactive carbon is lost through reactions not conserving carbon.
+As will be shown in Section \ref{ss:products}, another feature of reduced mechanisms is that the breakdown of emitted VOC into smaller sized degradation products is faster than the MCM.
+Alkanes are broken down quicker in CBM-IV, CB05, RADM2, RACM and RACM2 through a higher rate of reactive carbon loss than the MCM v3.2 (shown for pentane in \mbox{Figure \ref{f:net_carbon_loss}}); reactive carbon is lost through reactions not conserving carbon.
 Despite many alkane degradation reactions in MOZART-4 almost conserving carbon, the organic products have less carbon atoms than the organic reactant speeding up the breakdown of the alkane compared to the MCM v3.2.
+
 As an example, Figure \ref{f:HC5P_NO} shows the total reactive carbon of the reactants and products from the reaction of NO with the pentyl peroxy radical in both MCM mechanisms and each lumped molecule mechanism.
 In the lumped molecule mechanisms, the individual organic products have less reactive carbon than the organic reactant; whilst, in RADM2, RACM and RACM2 this reaction does not conserve reactive carbon.  
 
 A further example of the speed of alkane breakdown impacting the amount of \ce{O_x} produced on the second day is octane in RADM2, RACM and RACM2 which produces peak \ce{O_x} on the first day, in contrast to all other mechanisms where peak \ce{O_x} is produced on the second day.
 The break down of octane in RADM2, RACM and RACM2 on the first day proceeds so quickly that there are not enough degradation products available on the second day to produce peak \ce{O_x} on the second day.
 The rate of carbon loss during octane degradation is shown in the online supplement to this paper.
-
-Alkane degradation in lumped structure mechanisms (CBM-IV and CB05) also loses reactive carbon quicker than the MCM, shown in Figure \ref{f:net_carbon_loss}, but still produce peak \ce{O_x} on the second day.
-Alkanes are represented by PAR, the \ce{C-C} bond, with the amount of PAR emitted determined by multiplying the initial condition of the alkane by its carbon number.
-This approach leads to a larger amount of unreacted PAR after the first day which reacts with OH during the subsequent days of the simulation producing peak \ce{O_x} on the second day despite the loss of reactive carbon.
-\mbox{Figure \ref{f:Unreacted_PAR}} shows the percentage of unreacted alkane at the beginning of the second day in the CBM-IV, CB05 and the MCM mechanisms.
-The lumped structure approach to alkane degradation produces similar amounts of \ce{O_x} on the first day to the MCM v3.2 (\mbox{Figure \ref{f:first_day}}) but does not produce similar amounts of \ce{O_x} on the second day to the MCM v3.2.
 
 The faster breakdown of alkanes in lumped molecule and structure mechanisms on the first day limits the amount of \ce{O_x} produced on the second day, as less of the larger sized degradation products are available for further degradation and \ce{O_x} production.  
 %
@@ -170,8 +155,8 @@ The break down of pentane and toluene between mechanisms is compared in \mbox{Fi
 Some mechanism species in RADM2, RACM and RACM2 have fractional carbon numbers \citep{Stockwell:1990, Stockwell:1997, Goliff:2013} and \ce{O_x} production from these species was reassigned as \ce{O_x} production of the nearest integral carbon number.  
 
 During degradation of pentane, a five-carbon VOC, up to \mbox{$50$ \%} more \ce{O_x} is produced from degradation products also having five carbon atoms on the first day using the MCM v3.2. 
-Moreover the contribution of the degradation products having five carbon atoms in the MCM v3.2 is consistently higher throughout the model run than in reduced mechanisms \mbox{(Figure \ref{f:carbon}).}
-Reduced mechanisms produce similar amounts of \ce{O_x} on the first day to the \mbox{MCM v3.2} by producing up to double the amount of \ce{O_x} from smaller degradation products than in the MCM v3.2.
+Moreover the contribution of the degradation products having five carbon atoms in the \mbox{MCM v3.2} is consistently higher throughout the model run than in reduced mechanisms \mbox{(Figure \ref{f:carbon}).}
+Despite producing less total \ce{O_x}, reduced mechanisms produce up to double the amount of \ce{O_x} from degradation products with one carbon atom than in the MCM v3.2.
 The lower contribution of larger degradation products indicates that pentane is broken down faster in reduced mechanisms.
 
 %

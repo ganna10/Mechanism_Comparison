@@ -30,9 +30,10 @@ The first day mixing ratios of \ce{O3} in RACM are lower than other mechanisms d
 Aromatic degradation chemistry in RACM results in net loss of \ce{O_x} on the first day, described later in \mbox{Section \ref{sss:day1}}.
 
 RADM2 is the only reduced mechanism producing higher \ce{O3} mixing ratios than more detailed mechanisms (MCM v3.2, MCM v3.1 and CRI v2).
-Higher mixing ratios of \ce{O3} in RADM2 are produced due to increased \ce{O_x} production from propane, butane and $2$-methylpropane compared to the \mbox{MCM v3.2} (Figure \ref{f:Ox_tagged_budgets}).
-These alkanes are each represented as HC3 in RADM2 \citep{Stockwell:1990}.
-HC3 degradation produces more acetaldehyde (\ce{CH3CHO}) than the MCM v3.2 which leads to more \ce{O_x} production in RADM2 through reactions of \ce{CH3CO3} and \ce{CH3O2}, degradation products of \ce{CH3CHO}, with NO. 
+Higher mixing ratios of \ce{O3} in RADM2 are produced due to increased \ce{O_x} production from propane compared to the \mbox{MCM v3.2}, on the first day the \ce{O_x} production from propane in RADM2 is triple that in the MCM v3.2 \mbox{(Figure \ref{f:Ox_tagged_budgets})}.
+Propane is represented as HC3 in RADM2 \citep{Stockwell:1990} and HC3 degradation produces about $17$ times the amount of acetaldehyde (\ce{CH3CHO}) on the first day than the MCM v3.2.
+The OH-oxidation of \ce{CH3CHO} starts a degradation chain that produces \ce{O_x} through the reactions of \ce{CH3CO3} and \ce{CH3O2} with NO; thus the higher amounts of \ce{CH3CHO} in RADM2 during propane degradation leads to increased \ce{O_x} production in RADM2 compared to the MCM v3.2.
+The production budgets of \ce{CH3CHO} in RADM2 and MCM v3.2 during propane degradation are found in the online supplement to this paper.
 %
 \subsection[Time Dependent Ox Production]{Time Dependent \ce{O_x} Production}
 %
@@ -70,7 +71,7 @@ The RMSE values show that lumped structure and molecule mechanisms have a higher
 
 Aromatic VOC in reduced mechanisms are represented by mechanism species describing the degradation of many other aromatic VOC.
 For example, all aromatic VOC in MOZART-4 are represented as toluene, thus less reactive aromatic VOC, such as benzene, produce higher \ce{O_x} whilst more reactive aromatic VOC, such as the xylenes, produce less \ce{O_x} in MOZART-4 than the \mbox{MCM v3.2}.
-RACM2 includes explicit species representing benzene, toluene and each xylene resulting in \ce{O_x} production from aromatic VOC that is the most similar to the MCM v3.2 than other reduced mechanisms.
+RACM2 includes explicit species representing benzene, toluene and each xylene resulting in \ce{O_x} production that is the most similar to the MCM v3.2 than other reduced mechanisms.
 
 \ce{O_x} production during toluene degradation has a high spread on the first day in \mbox{Figure \ref{f:TOPP_dailies}} indicating that aromatic degradation is treated differently between mechanisms.
 The reactions contributing to \ce{O_x} production and loss during toluene degradation are determined by following the ``toluene'' tags in each mechanism and are compared in Figure \ref{f:toluene_Ox}.
@@ -111,8 +112,8 @@ The increase in \ce{O_x} production on the second day is reproduced for each alk
 However, larger alkanes produce lower \ce{O_x} on the second day in all lumped molecule and structure mechanisms.
 
 The lumped molecule mechanisms (MOZART-4, RADM2, RACM and RACM2) represent many alkanes by mechanism species which may lead to unrepresentative secondary chemistry.
-For example, more \ce{O_x} is produced during the degradation of propane, butane and $2$-methylpropane in RADM2 than the MCM v3.2 (Figure \ref{f:Ox_tagged_budgets}).
-These alkanes are all represented in RADM2 by the mechanism species HC3 which also represents other classes of VOC, such as alcohols.
+For example, three times more \ce{O_x} is produced during the degradation of propane in RADM2 than the MCM v3.2 (Figure \ref{f:Ox_tagged_budgets}).
+Propane is represented in RADM2 by the mechanism species HC3 which also represents other classes of VOC, such as alcohols.
 The secondary chemistry of HC3 is tailored to produce \ce{O_x} from these different VOC and differs from the alkane degradation in the MCM v3.2 by producing more \ce{CH3CHO} in RADM2.
 
 %

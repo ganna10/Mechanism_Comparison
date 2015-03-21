@@ -1,27 +1,17 @@
 Tagged Ozone Production Potentials (TOPPs) were used to compare \ce{O_x} production during VOC degradation in reduced chemical mechanisms to the near-explicit MCM v3.2. 
 First day mixing ratios of \ce{O3} are similar to the MCM v3.2 for most mechanisms; the \ce{O3} mixing ratios in RACM were much lower than the MCM v3.2 due to a lack of \ce{O_x} production from the degradation of aromatic VOC.
+Thus, RACM may not be the appropriate chemical mechanism when simulating atmospheric conditions having a large fraction of aromatic VOC.
 
-The lumped intermediate mechanism, CRI v2, produces the most similar amounts of \ce{O_x} to the MCM v3.2 for each VOC with the largest differences obtained for aromatic VOC.
-Improved treatment of unsaturated dicarbonyls produced during aromatic VOC degradation would lead to similar \ce{O_x} production to aromatic VOC in the MCM.
+The lumped intermediate mechanism, CRI v2, produces the most similar amounts of \ce{O_x} to the MCM v3.2 for each VOC.
+The largest differences between \ce{O_x} production in CRI v2 and MCM v3.2 were obtained for aromatic VOC, however overall these differences were much lower than any other reduced mechanism.
 
-The lumped structure mechanisms (CBM-IV and CB05) produce similar amounts of \ce{O_x} to the MCM v3.2 on the first day during alkane degradation.
-Aromatic and unsaturated VOC in CBM-IV and CB05 produce less \ce{O_x} than the MCM v3.2 due to either a more rapid break down of the VOC or unrepresentative secondary chemistry of the emitted VOC.
-Overall this leads to lower \ce{O3} mixing ratios than the MCM v3.2.
+Many VOC are broken down into smaller sized degradation products faster on the first in reduced mechanisms than the MCM v3.2 leading to lower amounts of larger sized degradation products that can further degrade and produce \ce{O_x}.
+Thus, many VOC in reduced mechanisms have a lower maximum in \ce{O_x} production and produce lower amounts of \ce{O_x} after the first day than the MCM v3.2.
+This lower \ce{O_x} production from many VOC in reduced mechanisms leads to lower \ce{O3} mixing ratios compared to the MCM v3.2.
 
-\ce{O_x} produced from VOC represented by mechanism species in lumped molecule mechanisms (MOZART-4, RADM2, RACM, RACM2) varies the most from the MCM v3.2.
-More mechanism species representing VOC with similar functionality and OH-oxidation rate constants would lead to more representative \ce{O_x} production from individual VOC.
-The faster break down of most VOC in lumped molecule mechanisms results in lower \ce{O3} mixing ratios than the MCM v3.2.
-RADM2 is the only lumped molecule mechanism having larger \ce{O3} mixing ratios than the MCM v3.2, as the degradation of smaller alkanes produce more \ce{O_x} than the MCM v3.2.
+Alkanes produce maximum \ce{O3} on the second day of simulations and this maximum is lower in reduced mechanisms than the MCM v3.2 due to the faster break down of alkanes into smaller sized degradation products on the first day.
+The lower maximum in \ce{O3} production during alkane degradation in reduced mechanisms would lead to an underestimation of the \ce{O3} levels downwind of VOC emissions when using reduced mechanisms in regional or global modelling studies.
 
-Unsaturated and aromatic VOC have the largest differences between mechanisms on the first day of simulations while alkanes have the largest differences on the second and third days.
-Many unsaturated VOC produce similar amounts of \ce{O_x} between mechanisms, especially VOC that are explicitly represented.
-
-\ce{O_x} produced during the degradation of aromatic VOC show the largest differences between the mechanisms; improved degradation chemistry and more mechanism species representing aromatic VOC would improve the representation of aromatic degradation.
-\ce{O_x} production on the first day from aromatic VOC is lower in each reduced mechanism than the MCM v3.2 due to a quicker break down of the VOC on the first day in reduced mechanisms.
-
-Alkane degradation in lumped molecule and structure mechanisms produces similar amounts of \ce{O_x} on the first day to the MCM v3.2, less \ce{O_x} is produced on subsequent days in lumped molecule and structure mechanisms.
-A faster break down of alkanes into smaller sized products in lumped molecule and structure mechanisms on the first day limits the amount of \ce{O_x} produced on subsequent days as there are less larger degradation products available for further degradation and \ce{O_x} production.
-Representation of alkane degradation is particularly important for emission control strategies targeting \ce{O3} production at the regional scale as alkanes can produce more \ce{O_x} than more-reactive VOC over multi-day time scales \citep{Butler:2011}.
-
-The tagging approach and TOPP calculation over multi-day scenarios is a useful tool for comparing the chemical degradation pathways in chemical mechanisms. 
-This tagging approach could be used to investigate the effects on \ce{O_x} production by the treatment of degradation chemistry in mechanisms under using more realistic \ce{NO_x} conditions.
+This study has determined the maximum potential of a VOC represented in reduced mechanisms to produce \ce{O3}, this potential may not be reached when simulating ambient conditions due to non-optimal \ce{NO_x} levels.
+Moreover, the maximum potential of the VOC to produce \ce{O3} may not be reached when using these reduced mechanisms in 3-D models due to the influence of additional processes, such as transport and meteorology.
+Future work shall examine the extent to which the maximum potential of VOC to produce \ce{O3} in reduced chemical mechanisms is reached using ambient \ce{NO_x} conditions and including processes found in 3-D models.

@@ -25,15 +25,15 @@ The \ce{O3} mixing ratios in the CRI v2 are larger than those in the MCM v3.1, w
 
 The day-time \ce{O_x} production budgets allocated to VOC for each mechanism are shown in \mbox{Figure \ref{f:Ox_tagged_budgets}}.
 The relationships between \ce{O3} mixing ratios in Figure \ref{f:time_series} are mirrored in Figure \ref{f:Ox_tagged_budgets} where mechanisms producing high amounts of \ce{O_x} also have high \ce{O3} mixing ratios.
-The conditions in the box model lead to a higher daily maximum of OH with each day, increasing the reaction rate between \ce{CH4} and OH which increases the daily contribution of \ce{CH4} to \ce{O_x} production each day.
+The conditions in the box model lead to a daily maximum of OH that increases with each day leading to an increase on each day in the reaction rate between \ce{CH4} and OH, and the daily contribution of \ce{CH4} to \ce{O_x} production.
 
 The first day mixing ratios of \ce{O3} in RACM are lower than other mechanisms due to a lack of \ce{O_x} production from aromatic VOC on the first day in RACM (Figure \ref{f:Ox_tagged_budgets}).
 Aromatic degradation chemistry in RACM results in net loss of \ce{O_x} on the first day, described later in \mbox{Section \ref{sss:day1}}.
 
 RADM2 is the only reduced mechanism producing higher \ce{O3} mixing ratios than the more detailed mechanisms (MCM v3.2, MCM v3.1 and CRI v2).
-Higher mixing ratios of \ce{O3} in RADM2 are produced due to increased \ce{O_x} production from propane compared to the \mbox{MCM v3.2}; on the first day the \ce{O_x} production from propane in RADM2 is triple that in the MCM v3.2 \mbox{(Figure \ref{f:Ox_tagged_budgets})}.
-Propane is represented as HC3 in RADM2 \citep{Stockwell:1990} and HC3 degradation produces about $17$ times the amount of acetaldehyde (\ce{CH3CHO}) on the first day than the MCM v3.2.
-The OH-oxidation of \ce{CH3CHO} starts a degradation chain that produces \ce{O_x} through the reactions of \ce{CH3CO3} and \ce{CH3O2} with NO; thus the higher amounts of \ce{CH3CHO} in RADM2 during propane degradation leads to increased \ce{O_x} production in RADM2 compared to the MCM v3.2.
+Higher mixing ratios of \ce{O3} in RADM2 are produced due to increased \ce{O_x} production from propane compared to the \mbox{MCM v3.2}; on the first day the \ce{O_x} production from propane in RADM2 is triple that of the MCM v3.2 \mbox{(Figure \ref{f:Ox_tagged_budgets})}.
+Propane is represented as HC3 in RADM2 \citep{Stockwell:1990} and on the first day HC3 degradation produces about $17$ times the amount of acetaldehyde (\ce{CH3CHO}) produced by the MCM v3.2.
+The OH-oxidation of \ce{CH3CHO} starts a degradation chain that produces \ce{O_x} through the reactions of \ce{CH3CO3} and \ce{CH3O2} with NO; thus the higher amounts of \ce{CH3CHO} in RADM2 during propane degradation leads to increased \ce{O_x} production in RADM2 compared to the \mbox{MCM v3.2}.
 %
 \subsection[Time Dependent Ox Production]{Time Dependent \ce{O_x} Production}
 %
@@ -45,13 +45,52 @@ The OH-oxidation of \ce{CH3CHO} starts a degradation chain that produces \ce{O_x
     \label{f:TOPP_dailies}
 \end{figure}
 %
-Time series of daily TOPP values for each VOC are presented in \mbox{Figure \ref{f:TOPP_dailies}}. 
+Time series of daily TOPP values for each VOC are presented in \mbox{Figure \ref{f:TOPP_dailies}} and the cumulative TOPP values at the end of the model run obtained for each VOC with the mechanisms are presented in Table \ref{t:cumulative_TOPPs}.
+
+{%
+    \renewcommand{\arraystretch}{1.1}%
+    \begin{sidewaystable}%
+        \begin{center}%
+            \begin{tabular}{llllllllll}%
+                \hline \hline
+                \textbf{NMVOC} & \textbf{MCMv3.2} & \textbf{MCMv3.1} & \textbf{CRIv2} & \textbf{MOZART-4} & \textbf{RADM2} & \textbf{RACM} & \textbf{RACM2} & \textbf{CBM-IV} & \textbf{CB05} \\ 
+                \hline \hline \multicolumn{9}{c}{\textbf{Alkanes}}  \\ \hline
+                Ethane & $1.7$ & $1.9$ & $1.8$ & $1.8$ & $2.0$ & $2.0$ & $1.8$ & $0.7$ & $1.7$ \\
+                Propane & $3.3$ & $3.7$ & $3.6$ & $3.2$ & $5.3$ & $5.5$ & $4.3$ & $2.6$ & $3.1$ \\
+                Butane & $7.9$ & $8.2$ & $8.1$ & $6.7$ & $7.1$ & $7.3$ & $5.7$ & $7.0$ &$8.3$ \\
+                $2$-Methylpropane & $5.0$ & $5.4$ & $5.2$ & $6.7$ & $7.1$ & $7.3$ & $5.7$ & $7.0$ & $8.3$ \\
+                Pentane & $10.3$ & $10.5$ & $10.8$ & $8.3$ & $7.3$ & $8.1$ & $5.7$ & $8.7$ & $10.4$ \\
+                $2$-Methylbutane & $7.8$ & $8.2$ & $7.4$ & $8.3$ & $7.3$ & $8.1$ & $5.7$ & $8.7$ & $10.4$ \\
+                Hexane & $12.4$ & $12.6$ & $13.2$ & $10.0$ & $8.8$ & $10.0$ & $6.8$ & $10.5$ & $12.5$ \\
+                Heptane & $14.3$ & $14.7$ & $15.1$ & $11.7$ & $10.2$ & $11.4$ & $7.9$ & $12.2$ & $14.5$ \\
+                Octane & $15.8$ & $16.3$ & $17.2$ & $13.3$ & $9.8$ & $8.0$ & $8.4$ & $14.0$ & $16.6$ \\ \hline
+                \multicolumn{9}{c}{\textbf{Alkenes}} \\ \hline
+                Ethene & $3.8$ & $3.8$ & $3.7$ & $2.8$ & $3.9$ & $4.1$ & $4.4$ & $3.8$ & $4.4$ \\
+                Propene & $5.8$ & $5.8$ & $5.8$ & $5.1$ & $4.5$ & $4.8$ & $4.3$ & $3.7$ & $4.3$ \\
+                Butene & $7.6$ & $7.9$ & $8.0$ & $6.0$ & $6.0$ & $6.4$ & $6.0$ & $3.0$ & $3.6$ \\
+                $2$-Methylpropene & $4.5$ & $4.8$ & $4.7$ & $6.0$ & $4.6$ & $6.0$ & $6.6$ & $2.0$ & $1.8$ \\
+                Isoprene & $8.8$ & $9.2$ & $9.0$ & $6.6$ & $5.9$ & $8.1$ & $8.4$ & $9.3$ & $10.7$ \\ \hline
+                \multicolumn{9}{c}{\textbf{Aromatics}} \\ \hline 
+                Benzene & $4.8$ & $5.0$ & $6.8$ & $3.6$ & $5.4$ & $3.7$ & $5.6$ & $1.7$ & $2.1$ \\
+                Toluene & $9.0$ & $9.0$ & $10.4$ & $4.2$ & $6.4$ & $4.3$ & $7.3$ & $2.0$ & $2.0$ \\
+                m-Xylene & $12.0$ & $11.9$ & $12.5$ & $4.8$ & $7.2$ & $5.1$ & $13.5$ & $7.6$ & $8.2$ \\
+                p-Xylene $12.2$ & $12.0$ & $12.5$ & $4.8$ & $7.2$ & $5.1$ & $13.5$ & $7.6$ & $8.2$ \\
+                o-Xylene & $12.2$ & $12.2$ & $12.6$ & $4.8$ & $7.2$ & $5.1$ & $13.5$ & $7.6$ & $8.2$ \\
+                Ethylbenzene & $10.7$ & $11.0$ & $12.3$ & $4.8$ & $7.3$ & $5.0$ & $8.3$ & $1.9$ & $2.0$ \\
+                \hline \hline
+            \end{tabular}%
+            \caption{Cumulative TOPP values at the end of the model run for each VOC with each mechanism.}%
+            \label{t:cumulative_TOPPs}%
+        \end{center}%
+    \end{sidewaystable}%
+}
+
 The lumped intermediate mechanism (CRI v2) produces the most similar \ce{O_x} to the \mbox{MCM v3.2} for each VOC.
 Higher variability in the time dependent \ce{O_x} production is evident for VOC represented by lumped mechanism species.
 For example, $2$-methylpropene, represented in the reduced mechanisms by a variety of lumped species, has a higher spread in time dependent \ce{O_x} production than ethene, which is explicitly represented in each mechanism.
 
-In general, aromatic and unsaturated aliphatic species have their largest differences between mechanisms on the first day of the simulations, while alkanes show their largest inter-mechanism differences in \ce{O_x} production on the second and third days of the simulations.
-\mbox{Section \ref{sss:day1}} examines differences in first day \ce{O_x} production between the chemical mechanisms and \mbox{Section \ref{sss:profiles}} examines the differences in \ce{O_x} production on subsequent days.
+In general, the largest differences in \ce{O_x} produced by aromatic and unsaturated aliphatic species is on the first day of the simulations, while the largest inter-mechanism differences in \ce{O_x} produced by alkanes is on the second and third days of the simulations.
+The reasons for these differences in behaviour will be explored in \mbox{Section \ref{sss:day1}} which examines differences in first day \ce{O_x} production between the chemical mechanisms and \mbox{Section \ref{sss:profiles}} which examines the differences in \ce{O_x} production on subsequent days.
 %
 \subsubsection{First Day Ozone Production} \label{sss:day1} %first day comparison
 %
@@ -64,12 +103,12 @@ In general, aromatic and unsaturated aliphatic species have their largest differ
     \label{f:first_day}
 \end{figure}
 %
-The first day TOPP values of each VOC, representing \ce{O3} production from freshly emitted VOC near their source region, from each mechanism are compared to those obtained with the \mbox{MCM v3.{2}} in Figure \ref{f:first_day}.
+The first day TOPP values of each VOC from each mechanism, representing \ce{O3} production from freshly emitted VOC near their source region, are compared to those obtained with the \mbox{MCM v3.{2}} in Figure \ref{f:first_day}.
 The root mean square error (RMSE) of all first day TOPP values in each mechanism relative to those in the MCM v3.2 are also included in Figure \ref{f:first_day}.  
 The RMSE value of the CRI v2 shows that \ce{O_x} production on the first day from practically all the individual VOC matches that in the MCM v3.2.
 All other reduced mechanisms have much larger RMSE values indicating that the first day \ce{O_x} production from the majority of the VOC differs from that in the MCM v3.2.
 
-Aromatic VOC in reduced mechanisms are represented by mechanism species describing the degradation of other aromatic VOC leading to differences in \ce{O_x} production of the actual VOC compared to the MCM v3.2.
+The reduced complexity of reduced mechanisms means that aromatic VOC are typically represented by one or two mechanism species leading to differences in \ce{O_x} production of the actual VOC compared to the MCM v3.2.
 For example, all aromatic VOC in MOZART-4 are represented as toluene, thus less reactive aromatic VOC, such as benzene, produce higher \ce{O_x} whilst more reactive aromatic VOC, such as the xylenes, produce less \ce{O_x} in MOZART-4 than the \mbox{MCM v3.2}.
 RACM2 includes explicit species representing benzene, toluene and each xylene resulting in \ce{O_x} production that is the most similar to the MCM v3.2 than other reduced mechanisms.
 

@@ -49,7 +49,7 @@ RADM2 was updated to RACM \citep{Stockwell:1997} with more explicit and lumped s
 RACM2 is the updated RACM version \citep{Goliff:2013} with substantial updates to the chemistry, including more lumped and explicit species representing emitted VOC.
 
 %CBM4 and CB05
-The CBM-IV \citep{Gery:1989} simulates polluted urban conditions and represents ethene, formaldehyde and isoprene explicitly while all other emitted VOC are lumped by their carbon bond types. 
+CBM-IV \citep{Gery:1989} simulates polluted urban conditions and represents ethene, formaldehyde and isoprene explicitly while all other emitted VOC are lumped by their carbon bond types. 
 All primary VOC were assigned to lumped species in CBM-IV as described in \citet{Hogo:1989}. 
 For example, the mechanism species PAR represents the C--C bond.
 Pentane, having five carbon atoms, is represented as $5$ PAR.
@@ -65,9 +65,9 @@ The approach is summarised here; further details can be found in the online supp
 We use the MECCA boxmodel \citep{Sander:2005} as described in \citet{Butler:2011}, representing the tropospheric conditions of Los Angeles and consider all gas-phase chemical processes occurring within the planetary boundary layer.
 
 Maximum \ce{O3} production is achieved in each model run by balancing the chemical source of radicals and \ce{NO_x} at each timestep by emitting the appropriate amount of NO.
-These \ce{NO_x} conditions induce \ce{NO_x}-VOC-sensitive chemistry which would be lower than the \ce{NO_x}-saturated conditions found in Los Angeles.
-Ambient \ce{NO_x} conditions are not required as this study is concerned with the maximum potential of VOC to produce \ce{O3}.
-Future work could verify the extent to which the maximum potential is reached under ambient \ce{NO_x} conditions.
+These \ce{NO_x} conditions induce \ce{NO_x}-VOC-sensitive chemistry which would be lower than the typically \ce{NO_x}-saturated conditions found in Los Angeles.
+Ambient \ce{NO_x} conditions are not required as this study calculates the maximum potential of VOC to produce \ce{O3}.
+Future work should verify the extent to which the maximum potential of VOC to produce \ce{O3} is reached under ambient \ce{NO_x} conditions.
 
 \begin{sidewaystable}
     \centering
@@ -104,7 +104,7 @@ Future work could verify the extent to which the maximum potential is reached un
 \end{sidewaystable}
 
 %initial conditions
-VOCs typical of Los Angeles and their initial mixing ratios are taken from \citet{Baker:2008} and are listed in \mbox{Table \ref{t:initial_conditions}}. 
+VOCs typical of Los Angeles and their initial mixing ratios are taken from \citet{Baker:2008}, listed in \mbox{Table \ref{t:initial_conditions}}. 
 Following \citet{Butler:2011}, the associated emissions required to keep the initial mixing ratios of each VOC constant until noon of the first day were determined for the \mbox{MCM v3.2.}
 These emissions are subsequently used for each mechanism, ensuring the amount of each VOC emitted was the same in every model run.
 Methane (\ce{CH4}) was fixed at \mbox{$1.8$ ppmv} while CO and \ce{O3} were initialised at \mbox{$200$ ppbv} and \mbox{$40$ ppbv} and then allowed to evolve freely.
@@ -139,7 +139,7 @@ Thus, each emitted VOC effectively has its own set of degradation reactions.
 For example, TOL in RACM2 represents toluene and ethylbenzene with fractional contributions of $0.87$ and $0.13$ to TOL emissions.
 Scaling the \ce{O_x} production from TOL by these factors gives the \ce{O_x} production from toluene and ethylbenzene in RACM2.
 
-Many reduced mechanisms use an operator species as a surrogate for \ce{RO2} during VOC degradation enabling these mechanisms to produce \ce{O_x} while minimising the number of \ce{RO2} species.
+Many reduced mechanisms use an operator species as a surrogate for \ce{RO2} during VOC degradation enabling these mechanisms to produce \ce{O_x} while minimising the number of \ce{RO2} species represented.
 \ce{O_x} production from operator species is assigned as \ce{O_x} production from the organic degradation species producing the operator.
 This allocation technique is also used to assign \ce{O_x} production from \ce{HO2} via \reactionref{r:HO2_NO}.
 %

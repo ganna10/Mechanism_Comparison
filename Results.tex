@@ -12,7 +12,7 @@ The conditions in the box model lead to a daily maximum of OH that increases wit
 \begin{figure}[h!]
     \centering
     \caption{Time series of \ce{O3} mixing ratios obtained using each mechanism.}
-    \includegraphics[width=\textwidth]{img/O3_mixing_ratios}
+    \includegraphics[width=0.9\textwidth]{img/O3_mixing_ratios}
     \vspace{-2mm}
     \label{f:time_series}
 \end{figure}
@@ -45,18 +45,18 @@ The OH-oxidation of \ce{CH3CHO} starts a degradation chain that produces \ce{O_x
     \label{f:TOPP_dailies}
 \end{figure}
 %
-Time series of daily TOPP values for each VOC are presented in \mbox{Figure \ref{f:TOPP_dailies}} and the cumulative TOPP values at the end of the model run obtained for each VOC using each of the mechanisms, normalised by the number of atoms of C in each VOC are presented in Table \ref{t:cumulative_TOPPs}.
-The cumulative TOPP values obtained for each VOC show that by the end of the model run larger alkanes have produced more \ce{O_x} per unit of reactive C than alkenes or aromatic VOC.
-Although, the higher alkanes in all lumped molecule and structure mechanisms do produce more \ce{O_x} than alkenes and aromatics, the amount of \ce{O_x} produced is lower than that in the MCM and CRI v2 which would lead to an underestimation of \ce{O3} levels downwind of an emission source, and a smaller contribution to background \ce{O3} when using lumped molecule and structure mechanisms.
-
-\input{Cumulative_TOPPs_table}
 \input{Cumulative_TOPPs_table_per_C}
-%
-The lumped intermediate mechanism (CRI v2) produces the most similar \ce{O_x} to the \mbox{MCM v3.2} for each VOC, seen in Figure \ref{f:TOPP_dailies} and Table \ref{t:cumulative_TOPPs}.
+Time series of daily TOPP values for each VOC are presented in \mbox{Figure \ref{f:TOPP_dailies}} and the cumulative TOPP values at the end of the model run obtained for each VOC using each of the mechanisms, normalised by the number of atoms of C in each VOC are presented in Table \ref{t:cumulative_TOPPs_per_C}.
+In the MCM and CRI v2, the cumulative TOPP values obtained for each VOC show that by the end of the model run larger alkanes have produced more \ce{O_x} per unit of reactive C than alkenes or aromatic VOC.
+By the end of the runs using the lumped structure mechanisms (CBM-IV and CB05), alkanes produce similar amounts of \ce{O_x} per reactive C while aromatic VOC and some alkenes produce less \ce{O_x} per reactive C than the MCM.
+Whereas in lumped molecule mechanisms (MOZART-4, RADM2, RACM, RACM2), practically all VOC produce less \ce{O_x} per reactive C than the MCM by the end of the run.
+This lower efficiency of \ce{O_x} production from many individual VOC in lumped molecule and structure mechanisms would lead to an underestimation of \ce{O3} levels downwind of an emission source, and a smaller contribution to background \ce{O3} when using lumped molecule and structure mechanisms.
+
+The lumped intermediate mechanism (CRI v2) produces the most similar \ce{O_x} to the \mbox{MCM v3.2} for each VOC, seen in Figure \ref{f:TOPP_dailies} and Table \ref{t:cumulative_TOPPs_per_C}.
 Higher variability in the time dependent \ce{O_x} production is evident for VOC represented by lumped mechanism species.
 For example, $2$-methylpropene, represented in the reduced mechanisms by a variety of lumped species, has a higher spread in time dependent \ce{O_x} production than ethene, which is explicitly represented in each mechanism.
 
-In general, the largest differences in \ce{O_x} produced by aromatic and unsaturated aliphatic species are on the first day of the simulations, while the largest inter-mechanism differences in \ce{O_x} produced by alkanes are on the second and third days of the simulations.
+In general, the largest differences in \ce{O_x} produced by aromatic and alkene species are on the first day of the simulations, while the largest inter-mechanism differences in \ce{O_x} produced by alkanes are on the second and third days of the simulations.
 The reasons for these differences in behaviour will be explored in \mbox{Section \ref{sss:day1}} which examines differences in first day \ce{O_x} production between the chemical mechanisms and \mbox{Section \ref{sss:profiles}} which examines the differences in \ce{O_x} production on subsequent days.
 %
 \subsubsection{First Day Ozone Production} \label{sss:day1} %first day comparison
@@ -133,7 +133,7 @@ The secondary chemistry of HC3 is tailored to produce \ce{O_x} from these differ
 %
 As will be shown in Section \ref{ss:products}, another feature of reduced mechanisms is that the breakdown of emitted VOC into smaller sized degradation products is faster than the MCM.
 Alkanes are broken down quicker in CBM-IV, CB05, RADM2, RACM and RACM2 through a higher rate of reactive carbon loss than the MCM v3.2 (shown for pentane and octane in \mbox{Figure \ref{f:net_carbon_loss}}); reactive carbon is lost through reactions not conserving carbon.
-Despite many degradation reactions of alkanes in MOZART-4 almost conserving carbon, the organic products have less reactive carbon than the organic reactant also speeding up the breakdown of the alkane compared to the MCM v3.2.
+Despite many degradation reactions of alkanes in MOZART-4 almost conserving carbon, the organic products have less reactive carbon than the organic reactant also speeding up the breakdown of the alkane compared to the \mbox{MCM v3.2}.
 
 For example, Figure \ref{f:HC5P_NO} shows the distribution of reactive carbon in the reactants and products from the reaction of NO with the pentyl peroxy radical in both MCM mechanisms and each lumped molecule mechanism.
 In all the lumped molecule mechanisms, the individual organic products have less reactive carbon than the organic reactant. 
@@ -175,10 +175,9 @@ Pentane is broken down faster in CBM-IV, CB05, RADM2, RACM and RACM2 by losing r
 MOZART-4 also breaks pentane down into smaller sized products quicker than the MCM v3.2 as reactions during pentane degradation in MOZART-4 have organic products whose carbon number is less than the organic reactant, described in Section \ref{sss:profiles}.
 The faster break down of pentane on the first day limits the amount of reactive carbon available to produce further \ce{O_x} on subsequent days leading to lower \ce{O_x} production after the first day in reduced mechanisms.
 
-A further example of the speed of alkane breakdown impacting the amount of \ce{O_x} produced on the second day is octane in RADM2, RACM and RACM2.
-Figure \ref{f:TOPP_dailies} showed that octane degradation produces peak \ce{O_x} on the first day in RADM2, RACM and RACM2 in contrast to all other mechanisms where peak \ce{O_x} is produced on the second day (\mbox{Figure \ref{f:net_carbon_loss}}).
-Octane degradation in RADM2, RACM and RACM2 loses reactive carbon much faster than any other mechanism on the first day so that there are not enough degradation products available on the second day to produce peak \ce{O_x} on the second day.
-This loss of reactive carbon during alkane degradation leads to the lower accumulated ozone production from these VOC shown in \mbox{Table \ref{t:cumulative_TOPPs}}.
+Figure \ref{f:TOPP_dailies} showed that octane degradation produces peak \ce{O_x} on the first day in RADM2, RACM and RACM2 in contrast to all other mechanisms where peak \ce{O_x} is produced on the second day.
+Octane degradation in RADM2, RACM and RACM2 loses reactive carbon much faster than any other mechanism on the first day so that there are not enough degradation products available on the second day to produce peak \ce{O_x} on the second day (\mbox{Figure \ref{f:net_carbon_loss}}).
+This loss of reactive carbon during alkane degradation leads to the lower accumulated ozone production from these VOC shown in \mbox{Table \ref{t:cumulative_TOPPs_per_C}}.
 
 As seen in Figure \ref{f:TOPP_dailies}, \ce{O_x} produced during toluene degradation has a high spread between the mechanisms.
 Figure \ref{f:carbon} shows differing distributions of the sizes of the degradation products that produce \ce{O_x}.

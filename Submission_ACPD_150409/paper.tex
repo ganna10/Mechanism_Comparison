@@ -1,0 +1,794 @@
+%% Copernicus Publications Manuscript Preparation Template for LaTeX Submissions
+%% ---------------------------------
+%% This template should be used for copernicus.cls
+%% The class file and some style files are bundled in the Copernicus Latex Package which can be downloaded from the different journal webpages.
+%% For further assistance please contact the Copernicus Publications at: publications@copernicus.org
+%% http://publications.copernicus.org
+
+
+%% Please use the following documentclass and Journal Abbreviations for Discussion Papers and Final Revised Papers.
+
+
+%% 2-Column Papers and Discussion Papers
+\documentclass[acp, manuscript]{copernicus}
+
+
+
+%% Journal Abbreviations (Please use the same for Discussion Papers and Final Revised Papers)
+
+% Atmospheric Chemistry and Physics (acp)
+% Advances in Geosciences (adgeo)
+% Advances in Statistical Climatology, Meteorology and Oceanography (ascmo)
+% Annales Geophysicae (angeo)
+% ASTRA Proceedings (ap)
+% Atmospheric Measurement Techniques (amt)
+% Advances in Radio Science (ars)
+% Advances in Science and Research (asr)
+% Biogeosciences (bg)
+% Climate of the Past (cp)
+% Drinking Water Engineering and Science (dwes)
+% Earth System Dynamics (esd)
+% Earth Surface Dynamics (esurf)
+% Earth System Science Data (essd)
+% Fossil Record (fr)
+% Geographica Helvetica (gh)
+% Geoscientific Instrumentation, Methods and Data Systems (gi)
+% Geoscientific Model Development (gmd)
+% Geothermal Energy Science (gtes)
+% Hydrology and Earth System Sciences (hess)
+% History of Geo- and Space Sciences (hgss)
+% Journal of Sensors and Sensor Systems (jsss)
+% Mechanical Sciences (ms)
+% Natural Hazards and Earth System Sciences (nhess)
+% Nonlinear Processes in Geophysics (npg)
+% Ocean Science (os)
+% Primate Biology (pb)
+% Scientific Drilling (sd)
+% SOIL (soil)
+% Solid Earth (se)
+% The Cryosphere (tc)
+% Web Ecology (we)
+
+
+
+%% \usepackage commands included in the copernicus.cls:
+%\usepackage[german, english]{babel}
+\usepackage{tabularx}
+%\usepackage{cancel}
+\usepackage{multirow}
+%\usepackage{supertabular}
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+%\usepackage{float}
+%\usepackage{subfig}
+%\usepackage{rotating}
+
+
+\begin{document}
+
+\linenumbers
+
+\title{A Comparison of Chemical Mechanisms using Tagged Ozone Production Potential (TOPP) Analysis}
+
+
+% \Author[affil]{given_name}{surname}
+
+\Author[1]{J. Coates}{}
+\Author[1]{T. M. Butler}{}
+%\Author[]{}{}
+
+\affil[1]{Insititute for Advanced Sustainability Studies, Potsdam, Germany}
+%\affil[]{ADDRESS}
+
+%% The [] brackets identify the author with the corresponding affiliation. 1, 2, 3, etc. should be inserted.
+
+
+
+\runningtitle{A Comparison of Chemical Mechanisms using Tagged Ozone Production Potential (TOPP) Analysis}
+
+\runningauthor{J. Coates and T. M. Butler}
+
+\correspondence{J. Coates (jane.coates@iass-potsdam.de)}
+
+
+
+\received{}
+\pubdiscuss{} %% only important for two-stage journals
+\revised{}
+\accepted{}
+\published{}
+
+%% These dates will be inserted by Copernicus Publications during the typesetting process.
+
+
+\firstpage{1}
+
+\maketitle
+
+
+
+\begin{abstract}
+Ground-level ozone is a secondary pollutant produced photochemically from reactions of \chem{NO_x} with peroxy radicals produced during VOC degradation. 
+Chemical transport models use simplified representations of this complex gas-phase chemistry to predict \chem{O_3} levels and inform emission control strategies. 
+Accurate representation of \chem{O_3} production chemistry is vital for effective predictions.
+In this study, VOC degradation chemistry in simplified mechanisms is compared to that in the near-explicit MCM mechanism using a boxmodel and by ``tagging'' all organic degradation products over multi-day runs, thus calculating the Tagged Ozone Production Potential (TOPP) for a selection of VOC representative of urban airmasses.
+Simplified mechanisms that aggregate VOC degradation products instead of aggregating emitted VOC produce comparable amounts of \chem{O_3} from VOC degradation to the MCM.
+First day TOPP values are similar across mechanisms for most VOC, with larger discrepancies arising over the course of the model run.
+Aromatic and unsaturated aliphatic VOC have largest inter-mechanisms differences on the first day, while alkanes show largest differences on the second day.
+Simplified mechanisms break down VOC into smaller sized degradation products on the first day faster than the MCM impacting the total amount of \chem{O_3} produced on subsequent days due to secondary chemistry.
+\end{abstract}
+
+
+
+\introduction  %% \introduction[modified heading if necessary]
+Ground-level ozone (\chem{O_3}) is both an air pollutant and a climate forcer that is detrimental to human health and crop growth \citep{Stevenson:2013}. 
+\chem{O_3} is produced from the reactions of volatile organic compounds (VOCs) and nitrogen oxides (\chem{NO_x} = \chem{NO} + \chem{NO_2}) in the presence of sunlight \citep{Atkinson:2000}.
+
+Background \chem{O_3} concentrations have increased during the last several decades due to the increase of overall global anthropogenic emissions of \chem{O_3} precursors \citep{HTAP:2010}.
+Despite decreases in emissions of \chem{O_3} precursors over Europe since 1990, \citet{AQEU:2014} reports that $98$\% of Europe's urban population are exposed to levels exceeding the WHO air quality guideline of \mbox{$100$ $\mu$g m$^{-3}$} over an \mbox{$8$-hour} mean.
+These exceedances result from local and regional \chem{O_3} precursor gas emissions, their intercontinental transport and the non-linear relationship of \chem{O_3} concentrations to \chem{NO_x} and VOC levels \citep{AQEU:2014}.
+
+Effective strategies for emission reductions rely on accurate predictions of \chem{O_3} concentrations using chemical transport models (CTMs). 
+These predictions require adequate representation of gas-phase chemistry in the chemical mechanism used by the CTM. 
+For reasons of computational efficiency, the chemical mechanisms used by global and regional CTMs must be simpler than the nearly-explicit mechanisms which can be used in box modelling studies.
+This study compares the impacts of different simplification approaches of chemical mechanisms on \chem{O_3} production chemistry focusing on the role of VOC degradation products.
+
+\begin{reaction}%
+    \chem{NO + O_3 \rightarrow NO_2 + O_2} \label{r:NO_O3}%
+\end{reaction}%
+\begin{reaction}%
+    \chem{NO_2 + h\nu \rightarrow NO + O(^3P)} \label{r:NO2_hv}%
+\end{reaction}%
+\begin{reaction}%
+    \chem{O_2 + O(^3P) + M \rightarrow O_3 + M} \label{r:O2_O3P}%
+\end{reaction}%
+The photochemical cycle (\ref{r:NO_O3}--\ref{r:O2_O3P}) rapidly produces and destroys \chem{O_3}.
+\chem{NO} and \chem{NO_2} reach a near-steady state via \ref{r:NO_O3} and \ref{r:NO2_hv} which is disturbed in two cases. 
+Firstly, via \chem{O_3} removal (deposition or \ref{r:NO_O3} during night-time and near large \chem{NO} sources) and secondly, when \chem{O_3} is produced through VOC--\chem{NO_x} chemistry \citep{Sillman:1999}.
+
+VOCs (RH) are oxidised in the troposphere by the hydoxyl radical (OH) forming peroxy radicals (\chem{RO_2}) in the presence of \chem{O_2} \ref{r:RH_OH}. 
+In high-\chem{NO_x} conditions, typical of urban environments, \chem{RO_2} react with \chem{NO} \ref{r:RO2_NO} to form alkoxy radicals (\chem{RO}), which react quickly with \chem{O_2} \ref{r:RO_O2} producing a hydroperoxy radical (\chem{HO_2}) and a carbonyl species (\chem{R^\prime CHO}).
+The secondary chemistry of these first generation carbon-containing oxidation products is analogous to the sequence \ref{r:RH_OH}--\ref{r:RO_O2}, producing further \chem{HO_2} and \chem{RO_2} radicals.
+Subsequent generation oxidation products can continue to react, producing \chem{HO_2} and \chem{RO_2} until they have been completely oxidised to \chem{CO_2} and \chem{H_2O}.
+Both \chem{RO_2} and \chem{HO_2} react with \chem{NO} to produce \chem{NO_2} (\ref{r:RO2_NO} and \ref{r:HO2_NO}) leading to \chem{O_3} production via \ref{r:NO2_hv} and \ref{r:O2_O3P}. 
+Thus the amount of \chem{O_3} produced from VOC degradation is related to the number of \chem{NO} to \chem{NO_2} conversions by \chem{RO_2} and \chem{HO_2} radicals formed during VOC degradation \citep{Atkinson:2000}.
+\begin{reaction}
+    \chem{RH + OH + O_2 \rightarrow RO_2 + H_2O}\label{r:RH_OH}
+\end{reaction}
+\begin{reaction}
+    \chem{RO_2 + NO \rightarrow RO + NO_2}\label{r:RO2_NO}
+\end{reaction}
+\begin{reaction}
+    \chem{RO + O_2 \rightarrow R^\prime CHO + HO_2}\label{r:RO_O2}
+\end{reaction}
+\begin{reaction}
+    \chem{HO_2 + NO \rightarrow OH + NO_2}\label{r:HO2_NO}
+\end{reaction}
+
+Three atmospheric regimes with respect to \chem{O_3} production can be defined \citep{Jenkin:2000}. 
+In the \chem{NO_x}-sensitive regime, VOC concentrations are much higher than those of \chem{NO_x} and \chem{O_3} production depends on \chem{NO_x} concentrations. 
+On the other hand, when \chem{NO_x} concentrations are much higher than those of VOC (VOC-sensitive regime), VOC concentrations determine the amount of \chem{O_3} produced.
+Finally, the \chem{NO_x}-VOC-sensitive regime produces maximal \chem{O_3} and is controlled by both VOC and \chem{NO_x} concentrations.
+
+These atmospheric regimes remove radicals through distinct mechanisms \citep{Kleinman:1991}. 
+In the \chem{NO_x}-sensitive regime, radical concentrations are high relative to \chem{NO_x} leading to radical removal by radical combination reactions \ref{r:RO2_HO2} and bimolecular destruction reactions \ref{r:HO2_OH} \citep{Kleinman:1994}.
+\begin{reaction}
+    \chem{RO_2 + HO_2 \rightarrow ROOH + O_2} \label{r:RO2_HO2}
+\end{reaction}
+\begin{reaction}
+    \chem{HO_2 + OH \rightarrow H_2O + O_2} \label{r:HO2_OH}
+\end{reaction}
+Whereas in the VOC-sensitive regime, radicals are removed by reacting with \chem{NO_2} leading to nitric acid (\chem{HNO_3}) \ref{r:NO2_OH} and PAN species \ref{r:RC(O)O2_NO2}.
+\begin{reaction}
+    \chem{NO_2 + OH \rightarrow HNO_3} \label{r:NO2_OH}
+\end{reaction}
+\begin{reaction}
+    \chem{RC(O)O_2 + NO_2 \rightarrow RC(O)O_2NO_2} \label{r:RC(O)O2_NO2}
+\end{reaction}
+The \chem{NO_x}-VOC-sensitive regime has no dominant radical removal mechanism as radical and \chem{NO_x} amounts are comparable.
+This chemistry results in \chem{O_3} concentrations being a non-linear function of \chem{NO_x} and VOC concentrations.
+
+Individual VOC impact \chem{O_3} production differently through their diverse reaction rates and degradation pathways. 
+These impacts can be quantified using Ozone Production Potentials (OPP) which can be calculated through incremental reactivity (IR) studies using photochemical models. 
+In IR studies, VOC concentrations are changed by a known increment and the change in \chem{O_3} production is compared to that of a standard VOC mixture. 
+Examples of IR scales are the Maximal Incremental Reactivity (MIR) and Maximum Ozone Incremental Reactivity (MOIR) scales in \citet{Carter:1994}, as well as the Photochemical Ozone Creation Potential (POCP) scale of \citet{Derwent:1996} and \citet{Derwent:1998}. 
+The MIR, MOIR and POCP scales were calculated under different \chem{NO_x} conditions, thus calculating OPPs in different atmospheric regimes.
+
+\citet{Butler:2011} calculate the maximum potential of VOC to produce \chem{O_3} by using \chem{NO_x} conditions inducing \chem{NO_x}-VOC-sensitive chemistry over multi-day scenarios using a ``tagging'' approach -- the Tagged Ozone Production Potential (TOPP). 
+Tagging involves labelling all organic degradation products produced during VOC degradation with the name of the emitted VOC.
+Tagging enables the attribution of \chem{O_3} production from VOC degradation products back to the emitted VOC, thus providing a detailed insight into VOC degradation chemistry.
+\citet{Butler:2011}, using a near-explicit chemical mechanism, showed that some VOC, such as alkanes, produce maximum \chem{O_3} on the second day of the model run; in contrast to unsaturated aliphatic and aromatic VOC which produce maximum \chem{O_3} on the first day.
+In this study, the tagging approach of \citet{Butler:2011} is applied to several chemical mechanisms of reduced complexity, using conditions of maximum \chem{O_3} production (\chem{NO_x}-VOC-sensitive regime), to compare the effects of different representations of VOC degradation chemistry on \chem{O_3} production in the different chemical mechanisms.
+
+A near-explicit mechanism, such as the Master Chemical Mechanism (MCM) \citep{Jenkin:2003, Saunders:2003, Bloss:2005}, includes detailed degradation chemistry making the MCM ideal as a reference for comparing chemical mechanisms.
+Reduced mechanisms generally take two approaches to simplifying the representation of VOC degradation chemistry: lumped structure approaches; and lumped molecule approaches \citep{Dodge:2000}. 
+
+Lumped structure mechanisms speciate VOC by the carbon bonds of the emitted VOC, examples are the Carbon Bond mechanisms, CBM-IV \citep{Gery:1989} and CB05 \citep{Yarwood:2005}.
+Lumped molecule mechanisms represent VOC explicitly or by aggregating (lumping) many VOC into a single mechanism species.
+Mechanism species may lump VOC by functionality (MOdel for Ozone and Related chemical Tracers, MOZART-4 \citep{Emmons:2010}) or OH-reactivity (Regional Acid Deposition Model, RADM2 \citep{Stockwell:1990}, Regional Atmospheric Chemistry Mechanisms, RACM \citep{Stockwell:1997} and RACM2 \citep{Goliff:2013}).
+The Common Representative Intermediates mechanism (CRI) lumps the degradation products of VOC rather than the emitted VOC \citep{Jenkin:2008}.
+
+Many comparison studies of chemical mechanisms consider modelled time series of \chem{O_3} concentrations over varying VOC and \chem{NO_x} concentrations.
+Examples are \citet{Dunker:1984}, \citet{Kuhn:1998} and \citet{Emmerson:2009}.
+The largest discrepancies between the time series of \chem{O_3} concentrations in different mechanisms from these studies arise when modelling urban rather than rural conditions and are attributed to the treatment of radical production, organic nitrate and night-time chemistry.
+\citet{Emmerson:2009} also compare the inorganic gas-phase chemistry of different chemical mechanisms, differences in inorganic chemistry arise from inconsistencies between IUPAC and JPL reaction rate constants.
+
+Mechanisms have also been compared using OPP scales.
+OPPs are a useful comparison tool as they relate \chem{O_3} production to a single value. 
+\citet{Derwent:2010} compared the near-explicit \mbox{MCM v3.1} and SAPRC-07 mechanisms using first-day POCP values calculated under VOC-sensitive conditions. 
+The POCP values were comparable between the mechanisms.  
+\citet{Butler:2011} compared first day TOPP values to the corresponding published MIR, MOIR and POCP values.
+TOPP values were most comparable to MOIR and POCP values due to the similarity of the chemical regimes used in their calculation. 
+
+In this study, we compare TOPP values of VOC using a number of mechanisms to those calculated with the MCM v3.2, under standardised conditions which maximise \chem{O_3} production. 
+Differences in \chem{O_3} production are explained by the differing treatments of secondary VOC degradation in these mechanisms.
+
+%\section{HEADING}
+%TEXT
+%
+%\subsection{HEADING}
+%TEXT
+%
+%\subsubsection{HEADING}
+%TEXT
+
+\section{Methodology} \label{s:methodology}
+%
+\subsection{Chemical Mechanisms} \label{ss:mechanisms}
+%
+The nine chemical mechanisms compared in this study are outlined in Table \ref{t:mechanisms} with a brief summary below.
+The reduced mechanisms in this study were chosen as they are commonly used in 3-D models and apply different approaches to representing secondary VOC chemistry.
+
+\begin{table}[t]%
+    \caption{The chemical mechanisms used in the study, MCM v3.2 is the reference mechanism.}%
+    \begin{tabular}{ccccc}
+        \tophline
+        \textbf{Chemical} & \textbf{Number of} & \textbf{Number of} & \textbf{Type of} & \multirow{2}{*}{\textbf{Reference}} \\
+        \textbf{Mechanism} & \textbf{Organic Species} & \textbf{Organic Reactions} & \textbf{Lumping} & \\ \middlehline
+        MCM v3.2 & $5708$ & $16349$ & No lumping & \citet{MCM_Site} \\ 
+        \multirow{4}{*}{MCM v3.1} & \multirow{4}{*}{$4351$} & \multirow{4}{*}{$12691$} & \multirow{4}{*}{No lumping} & \citet{Jenkin:1997} \\ 
+        & & & & \citet{Saunders:2003} \\ 
+        & & & & \citet{Jenkin:2003} \\ 
+        & & & & \citet{Bloss:2005} \\ 
+        CRI v2 & $411$ & $1145$ & Lumped intermediates & \citet{Jenkin:2008} \\ 
+        MOZART-4 & $69$ & $145$ & Lumped molecule & \citet{Emmons:2010} \\ 
+        RADM2 & $44$ & $103$ & Lumped molecule & \citet{Stockwell:1990} \\ 
+        RACM & $58$ & $193$ & Lumped molecule & \citet{Stockwell:1997} \\ 
+        RACM2 & $99$ & $315$ & Lumped molecule & \citet{Goliff:2013} \\ 
+        CBM-IV & $20$ & $45$ & Lumped structure & \citet{Gery:1989} \\ 
+        CB05 & $37$ & $99$ & Lumped structure & \citet{Yarwood:2005} \\ 
+        \bottomhline
+    \end{tabular} \label{t:mechanisms}%
+\end{table}%
+
+The MCM \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005, MCM_Site} is a near-explicit mechanism describing the degradation of $125$ primary VOC. 
+The \mbox{MCM v3.2} is the reference mechanism in this study.
+
+The CRI \citep{Jenkin:2008} is a reduced chemical mechanism describing the oxidation of the same primary VOC as the \mbox{MCM v3.1}. 
+VOC degradation in the CRI is simplified by lumping the degradation products of many VOC into mechanism species whose overall \chem{O_3} production reflects that of the \mbox{MCM v3.1}. 
+The full version of the \mbox{CRI v2} (\url{http://mcm.leeds.ac.uk/CRI}) is used in this study.
+Differences in \chem{O_3} production between the CRI v2 and MCM v3.2 may be due to changes in the MCM versions rather than the CRI reduction techniques, hence the \mbox{MCM v3.1} is also included in this study.
+
+MOZART-4 represents global tropospheric and stratospheric chemistry \citep{Emmons:2010}. 
+Explicit species exist for methane, ethane, propane, ethene, propene, isoprene and $\alpha$-pinene.
+All other VOC are represented by lumped species determined by the functionality of the VOC.
+
+RADM2 \citep{Stockwell:1990} describes regional scale atmospheric chemistry with explicit species representing methane, ethane, ethene and isoprene. 
+All other VOC are assigned to lumped species based on OH-reactivity and molecular weight.
+RADM2 was updated to RACM \citep{Stockwell:1997} with more explicit and lumped species representing VOC as well as revised chemistry.
+RACM2 is the updated RACM version \citep{Goliff:2013} with substantial updates to the chemistry, including more lumped and explicit species representing emitted VOC.
+
+CBM-IV \citep{Gery:1989} simulates polluted urban conditions and represents ethene, formaldehyde and isoprene explicitly while all other emitted VOC are lumped by their carbon bond types. 
+All primary VOC were assigned to lumped species in CBM-IV as described in \citet{Hogo:1989}. 
+For example, the mechanism species PAR represents the C--C bond.
+Pentane, having five carbon atoms, is represented as $5$ PAR.
+A pentane mixing ratio of \mbox{$1200$ pptv} would be assigned to \mbox{$6000$ ($= 1200 \times 5$) pptv of PAR} in CBM-IV.
+CBM-IV was updated to CB05 \citep{Yarwood:2005} by including further explicit species representing methane, ethane and acetaldehyde. 
+Other updates include revised allocation of primary VOC and updated rate constants.
+%
+\subsection{Model Setup} \label{ss:model_setup}
+%
+The modelling approach and set-up follows the original TOPP study of \citet{Butler:2011}.
+The approach is summarised here; further details can be found in the online supplement to this paper and in \citet{Butler:2011}. 
+We use the MECCA boxmodel, originally described by \citep{Sander:2005}, and as subsequently modified by \citet{Butler:2011} to include MCM chemistry.
+In this study, the model is run under conditions representative of $34$ degrees North at the equinox (broadly representative of the city of Los Angeles, USA).
+
+Maximum \chem{O_3} production is achieved in each model run by balancing the chemical source of radicals and \chem{NO_x} at each timestep by emitting the appropriate amount of NO.
+These \chem{NO_x} conditions induce \chem{NO_x}-VOC-sensitive chemistry.
+Ambient \chem{NO_x} conditions are not required as this study calculates the maximum potential of VOC to produce \chem{O_3}.
+Future work should verify the extent to which the maximum potential of VOC to produce \chem{O_3} is reached under ambient \chem{NO_x} conditions.
+
+\begin{sidewaystable}[t]
+    \begin{tabular}{lllllllll}
+        \tophline
+        \multirow{2}{*}{\textbf{NMVOC}} & \textbf{Mixing} & \textbf{MCM v3.1, v3.2,} & \multirow{2}{*}{\textbf{MOZART-4}} & \multirow{2}{*}{\textbf{RADM2}} & \multirow{2}{*}{\textbf{RACM}} & \multirow{2}{*}{\textbf{RACM2}} & \multirow{2}{*}{\textbf{CBM-IV}} & \multirow{2}{*}{\textbf{CB05}}\\ 
+        & \textbf{Ratio (pptv)} & \textbf{CRI v2} & & & & & & \\ 
+        \middlehline \multicolumn{9}{c}{\textbf{Alkanes}}  \\ \middlehline
+        Ethane & $6610$ & C2H6 & C2H6 & ETH & ETH & ETH & $0.4$ PAR & ETHA \\
+        Propane  & $6050$ & C3H8 & C3H8 & HC3 & HC3 & HC3 & $1.5$ PAR & $1.5$ PAR \\
+        Butane & $2340$ & NC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
+        $2$-Methylpropane & $1240$ & IC4H10 & BIGALK & HC3 & HC3 & HC3 & $4$ PAR & $4$ PAR \\
+        Pentane & $1200$ & NC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
+        $2$-Methylbutane & $2790$ & IC5H12 & BIGALK & HC5 & HC5 & HC5 & $5$ PAR & $5$ PAR \\
+        Hexane & $390$ & NC6H14 & BIGALK & HC5 & HC5 & HC5 & $6$ PAR & $6$ PAR \\
+        Heptane & $160$ & NC7H16 &  BIGALK & HC5 & HC5 & HC5 & $7$ PAR & $7$ PAR \\
+        Octane & $80$ & NC8H18 & BIGALK & HC8 & HC8 & HC8 & $8$ PAR & $8$ PAR \\ \hline 
+        \multicolumn{9}{c}{\textbf{Alkenes}} \\ \middlehline
+        Ethene & $2430$ & C2H4 & C2H4 & OL2 & ETE & ETE & ETH & ETH \\
+        Propene & $490$ & C3H6 & C3H6 & OLT & OLT & OLT & OLE + PAR & OLE + PAR \\ 
+        Butene & $65$ & BUT1ENE & BIGENE & OLT & OLT & OLT & OLE + $2$ PAR & OLE + $2$ PAR \\ 
+        \multirow{2}{*}{$2$-Methylpropene} & \multirow{2}{*}{$130$} & \multirow{2}{*}{MEPROPENE} & \multirow{2}{*}{BIGENE} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & \multirow{2}{*}{OLI} & PAR + FORM & FORM + \\ & & & & & & & \hspace{3mm}+ ALD2 & \hspace{3mm}$3$ PAR \\
+        Isoprene & $270$ & C5H8 & ISOP & ISO & ISO & ISO & ISOP & ISOP \\ \hline
+        \multicolumn{9}{c}{\textbf{Aromatics}} \\ \middlehline 
+        Benzene & $480$ & BENZENE & TOLUENE & TOL & TOL & BEN & PAR & PAR \\
+        Toluene & $1380$ & TOLUENE & TOLUENE & TOL & TOL & TOL & TOL & TOL \\
+        m-Xylene & $410$ & MXYL & TOLUENE & XYL & XYL & XYM & XYL & XYL \\
+        p-Xylene & $210$ & PXYL & TOLUENE & XYL & XYL & XYP & XYL & XYL \\
+        o-Xylene & $200$ & OXYL & TOLUENE & XYL & XYL & XYO & XYL & XYL \\
+        Ethylbenzene & $210$ & EBENZ & TOLUENE & TOL & TOL & TOL & TOL + PAR & TOL + PAR \\ \bottomhline
+    \end{tabular}
+    \caption{VOC present in Los Angeles, mixing ratios are taken from \citet{Baker:2008} and their representation in each chemical mechanism. The representation of the VOC in each mechanism is based upon the recommendations of the literature for each mechanism (Table \ref{t:mechanisms}).}
+    \label{t:initial_conditions}
+\end{sidewaystable}
+
+VOCs typical of Los Angeles and their initial mixing ratios are taken from \citet{Baker:2008}, listed in \mbox{Table \ref{t:initial_conditions}}. 
+Following \citet{Butler:2011}, the associated emissions required to keep the initial mixing ratios of each VOC constant until noon of the first day were determined for the \mbox{MCM v3.2.}
+These emissions are subsequently used for each mechanism, ensuring the amount of each VOC emitted was the same in every model run.
+Methane (\chem{CH_4}) was fixed at \mbox{$1.8$ ppmv} while \chem{CO} and \chem{O_3} were initialised at \mbox{$200$ ppbv} and \mbox{$40$ ppbv} and then allowed to evolve freely.
+
+The VOCs used in this study are assigned to mechanism species following the recommendations from the literature of each mechanism (Table \ref{t:mechanisms}), the representation of each VOC in the mechanisms is found in \mbox{Table \ref{t:initial_conditions}}.
+Emissions of lumped species are weighted by the carbon number of the mechanism species ensuring the total amount of emitted reactive carbon was the same in each model run.
+
+The MECCA boxmodel is based upon the Kinetic Pre-Processor (KPP) \citep{Damian:2002}.
+Hence, all chemical mechanisms were adapted into modularised KPP format.
+The inorganic gas-phase chemistry described in the \mbox{MCM v3.2} was used in each run to remove any differences between treatments of inorganic chemistry in each mechanism.
+Thus differences between the \chem{O_3} produced by the mechanisms are due to the treatment of organic degradation chemistry.
+
+The MCM v3.2 approach to photolysis, dry deposition of VOC oxidation intermediates and \mbox{\chem{RO_2}--\chem{RO_2}} reactions was used for each mechanism; details of these adaptations can be found in the online supplement to this paper.
+Some mechanisms include reactions which are only important in the stratosphere or free troposphere.
+For example, PAN photolysis is only important in the free troposphere \citep{Harwood:2003} and was removed from MOZART-4, RACM2 and CB05 for the purpose of the study, as this study considers processes occurring within the planetary boundary layer.
+
+\subsection{Tagged Ozone Production Potential (TOPP)}
+This section summarises the tagging approach described in \citet{Butler:2011} which is applied in this study.
+%
+\subsubsection[Ox Family and Tagging Approach]{\chem{O_x} Family and Tagging Approach} \label{ss:tagging} %tagging of mechanisms
+%
+\chem{O_3} production and loss is dominated by rapid photochemical cycles, such as \ref{r:NO_O3}--\ref{r:O2_O3P}.
+The effects of rapid production and loss cycles can be removed by using chemical families that include rapidly inter-converting species.
+In this study, we define the \chem{O_x} family to include \chem{O_3}, \chem{O(^3P)}, \chem{O(^1D)}, \chem{NO_2} and other species involved in fast cycling with \chem{NO_2}, such as \chem{HO_2NO_2} and PAN species.
+Thus, production of \chem{O_x} can be used as a proxy for production of \chem{O_3}.
+
+The tagging approach follows the degradation of emitted VOC through all possible pathways by labelling every organic degradation product with the name of the emitted VOC.
+Thus, each emitted VOC effectively has its own set of degradation reactions.
+\citet{Butler:2011} showed that \chem{O_x} production can be attributed to the VOC by following the tags of each VOC.
+
+\chem{O_x} production from lumped mechanism species are re-assigned to the VOC of \mbox{Table \ref{t:initial_conditions}} by scaling the \chem{O_x} production of the mechanism species by the fractional contribution of each represented VOC.
+For example, TOL in RACM2 represents toluene and ethylbenzene with fractional contributions of $0.87$ and $0.13$ to TOL emissions.
+Scaling the \chem{O_x} production from TOL by these factors gives the \chem{O_x} production from toluene and ethylbenzene in RACM2.
+
+Many reduced mechanisms use an operator species as a surrogate for \chem{RO_2} during VOC degradation enabling these mechanisms to produce \chem{O_x} while minimising the number of \chem{RO_2} species represented.
+\chem{O_x} production from operator species is assigned as \chem{O_x} production from the organic degradation species producing the operator.
+This allocation technique is also used to assign \chem{O_x} production from \chem{HO_2} via \ref{r:HO2_NO}.
+%
+\subsubsection{Definition of the Tagged Ozone Production Potential (TOPP)} \label{sss:TOPP} %final definition of TOPP
+%
+Attributing \chem{O_x} production to individual VOC using the tagging approach is the basis for calculating the TOPP of a VOC, which is defined as the number of \chem{O_x} molecules produced per emitted molecule of VOC.
+The TOPP value of a VOC that is not represented explicitly in a chemical mechanism is calculated by multiplying the TOPP value of the mechanism species representing the VOC by the ratio of the carbon numbers of the VOC to the mechanism species.
+For example, CB05 represents hexane as $6$ PAR, so the TOPP value of hexane in the CB05 is $6$ times the TOPP of PAR.
+\mbox{MOZART-4} represents hexane by the five carbon species BIGALK.
+Thus hexane emissions are represented molecule for molecule as $\frac{6}{5}$ of the equivalent number of molecules of BIGALK, and the TOPP value of hexane in MOZART-4 is calculated by multiplying the TOPP value of BIGALK by $\frac{6}{5}$.
+
+\section{Results} \label{s:results}
+%
+\subsection[O3 Time Series and Ox Production Budgets]{Ozone Time Series and \chem{O_x} Production Budgets} \label{ss:O3_time_series}
+%
+Figure \ref{f:time_series} shows the time series of \chem{O_3} mixing ratios obtained with each mechanism.
+There is an \mbox{$8$ ppbv} difference in \chem{O_3} mixing ratios on the first day between RADM2, which has the highest \chem{O_3}, and RACM2, which has the lowest \chem{O_3} mixing ratios when not considering the outlier time series of RACM.
+The difference between RADM2 and RACM, the low outlier, was $21$ ppbv on the first day.
+The \chem{O_3} mixing ratios in the CRI v2 are larger than those in the MCM v3.1, which is similar to the results in \citet{Jenkin:2008} where the \chem{O_3} mixing ratios of the CRI v2 and MCM v3.1 are compared over a five day period.
+
+The day-time \chem{O_x} production budgets allocated to VOC for each mechanism are shown in \mbox{Fig. \ref{f:Ox_tagged_budgets}}.
+The relationships between \chem{O_3} mixing ratios in Fig. \ref{f:time_series} are mirrored in Fig. \ref{f:Ox_tagged_budgets} where mechanisms producing high amounts of \chem{O_x} also have high \chem{O_3} mixing ratios.
+The conditions in the box model lead to a daily maximum of OH that increases with each day leading to an increase on each day in both the reaction rate of the OH-oxidation of \chem{CH_4} and the daily contribution of \chem{CH_4} to \chem{O_x} production.
+%
+\begin{figure}[t]
+    \caption{Time series of \chem{O_3} mixing ratios obtained using each mechanism.}
+    \includegraphics[width=0.9\textwidth]{fig01}
+    \label{f:time_series}
+\end{figure}
+%
+\begin{figure}
+    \includegraphics[width=\textwidth]{fig02}
+    \caption{Day-time \chem{O_x} production budgets in each mechanism allocated to individual VOC.}
+    \label{f:Ox_tagged_budgets}
+\end{figure}
+%
+
+The first day mixing ratios of \chem{O_3} in RACM are lower than other mechanisms due to a lack of \chem{O_x} production from aromatic VOC on the first day in RACM (Fig. \ref{f:Ox_tagged_budgets}).
+Aromatic degradation chemistry in RACM results in net loss of \chem{O_x} on the first day, described later in \mbox{Sect. \ref{sss:day1}}.
+
+RADM2 is the only reduced mechanism producing higher \chem{O_3} mixing ratios than the more detailed mechanisms (MCM v3.2, MCM v3.1 and CRI v2).
+Higher mixing ratios of \chem{O_3} in RADM2 are produced due to increased \chem{O_x} production from propane compared to the \mbox{MCM v3.2}; on the first day, the \chem{O_x} production from propane in RADM2 is triple that of the MCM v3.2 \mbox{(Fig. \ref{f:Ox_tagged_budgets})}.
+Propane is represented as HC3 in RADM2 \citep{Stockwell:1990} and on the first day HC3 degradation produces about $17$ times the amount of acetaldehyde (\chem{CH_3CHO}) produced by the MCM v3.2.
+The OH-oxidation of \chem{CH_3CHO} starts a degradation chain that produces \chem{O_x} through the reactions of \chem{CH_3CO_3} and \chem{CH_3O_2} with \chem{NO}; thus the higher amounts of \chem{CH_3CHO} in RADM2 during propane degradation leads to increased \chem{O_x} production from propane degradation in RADM2 compared to the \mbox{MCM v3.2}.
+%
+\subsection[Time Dependent Ox Production]{Time Dependent \chem{O_x} Production}
+%
+\begin{figure}[t]
+    \caption{TOPP value time series using each mechanism for each VOC.}
+    \includegraphics[width=\textwidth]{fig03}
+    \label{f:TOPP_dailies}
+\end{figure}
+
+\begin{sidewaystable}%
+    \begin{center}%
+        \begin{tabular}{llllllllll}%
+            \tophline
+            \textbf{NMVOC} & \textbf{MCM v3.2} & \textbf{MCM v3.1} & \textbf{CRI v2} & \textbf{MOZART-4} & \textbf{RADM2} & \textbf{RACM} & \textbf{RACM2} & \textbf{CBM-IV} & \textbf{CB05} \\ 
+            \middlehline \multicolumn{10}{c}{\textbf{Alkanes}}  \\ \middlehline
+            Ethane & $0.9$ & $1.0$ & $0.9$ & $0.9$ & $1.0$ & $1.0$ & $0.9$ & $0.3$ & $0.9$ \\
+            Propane & $1.1$ & $1.2$ & $1.2$ & $1.1$ & $1.8$ & $1.8$ & $1.4$ & $0.9$ & $1.0$ \\
+            Butane & $2.0$ & $2.0$ & $2.0$ & $1.7$ & $1.8$ & $1.8$ & $1.4$ & $1.7$ & $2.1$ \\
+            $2$-Methylpropane & $1.3$ & $1.3$ & $1.3$ & $1.7$ & $1.8$ & $1.8$ & $1.4$ & $1.7$ & $2.1$ \\
+            Pentane & $2.1$ & $2.1$ & $2.2$ & $1.7$ & $1.5$ & $1.6$ & $1.1$ & $1.7$ & $2.1$ \\
+            $2$-Methylbutane & $1.6$ & $1.6$ & $1.5$ & $1.7$ & $1.5$ & $1.6$ & $1.1$ & $1.7$ & $2.1$ \\
+            Hexane & $2.1$ & $2.1$ & $2.2$ & $1.7$ & $1.5$ & $1.6$ & $1.1$ & $1.7$ & $2.1$ \\
+            Heptane & $2.0$ & $2.1$ & $2.2$ & $1.7$ & $1.5$ & $1.6$ & $1.1$ & $1.7$ & $2.1$ \\
+            Octane & $2.0$ & $2.0$ & $2.2$ & $1.7$ & $1.2$ & $1.0$ & $1.0$ & $1.7$ & $2.1$ \\ \middlehline
+            \multicolumn{10}{c}{\textbf{Alkenes}} \\ \middlehline
+            Ethene & $1.9$ & $1.9$ & $1.9$ & $1.4$ & $2.0$ & $2.0$ & $2.2$ & $1.9$ & $2.2$ \\
+            Propene & $1.9$ & $2.0$ & $1.9$ & $1.7$ & $1.5$ & $1.6$ & $1.5$ & $1.2$ & $1.4$ \\
+            Butene & $1.9$ & $2.0$ & $2.0$ & $1.5$ & $1.5$ & $1.6$ & $1.5$ & $0.8$ & $0.9$ \\
+            $2$-Methylpropene & $1.1$ & $1.2$ & $1.2$ & $1.5$ & $1.1$ & $1.5$ & $1.6$ & $0.5$ & $0.5$ \\
+            Isoprene & $1.8$ & $1.8$ & $1.8$ & $1.3$ & $1.2$ & $1.6$ & $1.7$ & $1.9$ & $2.1$ \\ \middlehline
+            \multicolumn{10}{c}{\textbf{Aromatics}} \\ \middlehline 
+            Benzene & $0.8$ & $0.8$ & $1.1$ & $0.6$ & $0.9$ & $0.6$ & $0.9$ & $0.3$ & $0.3$ \\
+            Toluene & $1.3$ & $1.3$ & $1.5$ & $0.6$ & $0.9$ & $0.6$ & $1.0$ & $0.3$ & $0.3$ \\
+            m-Xylene & $1.5$ & $1.5$ & $1.6$ & $0.6$ & $0.9$ & $0.6$ & $1.7$ & $0.9$ & $1.0$ \\
+            p-Xylene & $1.5$ & $1.5$ & $1.6$ & $0.6$ & $0.9$ & $0.6$ & $1.7$ & $0.9$ & $1.0$ \\
+            o-Xylene & $1.5$ & $1.5$ & $1.6$ & $0.6$ & $0.9$ & $0.6$ & $1.7$ & $0.9$ & $1.0$ \\
+            Ethylbenzene & $1.3$ & $1.4$ & $1.5$ & $0.6$ & $0.9$ & $0.6$ & $1.0$ & $0.2$ & $0.3$ \\
+            \bottomhline
+        \end{tabular}%
+        \caption{Cumulative TOPP values at the end of the model run for all VOCs with each mechanism, normalised by the number of C atoms in each VOC.}%
+        \label{t:cumulative_TOPPs_per_C}%
+    \end{center}%
+\end{sidewaystable}%
+Time series of daily TOPP values for each VOC are presented in \mbox{Fig. \ref{f:TOPP_dailies}} and the cumulative TOPP values at the end of the model run obtained for each VOC using each of the mechanisms, normalised by the number of atoms of C in each VOC are presented in Table \ref{t:cumulative_TOPPs_per_C}.
+In the MCM and CRI v2, the cumulative TOPP values obtained for each VOC show that by the end of the model run larger alkanes have produced more \chem{O_x} per unit of reactive C than alkenes or aromatic VOC.
+By the end of the runs using the lumped structure mechanisms (CBM-IV and CB05), alkanes produce similar amounts of \chem{O_x} per reactive C while aromatic VOC and some alkenes produce less \chem{O_x} per reactive C than the MCM.
+Whereas in lumped molecule mechanisms (MOZART-4, RADM2, RACM, RACM2), practically all VOC produce less \chem{O_x} per reactive C than the MCM by the end of the run.
+This lower efficiency of \chem{O_x} production from many individual VOC in lumped molecule and structure mechanisms would lead to an underestimation of \chem{O_3} levels downwind of an emission source, and a smaller contribution to background \chem{O_3} when using lumped molecule and structure mechanisms.
+
+The lumped intermediate mechanism (CRI v2) produces the most similar \chem{O_x} to the \mbox{MCM v3.2} for each VOC, seen in Fig. \ref{f:TOPP_dailies} and Table \ref{t:cumulative_TOPPs_per_C}.
+Higher variability in the time dependent \chem{O_x} production is evident for VOC represented by lumped mechanism species.
+For example, $2$-methylpropene, represented in the reduced mechanisms by a variety of lumped species, has a higher spread in time dependent \chem{O_x} production than ethene, which is explicitly represented in each mechanism.
+
+In general, the largest differences in \chem{O_x} produced by aromatic and alkene species are on the first day of the simulations, while the largest inter-mechanism differences in \chem{O_x} produced by alkanes are on the second and third days of the simulations.
+The reasons for these differences in behaviour will be explored in \mbox{Sect. \ref{sss:day1}} which examines differences in first day \chem{O_x} production between the chemical mechanisms and \mbox{Sect. \ref{sss:profiles}} which examines the differences in \chem{O_x} production on subsequent days.
+%
+\subsubsection{First Day Ozone Production} \label{sss:day1} %first day comparison
+%
+\begin{figure}[t]
+    \includegraphics[width=\textwidth]{fig04.pdf}
+    \caption{The first day TOPP values for each VOC calculated using MCM v3.2 and the corresponding values in each mechanism. The root mean square error (RMSE) of each set of TOPP values is also displayed. The black line represents the $1:1$ line.}
+    \label{f:first_day}
+\end{figure}
+%
+The first day TOPP values of each VOC from each mechanism, representing \chem{O_3} production from freshly emitted VOC near their source region, are compared to those obtained with the \mbox{MCM v3.{2}} in Fig. \ref{f:first_day}.
+The root mean square error (RMSE) of all first day TOPP values in each mechanism relative to those in the MCM v3.2 are also included in Fig. \ref{f:first_day}.
+The RMSE value of the CRI v2 shows that \chem{O_x} production on the first day from practically all the individual VOC matches that in the \mbox{MCM v3.2}.
+All other reduced mechanisms have much larger RMSE values indicating that the first day \chem{O_x} production from the majority of the VOC differs from that in the MCM v3.2.
+
+The reduced complexity of reduced mechanisms means that aromatic VOC are typically represented by one or two mechanism species leading to differences in \chem{O_x} production of the actual VOC compared to the MCM v3.2.
+For example, all aromatic VOC in MOZART-4 are represented as toluene, thus less reactive aromatic VOC, such as benzene, produce higher \chem{O_x} whilst more reactive aromatic VOC, such as the xylenes, produce less \chem{O_x} in MOZART-4 than the \mbox{MCM v3.2}.
+RACM2 includes explicit species representing benzene, toluene and each xylene resulting in \chem{O_x} production that is the most similar to the MCM v3.2 than other reduced mechanisms.
+
+Figure \ref{f:TOPP_dailies} shows a high spread in \chem{O_x} production from aromatic VOC on the first day indicating that aromatic degradation is treated differently between mechanisms.
+Toluene degradation is examined in more detail by comparing the reactions contributing to \chem{O_x} production and loss in each mechanism, shown in Fig. \ref{f:toluene_Ox}. 
+These reactions are determined by following the ``toluene'' tags in the tagged version of each mechanism.
+
+%
+\begin{figure}[t]
+    \includegraphics[height=0.95\textheight]{fig05}
+    \caption{Day-time \chem{O_x} production and loss budgets allocated to the responsible reactions during toluene degradation in all mechanisms. These reactions are presented using the species defined in each mechanism \mbox{Table \ref{t:mechanisms}.}}
+    \label{f:toluene_Ox}
+\end{figure}
+%
+Toluene degradation in RACM includes several reactions consuming \chem{O_x} that are not present in the MCM resulting in net loss of \chem{O_x} on the first two days.
+Ozonolysis of the cresol OH-adduct mechanism species ADDC contributes significantly to \chem{O_x} loss in RACM.
+This reaction was included in RACM due to improved cresol product yields when comparing RACM predictions with experimental data \citep{Stockwell:1997}. 
+Other mechanisms that include cresol OH-adduct species do not include ozonolysis and these reactions are not included in the updated RACM2.
+
+The total \chem{O_x} produced on the first day during toluene degradation in each reduced mechanism is less than that in the \mbox{MCM v3.2} (Fig. \ref{f:toluene_Ox}).
+Less \chem{O_x} is produced in all reduced mechanisms due to a faster break down of the VOC into smaller fragments than the MCM, described later in \mbox{Sect. \ref{ss:products}}.
+Moreover in CBM-IV and CB05, less \chem{O_x} is produced during toluene degradation as reactions of the toluene degradation products \chem{CH_3O_2} and \chem{CO} do not contribute to the \chem{O_x} production budgets, which is not the case in any other mechanism (Fig. \ref{f:toluene_Ox}).
+
+Maximum \chem{O_x} production from toluene degradation in CRI v2 and RACM2 is reached on the second day in contrast to the MCM v3.2 which produces peak \chem{O_x} on the first day.
+The second day maximum of \chem{O_x} production in CRI v2 and RACM2 from toluene degradation results from increased \chem{C_2H_5O_2} production from degradation of unsaturated dicarbonyls; \chem{C_2H_5O_2} is not produced during degradation of unsaturated dicarbonyls in the MCM v3.2.
+
+Unsaturated aliphatic VOC generally produce similar amounts of \chem{O_x} between mechanisms, especially explicitly represented VOC, such as ethene and isoprene.
+On the other hand, unsaturated aliphatic VOC that are not explicitly represented produce differing amounts of \chem{O_x} between mechanisms \mbox{(Fig. \ref{f:TOPP_dailies}).}
+For example, the \chem{O_x} produced during $2$-methylpropene degradation varies between mechanisms; differing rate constants of initial oxidation reactions and non-realistic secondary chemistry lead to these differences, further details are found in the online supplement to this paper.
+
+Non-explicit representations of aromatic and unsaturated aliphatic VOC coupled with differing degradation chemistry and a faster break down into smaller size degradation products results in different \chem{O_x} production in lumped molecule and lumped structure mechanisms compared to the MCM v3.2.
+%
+\subsubsection{Ozone Production on Subsequent Days} \label{sss:profiles} %TOPP time series of all species
+%
+Alkane degradation in CRI v2 and both MCM mechanisms produces a second day maximum in \chem{O_x} that increases with alkane carbon number (Fig. \ref{f:TOPP_dailies}).
+The increase in \chem{O_x} production on the second day is reproduced for each alkane by the reduced mechanisms; except octane in RADM2, RACM and RACM2.
+However, larger alkanes produce less \chem{O_x} than the MCM on the second day in all lumped molecule and structure mechanisms.
+
+The lumped molecule mechanisms (MOZART-4, RADM2, RACM and RACM2) represent many alkanes by mechanism species which may lead to unrepresentative secondary chemistry for alkane degradation.
+For example, three times more \chem{O_x} is produced during the degradation of propane in RADM2 than the MCM v3.2 on the first day (Fig. \ref{f:Ox_tagged_budgets}).
+Propane is represented in RADM2 by the mechanism species HC3 which also represents other classes of VOC, such as alcohols.
+The secondary chemistry of HC3 is tailored to produce \chem{O_x} from these different VOC and differs from alkane degradation in the MCM v3.2 by producing more \chem{CH_3CHO} in RADM2.
+
+%
+\begin{figure}[t]
+    \caption{The distribution of reactive carbon in the products of the reaction between \chem{NO} and the pentyl peroxy radical in lumped molecule mechanisms compared to the MCM. The black dot represents the reactive carbon of the pentyl peroxy radical.}
+    \includegraphics[width=0.8\textwidth]{fig06}
+    \label{f:HC5P_NO}
+\end{figure}
+%
+As will be shown in Sect. \ref{ss:products}, another feature of reduced mechanisms is that the breakdown of emitted VOC into smaller sized degradation products is faster than the MCM.
+Alkanes are broken down quicker in CBM-IV, CB05, RADM2, RACM and RACM2 through a higher rate of reactive carbon loss than the MCM v3.2 (shown for pentane and octane in \mbox{Fig. \ref{f:net_carbon_loss}}); reactive carbon is lost through reactions not conserving carbon.
+Despite many degradation reactions of alkanes in MOZART-4 almost conserving carbon, the organic products have less reactive carbon than the organic reactant also speeding up the breakdown of the alkane compared to the \mbox{MCM v3.2}.
+
+For example, Fig. \ref{f:HC5P_NO} shows the distribution of reactive carbon in the reactants and products from the reaction of \chem{NO} with the pentyl peroxy radical in both MCM mechanisms and each lumped molecule mechanism.
+In all the lumped molecule mechanisms, the individual organic products have less reactive carbon than the organic reactant. 
+Moreover, in RADM2, RACM and RACM2 this reaction does not conserve reactive carbon leading to faster loss rates of reactive carbon. 
+
+The faster breakdown of alkanes in lumped molecule and structure mechanisms on the first day limits the amount of \chem{O_x} produced on the second day, as less of the larger sized degradation products are available for further degradation and \chem{O_x} production.  
+%
+\subsection{Treatment of Degradation Products} \label{ss:products} 
+%
+\begin{figure}[t]
+    \includegraphics[width=1.10\textwidth]{fig07}
+    \caption{Day-time \chem{O_x} production during pentane and toluene degradation is attributed to the number of carbon atoms of the degradation products for each mechanism.}
+    \label{f:carbon}
+\end{figure}
+%
+The time dependent \chem{O_x} production of the different VOC in Fig. \ref{f:TOPP_dailies} results from the varying rates at which VOC break up into smaller fragments \citep{Butler:2011}.
+Varying break down rates of the same VOC between mechanisms could explain the different time dependent \chem{O_x} production between mechanisms.
+The break down of pentane and toluene between mechanisms is compared in \mbox{Fig. \ref{f:carbon}} by allocating the \chem{O_x} production to the number of carbon atoms in the degradation products responsible for \chem{O_x} production on each day of the model run in each mechanism.
+Some mechanism species in RADM2, RACM and RACM2 have fractional carbon numbers \citep{Stockwell:1990, Stockwell:1997, Goliff:2013} and \chem{O_x} production from these species was reassigned as \chem{O_x} production of the nearest integral carbon number.  
+
+The degradation of pentane, a five-carbon VOC, on the first day in the MCM v3.2 produces up to \mbox{$50$ \%} more \chem{O_x} from degradation products also having five carbon atoms than any reduced mechanism.
+Moreover, the contribution of the degradation products having five carbon atoms in the \mbox{MCM v3.2} is consistently higher throughout the model run than in reduced mechanisms \mbox{(Fig. \ref{f:carbon}).}
+Despite producing less total \chem{O_x}, reduced mechanisms produce up to double the amount of \chem{O_x} from degradation products with one carbon atom than in the MCM v3.2.
+The lower contribution of larger degradation products indicates that pentane is generally broken down faster in reduced mechanisms, consistent with the specific example shown for the breakdown of the pentyl peroxy radical in \mbox{Fig. \ref{f:HC5P_NO}}.
+
+%
+\begin{figure}[t]
+    \caption{Daily rate of change in reactive carbon during pentane, octane and toluene degradation. Octane is represented by the five carbon species, BIGALK, in MOZART-4.}
+    \includegraphics[width=0.9\textwidth]{fig08}
+    \label{f:net_carbon_loss}
+\end{figure}
+The rate of change in reactive carbon during pentane, octane and toluene degradation was determined by multiplying the rate of each reaction occurring during pentane, octane and toluene degradation by its net change in carbon, shown in \mbox{Fig. \ref{f:net_carbon_loss}}.
+Pentane is broken down faster in CBM-IV, CB05, RADM2, RACM and RACM2 by losing reactive carbon more quickly than the MCM v3.2.
+MOZART-4 also breaks pentane down into smaller sized products quicker than the MCM v3.2 as reactions during pentane degradation in MOZART-4 have organic products whose carbon number is less than the organic reactant, described in Sect. \ref{sss:profiles}.
+The faster break down of pentane on the first day limits the amount of reactive carbon available to produce further \chem{O_x} on subsequent days leading to lower \chem{O_x} production after the first day in reduced mechanisms.
+
+Figure \ref{f:TOPP_dailies} showed that octane degradation produces peak \chem{O_x} on the first day in RADM2, RACM and RACM2 in contrast to all other mechanisms where peak \chem{O_x} is produced on the second day.
+Octane degradation in RADM2, RACM and RACM2 loses reactive carbon much faster than any other mechanism on the first day so that there are not enough degradation products available on the second day to produce peak \chem{O_x} on the second day (\mbox{Fig. \ref{f:net_carbon_loss}}).
+This loss of reactive carbon during alkane degradation leads to the lower accumulated ozone production from these VOC shown in \mbox{Table \ref{t:cumulative_TOPPs_per_C}}.
+
+As seen in Fig. \ref{f:TOPP_dailies}, \chem{O_x} produced during toluene degradation has a high spread between the mechanisms.
+Figure \ref{f:carbon} shows differing distributions of the sizes of the degradation products that produce \chem{O_x}.
+All reduced mechanisms omit \chem{O_x} production from at least one degradation fragment size which produces \chem{O_x} in the MCM v3.2, indicating that toluene is also broken down more quickly in the reduced mechanisms than the more explicit mechanisms.
+For example, toluene degradation in RACM2 does not produce \chem{O_x} from degradation products with six carbons, as is the case in the \mbox{MCM v3.2}.  
+Figure \ref{f:net_carbon_loss} shows that all reduced mechanisms lose reactive carbon during toluene degradation faster than the MCM v3.2.
+Thus the degradation of aromatic VOC in reduced mechanisms are unable to produce similar amounts of \chem{O_x} as the explicit mechanisms.
+
+\conclusions  %% \conclusions[modified heading if necessary]
+
+Tagged Ozone Production Potentials (TOPPs) were used to compare \chem{O_x} production during VOC degradation in reduced chemical mechanisms to the near-explicit MCM v3.2. 
+First day mixing ratios of \chem{O_3} are similar to the MCM v3.2 for most mechanisms; the \chem{O_3} mixing ratios in RACM were much lower than the MCM v3.2 due to a lack of \chem{O_x} production from the degradation of aromatic VOC.
+Thus, RACM may not be the appropriate chemical mechanism when simulating atmospheric conditions having a large fraction of aromatic VOC.
+
+The lumped intermediate mechanism, CRI v2, produces the most similar amounts of \chem{O_x} to the MCM v3.2 for each VOC.
+The largest differences between \chem{O_x} production in CRI v2 and \mbox{MCM v3.2} were obtained for aromatic VOC, however overall these differences were much lower than any other reduced mechanism.
+Thus, when developing chemical mechanisms the technique of using lumped intermediate species whose degradation are based upon more detailed mechanism should be considered.
+
+Many VOC are broken down into smaller sized degradation products faster on the first day in reduced mechanisms than the MCM v3.2 leading to lower amounts of larger sized degradation products that can further degrade and produce \chem{O_x}.
+Thus, many VOC in reduced mechanisms produce a lower maximum of \chem{O_x} and lower total \chem{O_x} per reactive C by the end of the run than the MCM v3.2.
+This lower \chem{O_x} production from many VOC in reduced mechanisms leads to lower \chem{O_3} mixing ratios compared to the MCM v3.2.
+
+Alkanes produce maximum \chem{O_3} on the second day of simulations and this maximum is lower in reduced mechanisms than the MCM v3.2 due to the faster break down of alkanes into smaller sized degradation products on the first day.
+The lower maximum in \chem{O_3} production during alkane degradation in reduced mechanisms would lead to an underestimation of the \chem{O_3} levels downwind of VOC emissions, and an underestimation of the VOC contribution to tropospheric background \chem{O_3} when using reduced mechanisms in regional or global modelling studies.
+
+This study has determined the maximum potential of VOC represented in reduced mechanisms to produce \chem{O_3}, this potential may not be reached as ambient \chem{NO_x} conditions may not induce \chem{NO_x}-VOC-sensitive chemistry.
+Moreover, the maximum potential of the VOC to produce \chem{O_3} may not be reached when using these reduced mechanisms in 3-D models due to the influence of additional processes, such as mixing and meteorology.
+Future work shall examine the extent to which the maximum potential of VOC to produce \chem{O_3} in reduced chemical mechanisms is reached using ambient \chem{NO_x} conditions and including processes found in 3-D models.
+
+
+%\appendix
+%\section{}    %% Appendix A
+
+%\subsection{}                               %% Appendix A1, A2, etc.
+
+
+
+
+\begin{acknowledgements}
+The authors would like to thank Mark Lawrence and Peter J. H. Builtjes for valuable discussions during the preparation of this manuscript.
+\end{acknowledgements}
+
+
+%% REFERENCES
+
+%% The reference list is compiled as follows:
+
+%\begin{thebibliography}{}
+
+%\bibitem[AUTHOR(YEAR)]{LABEL}
+%REFERENCE 1
+
+%\bibitem[AUTHOR(YEAR)]{LABEL}
+%REFERENCE 2
+
+%\end{thebibliography}
+
+%% Since the Copernicus LaTeX package includes the BibTeX style file copernicus.bst,
+%% authors experienced with BibTeX only have to include the following two lines:
+%%
+ \bibliographystyle{copernicus}
+ \bibliography{/local/home/coates/Documents/PhD_References.bib}
+%%
+%% URLs and DOIs can be entered in your BibTeX file as:
+%%
+%% URL = {http://www.xyz.org/~jones/idx_g.htm}
+%% DOI = {10.5194/xyz}
+
+
+%% LITERATURE CITATIONS
+%%
+%% command                        & example result
+%% \citet{jones90}|               & Jones et al. (1990)
+%% \citep{jones90}|               & (Jones et al., 1990)
+%% \citep{jones90,jones93}|       & (Jones et al., 1990, 1993)
+%% \citep[p.~32]{jones90}|        & (Jones et al., 1990, p.~32)
+%% \citep[e.g.,][]{jones90}|      & (e.g., Jones et al., 1990)
+%% \citep[e.g.,][p.~32]{jones90}| & (e.g., Jones et al., 1990, p.~32)
+%% \citeauthor{jones90}|          & Jones et al.
+%% \citeyear{jones90}|            & 1990
+
+
+
+%% FIGURES
+
+%% ONE-COLUMN FIGURES
+
+%%f
+%\begin{figure}[t]
+%\includegraphics[width=8.3cm]{FILE NAME}
+%\caption{TEXT}
+%\end{figure}
+%
+%%% TWO-COLUMN FIGURES
+%
+%%f
+%\begin{figure*}[t]
+%\includegraphics[width=12cm]{FILE NAME}
+%\caption{TEXT}
+%\end{figure*}
+%
+%
+%%% TABLES
+%%%
+%%% The different columns must be seperated with a & command and should
+%%% end with \\ to identify the column brake.
+%
+%%% ONE-COLUMN TABLE
+%
+%%t
+%\begin{table}[t]
+%\caption{TEXT}
+%\begin{tabular}{column = lcr}
+%\tophline
+%
+%\middlehline
+%
+%\bottomhline
+%\end{tabular}
+%\belowtable{} % Table Footnotes
+%\end{table}
+%
+%%% TWO-COLUMN TABLE
+%
+%%t
+%\begin{table*}[t]
+%\caption{TEXT}
+%\begin{tabular}{column = lcr}
+%\tophline
+%
+%\middlehline
+%
+%\bottomhline
+%\end{tabular}
+%\belowtable{} % Table Footnotes
+%\end{table*}
+%
+%
+%%% NUMBERING OF FIGURES AND TABLES
+%%%
+%%% If figures and tables must be numbered 1a, 1b, etc. the following command
+%%% should be inserted before the begin{} command.
+%
+%\addtocounter{figure}{-1}\renewcommand{\thefigure}{\arabic{figure}a}
+%
+%
+%%% MATHEMATICAL EXPRESSIONS
+%
+%%% All papers typeset by Copernicus Publications follow the math typesetting regulations
+%%% given by the IUPAC Green Book (IUPAC: Quantities, Units and Symbols in Physical Chemistry,
+%%% 2nd Edn., Blackwell Science, available at: http://old.iupac.org/publications/books/gbook/green_book_2ed.pdf, 1993).
+%%%
+%%% Physical quantities/variables are typeset in italic font (t for time, T for Temperature)
+%%% Indices which are not defined are typeset in italic font (x, y, z, a, b, c)
+%%% Items/objects which are defined are typeset in roman font (Car A, Car B)
+%%% Descriptions/specifications which are defined by itself are typeset in roman font (abs, rel, ref, tot, net, ice)
+%%% Abbreviations from 2 letters are typeset in roman font (RH, LAI)
+%%% Vectors are identified in bold italic font using \vec{x}
+%%% Matrices are identified in bold roman font
+%%% Multiplication signs are typeset using the LaTeX commands \times (for vector products, grids, and exponential notations) or \cdot
+%%% The character * should not be applied as mutliplication sign
+%
+%
+%%% EQUATIONS
+%
+%%% Single-row equation
+%
+%\begin{equation}
+%
+%\end{equation}
+%
+%%% Multiline equation
+%
+%\begin{align}
+%& 3 + 5 = 8\\
+%& 3 + 5 = 8\\
+%& 3 + 5 = 8
+%\end{align}
+%
+%
+%%% MATRICES
+%
+%\begin{matrix}
+%x & y & z\\
+%x & y & z\\
+%x & y & z\\
+%\end{matrix}
+%
+%
+%%% ALGORITHM
+%
+%\begin{algorithm}
+%\caption{…}
+%\label{a1}
+%\begin{algorithmic}
+%…
+%\end{algorithmic}
+%\end{algorithm}
+%
+%
+%%% CHEMICAL FORMULAS AND REACTIONS
+%
+%%% For formulas embedded in the text, please use \chem{}
+%
+%%% The reaction environment creates labels including the letter R, i.e. (R1), (R2), etc.
+%
+%\begin{reaction}
+%%% \rightarrow should be used for normal (one-way) chemical reactions
+%%% \rightleftharpoons should be used for equilibria
+%%% \leftrightarrow should be used for resonance structures
+%\end{reaction}
+%
+%
+%%% PHYSICAL UNITS
+%%%
+%%% Please use \unit{} and apply the exponential notation
+
+
+\end{document}

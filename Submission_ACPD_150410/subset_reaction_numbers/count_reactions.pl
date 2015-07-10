@@ -5,7 +5,7 @@
 use strict;
 use diagnostics;
 
-my @files = qw( cb05 cbm4 cbm4_orig cri mcm3_1 mcm3_2 mozart racm2 racm radm2 );
+my @files = qw( cb05 cbm4 cbm4_orig cri mcm3_1 mcm3_2 mozart racm2 racm radm2 radm2_orig );
 my %data;
 foreach my $name (@files) {
     my $file = $name . ".eqn";

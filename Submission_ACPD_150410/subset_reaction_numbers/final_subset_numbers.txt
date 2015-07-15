@@ -1,0 +1,21 @@
+Organic species
+cb05 : 33
+cbm4 : 19
+cri : 189
+mcm3_1 : 1677
+mcm3_2 : 1884
+mozart : 61
+racm : 51
+racm2 : 92
+radm2 : 42
+
+Subset Organic reactions
+cb05 : 86
+cbm4 : 47
+cri : 559
+mcm3_1 : 4862
+mcm3_2 : 5621
+mozart : 135
+racm : 152
+racm2 : 244
+radm2 : 105

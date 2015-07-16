@@ -80,7 +80,7 @@ levels \citep{AQEU:2014}.
 Effective strategies for emission reductions rely on accurate
 predictions of \chem{O_3} concentrations using chemical transport
 models (CTMs).  These predictions require adequate representation of
-gas-phase chemistry in the chemical mechanism used by CTMs.  For
+gas-phase chemistry in the chemical mechanism used by the CTM.  For
 reasons of computational efficiency, the chemical mechanisms used by
 global and regional CTMs must be simpler than the nearly-explicit
 mechanisms which can be used in box modelling studies.  This study
@@ -246,7 +246,6 @@ conditions which maximise \chem{O_3} production.  Differences in
 secondary VOC degradation in these mechanisms.
 
 
-
 \section{Methodology}
 \label{s:methodology}
 
@@ -255,32 +254,26 @@ secondary VOC degradation in these mechanisms.
 \label{ss:mechanisms}
 
 The nine chemical mechanisms compared in this study are outlined in
-Table~\ref{t:mechanisms} with a~brief summary below.  We used a subset 
-of the chemical reactions fully describing the degradation of the VOC 
-in Table~\ref{t:initial_conditions}.  The reduced
+Table~\ref{t:mechanisms} with a~brief summary below.  We used a subset of each chemical mechanism containing all the reactions needed to fully describe the degradation of the VOC in Table~\ref{t:initial_conditions}.  The reduced
 mechanisms in this study were chosen as they are commonly used in 3-D
 models and apply different approaches to representing secondary VOC
-chemistry. The recent review by \citet{Baklanov:2014} shows that each
-chemical mechanism used in this study are actively used by modelling
-groups.
+chemistry. The recent review by \citet{Baklanov:2014} shows that each chemical mechanism used in this study are actively used by modelling groups.  
 
 The MCM \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005,
   MCM_Site} is a~near-explicit mechanism describing the degradation of
 $125$ primary VOC.  The MCM v3.2 is the reference mechanism in this
-study due to its level of detail ($16\,349$ organic reactions). Despite this level of detail, the MCM
-had difficulties in reproducing the results of chamber study
-experiments involving aromatic VOC \citep{Bloss:2005}.
+study due to its level of detail ($16\,349$ organic reactions). Despite this level of detail, the MCM had difficulties in reproducing the results of chamber study experiments involving aromatic VOC \citep{Bloss:2005}.
 
 The CRI \citep{Jenkin:2008} is a~reduced chemical mechanism with $1145$ organic reactions describing
 the oxidation of the same primary VOC as the MCM v3.1 ($12\,691$ organic reactions).  VOC
 degradation in the CRI is simplified by lumping the degradation
 products of many VOC into mechanism species whose overall \chem{O_3}
-production reflects that of the MCM v3.1.  The CRI~v2 is available in
+production reflects that of the MCM~v3.1.  The CRI~v2 is available in
 more than one reduced variant, described in \citet{Watson:2008}. We used a
 subset of the full version of the CRI~ v2 (\url{http://mcm.leeds.ac.uk/CRI}).
-Differences in \chem{O_3} production between the CRI v2 and MCM v3.2
+Differences in \chem{O_3} production between the CRI v2 and MCM~v3.2
 may be due to changes in the MCM versions rather than the CRI
-reduction techniques, hence the MCM v3.1 is also included in this
+reduction techniques, hence the MCM~v3.1 is also included in this
 study.
 
 MOZART-4 represents global tropospheric and stratospheric chemistry
@@ -447,8 +440,7 @@ the CRI v2 are larger than those in the MCM v3.1, which is similar to
 the results in \citet{Jenkin:2008} where the \chem{O_3} mixing ratios
 of the CRI v2 and MCM v3.1 are compared over a~five day period.
 
-The \chem{O_3} mixing ratios in Fig.~\ref{f:time_series} are
-not simply determined by the explicitness of the chemical mechanism.
+The \chem{O_3} mixing ratios in Fig.~\ref{f:time_series} are influenced by the approaches used in developing the chemical mechanisms and not a function of the explicitness of the chemical mechanism.
 For example, the \chem{O_3} mixing ratios obtained using the Carbon Bond mechanisms 
 (CBM-IV and CB05) compare well with the MCM despite both Carbon Bond mechanisms 
 having $\sim1~\%$ of the number of reactions in the MCM~v3.2.
@@ -476,16 +468,16 @@ first day, described later in Sect.~\ref{sss:day1}.
 RADM2 is the only reduced mechanism producing higher \chem{O_3} mixing
 ratios than the more detailed mechanisms (MCM v3.2, MCM v3.1 and CRI
 v2).  Higher mixing ratios of \chem{O_3} in RADM2 are produced due to
-increased O$_{x}$ production from propane compared to the MCM v3.2;
+increased O$_{x}$ production from propane compared to the MCM~v3.2;
 on the first day, the O$_{x}$ production from propane in RADM2 is
-triple that of the MCM v3.2 (Fig.~\ref{f:Ox_tagged_budgets}).  Propane
+triple that of the MCM~v3.2 (Fig.~\ref{f:Ox_tagged_budgets}).  Propane
 is represented as HC3 in RADM2 \citep{Stockwell:1990} and the degradation
-of HC3 does not produce a high yield of the less reactive ketones compared
+of HC3 has a lower yield of the less reactive ketones compared
 to the MCM. The further degradation of ketones hinders \chem{O_x} production
-due to its low OH reactivity and photolysis rate. Thus further degradation
-of HC3 proceeds through the degradation of acetaldehyde (\chem{CH3CHO}) which
-propogates \chem{O_x} production through the reactions of \chem{CH_3CO_3} and
-\chem{CH_3O_2} with \chem{NO}; thus the lower ketone yields leads to increased
+due to the low OH reactivity and photolysis rate of ketones. Secondary degradation
+of HC3 proceeds through the degradation of acetaldehyde (\chem{CH_3CHO}) 
+propogating \chem{O_x} production through the reactions of \chem{CH_3CO_3} and
+\chem{CH_3O_2} with \chem{NO}. Thus the lower ketone yields leads to increased
 O$_{x}$ production from propane degradation in RADM2 compared to
 the MCM v3.2.
 
@@ -513,7 +505,7 @@ background \chem{O_3} when using lumped molecule and structure
 mechanisms.
 
 The lumped intermediate mechanism (CRI v2) produces the most similar
-O$_{x}$ to the MCM v3.2 for each VOC, seen in
+O$_{x}$ to the MCM~v3.2 for each VOC, seen in
 Fig.~\ref{f:TOPP_dailies} and Table~\ref{t:cumulative_TOPPs_per_C}.
 Higher variability in the time dependent O$_{x}$ production is
 evident for VOC represented by lumped mechanism species.  For example,
@@ -594,7 +586,7 @@ produces peak O$_{x}$ on the first day.  The second day maximum of
 O$_{x}$ production in CRI v2 and RACM2 from toluene degradation
 results from more efficient production of unsaturated dicarbonyls than
 the MCM~v3.2. The degradation of unsaturated dicarbonyls produces peroxy
-radicals such as \chem{C_2H_5O_2} which promote \chem{O_x} production.
+radicals such as \chem{C_2H_5O_2} which promote \chem{O_x} production via reactions with NO.
 
 Unsaturated aliphatic VOC generally produce similar amounts of
 O$_{x}$ between mechanisms, especially explicitly represented VOC,
@@ -1182,7 +1174,7 @@ Agency, Novato, California, USA, 2005.
 
 
 \begin{table}
-  \caption{Cumulative TOPP values at the end of the model run for all VOCs with each mechanism, normalised by the number of C atoms in each VOC.}
+  \caption{Cumulative TOPP values at the end of the model run for all VOC with each mechanism, normalised by the number of C atoms in each VOC.}
   \scalebox{.77}[.77]{\begin{tabular}{llllllllll}
       \tophline
       {NMVOC} &{MCM v3.2} &{MCM v3.1} &{CRI v2} &{MOZART-4} &{RADM2} &{RACM} &{RACM2} &{CBM-IV} &{CB05} \\

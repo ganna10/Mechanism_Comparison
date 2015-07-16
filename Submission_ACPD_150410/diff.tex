@@ -100,7 +100,7 @@ levels \citep{AQEU:2014}.
 Effective strategies for emission reductions rely on accurate
 predictions of \chem{O_3} concentrations using chemical transport
 models (CTMs).  These predictions require adequate representation of
-gas-phase chemistry in the chemical mechanism used by \DIFdelbegin \DIFdel{the CTM}\DIFdelend \DIFaddbegin \DIFadd{CTMs}\DIFaddend .  For
+gas-phase chemistry in the chemical mechanism used by the CTM.  For
 reasons of computational efficiency, the chemical mechanisms used by
 global and regional CTMs must be simpler than the nearly-explicit
 mechanisms which can be used in box modelling studies.  This study
@@ -266,7 +266,6 @@ conditions which maximise \chem{O_3} production.  Differences in
 secondary VOC degradation in these mechanisms.
 
 
-
 \section{Methodology}
 \label{s:methodology}
 
@@ -275,53 +274,45 @@ secondary VOC degradation in these mechanisms.
 \label{ss:mechanisms}
 
 The nine chemical mechanisms compared in this study are outlined in
-Table~\ref{t:mechanisms} with a~brief summary below.  \DIFaddbegin \DIFadd{We used a subset 
-of the chemical reactions fully describing the degradation of the VOC 
-in Table~\ref{t:initial_conditions}.  }\DIFaddend The reduced
+Table~\ref{t:mechanisms} with a~brief summary below.  \DIFaddbegin \DIFadd{We used a subset of each chemical mechanism containing all the reactions needed to fully describe the degradation of the VOC in Table~\ref{t:initial_conditions}.  }\DIFaddend The reduced
 mechanisms in this study were chosen as they are commonly used in 3-D
 models and apply different approaches to representing secondary VOC
-chemistry. \DIFaddbegin \DIFadd{The recent review by }\citet{Baklanov:2014} \DIFadd{shows that each
-chemical mechanism used in this study are actively used by modelling
-groups.
-}\DIFaddend 
+chemistry. \DIFaddbegin \DIFadd{The recent review by }\citet{Baklanov:2014} \DIFadd{shows that each chemical mechanism used in this study are actively used by modelling groups.   }\DIFaddend 
 
 The MCM \citep{Jenkin:1997, Jenkin:2003, Saunders:2003, Bloss:2005,
   MCM_Site} is a~near-explicit mechanism describing the degradation of
 $125$ primary VOC.  The MCM v3.2 is the reference mechanism in this
-study \DIFaddbegin \DIFadd{due to its level of detail ($16\,349$ reactions). Despite this level of detail, the MCM
-had difficulties in reproducing the results of chamber study
-experiments involving aromatic VOC }\citep{Bloss:2005}\DIFaddend .
+study \DIFaddbegin \DIFadd{due to its level of detail ($16\,349$ organic reactions). Despite this level of detail, the MCM had difficulties in reproducing the results of chamber study experiments involving aromatic VOC }\citep{Bloss:2005}\DIFaddend .
 
-The CRI \citep{Jenkin:2008} is a~reduced chemical mechanism \DIFaddbegin \DIFadd{with $1145$ reactions }\DIFaddend describing
-the oxidation of the same primary VOC as the MCM v3.1 \DIFaddbegin \DIFadd{($12\,691$ reactions)}\DIFaddend .  VOC
+The CRI \citep{Jenkin:2008} is a~reduced chemical mechanism \DIFaddbegin \DIFadd{with $1145$ organic reactions }\DIFaddend describing
+the oxidation of the same primary VOC as the MCM v3.1 \DIFaddbegin \DIFadd{($12\,691$ organic reactions)}\DIFaddend .  VOC
 degradation in the CRI is simplified by lumping the degradation
 products of many VOC into mechanism species whose overall \chem{O_3}
-production reflects that of the MCM v3.1.  The \DIFaddbegin \DIFadd{CRI~v2 is available in
+production reflects that of the MCM\DIFaddbegin \DIFadd{~}\DIFaddend v3.1.  The \DIFaddbegin \DIFadd{CRI~v2 is available in
 more than one reduced variant, described in }\citet{Watson:2008}\DIFadd{. We used a
 subset of the }\DIFaddend full version of the CRI\DIFaddbegin \DIFadd{~ }\DIFaddend v2 (\url{http://mcm.leeds.ac.uk/CRI})\DIFdelbegin \DIFdel{is used in this study}\DIFdelend .
-Differences in \chem{O_3} production between the CRI v2 and MCM v3.2
+Differences in \chem{O_3} production between the CRI v2 and MCM\DIFaddbegin \DIFadd{~}\DIFaddend v3.2
 may be due to changes in the MCM versions rather than the CRI
-reduction techniques, hence the MCM v3.1 is also included in this
+reduction techniques, hence the MCM\DIFaddbegin \DIFadd{~}\DIFaddend v3.1 is also included in this
 study.
 
 MOZART-4 represents global tropospheric and stratospheric chemistry
 \citep{Emmons:2010}.  Explicit species exist for methane, ethane,
 propane, ethene, propene, isoprene and $\alpha$-pinene.  All other VOC
 are represented by lumped species determined by the functionality of
-the VOC. \DIFaddbegin \DIFadd{Tropospheric chemistry is described by $145$ reactions in MOZART-4.
-}\DIFaddend 
+the VOC. \DIFaddbegin \DIFadd{Tropospheric chemistry is described by $145$ organic reactions in MOZART-4. }\DIFaddend 
 
 RADM2 \citep{Stockwell:1990} describes regional scale atmospheric
-chemistry \DIFaddbegin \DIFadd{using $145$ reactions }\DIFaddend with explicit species representing methane, ethane, ethene
+chemistry \DIFaddbegin \DIFadd{using $145$ organic reactions }\DIFaddend with explicit species representing methane, ethane, ethene
 and isoprene.  All other VOC are assigned to lumped species based on
 OH-reactivity and molecular weight.  RADM2 was updated to RACM
 \citep{Stockwell:1997} with more explicit and lumped species
-representing VOC as well as revised chemistry \DIFaddbegin \DIFadd{($193$ reactions)}\DIFaddend .  RACM2 is the updated
+representing VOC as well as revised chemistry \DIFaddbegin \DIFadd{($193$ organic reactions)}\DIFaddend .  RACM2 is the updated
 RACM version \citep{Goliff:2013} with substantial updates to the
 chemistry, including more lumped and explicit species representing
-emitted VOC \DIFaddbegin \DIFadd{($315$ reactions)}\DIFaddend .
+emitted VOC \DIFaddbegin \DIFadd{($315$ organic reactions)}\DIFaddend .
 
-CBM-IV \citep{Gery:1989} \DIFdelbegin \DIFdel{simulates }\DIFdelend \DIFaddbegin \DIFadd{uses $46$ reactions to simulate }\DIFaddend polluted urban conditions and
+CBM-IV \citep{Gery:1989} \DIFdelbegin \DIFdel{simulates }\DIFdelend \DIFaddbegin \DIFadd{uses $46$ organic reactions to simulate }\DIFaddend polluted urban conditions and
 represents ethene, formaldehyde and isoprene explicitly while all
 other emitted VOC are lumped by their carbon bond types.  All primary
 VOC were assigned to lumped species in CBM-IV as described in
@@ -330,7 +321,7 @@ the C--C bond.  Pentane, having five carbon atoms, is represented as
 $5$ PAR.  A~pentane mixing ratio of $1200$\,\unit{pptv} would be
 assigned to $6000$ ($= 1200 \times 5$)\,pptv of PAR in CBM-IV.  CBM-IV
 was updated to CB05 \citep{Yarwood:2005} by including further explicit
-species representing methane, ethane and acetaldehyde\DIFaddbegin \DIFadd{, and has $99$ reactions}\DIFaddend .  Other updates
+species representing methane, ethane and acetaldehyde\DIFaddbegin \DIFadd{, and has $99$ organic reactions}\DIFaddend .  Other updates
 include revised allocation of primary VOC and updated rate constants.
 \subsection{Model Setup} \label{ss:model_setup} The modelling approach
 and set-up follows the original TOPP study of \citet{Butler:2011}.
@@ -470,15 +461,13 @@ the CRI v2 are larger than those in the MCM v3.1, which is similar to
 the results in \citet{Jenkin:2008} where the \chem{O_3} mixing ratios
 of the CRI v2 and MCM v3.1 are compared over a~five day period.
 
-The \DIFaddbegin \chem{O_3} \DIFadd{mixing ratios in Fig.~\ref{f:time_series} are
-not simply determined by the explicitness of the chemical mechanism.
+The \DIFaddbegin \chem{O_3} \DIFadd{mixing ratios in Fig.~\ref{f:time_series} are influenced by the approaches used in developing the chemical mechanisms and not a function of the explicitness of the chemical mechanism.
 For example, the }\chem{O_3} \DIFadd{mixing ratios obtained using the Carbon Bond mechanisms 
 (CBM-IV and CB05) compare well with the MCM despite both Carbon Bond mechanisms 
 having $\sim1~\%$ of the number of reactions in the MCM~v3.2.
 Also, the }\chem{O_3} \DIFadd{mixing ratios from RACM2 and RADM2 show similar 
 absolute differences from that of the MCM despite RACM2 having more than
-double the number of reactions of RADM2.  
-}
+double the number of reactions of RADM2.   }
 
 \DIFadd{The }\DIFaddend day-time O$_{x}$ production budgets allocated to \DIFaddbegin \DIFadd{individual }\DIFaddend VOC for each
 mechanism are shown in Fig.~\ref{f:Ox_tagged_budgets}.  The
@@ -500,24 +489,23 @@ first day, described later in Sect.~\ref{sss:day1}.
 RADM2 is the only reduced mechanism producing higher \chem{O_3} mixing
 ratios than the more detailed mechanisms (MCM v3.2, MCM v3.1 and CRI
 v2).  Higher mixing ratios of \chem{O_3} in RADM2 are produced due to
-increased O$_{x}$ production from propane compared to the MCM v3.2;
+increased O$_{x}$ production from propane compared to the MCM\DIFaddbegin \DIFadd{~}\DIFaddend v3.2;
 on the first day, the O$_{x}$ production from propane in RADM2 is
-triple that of the MCM v3.2 (Fig.~\ref{f:Ox_tagged_budgets}).  Propane
+triple that of the MCM\DIFaddbegin \DIFadd{~}\DIFaddend v3.2 (Fig.~\ref{f:Ox_tagged_budgets}).  Propane
 is represented as HC3 in RADM2 \citep{Stockwell:1990} and \DIFdelbegin \DIFdel{on the first
 day HC3 degradation
 produces about $17$ times the amount of acetaldehyde (}%DIFDELCMD < \chem{CH_3CHO}%%%
-\DIFdel{) produced by the MCMv3.2. The OH-oxidation of }%DIFDELCMD < \chem{CH_3CHO} %%%
-\DIFdel{starts a~degradation
-chain that
-produces O$_{x}$ }\DIFdelend \DIFaddbegin \DIFadd{the degradation
-of HC3 does not produce a high yield of the less reactive ketones compared
+\DIFdel{) produced by the MCMv3.2. The OH-oxidation of }\DIFdelend \DIFaddbegin \DIFadd{the degradation
+of HC3 has a lower yield of the less reactive ketones compared
 to the MCM. The further degradation of ketones hinders }\chem{O_x} \DIFadd{production
-due to its low OH reactivity and photolysis rate. Thus further degradation
-of HC3 proceeds through the degradation of acetaldehyde (}\chem{CH3CHO}\DIFadd{) which
-propogates }\chem{O_x} \DIFadd{production }\DIFaddend through the reactions of \chem{CH_3CO_3} and
-\chem{CH_3O_2} with \chem{NO}; thus the \DIFdelbegin \DIFdel{higher amounts of
+due to the low OH reactivity and photolysis rate of ketones. Secondary degradation
+of HC3 proceeds through the degradation of acetaldehyde (}\DIFaddend \chem{CH_3CHO}\DIFdelbegin \DIFdel{starts a~degradation
+chain that
+produces O$_{x}$ }\DIFdelend \DIFaddbegin \DIFadd{) 
+propogating }\chem{O_x} \DIFadd{production }\DIFaddend through the reactions of \chem{CH_3CO_3} and
+\chem{CH_3O_2} with \chem{NO}\DIFdelbegin \DIFdel{; thus the higher amounts of
 }%DIFDELCMD < \chem{CH_3CHO} %%%
-\DIFdel{in RADM2 during propane degradation }\DIFdelend \DIFaddbegin \DIFadd{lower ketone yields }\DIFaddend leads to increased
+\DIFdel{in RADM2 during propane degradation }\DIFdelend \DIFaddbegin \DIFadd{. Thus the lower ketone yields }\DIFaddend leads to increased
 O$_{x}$ production from propane degradation in RADM2 compared to
 the MCM v3.2.
 
@@ -545,7 +533,7 @@ background \chem{O_3} when using lumped molecule and structure
 mechanisms.
 
 The lumped intermediate mechanism (CRI v2) produces the most similar
-O$_{x}$ to the MCM v3.2 for each VOC, seen in
+O$_{x}$ to the MCM\DIFaddbegin \DIFadd{~}\DIFaddend v3.2 for each VOC, seen in
 Fig.~\ref{f:TOPP_dailies} and Table~\ref{t:cumulative_TOPPs_per_C}.
 Higher variability in the time dependent O$_{x}$ production is
 evident for VOC represented by lumped mechanism species.  For example,
@@ -625,12 +613,12 @@ RACM2 is reached on the second day in contrast to the MCM v3.2 which
 produces peak O$_{x}$ on the first day.  The second day maximum of
 O$_{x}$ production in CRI v2 and RACM2 from toluene degradation
 results from \DIFdelbegin \DIFdel{increased }%DIFDELCMD < \chem{C_2H_5O_2} %%%
-\DIFdel{production from degradation }\DIFdelend \DIFaddbegin \DIFadd{more efficient production }\DIFaddend of unsaturated dicarbonyls \DIFdelbegin \DIFdel{; }%DIFDELCMD < \chem{C_2H_5O_2} %%%
+\DIFdel{production from degradation of
+unsaturated dicarbonyls; }%DIFDELCMD < \chem{C_2H_5O_2} %%%
 \DIFdel{is not produced during
-degradation of unsaturated dicarbonyls in the MCM}\DIFdelend \DIFaddbegin \DIFadd{than
+degradation }\DIFdelend \DIFaddbegin \DIFadd{more efficient production }\DIFaddend of unsaturated dicarbonyls \DIFdelbegin \DIFdel{in the MCM}\DIFdelend \DIFaddbegin \DIFadd{than
 the MCM~}\DIFaddend v3.2. \DIFaddbegin \DIFadd{The degradation of unsaturated dicarbonyls produces peroxy
-radicals such as }\chem{C_2H_5O_2} \DIFadd{which promote }\chem{O_x} \DIFadd{production.
-}\DIFaddend 
+radicals such as }\chem{C_2H_5O_2} \DIFadd{which promote }\chem{O_x} \DIFadd{production via reactions with NO. }\DIFaddend 
 
 Unsaturated aliphatic VOC generally produce similar amounts of
 O$_{x}$ between mechanisms, especially explicitly represented VOC,
@@ -842,15 +830,13 @@ conditions and including processes found in 3-D models.
 chemistry of VOCs and NO$_{x}$}, Atmos. Environ., 34, 2063--2101, 2000.
 
 
-    \DIFaddbegin \bibitem[{Ahmadov et~al.(2015)Ahmadov, McKeen, Trainer, Banta, Brewer, Brown, Edwards, de Gouw, Frost, Gilman, Helmig, Johnson, Karion, Koss, Langford, Lerner, Olson, Oltmans, Peischl, P\'etron, Pichugina, Roberts, Ryerson, Schnell, Senff, Sweeney, Thompson, Veres, Warneke, Wild, Williams, Yuan, and Zamora}]{Ahmadov:2015} \DIFadd{Ahmadov,~R. and McKeen,~S. and Trainer,~M. and Banta,~R. and Brewer,~A. and Brown,~S. and Edwards,~P.~M. and de Gouw,~J.~A. and Frost,~G.~J. and Gilman,~J. and Helmig,~D. and Johnson,~B. and Karion,~A. and Koss,~A. and Langford,~A. and Lerner,~B. and Olson,~J. and Oltmans,~S. and Peischl,~J. and P\'etron,~G. and Pichugina,~Y. and Roberts,~J.~M. and Ryerson,~T. and Schnell,~R. and Senff,~C. and Sweeney,~C. and Thompson,~C. and Veres,~P.~R. and Warneke,~C. and Wild,~R. and Williams,~E.~J. and Yuan,~B. and Zamora,~R.: Understanding high wintertime ozone pollution events in an oil- and natural gas-producing region of the western US, Atmospheric Chemistry and Physics, 15, 1, 411--429, 2015.
-}
+    \DIFaddbegin \bibitem[{Ahmadov et~al.(2015)Ahmadov, McKeen, Trainer, Banta, Brewer, Brown, Edwards, de Gouw, Frost, Gilman, Helmig, Johnson, Karion, Koss, Langford, Lerner, Olson, Oltmans, Peischl, P\'etron, Pichugina, Roberts, Ryerson, Schnell, Senff, Sweeney, Thompson, Veres, Warneke, Wild, Williams, Yuan, and Zamora}]{Ahmadov:2015} \DIFadd{Ahmadov,~R. and McKeen,~S. and Trainer,~M. and Banta,~R. and Brewer,~A. and Brown,~S. and Edwards,~P.~M. and de Gouw,~J.~A. and Frost,~G.~J. and Gilman,~J. and Helmig,~D. and Johnson,~B. and Karion,~A. and Koss,~A. and Langford,~A. and Lerner,~B. and Olson,~J. and Oltmans,~S. and Peischl,~J. and P\'etron,~G. and Pichugina,~Y. and Roberts,~J.~M. and Ryerson,~T. and Schnell,~R. and Senff,~C. and Sweeney,~C. and Thompson,~C. and Veres,~P.~R. and Warneke,~C. and Wild,~R. and Williams,~E.~J. and Yuan,~B. and Zamora,~R.: Understanding high wintertime ozone pollution events in an oil- and natural gas-producing region of the western US, Atmospheric Chemistry and Physics, 15, 1, 411--429, 2015. }
 
 
-    \bibitem[{Archer-Nicholls et~al.(2014) Archer-Nicholls, Lowe, Utembe, Allan, Zaveri, Fast, Hodnebrog, Denier van der Gon, and McFiggans}]{Archer-Nicholls:2014} \DIFadd{Archer-Nicholls,~S. and Lowe,~D. and Utembe,~S. and Allan,~J. and Zaveri,~R.~A. and Fast,~J.~D. and Hodnebrog,~}{\DIFadd{\O}}\DIFadd{. and Denier van der Gon,~H. and McFiggans,~G., Gaseous chemistry and aerosol mechanism developments for version 3.5.1 of the online regional model, WRF-Chem, Geoscientific Model Development, 7, 6, 2557--2579, 2014.
-}
+    \bibitem[{Archer-Nicholls et~al.(2014) Archer-Nicholls, Lowe, Utembe, Allan, Zaveri, Fast, Hodnebrog, Denier van der Gon, and McFiggans}]{Archer-Nicholls:2014} \DIFadd{Archer-Nicholls,~S. and Lowe,~D. and Utembe,~S. and Allan,~J. and Zaveri,~R.~A. and Fast,~J.~D. and Hodnebrog,~}{\DIFadd{\O}}\DIFadd{. and Denier van der Gon,~H. and McFiggans,~G., Gaseous chemistry and aerosol mechanism developments for version 3.5.1 of the online regional model, WRF-Chem, Geoscientific Model Development, 7, 6, 2557--2579, 2014. }\DIFaddend 
 
 
-\DIFaddend \bibitem[{Baker et~al.(2008)Baker, Beyersdorf, Doezema, Katzenstein,
+\bibitem[{Baker et~al.(2008)Baker, Beyersdorf, Doezema, Katzenstein,
     Meinardi, Simpson, Blake, and Rowland}]{Baker:2008} Baker,~A.~K.,
   Beyersdorf,~A.~J., Doezema,~L.~A., Katzenstein,~A., Meinardi,~S.,
   Simpson,~I.~J., Blake,~D.~R., and Rowland,~F.~S.: {Measurements of
@@ -871,11 +857,10 @@ chemistry of VOCs and NO$_{x}$}, Atmos. Environ., 34, 2063--2101, 2000.
     Savage,~N., Seigneur,~C., Sokhi,~R. S., Solazzo,~E., Solomos,~S., S}{\DIFadd{\o}}\DIFadd{rensen,~B., 
     Tsegas,~G., Vignati,~E., Vogel,~B., Zhang,~Y.: Online coupled regional meteorology 
     chemistry models in Europe: current status and prospects, Atmospheric Chemistry and
-    Physics, 14, 1, 317--398, 2014.
-}
+    Physics, 14, 1, 317--398, 2014. }\DIFaddend 
 
 
-\DIFaddend \bibitem[{Bloss et~al.(2005)Bloss, Wagner, Jenkin, Vollamer, Bloss,
+\bibitem[{Bloss et~al.(2005)Bloss, Wagner, Jenkin, Vollamer, Bloss,
     Lee, Heard, Wirtz, Martin-Reviejo, Rea, Wenger, and
     Pilling}]{Bloss:2005} Bloss,~C., Wagner,~V., Jenkin,~M.~E.,
   Volkamer,~R., Bloss,~W.~J., Lee,~J.~D., Heard,~D.~E., Wirtz,~K.,
@@ -929,11 +914,10 @@ doi:\href{http://dx.doi.org/10.5194/acp-5-641-2005}{10.5194/acp-5-641-2005},
   Waste Manage., 60, 914--924, 2010.
 
 
-    \DIFaddbegin \bibitem[{Derwent et~al.(2015)Derwent, Utembe, Jenkin, and Shallcross}]{Derwent:2015} \DIFadd{Derwent,~R.~G., Utember,~S.~R., Jenkin,~M.~E., and Shallcross,~D.~E.: Tropospheric ozone production regions and the intercontinental origins of surface ozone over Europe, Atmospheric Environment, 112, 216--224, 2015
-}
+    \DIFaddbegin \bibitem[{Derwent et~al.(2015)Derwent, Utembe, Jenkin, and Shallcross}]{Derwent:2015} \DIFadd{Derwent,~R.~G., Utember,~S.~R., Jenkin,~M.~E., and Shallcross,~D.~E.: Tropospheric ozone production regions and the intercontinental origins of surface ozone over Europe, Atmospheric Environment, 112, 216--224, 2015 }\DIFaddend 
 
 
-\DIFaddend \bibitem[{Dodge(2000)}]{Dodge:2000} Dodge,~M.: {Chemical oxidant
+\bibitem[{Dodge(2000)}]{Dodge:2000} Dodge,~M.: {Chemical oxidant
     mechanisms for air quality modeling: critical review},
   Atmos. Environ., 34, 2103--2130, 2000.
 
@@ -944,11 +928,10 @@ doi:\href{http://dx.doi.org/10.5194/acp-5-641-2005}{10.5194/acp-5-641-2005},
   18, 311--321, 1984.
 
 
-    \DIFaddbegin \bibitem[{Dunker et.~al.(2015)Dunker, Koo, and Yarwood}]{Dunker:2015} \DIFadd{Dunker,~A.~M., Koo,~B, and Yarwood,~G.: Source Apportionment of the Anthropogenic Increment to Ozone, Formaldehyde, and Nitrogen Dioxide by the Path- Integral Method in a 3D Model, Environmental Science }\& \DIFadd{Technology, 49, 11, 6751--6759, 2015.
-}
+    \DIFaddbegin \bibitem[{Dunker et.~al.(2015)Dunker, Koo, and Yarwood}]{Dunker:2015} \DIFadd{Dunker,~A.~M., Koo,~B, and Yarwood,~G.: Source Apportionment of the Anthropogenic Increment to Ozone, Formaldehyde, and Nitrogen Dioxide by the Path- Integral Method in a 3D Model, Environmental Science }\& \DIFadd{Technology, 49, 11, 6751--6759, 2015. }\DIFaddend 
 
 
-\DIFaddend \bibitem[{EEA(2014)}]{AQEU:2014} EEA: {Air quality in Europe -- 2014
+\bibitem[{EEA(2014)}]{AQEU:2014} EEA: {Air quality in Europe -- 2014
     report}, Tech. Rep. 5/2014, European Environmental Agency, Publications Office of the European
     Union,
   doi:\href{http://dx.doi.org/10.2800/22847}{10.2800/22847}, 2014.
@@ -975,12 +958,11 @@ doi:\href{http://dx.doi.org/10.5194/acp-9-1831-2009}{10.5194/acp-9-1831-2009},
   doi:\href{http://dx.doi.org/10.5194/gmd-3-43-2010}{10.5194/gmd-3-43-2010}, 2010.
 
 
-    \DIFaddbegin \bibitem[{Foster et~al.(2014)Foster, Prentice, Morfopoulos, Siddall, and van Weele}]{Foster:2014}\DIFadd{Foster,~P.~N., Prentice,~I.~C., Morfopoulos,~C., Siddall,~M., and van Weele,~M.: Isoprene emissions track the seasonal cycle of canopy temperature, not primary production: evidence from remote sensing, Biogeosciences, 11, 13, 3427--3451, 2014.
-}
+    \DIFaddbegin \bibitem[{Foster et~al.(2014)Foster, Prentice, Morfopoulos, Siddall, and van Weele}]{Foster:2014}\DIFadd{Foster,~P.~N., Prentice,~I.~C., Morfopoulos,~C., Siddall,~M., and van Weele,~M.: Isoprene emissions track the seasonal cycle of canopy temperature, not primary production: evidence from remote sensing, Biogeosciences, 11, 13, 3427--3451, 2014. }\DIFaddend 
 
 
 
-\DIFaddend \bibitem[{Gery et~al.(1989)Gery, Whitten, Killus, and
+\bibitem[{Gery et~al.(1989)Gery, Whitten, Killus, and
     Dodge}]{Gery:1989} Gery,~M.~W., Whitten,~G.~Z., Killus,~J.~P., and
   Dodge,~M.~C.: {A photochemical kinetics mechanism for urban and
     regional scale computer modeling}, J. Geophys. Res., 94,
@@ -993,11 +975,10 @@ doi:\href{http://dx.doi.org/10.5194/acp-9-1831-2009}{10.5194/acp-9-1831-2009},
     version 2}, Atmos. Environ., 68, 174--185, 2013.
 
 
-    \DIFaddbegin \bibitem[{Goliff et.~al.(2015)Goliff, Luria, Blake, Zielinska, Hallar, Valente, Lawson, and Stockwell}]{Goliff:2015} \DIFadd{Goliff,~W.~S., Luria,~M., Blake,~D.~R., Zielinska,~B., Hallar,~G., Valente,~R.~J., Lawson,~C.~V., and Stockwell,~W.~R.:Nighttime air quality under desert conditions, Atmospheric Environment, 114, 102--111, 2015.
-}
+    \DIFaddbegin \bibitem[{Goliff et.~al.(2015)Goliff, Luria, Blake, Zielinska, Hallar, Valente, Lawson, and Stockwell}]{Goliff:2015} \DIFadd{Goliff,~W.~S., Luria,~M., Blake,~D.~R., Zielinska,~B., Hallar,~G., Valente,~R.~J., Lawson,~C.~V., and Stockwell,~W.~R.:Nighttime air quality under desert conditions, Atmospheric Environment, 114, 102--111, 2015. }\DIFaddend 
 
 
-\DIFaddend \bibitem[{Harwood et~al.(2003)Harwood, Roberts, Frost, Ravishankara,
+\bibitem[{Harwood et~al.(2003)Harwood, Roberts, Frost, Ravishankara,
     and Burkholder}]{Harwood:2003} Harwood,~M., Roberts,~J.,
   Frost,~G., Ravishankara,~A., and Burkholder,~J.: {Photochemical
     studies of \chem{CH_3C(O)OONO_2} (PAN) and
@@ -1013,11 +994,10 @@ doi:\href{http://dx.doi.org/10.5194/acp-9-1831-2009}{10.5194/acp-9-1831-2009},
   Environmental Protection Agency, Durham, North Carolina, USA, 1989.
 
 
-    \DIFaddbegin \bibitem[{Hou et~al.(2015)Hou, Zhu, Fei, and Wang}]{Hou:2015} \DIFadd{Hou,~X., Zhu,~B., Fei,~D., and Wang,~D.: The impacts of summer monsoons on the ozone budget of the atmospheric boundary layer of the Asia-Pacific region, Science of The Total Environment, 502, 641--649, 2015.
-}
+    \DIFaddbegin \bibitem[{Hou et~al.(2015)Hou, Zhu, Fei, and Wang}]{Hou:2015} \DIFadd{Hou,~X., Zhu,~B., Fei,~D., and Wang,~D.: The impacts of summer monsoons on the ozone budget of the atmospheric boundary layer of the Asia-Pacific region, Science of The Total Environment, 502, 641--649, 2015. }\DIFaddend 
 
   
-\DIFaddend \bibitem[{HTAP(2010)}]{HTAP:2010} HTAP: Hemispheric Transport of Air
+\bibitem[{HTAP(2010)}]{HTAP:2010} HTAP: Hemispheric Transport of Air
     Pollution 2010, Part A: Ozone and Particulate Matter, Air
     Pollution Studies No.17, Geneva, Switzerland, 2010.
 
@@ -1065,6 +1045,7 @@ doi:\href{http://dx.doi.org/10.5194/acp-3-181-2003}{10.5194/acp-3-181-2003},
     high NO$_{x}$ tropospheric photochemistry}, J. Geophys. Res.,
   99, 16831--16838, 1994.
 
+\DIFaddbegin \bibitem[{Koss et~al.(2015)Koss, de Gouw, Warneke, Gilman, Lerner, Graus, Yuan, Edwards, Brown, Wild, Roberts, Bates and Quinn}]{Koss:2015} \DIFadd{Koss,~A.~R., de Gouw,~J., Warneke,~C., Gilman,~J.~B., Lerner,~B.~M., Graus,~M., Yuan,~B., Edwards,~P., Brown,~S.~S., Wild,~R., Roberts,~J.~M., Bates,~T.~S. and Quinn,~P.~K.: }{\DIFadd{Photochemical aging of volatile organic compounds associated with oil and natural gas extraction in the Uintah Basin, UT, during a wintertime ozone formation event}}\DIFadd{, Atmospheric Chemistry and Physics, 15, 10, 5727--5741, 2015. }\DIFaddend 
 
 \bibitem[{Kuhn et~al.(1998)Kuhn, Builtjes, Poppe, Simpson, Stockwell,
     Andersson-Sk{\"o}ld, Baart, Das, Fiedler, Hov, Kirchner, Makar,
@@ -1077,13 +1058,14 @@ doi:\href{http://dx.doi.org/10.5194/acp-3-181-2003}{10.5194/acp-3-181-2003},
     transport models}, Atmos. Environ., 32, 693--709, 1998.
 
     
+\DIFaddbegin \bibitem[{Li et~al.(2014)Li, Georgescu, Hydpe, Mahalov, and Moustaui}]{Li:2014}\DIFadd{Li,~J, Georgescu,~M., Hyde,~P., Mahalov,~A. and Moustaoui,~M.: Achieving accurate simulations of urban impacts on ozone at high resolution, Environmental Research Letters, 9, 11, 114019, 2014. }\DIFaddend
+
+  \DIFaddbegin \bibitem[{Lidster et~al.(2014)Lidster, Hamilton, Lee, Lewis, Hopkins, Punjabi, Rickard and Young}]{Lidster:2014} \DIFadd{Lidster,~R.~T., Hamilton,~J.~F., Lee,~J.~D., Lewis}\DIFaddend ,~A.\DIFdelbegin \DIFdel{, }\DIFdelend \DIFaddbegin \DIFadd{~C., Hopkins,~J.~R., Punjabi,~S., Rickard,~A.~R. and }\DIFaddend Young,~J.\DIFaddbegin \DIFadd{~C.: The impact of monoaromatic hydrocarbons on OH reactivity in the coastal UK boundary layer and free troposphere, Atmospheric Chemistry and Physics, 14}\DIFaddend , \DIFdelbegin \DIFdel{and }\DIFdelend \DIFaddbegin \DIFadd{13, 6677--6693, 2014. }
+
   \DIFdelbegin %DIFDELCMD < \bibitem[{Rickard et~al.(2015)Rickard, Young, and Pascoe}]{MCM_Site}
 %DIFDELCMD <   %%%
-\DIFdelend \DIFaddbegin \bibitem[{Li et.~al.(2014)Li, Georgescu, Hydpe, Mahalov, and Moustaui}]{Li:2014}\DIFadd{Li,~J, Georgescu,~M., Hyde,~P., Mahalov,~A. and Moustaoui,~M.: Achieving accurate simulations of urban impacts on ozone at high resolution, Environmental Research Letters, 9, 11, 114019, 2014.
-  }
-
-
-\bibitem[{Rickard et~al.(2015)Rickard, Young, Pilling, Jenkin, Pascoe, and Saunders}]{MCM_Site} \DIFaddend Rickard,~A., Young,~J., \DIFdelbegin \DIFdel{and }\DIFdelend \DIFaddbegin \DIFadd{Pilling,~M., Jenkin.~M., }\DIFaddend Pascoe,~S.\DIFaddbegin \DIFadd{, and Saunders~S.}\DIFaddend : {The Master Chemical Mechanism Version MCM v3.2}, available at: \url{http://mcm.leeds.ac.uk/MCMv3.2/} (last access: \DIFdelbegin \DIFdel{25 March }\DIFdelend \DIFaddbegin \DIFadd{15 July }\DIFaddend 2015), 2015.
+\DIFdel{Rickard}\DIFdelend 
+\bibitem[{Rickard et~al.(2015)Rickard, Young, Pilling, Jenkin, Pascoe, and Saunders}]{MCM_Site} \DIFadd{Rickard,~A., Young,~J., Pilling,~M., Jenkin.~M., }\DIFaddend Pascoe,~S.\DIFaddbegin \DIFadd{, and Saunders~S.}\DIFaddend : {The Master Chemical Mechanism Version MCM v3.2}, available at: \url{http://mcm.leeds.ac.uk/MCMv3.2/} (last access: \DIFdelbegin \DIFdel{25 March }\DIFdelend \DIFaddbegin \DIFadd{15 July }\DIFaddend 2015), 2015.
 
 
 \bibitem[{Sander et~al.(2005)Sander, Kerkweg, J{\"o}ckel, and
@@ -1146,11 +1128,10 @@ doi:\href{http://dx.doi.org/10.5194/acp-3-161-2003}{10.5194/acp-3-161-2003},
   1997.
 
 
-    \DIFaddbegin \bibitem[{Watson et~al.(2008)Watson, Shallcross, Utembe, and Jenkin}]{Watson:2008} \DIFadd{Watson,~L.~A., Shallcross,~D.~E., Utembe,~S.~R., and Jenkin,~M.~E.: A Common Representative Intermediates (CRI) mechanism for VOC degradation. Part 2: Gas phase mechanism reduction, Atmospheric Environment, 42, 7196--7204, 2008.
-}
+    \DIFaddbegin \bibitem[{Watson et~al.(2008)Watson, Shallcross, Utembe, and Jenkin}]{Watson:2008} \DIFadd{Watson,~L.~A., Shallcross,~D.~E., Utembe,~S.~R., and Jenkin,~M.~E.: A Common Representative Intermediates (CRI) mechanism for VOC degradation. Part 2: Gas phase mechanism reduction, Atmospheric Environment, 42, 7196--7204, 2008. }\DIFaddend 
 
 
-\DIFaddend \bibitem[{Yarwood et~al.(2005)Yarwood, Rao, Yocke, and Whitten}]{Yarwood:2005}
+\bibitem[{Yarwood et~al.(2005)Yarwood, Rao, Yocke, and Whitten}]{Yarwood:2005}
 Yarwood,~G., Rao,~S., Yocke,~M., and Whitten,~G.~Z.: Updates to the Carbon
 Bond Chemical Mechanism: CB05, Tech. rep.,~US Environmental Protection
 Agency, Novato, California, USA, 2005.
@@ -1186,18 +1167,18 @@ Agency, Novato, California, USA, 2005.
         {Chemical} &{Subset of} &{Subset of} &{Type of} &\multirow{2}{*}{{Reference}} &{Recent}\\
         {Mechanism} &{Organic Species} &{Organic Reactions} &{Lumping} &&{Study}\\
 \middlehline
-        MCM v3.2 &$5708$ &$5620$ &No lumping &\citet{MCM_Site} & \\
-        {MCM v3.1} &{$4351$} &{$4861$} &{No lumping} &\citet{Jenkin:1997} & \\
+        MCM v3.2 &$1884$ &$5621$ &No lumping &\citet{MCM_Site} &\citet{Koss:2015} \\
+        {MCM v3.1} &{$1677$} &{$4862$} &{No lumping} &\citet{Jenkin:1997} &\citet{Lidster:2014} \\
         &&&&\citet{Saunders:2003} & \\
         &&&&\citet{Jenkin:2003} & \\
         &&&&\citet{Bloss:2005} & \\
-        CRI v2 &$411$ &$558$ &Lumped intermediates &\citet{Jenkin:2008} &\citet{Derwent:2015} \\
-        MOZART-4 &$69$ &$134$ &Lumped molecule &\citet{Emmons:2010} &\citet{Hou:2015}\\
-        RADM2 &$44$ &$104$ &Lumped molecule &\citet{Stockwell:1990} &\citet{Li:2014}\\
-        RACM &$58$ &$151$ &Lumped molecule &\citet{Stockwell:1997} &\citet{Ahmadov:2015}\\
-        RACM2 &$99$ &$243$ &Lumped molecule &\citet{Goliff:2013} &\citet{Goliff:2015}\\
-        CBM-IV &$20$ &$46$ &Lumped structure &\citet{Gery:1989} &\citet{Foster:2014}\\
-        CB05 &$37$ &$85$ &Lumped structure &\citet{Yarwood:2005} &\citet{Dunker:2015}\\
+        CRI v2 &$189$ &$559$ &Lumped intermediates &\citet{Jenkin:2008} &\citet{Derwent:2015} \\
+        MOZART-4 &$61$ &$135$ &Lumped molecule &\citet{Emmons:2010} &\citet{Hou:2015}\\
+        RADM2 &$42$ &$105$ &Lumped molecule &\citet{Stockwell:1990} &\citet{Li:2014}\\
+        RACM &$51$ &$152$ &Lumped molecule &\citet{Stockwell:1997} &\citet{Ahmadov:2015}\\
+        RACM2 &$92$ &$244$ &Lumped molecule &\citet{Goliff:2013} &\citet{Goliff:2015}\\
+        CBM-IV &$19$ &$47$ &Lumped structure &\citet{Gery:1989} &\citet{Foster:2014}\\
+        CB05 &$33$ &$86$ &Lumped structure &\citet{Yarwood:2005} &\citet{Dunker:2015}\\
         \bottomhline
     \end{tabular}}
 \DIFaddendFL \label{t:mechanisms}
@@ -1250,7 +1231,7 @@ Agency, Novato, California, USA, 2005.
 
 
 \begin{table}
-  \caption{Cumulative TOPP values at the end of the model run for all VOCs with each mechanism, normalised by the number of C atoms in each VOC.}
+  \caption{Cumulative TOPP values at the end of the model run for all \DIFdelbeginFL \DIFdelFL{VOCs }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{VOC }\DIFaddendFL with each mechanism, normalised by the number of C atoms in each VOC.}
   \scalebox{.77}[.77]{\begin{tabular}{llllllllll}
       \tophline
       {NMVOC} &{MCM v3.2} &{MCM v3.1} &{CRI v2} &{MOZART-4} &{RADM2} &{RACM} &{RACM2} &{CBM-IV} &{CB05} \\

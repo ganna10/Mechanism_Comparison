@@ -1,0 +1,153 @@
+\documentclass{article}
+
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage{microtype}
+\usepackage[round]{natbib}
+\setlength{\bibhang}{0pt}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Response to Dr Stockwell's Review}
+
+We would like to thank Dr Stockwell for the review of our paper and feel that this review has enable us to improve our paper.
+Our responses to the review are below.
+
+\textbf{Review Point 1: } The comparison of the RADM2 (mislabeled in the paper as RADM, an earlier mechanism), RACM and RACM2 mechanisms was particularly interesting to me. The available laboratory has vastly increased from what was available in 1990 and 1997 when the RADM2 and RACM mechanisms were published. Now RADM2 and RACM are relics of the past. RACM2 is based on much more recent data especially for aromatic compounds. We only use RACM2 for air quality simulations in my research group.  Likewise the US EPA has implemented RACM2 in its most recent version of the Community Multi-scale Air Quality Model (CMAQ) and does not include the earlier obsolete versions. Much the same could be said about the other series of mechanisms.
+
+\textbf{Author Response:} We agree with Dr Stockwell that older versions of the chemical mechanisms in our study are relics of the past.
+However, as highlighted in the recent review by \citet{Baklanov:2014}, all versions of the chemical mechanisms used in our study are actively used for modelling studies.
+We have updated Section~2.1 (page 12395, line 12) to state:
+\textit{The recent review by \citet{Baklanov:2014} shows that each chemical mechanism used in this study are actively used by modelling groups.}
+
+Furthermore, we have updated Table~1 to include a column labelled \textit{Recent Study} which includes the following examples of studies using each chemical mechanism. 
+The studies cited are:
+\textit{\citet{Koss:2015} for the MCM~v3.2, \citet{Lidster:2014} for the MCM~v3.1, \citet{Derwent:2015} for the CRI~v2, \citet{Li:2014} for RADM2, \citet{Ahmadov:2015} with RACM, \citet{Goliff:2015} using RACM2, \citet{Hou:2015} using MOZART-4, \citet{Foster:2014} with the CBM-IV and \citet{Dunker:2015} which uses the CB05.}
+
+Dr Stockwell mentions that we have incorrectly referred to the RADM2 mechanism as RADM.
+In our paper, we have used the acronyms for the different chemical mechanisms provided by the base literature listed in Table~1 of the research article.
+\citet{Stockwell:1990} is the base reference for RADM2 and we have accordingly used this acronym.
+We have checked our paper and find no instance of any mechanism being called RADM.
+
+\textbf{Review Point 2: } One problem with the paper is that the authors appear to assume that the MCM is ``correct". There is a vast difference between being more explicit and having a greater content of laboratory based information. Actually the authors are comparing three different approaches to developing air quality mechanisms: explicit, aggregation by functional group and aggregation by molecule (or reactivity). The most recent versions of all these mechanisms were developed from the same laboratory databases. Even though the MCM has thousands of reactions, its information content is not much more than the reduced mechanisms; my guess is that MCM’s information advantage is probably not much more information than 10 to 20\%.
+
+\textbf{Author Response:}
+We also agree with Dr Stockwell that the MCM should not be considered ``correct'' and we have updated Section~2.1 (page 12395, line 15) of the manuscript: \textit{The MCM v3.2 is the reference mechanism in this study due to its level of detail ($16\,349$ organic reactions). Despite this level of detail, the MCM had difficulties in reproducing the results of chamber study experiments involving aromatic VOC \citep{Bloss:2005}.}
+
+\textbf{Review Point 3: } This raises and interesting discussion question: Have highly explicit mechanisms taught us anything new and important about the production of air pollutants? For ozone the answer is a resounding ``NO" while for secondary organic aerosols its probably ``Maybe".
+
+\textbf{Author Response:}
+As mentioned by Dr Stockwell, our paper compares the effects on ozone production from different approaches to simplifying the detailed atmospheric chemistry.
+Our results show that the approach used to create the chemical mechanism rather than its explicitness influences ozone production.
+For example, in Fig.~1 of our paper, the ozone mixing ratios obtained using the Carbon Bond mechanisms (CBM-IV and CB05) compare well with the MCM despite both Carbon Bond mechanisms being less explicit than the MCM.
+Also, the ozone mixing ratios from RACM2 and RADM2 show similar absolute differences from that of the MCM despite RACM2 being more explicit than RADM2.
+Accordingly, we have add the following text to Section~3.1 (page 12399, line 22):
+\textit{The O$_3$ mixing ratios in Fig.~1 are influenced by the approaches used in developing the chemical mechanisms and not a function of the explicitness of the chemical mechanism.  For example, the O$_3$ mixing ratios obtained using the Carbon Bond mechanisms (CBM-IV and CB05) compare well with the MCM despite both Carbon Bond mechanisms having $\sim1~\%$ of the number of reactions in the MCM~v3.2.  Also, the O$_3$ mixing ratios from RACM2 and RADM2 show similar absolute differences from that of the MCM despite RACM2 having more than double the number of reactions of RADM2.}
+
+\section*{Response to Dr Jenkin's Review}
+
+We would like to thank Dr Jenkin for the helpful review that will enable us to improve our manuscript; our responses to the review points and comments are found below.
+
+\textbf{Review Point 1:} Given that some inventory speciations contain several hundred VOCs for typical urban sources, it could be argued that this is already a substantially lumped representation – or maybe more correctly an incomplete speciation, as it is based on reported measurements of a subset of species (although probably the generally more important ones). As a result, the reference MCM simulations are themselves already a reduction, using only a subset of the mechanism. The numbers of species and reactions listed for MCM~v3.2 and MCM~v3.1 (and CRI~v2) in Table~1 should therefore probably more correctly correspond to the VOC speciation, as many species in the complete mechanisms are not participating in the chemistry. These can be obtained using the subset mechanism assembling facilities at the relevant MCM and CRI websites (see end of review). If the authors also wish to keep the existing full mechanism numbers, the subset numbers could be included in a footnote.
+
+\textbf{Author Response:} We agree with Dr Jenkin that it would be more complete stating the number of organic reactions used in our study for each mechanism listed in Table~1. 
+We have updated Section 2.1 (page 12395, line 10) of the manuscript stating :
+\textit{We used a subset of each chemical mechanism containing all the reactions needed to fully describe the degradation of the VOC in Table~2.  }
+
+Accordingly, we have updated Table 1 in the manuscript with the number of organic species and reactions need to fully describe the degradation of the VOC used in the study for each mechanism. 
+The caption of Table 1 has been updated with a further clarification: \textit{The number of organic species and reactions needed to fully oxidise the VOC in Table 2 for each mechanism are also included.}.
+We have retained the information on the total number of organic reactions in each mechanism by updating the mechanism description in Section 2.1 to include this information.
+
+Specific changes include: page 12395, line 15 (\textit{due to its level of detail (16349 organic reactions).}); page 12395, line 16 (\textit{with 1145 organic reactions}); page 12395, line 19 (\textit{(12691 organic reactions)}); page 12395, line 26 (\textit{Tropospheric chemistry is described by 145 organic reactions in MOZART-4}); page 12396, line 1 (\textit{using 145 organic reactions}); page 12396, line 5 (\textit{(193 organic reactions)}); page 12396, line 7 (\textit{(315 organic reactions)}); page 12396, line 8 (\textit{CBM-IV uses 46 organic reactions to simulate polluted urban conditions}); page 12396, line 15 (\textit{and has 99 organic reactions}).
+
+\textbf{Review Point 2:} On page 12400 (line 12) the high Ox formation from propane degradation in RACM2 is attributed to the mechanism species HC3 producing about 17 times the amount of acetaldehyde that is produced from propane in MCM~v3.2. This high ratio arises because acetaldehyde is not a significant first generation product of propane degradation, and therefore not formed in MCM~v3.2 until the second-generation chemistry (specifically the further oxidation of the relatively minor product, propanal). Acetaldehyde is therefore formed in RACM2 instead of other products formed in MCM~v3.2 (mainly acetone, and some propanal). Acetone, has a low OH reactivity (and photolysis rate) and is not significantly oxidised on the several day timescale of these calculations, thereby largely halting Ox formation after the first-generation chemistry. I suggest it is therefore the failure of RACM2 to represent the high yield of an unreactive product that results in its overestimate in Ox. Although the high relative formation of acetaldehyde on day 1 with RACM2 and MCM~v3.2 is one consequence of this, it is not itself the source of the Ox overestimate with RACM2.
+
+\textbf{Author Response:} We would first like to thank Dr Jenkin for further insight into the differences in Ox production between RADM2 and MCM~v3.2. 
+As Dr Jenkin suggests, the yield of the less reactive ketone products during propane degradation is lower than in the MCM~v3.2.
+We have updated Section 3.1 of the manuscript (page 12400, line 11) as follows:
+\textit{ Propane is represented as HC3 in RADM2 (Stockwell et al., 1990) and the degradation of HC3 has a lower yield of the less reactive ketones compared to the MCM. The further degradation of ketones hinders Ox production due to the low OH reactivity and photolysis rate of ketones. Secondary degradation of HC3 proceeds through the degradation of acetaldehyde (CH$_3$CHO) propogating Ox production through the reactions of CH$_3$CO$_3$ and CH3O2 with NO. Thus the lower ketone yields leads to increased Ox production from propane degradation in RADM2 compared to the MCM v3.2.}
+
+Section 3.2.2 (page 12403, line 26) was also updated as follows:
+\textit{The secondary chemistry of HC3 is tailored to produce O$_{x}$ from these different VOC and differs from alkane degradation in the MCM v3.2 by producing less ketones in RADM2.}
+
+\textbf{Review Point 2-Cont:} On page 12402 (line 28), where the second day maximum in Ox from toluene degradation with RACM2 and CRI~v2 is attributed to "..increased C2H5O2 production from degradation of unsaturated dicarbonyls; C2H5O2 is not produced during degradation of unsaturated dicarbonyls in the MCM~v3.2.'' I am particularly familiar with CRI~v2, and I agree that a likely contributor to the discrepancy is that the formation of the (relatively reactive) unsaturated dicarbonyls (UDCARB8 and UDCARB11) is too efficient. C2H5O2 is indeed used as a representative peroxy radical, formed from one channel of the oxidation of UDCARB8 - this being the surrogate for butenedial (MALDIAL) in MCM~v3.2. However, MALDIAL is also oxidised to peroxy radicals (MALDIALO2 and MALDIALCO3) in MCM~v3.2, with the fraction not leading to anhydride formation being represented by C2H5O2 in CRI~v2. I therefore do not think this is an unreasonable assignment (note that contributions of MALDIALO2 + NO and MALDIALCO3 + NO are probably hidden within the large ``production others'' category for MCM~v3.2). It is more that the formation of the unsaturated dicarbonyls is too efficient in CRI~v2, and that their degradation produces Ox, regardless of which peroxy radicals are used as representatives. Although the fluxes through the reactions of NO with the specific peroxy radicals (C2H5O2 from UDCARB8 and RN10O2 from UDCARB11) are how this is quantified in the present study, I think that highlighting increased production of C2H5O2 as the sole specific cause is not particularly instructive, as it is once again a consequence of the real cause.
+
+\textbf{Author Response:} Again, we would like to thank Dr Jenkin for his insight into the approach of toluene degradation in CRI~v2.
+Based on this insight, we have revised Section 3.2.1 (page 12402, line 29) of the manuscript (third paragraph from the end of the Section) to:
+\textit{The second day maximum of O$_{x}$ production in CRI v2 and RACM2 from toluene degradation results from more efficient production of unsaturated dicarbonyls than the MCM~v3.2. The degradation of unsaturated dicarbonyls produces peroxy radicals such as C$_2$H$_5$O$_2$ which promote O$_{x}$ production via reactions with NO.}
+
+\textbf{Minor Comments 1:} General "Volatile organic compounds'' seems to be abbreviated as either "VOC'' or "VOCs'' at different points in the manuscript. Given that the original definition on line~3 of the Introduction is "VOCs'', I would suggest using this consistently throughout, unless talking about an individual VOC.
+
+\textbf{Author Response:} We have corrected the manuscript to defined volatile organic compounds as VOC (page 12390, line 22), and updated the manuscript to use this acronym consistently. Changes were made to page 12391, line 22; page 12397 lines 3 and 10; and to the caption of Table 3.
+We added the text: \textit{a number of VOC} to page 12393, line 14 for clarification.
+
+\textbf{Minor Comments 2:} Page 12391, line 22: perhaps it should be stated that VOCs are oxidised mainly by reaction with the OH radical, to acknowledge the existence of other initiation pathways.
+
+\textbf{Minor Comments 3:} Page 12392: perhaps it should be clarified that Reaction (R4) specifically illustrates the abstraction of H from a VOC by reaction with OH, as occurs exclusively for alkanes. The main routes for the reactions of OH with alkenes and aromatics proceed by OH addition.
+
+\textbf{Author Response to Minor Comments 2 and 3:} We have updated page 12391, line 22 to: \textit{VOC (RH) are mainly oxidised in the troposphere by the hydoxyl radical (OH) forming peroxy radicals (RO$_2$) in the presence of O$_2$. For example, (Reaction~R4) describes the OH-oxidation of alkanes proceeding though abstraction of an H from the alkane. In high-NO$_{x}$ conditions,}
+
+\textbf{Minor Comments 4:} Page 12394, line 13: As stated, the full CRI~v2 does lump degradation products into common representatives. Although not used in the present study, its further reduced variants (e.g. CRI~v2-R5) also lump emitted VOCs using POCP as a criterion \citep{Watson:2008}, so that they are subsets of the full mechanism. As indicated in comment~1 above, the present work also uses a subset of the full mechanism, so I’m not sure that use of the "full CRI'' can be claimed on page 12395, line 19.
+
+\textbf{Author Response:} Our subset of the CRI~v2 was taken from the full CRI not any of the reduced variants of the CRI that use further reduction techniques as described in \citet{Watson:2008}.
+We have updated page 12395, line 19 as follows: \textit{The CRI~v2 is available in more than one reduced variant, described in \citet{Watson:2008}. We used a subset of the full version of the CRI~ v2 (\url{http://mcm.leeds.ac.uk/CRI}).}
+
+\textbf{Minor Comments 5:} Page 12398, line 9: The use of a family of Ox species is a sensible approach. However, it might be worth giving a formal definition of "other species involved in fast cycling with NO2'', as those shown have a wide range of cycling lifetimes. Are PANs sufficiently short-lived?
+
+\textbf{Author Response:} In our study, we simulate the conditions within the planetary boundary layer thus PAN chemistry is dominated by its production and thermal decomposition. Ox budgets when not including PAN as part of the Ox family are thus dominated by these cycles of PAN formation and thermal decompostion. For this reason we include PANs as part of the Ox family.
+
+\textbf{Other Comments 1:} Page 12395, lines 13-22: MCM~v3.2 is used as the reference mechanism in this study, with MCM~v3.1 also considered for completeness, because it was the reference for the original development of CRI~v2 \citep{Jenkin:2008}. Because an overview description of MCM~v3.2 has never been published in the open literature, I provide here a short summary of the updates. This is mainly for information, and not necessarily for reproduction in the paper, unless deemed helpful by the authors.
+
+Because there is no overview publication, the authors have used the citation "Rickard et al. (2015)'' for the MCM~v3.2 website. I suggest the author list of this citation is expanded to include those listed as "current contributors'' on the citation tab of the MCM v3.2 website (\url{http://mcm.leeds.ac.uk/MCMv3.2/contributors.htt}).
+
+\textbf{Author Response:} We would like to thank Dr Jenkin for providing the updates from the MCM~v3.1 to MCM~v3.2, and we shall update the reference to the MCM~v3.2 to \citep{MCM_Site} including those listed as current contributors to the MCM~v3.2.
+
+\textbf{Other Comments 2:} I note from the response to another reviewer (Coates and Butler, Atmos. Chem.  Phys. Discuss., 15, C3816, 2015) that the authors are proposing to include references to the studies of \citet{Bloss:2005} and \citet{Pinho:2005} to illustrate that the MCM has had difficulties in reproducing the results of chamber studies for aromatic VOCs and isoprene. Whilst I agree with this for aromatics, the main conclusion of \citet{Pinho:2005} was that the MCM~v3 isoprene scheme (written in 2001) performed very well. The major factor responsible for deviations in performance of the MCM~v3 scheme from the SAPRC chamber data was the absence of the reaction of O(3P) with isoprene in MCM~v3, this reaction being insignificant under atmospheric conditions. A number of other less important refinements were also identified by \citet{Pinho:2005}, and these were all implemented long before release of MCM~v3.2 in 2011. I therefore think it is misleading to report that the MCM has had difficulties in reproducing the results of traditional chamber studies for isoprene. 
+
+\textbf{Author Response:} Based upon the comments of Dr Jenkin, we shall not include the \citet{Pinho:2005} study as an example of the MCM having difficulties reproducing chamber study results.
+We have updated page 12395, line 15 of the manuscript accordingly: \textit{The MCM v3.2 is the reference mechanism in this study due to its level of detail ($16\,349$ organic reactions). Despite this level of detail, the MCM had difficulties in reproducing the results of chamber study experiments involving aromatic VOC \citep{Bloss:2005}.}
+
+\section*{Additional Changes}
+
+Figure 5 has been updated with the legend having a larger font size, as the legend in Figure 5 of the discussion manuscript was difficult to read.
+
+\begin{thebibliography}{17}
+
+    \bibitem[{Ahmadov et~al.(2015)Ahmadov, McKeen, Trainer, Banta, Brewer, Brown, Edwards, de Gouw, Frost, Gilman, Helmig, Johnson, Karion, Koss, Langford, Lerner, Olson, Oltmans, Peischl, P\'etron, Pichugina, Roberts, Ryerson, Schnell, Senff, Sweeney, Thompson, Veres, Warneke, Wild, Williams, Yuan, and Zamora}]{Ahmadov:2015} Ahmadov,~R. and McKeen,~S. and Trainer,~M. and Banta,~R. and Brewer,~A. and Brown,~S. and Edwards,~P.~M. and de Gouw,~J.~A. and Frost,~G.~J. and Gilman,~J. and Helmig,~D. and Johnson,~B. and Karion,~A. and Koss,~A. and Langford,~A. and Lerner,~B. and Olson,~J. and Oltmans,~S. and Peischl,~J. and P\'etron,~G. and Pichugina,~Y. and Roberts,~J.~M. and Ryerson,~T. and Schnell,~R. and Senff,~C. and Sweeney,~C. and Thompson,~C. and Veres,~P.~R. and Warneke,~C. and Wild,~R. and Williams,~E.~J. and Yuan,~B. and Zamora,~R.: Understanding high wintertime ozone pollution events in an oil- and natural gas-producing region of the western US, Atmospheric Chemistry and Physics, 15, 1, 411--429, 2015.
+
+    \bibitem[{Archer-Nicholls et~al.(2014) Archer-Nicholls, Lowe, Utembe, Allan, Zaveri, Fast, Hodnebrog, Denier van der Gon, and McFiggans}]{Archer-Nicholls:2014} Archer-Nicholls,~S. and Lowe,~D. and Utembe,~S. and Allan,~J. and Zaveri,~R.~A. and Fast,~J.~D. and Hodnebrog,~{\O}. and Denier van der Gon,~H. and McFiggans,~G., Gaseous chemistry and aerosol mechanism developments for version 3.5.1 of the online regional model, WRF-Chem, Geoscientific Model Development, 7, 6, 2557--2579, 2014.
+
+    \bibitem[{Baklanov et~al.(2014) Baklanov, Schl{\"u}nzen, Suppan, Baldasano, Brunner, Aksoyoglu, Carmichael, Douros, Flemming, Forkel, Galmarini, Gauss, Grell, Hirtl, Joffre, Jorba, Kaas, Kaasik, Kallos, Kong, Korsholm, Kurganskiy, Kushta, Lohmann, Mahura, Manders-Groot, Maurizi, Moussiopoulos, Rao, Savage, Seigneur, Sokhi, Solazzo, Solomos, S{\o}rensen, Tsegas, Vignati, Vogel, and Zhang}]{Baklanov:2014} Baklanov,~A., Schl{\"u}nzen,~K., Suppan,~P., Baldasano,~J., Brunner,~D., Aksoyoglu,~S., Carmichael,~G., Douros,~J., Flemming,~J., Forkel,~R., Galmarini,~S., Gauss,~M., Grell,~G., Hirtl,~M., Joffre,~S., Jorba,~O., Kaas,~E., Kaasik,~M., Kallos,~G., Kong,~X., Korsholm,~U., Kurganskiy,~A., Kushta,~J., Lohmann,~U., Mahura,~A., Manders-Groot,~A., Maurizi,~A., Moussiopoulos,~N., Rao,~S. T., Savage,~N., Seigneur,~C., Sokhi,~R. S., Solazzo,~E., Solomos,~S., S{\o}rensen,~B., Tsegas,~G., Vignati,~E., Vogel,~B., Zhang,~Y.: Online coupled regional meteorology chemistry models in Europe: current status and prospects, Atmospheric Chemistry and Physics, 14, 1, 317--398, 2014.
+
+    \bibitem[{Bloss et~al.(2005)Bloss, Wagner, Jenkin, Vollamer, Bloss, Lee, Heard, Wirtz, Martin-Reviejo, Rea, Wenger, and Pilling}]{Bloss:2005} Bloss,~C., Wagner,~V., Jenkin,~M.~E., Volkamer,~R., Bloss,~W.~J., Lee,~J.~D., Heard,~D.~E., Wirtz,~K., Martin-Reviejo,~M., Rea,~G., Wenger,~J.~C., and Pilling,~M.~J.: Development of a detailed chemical mechanism (MCMv3.1) for the atmospheric oxidation of aromatic hydrocarbons, Atmos. Chem. Phys., 5, 641--664, 2005.
+
+    \bibitem[{Derwent et~al.(2015)Derwent, Utembe, Jenkin, and Shallcross}]{Derwent:2015} Derwent,~R.~G., Utember,~S.~R., Jenkin,~M.~E., and Shallcross,~D.~E.: Tropospheric ozone production regions and the intercontinental origins of surface ozone over Europe, Atmospheric Environment, 112, 216--224, 2015
+
+    \bibitem[{Dunker et.~al.(2015)Dunker, Koo, and Yarwood}]{Dunker:2015} Dunker,~A.~M., Koo,~B, and Yarwood,~G.: Source Apportionment of the Anthropogenic Increment to Ozone, Formaldehyde, and Nitrogen Dioxide by the Path- Integral Method in a 3D Model, Environmental Science \& Technology, 49, 11, 6751--6759, 2015.
+
+    \bibitem[{Foster et~al.(2014)Foster, Prentice, Morfopoulos, Siddall, and van Weele}]{Foster:2014}Foster,~P.~N., Prentice,~I.~C., Morfopoulos,~C., Siddall,~M., and van Weele,~M.: Isoprene emissions track the seasonal cycle of canopy temperature, not primary production: evidence from remote sensing, Biogeosciences, 11, 13, 3427--3451, 2014.
+
+    \bibitem[{Goliff et.~al.(2015)Goliff, Luria, Blake, Zielinska, Hallar, Valente, Lawson, and Stockwell}]{Goliff:2015} Goliff,~W.~S., Luria,~M., Blake,~D.~R., Zielinska,~B., Hallar,~G., Valente,~R.~J., Lawson,~C.~V., and Stockwell,~W.~R.:Nighttime air quality under desert conditions, Atmospheric Environment, 114, 102--111, 2015.
+
+    \bibitem[{Hou et~al.(2015)Hou, Zhu, Fei, and Wang}]{Hou:2015} Hou,~X., Zhu,~B., Fei,~D., and Wang,~D.: The impacts of summer monsoons on the ozone budget of the atmospheric boundary layer of the Asia-Pacific region, Science of The Total Environment, 502, 641--649, 2015.
+
+    \bibitem[{Jenkin et~al.(2008)Jenkin, Watson, Utembe, and Shallcross}]{Jenkin:2008} Jenkin,~M.~E., Watson,~L.~A., Utembe,~S.~R., and Shallcross,~D.~E.: {A Common Representative Intermediates (CRI) mechanism for VOC degradation. Part 1: Gas phase mechanism development}, Atmos. Environ., 42, 7185--7195, 2008.
+
+    \bibitem[{Koss et~al.(2015)Koss, de Gouw, Warneke, Gilman, Lerner, Graus, Yuan, Edwards, Brown, Wild, Roberts, Bates and Quinn}]{Koss:2015} Koss,~A.~R., de Gouw,~J., Warneke,~C., Gilman,~J.~B., Lerner,~B.~M., Graus,~M., Yuan,~B., Edwards,~P., Brown,~S.~S., Wild,~R., Roberts,~J.~M., Bates,~T.~S. and Quinn,~P.~K.: {Photochemical aging of volatile organic compounds associated with oil and natural gas extraction in the Uintah Basin, UT, during a wintertime ozone formation event}, Atmospheric Chemistry and Physics, 15, 10, 5727--5741, 2015.
+
+    \bibitem[{Li et.~al.(2014)Li, Georgescu, Hydpe, Mahalov, and Moustaui}]{Li:2014}Li,~J, Georgescu,~M., Hyde,~P., Mahalov,~A. and Moustaoui,~M.: Achieving accurate simulations of urban impacts on ozone at high resolution, Environmental Research Letters, 9, 11, 114019, 2014.
+
+  \bibitem[{Lidster et~al.(2014)Lidster, Hamilton, Lee, Lewis, Hopkins, Punjabi, Rickard and Young}]{Lidster:2014} Lidster,~R.~T., Hamilton,~J.~F., Lee,~J.~D., Lewis,~A.~C., Hopkins,~J.~R., Punjabi,~S., Rickard,~A.~R. and Young,~J.~C.: The impact of monoaromatic hydrocarbons on OH reactivity in the coastal UK boundary layer and free troposphere, Atmospheric Chemistry and Physics, 14, 13, 6677--6693, 2014.
+
+    \bibitem[{Pinho et~al.(2005)Pinho, Pio, and Jenkin}]{Pinho:2005} Pinho,~P.~G., Pio~C.~A., and Jenkin~ M.~E.: Evaluation of isoprene degradation in the detailed tropospheric chemical mechanism, MCM~v3, using environmental chamber data, Atmospheric Environment, 39, 7, 1303--1322, 2005.
+
+    \bibitem[{Rickard et~al.(2015)Rickard, Young, Pilling, Jenkin, Pascoe, and Saunders}]{MCM_Site} Rickard,~A., Young,~J., Pilling,~M., Jenkin.~M., Pascoe,~S., and Saunders~S.: {The Master Chemical Mechanism Version MCM v3.2}, available at: \url{http://mcm.leeds.ac.uk/MCMv3.2/} (last access: 09 July 2015), 2015.
+
+    \bibitem[{Stockwell et~al.(1990)Stockwell, Middleton, Chang, and Tang}]{Stockwell:1990} Stockwell,~W.~R., Middleton,~P., Chang,~J.~S., and Tang,~X.: {The second generation regional acid deposition model chemical mechanism for regional air quality modeling}, J. Geophys. Res., 95, 16343--16367, 1990.
+
+    \bibitem[{Watson et~al.(2008)Watson, Shallcross, Utembe, and Jenkin}]{Watson:2008} Watson,~L.~A., Shallcross,~D.~E., Utembe,~S.~R., and Jenkin,~M.~E.: A Common Representative Intermediates (CRI) mechanism for VOC degradation. Part 2: Gas phase mechanism reduction, Atmospheric Environment, 42, 7196--7204, 2008.
+
+\end{thebibliography}
+
+\end{document}
